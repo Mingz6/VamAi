@@ -41,3 +41,6 @@ Frontend: A simple web-based UI to interact with the chatbot.
 Backend: API integration with GitHub to fetch repository data.
 AI Agent: Uses NLP to analyze README, documentation, and code structure.
 Report Generation: Summarized insights on repository setup, structure, and functionality.
+
+-- Task#2 --
+- [x] : # https://codingbat.com/python
