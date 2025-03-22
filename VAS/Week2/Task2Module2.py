@@ -31,101 +31,206 @@ client = Together(api_key=together_ai_token)  # Fixed to use together_ai_token i
 dataset = {
     "input": [
         {
-            "content": "Quantum Computing Basics",
-            "category": "text",
-            "source": "educational_material",
+            "content": "Python Web Application Repository",
+            "category": "repository",
+            "source": "github.com/user/python-web-app",
         },
         {
-            "content": "Machine Learning Fundamentals",
-            "category": "text",
-            "source": "educational_material",
+            "content": "Data Processing Pipeline",
+            "category": "repository",
+            "source": "github.com/user/data-pipeline",
         },
         {
-            "content": "Climate Change Science",
-            "category": "wikipedia",
-            "source": "https://en.wikipedia.org/wiki/Climate_change",
+            "content": "Machine Learning Model Deployment",
+            "category": "repository",
+            "source": "gitlab.com/organization/ml-deployment",
         },
         {
-            "content": "human_biology_101.pdf",
-            "category": "pdf",
-            "source": "course_materials",
+            "content": "DevOps Infrastructure as Code",
+            "category": "repository",
+            "source": "github.com/team/infrastructure",
         },
         {
-            "content": "World War II Overview",
-            "category": "wikipedia",
-            "source": "https://en.wikipedia.org/wiki/World_War_II",
+            "content": "Mobile App Backend API",
+            "category": "repository",
+            "source": "bitbucket.org/company/mobile-backend",
         },
     ],
     "expected_output": [
         [
             {
-                "question": "What is a qubit?",
+                "question": "What is the recommended way to set up the Python web application repository?",
                 "options": [
-                    "A classical computer bit",
-                    "A quantum bit that can be in superposition",
-                    "A measurement unit",
-                    "A quantum programming language",
+                    "Clone the repository and run npm install",
+                    "Clone the repository, create a virtual environment, and run pip install -r requirements.txt",
+                    "Download the ZIP file and extract it to your web server",
+                    "Fork the repository and modify the configuration files only",
                 ],
                 "correct": 1,
-                "justification": "A qubit is a quantum bit that can exist in superposition, meaning it can be in multiple states simultaneously, unlike classical bits which can only be 0 or 1.",
+                "justification": "Python web applications typically require a virtual environment to isolate dependencies, and the requirements.txt file contains all the necessary packages that should be installed using pip.",
             },
-            # ... other quantum computing questions
+            {
+                "question": "Which configuration file would you modify to change the database connection settings?",
+                "options": [
+                    "package.json",
+                    "app.py",
+                    "config.yml or .env file",
+                    "README.md",
+                ],
+                "correct": 2,
+                "justification": "Database connection settings are typically stored in configuration files like config.yml, config.json, or environment files (.env) to separate configuration from code and allow for different environments.",
+            },
+            {
+                "question": "What command would likely start the development server for this web application?",
+                "options": [
+                    "npm start",
+                    "python app.py or flask run",
+                    "java -jar app.jar",
+                    "docker-compose up",
+                ],
+                "correct": 1,
+                "justification": "Python web applications built with frameworks like Flask or Django typically use commands like 'python app.py', 'flask run', or 'python manage.py runserver' to start the development server.",
+            },
         ],
         [
             {
-                "question": "What is a key component of machine learning?",
+                "question": "What type of dependencies would a data processing pipeline likely require?",
                 "options": [
-                    "Manual programming only",
-                    "Learning from data and patterns",
-                    "Hardware manufacturing",
-                    "Network cables",
+                    "Front-end libraries like React and Bootstrap",
+                    "Database systems like MySQL and PostgreSQL only",
+                    "Data manipulation libraries like Pandas, NumPy, and possibly Spark",
+                    "Mobile development frameworks",
+                ],
+                "correct": 2,
+                "justification": "Data processing pipelines typically rely on libraries specialized for data manipulation and analysis, such as Pandas for data frames, NumPy for numerical operations, and potentially Spark for large-scale data processing.",
+            },
+            {
+                "question": "How would you configure the data pipeline to use a different data source?",
+                "options": [
+                    "Modify HTML templates",
+                    "Update the source parameters in configuration files",
+                    "Reinstall the entire application",
+                    "Change the programming language",
                 ],
                 "correct": 1,
-                "justification": "Machine learning fundamentally relies on algorithms that can learn from and make predictions based on data patterns, rather than being explicitly programmed with fixed rules.",
+                "justification": "Data pipelines are typically configurable through configuration files where source parameters (like file paths, database connections, API endpoints) can be modified without changing the code itself.",
             },
-            # ... other machine learning questions
+            {
+                "question": "What is a common way to schedule recurring data pipeline runs?",
+                "options": [
+                    "Manual execution only",
+                    "Using cron jobs, Airflow, or similar scheduling tools",
+                    "Through a mobile application",
+                    "Only when the system boots up",
+                ],
+                "correct": 1,
+                "justification": "Data pipelines often need to run on schedules to process data regularly. Tools like cron (for simple scheduling), Apache Airflow, or cloud schedulers are commonly used to automate and schedule pipeline execution.",
+            },
         ],
         [
             {
-                "question": "What is the greenhouse effect?",
+                "question": "What environment components are typically needed for ML model deployment?",
                 "options": [
-                    "Plant growth in greenhouses",
-                    "Atmospheric heat trapping",
-                    "Solar panel technology",
-                    "Wind patterns",
+                    "Only a web server",
+                    "A GPU-enabled server with appropriate ML libraries and serving infrastructure",
+                    "Just a database server",
+                    "A content delivery network (CDN)",
                 ],
                 "correct": 1,
-                "justification": "The greenhouse effect is a natural process where certain gases in Earth's atmosphere trap heat from the sun, similar to how a greenhouse works, keeping the planet warm enough to sustain life.",
+                "justification": "ML model deployment often requires specialized hardware like GPUs for inference, ML libraries (TensorFlow, PyTorch, etc.), and serving infrastructure (TensorFlow Serving, Flask API, etc.) to make predictions available to applications.",
             },
-            # ... other climate change questions
+            {
+                "question": "How would you update a deployed machine learning model?",
+                "options": [
+                    "Manually edit the model files",
+                    "Replace the model artifact and update version references in configuration",
+                    "Reinstall the operating system",
+                    "Always train a new model from scratch",
+                ],
+                "correct": 1,
+                "justification": "Updating a deployed ML model typically involves replacing the model artifact (file) with a new version and updating configuration references to point to the new model, often with version control to enable rollbacks if needed.",
+            },
+            {
+                "question": "What configuration might be needed for scaling ML model inference?",
+                "options": [
+                    "Database indexes",
+                    "Load balancer settings, instance count, and resource allocation",
+                    "Email server settings",
+                    "Social media integration",
+                ],
+                "correct": 1,
+                "justification": "Scaling ML inference requires infrastructure configurations like load balancer settings to distribute requests, adjusting the number of serving instances, and allocating appropriate resources (memory, CPU/GPU) for handling prediction traffic.",
+            },
         ],
         [
             {
-                "question": "What is the basic unit of life?",
+                "question": "What tool is commonly used for Infrastructure as Code in cloud environments?",
                 "options": [
-                    "Atom",
-                    "Cell",
-                    "Molecule",
-                    "Tissue",
+                    "Microsoft Word",
+                    "Terraform, AWS CloudFormation, or Pulumi",
+                    "Adobe Photoshop",
+                    "Social media platforms",
                 ],
                 "correct": 1,
-                "justification": "The cell is considered the basic unit of life because it is the smallest structure capable of performing all the functions necessary for life, including metabolism, growth, and reproduction.",
+                "justification": "Infrastructure as Code (IaC) relies on specialized tools like Terraform, AWS CloudFormation, Azure Resource Manager templates, or Pulumi that allow defining infrastructure in code files that can be version-controlled and automatically deployed.",
             },
-            # ... other biology questions
+            {
+                "question": "How would you modify network security settings in an Infrastructure as Code repository?",
+                "options": [
+                    "Edit the infrastructure code files to update security group or firewall rules",
+                    "Send an email to the network team",
+                    "Physically access the server room",
+                    "Post a request on social media",
+                ],
+                "correct": 0,
+                "justification": "In an IaC approach, network security settings like security groups, firewall rules, and network ACLs are defined in code files. To modify these settings, you would edit the appropriate code files (e.g., Terraform .tf files) and deploy the changes following the established workflow.",
+            },
+            {
+                "question": "What is a best practice for managing secrets in Infrastructure as Code?",
+                "options": [
+                    "Hardcode them in the infrastructure files",
+                    "Share them via email",
+                    "Use a secret management service like HashiCorp Vault or cloud-native secret managers",
+                    "Write them in a notebook",
+                ],
+                "correct": 2,
+                "justification": "Best practices for secret management in IaC include using specialized secret management services like HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault, rather than including sensitive information directly in the infrastructure code.",
+            },
         ],
         [
             {
-                "question": "When did World War II begin?",
+                "question": "What database system might a mobile app backend API typically use?",
                 "options": [
-                    "1935",
-                    "1939",
-                    "1941",
-                    "1945",
+                    "Spreadsheet files",
+                    "Relational (PostgreSQL, MySQL) or NoSQL (MongoDB, DynamoDB) databases",
+                    "Printed paper records",
+                    "Local storage only",
                 ],
                 "correct": 1,
-                "justification": "World War II officially began on September 1, 1939, when Nazi Germany invaded Poland, leading Britain and France to declare war on Germany two days later.",
+                "justification": "Mobile app backends typically use databases to store user data, application state, and content. These can be relational databases like PostgreSQL or MySQL for structured data with relationships, or NoSQL databases like MongoDB or DynamoDB for more flexible data models.",
             },
-            # ... other WWII questions
+            {
+                "question": "How would you configure authentication for a mobile app backend API?",
+                "options": [
+                    "No authentication is needed",
+                    "Configure OAuth, JWT, API keys, or other authentication mechanisms in the API configuration",
+                    "Only allow access from specific IP addresses",
+                    "Change the API URL regularly",
+                ],
+                "correct": 1,
+                "justification": "Mobile app backend APIs require secure authentication. This is typically configured through mechanisms like OAuth for third-party authentication, JWT (JSON Web Tokens) for stateless authentication, or API keys for service-to-service communication.",
+            },
+            {
+                "question": "What is a common way to handle API versioning in a mobile backend repository?",
+                "options": [
+                    "Create new folders/URLs with version numbers (e.g., /api/v1/, /api/v2/)",
+                    "Change the server hostname for each version",
+                    "Require users to uninstall and reinstall the app",
+                    "Send paper notices to all users",
+                ],
+                "correct": 0,
+                "justification": "API versioning is commonly handled by incorporating version numbers in the URL path (e.g., /api/v1/resources), using request headers, or query parameters. This allows maintaining backward compatibility while evolving the API.",
+            },
         ],
     ],
 }
@@ -133,7 +238,7 @@ dataset = {
 
 def prompt_llm(prompt):
     # TODO 2: You can experiment with different models here (see here https://api.together.ai/models)
-    model = "meta-llama/Llama-3.3-70B-Instruct-Turbo-Free"
+    model = "meta-llama/Llama-3.3-70B-Instruct-Turbo"
     response = client.chat.completions.create(
         model=model,
         messages=[{"role": "user", "content": prompt}],
@@ -239,11 +344,10 @@ with gr.Blocks(theme=gr.themes.Soft(), css=custom_css) as demo:
             prompt_llm_text = gr.TextArea(
                 label="Prompt Template",
                 # TODO 3: Modify the prompt template below for your specific AI task
-                value="""You are an expert quiz generator, skilled at creating engaging and educational multiple-choice questions.
+                value="""You are an expert repository analyst and technical educator, skilled at explaining software repository setups and configurations.
 
 # Task Description
-Generate 3 multiple-choice questions about the given topic with 4
-options each. Include explanations for the correct answers.
+Generate 3 multiple-choice questions about the given GitHub/repository with 4 options each. Include explanations for the correct answers.
 
 # Output Format
 - Q1: Question 1
@@ -256,13 +360,15 @@ options each. Include explanations for the correct answers.
 
 # Input Content
 {content}
+Repository location: {source}
 
 # Requirements
-1. Each question must have exactly 4 options
-2. Include clear explanations for correct answers
-3. Ensure questions test understanding, not just memorization
-4. Use clear, concise language
-5. Make sure all options are plausible""",
+1. Focus on repository setup, configuration, and best practices
+2. Include questions about typical file structures, commands, or configurations
+3. Each question must have exactly 4 options with only one correct answer
+4. Provide detailed explanations for why the correct answer is appropriate
+5. Make questions practical and useful for developers working with this type of repository
+6. Consider common pitfalls and configuration issues""",
                 lines=10,
                 interactive=True,
                 container=True,
@@ -327,7 +433,7 @@ options each. Include explanations for the correct answers.
 
     def generate_llm_response(index, prompt_template):
         input_data = dataset["input"][index]
-        prompt = prompt_template.format(content=input_data["content"])
+        prompt = prompt_template.format(**input_data)  # Pass all input_data fields to format
         response = prompt_llm(prompt)
         return response
 
