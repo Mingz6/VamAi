@@ -230,9 +230,9 @@ def show_data_point(index):
     # Update header with current index + 1
     header_text = f"## Example {index + 1}"
 
-    # Format the input display with markdown and symbols, now with a box
+    # Format the input display with markdown and symbols, using colors that work in dark mode
     input_text = """
-<div style="border: 2px solid #ddd; border-radius: 8px; padding: 15px; background-color: #ddfff5;">
+<div style="border: 2px solid rgba(150, 150, 150, 0.4); border-radius: 8px; padding: 15px; background-color: rgba(100, 220, 200, 0.15); color: var(--body-text-color);">
 
 ### 📖 Topic: {content}
 
@@ -245,9 +245,9 @@ def show_data_point(index):
         **input_data
     )
 
-    # Format the output in markdown with styled box
+    # Format the output in markdown with styled box compatible with dark mode
     output_text = """
-<div style="border: 2px solid #ddd; border-radius: 8px; padding: 15px; background-color: #ddfff5;">
+<div style="border: 2px solid rgba(150, 150, 150, 0.4); border-radius: 8px; padding: 15px; background-color: rgba(100, 220, 200, 0.15); color: var(--body-text-color);">
 
 ### 📝 Quiz Questions
 
@@ -301,7 +301,29 @@ Overall Average: [X/10]
 
 
 # Create Gradio interface
-with gr.Blocks(theme=gr.themes.Soft()) as demo:
+with gr.Blocks(theme=gr.themes.Soft(), css="""
+    :root {
+        --body-text-color: inherit;
+    }
+    @media (prefers-color-scheme: dark) {
+        .custom-textarea textarea {
+            background-color: rgba(50, 50, 50, 0.9) !important;
+            color: rgba(240, 240, 240, 0.9) !important;
+        }
+        .gradio-container {
+            color-scheme: dark;
+        }
+    }
+    .custom-textarea {
+        border-radius: 8px;
+    }
+    /* Ensure buttons are visible in dark mode */
+    button {
+        background-color: rgba(100, 200, 180, 0.8) !important;
+        color: rgba(240, 240, 240, 0.95) !important;
+        border: 1px solid rgba(180, 180, 180, 0.3) !important;
+    }
+""") as demo:
     gr.Markdown(
         """
     # 📚 Omniscient Prompt XRay with LLM Evaluation
