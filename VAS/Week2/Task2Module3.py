@@ -1,6 +1,27 @@
 import gradio as gr
 import json
 from together import Together
+import os
+
+# Get the current notebook directory
+notebook_dir = os.path.dirname(os.path.abspath("__file__"))
+
+# Navigate to the config.json in the parent directory
+config_path = os.path.join(os.path.dirname(notebook_dir), "config.json")
+
+# Load the configuration
+with open(config_path, 'r') as f:
+    config_text = f.read()
+    # Remove any extra quotes if the JSON is stored as a string
+    if config_text.startswith('"') and config_text.endswith('"'):
+        config_text = config_text[1:-1].replace('\\"', '"')
+    config = json.loads(config_text)
+
+# Now you can access your configuration
+together_ai_token = config.get("together_ai_token")
+model_name = config.get("model")
+
+print(f"Loaded token: {together_ai_token[:5]}... for model: {model_name}")
 
 # Sample dataset with input texts and corresponding quiz questions
 dataset = {
@@ -210,9 +231,7 @@ dataset = {
 }
 
 # TODO: 1. Customize your API key or use environment variables for security
-your_api_key = "9806a2601560024637df1e4acd804862faa67e08637db6598d920b64eebba43e"
-client = Together(api_key=your_api_key)
-
+client = Together(api_key=together_ai_token)
 
 def prompt_llm(prompt):
     model = "meta-llama/Meta-Llama-3-8B-Instruct-Lite"
