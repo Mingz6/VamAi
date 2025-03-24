@@ -6,11 +6,11 @@ from together import Together
 # TODO 1: Replace with your Together API key (https://www.together.ai/)
 import os
 
-# Get the current notebook directory
-notebook_dir = os.path.dirname(os.path.abspath("__file__"))
+# Get the current directory
+current_dir = os.path.dirname(os.path.abspath("__file__"))
 
 # Navigate to the config.json in the parent directory
-config_path = os.path.join(os.path.dirname(notebook_dir), "config.json")
+config_path = os.path.join(os.path.dirname(current_dir), "config.json")
 
 # Load the configuration
 with open(config_path, 'r') as f:
@@ -29,8 +29,8 @@ print(f"Loaded token: {together_ai_token[:5]}... for model: {model_name}")
 # Initialize the Together client with your API token
 client = Together(api_key=together_ai_token)
 
-# Load prompt template from file
-prompt_template_path = os.path.join(os.path.dirname(notebook_dir), "PromptTemplate.json")
+# Load prompt template from file - now in the same directory
+prompt_template_path = os.path.join(current_dir, "prompttemplate.json")
 with open(prompt_template_path, 'r') as f:
     prompt_template_data = json.load(f)
     prompt_template = prompt_template_data.get("prompt_template", "")
@@ -46,8 +46,8 @@ def prompt_llm(prompt):
 
 
 def load_dataset():
-    # Updated path to look for Dataset.json in the parent directory
-    json_path = os.path.join(os.path.dirname(notebook_dir), "DatasetGitHub.json")
+    # Updated path to look for DatasetGitHub.json in the same directory
+    json_path = os.path.join(current_dir, "DatasetGitHub.json")
     try:
         with open(json_path, 'r') as file:
             return json.load(file)
