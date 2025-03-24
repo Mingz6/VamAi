@@ -4,5 +4,6 @@
 
 .DS_Store
 
+ApiKey.py
 config.json
 __pycache__
