@@ -475,7 +475,12 @@ Source: {source}
 
     def generate_llm_response(index, prompt_template):
         input_data = dataset["input"][index]
-        prompt = prompt_template.format(content=input_data["content"])
+        # Format the prompt with all input data fields
+        prompt = prompt_template.format(
+            content=input_data["content"],
+            category=input_data["category"],
+            source=input_data["source"]
+        )
         response = prompt_llm(prompt)
         return response
 
