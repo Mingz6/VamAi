@@ -46,7 +46,8 @@ def prompt_llm(prompt):
 
 
 def load_dataset():
-    json_path = os.path.join(os.path.dirname(__file__), 'Dataset.json')
+    # Updated path to look for Dataset.json in the parent directory
+    json_path = os.path.join(os.path.dirname(notebook_dir), "DatasetGitHub.json")
     try:
         with open(json_path, 'r') as file:
             return json.load(file)
