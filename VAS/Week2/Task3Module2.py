@@ -26,6 +26,14 @@ model_name = config.get("model")
 
 print(f"Loaded token: {together_ai_token[:5]}... for model: {model_name}")
 
+# Initialize the Together client with your API token
+client = Together(api_key=together_ai_token)
+
+# Load prompt template from file
+prompt_template_path = os.path.join(os.path.dirname(notebook_dir), "PromptTemplate.json")
+with open(prompt_template_path, 'r') as f:
+    prompt_template_data = json.load(f)
+    prompt_template = prompt_template_data.get("prompt_template", "")
 
 def prompt_llm(prompt):
     # TODO 2: You can experiment with different models here (see here https://api.together.ai/models)
@@ -37,6 +45,22 @@ def prompt_llm(prompt):
     return response.choices[0].message.content
 
 
+def load_dataset():
+    json_path = os.path.join(os.path.dirname(__file__), 'Dataset.json')
+    try:
+        with open(json_path, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        print(f"Error: Dataset file not found at {json_path}")
+        return {"input": [], "expected_output": []}
+    except json.JSONDecodeError:
+        print(f"Error: Invalid JSON format in {json_path}")
+        return {"input": [], "expected_output": []}
+
+# Load the dataset
+dataset = load_dataset()
+
+
 def show_data_point(index):
     input_data = dataset["input"][index]
     quiz_data = dataset["expected_output"][index]
@@ -46,7 +70,7 @@ def show_data_point(index):
 
     # Format the input display with markdown and symbols, now with a box
     input_text = """
-<div style="border: 2px solid #ddd; border-radius: 8px; padding: 15px; background-color: #ddfff5;">
+<div style="border: 2px solid rgba(150, 150, 150, 0.4); border-radius: 8px; padding: 15px; background-color: rgba(100, 220, 200, 0.15); color: var(--body-text-color);">
 
 ### 📖 Topic: {content}
 
@@ -61,7 +85,7 @@ def show_data_point(index):
 
     # Format the output in markdown with styled box
     output_text = """
-<div style="border: 2px solid #ddd; border-radius: 8px; padding: 15px; background-color: #ddfff5;">
+<div style="border: 2px solid rgba(150, 150, 150, 0.4); border-radius: 8px; padding: 15px; background-color: rgba(100, 220, 200, 0.15); color: var(--body-text-color);">
 
 ### 📝 Quiz Questions
 
@@ -113,31 +137,8 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
 
             prompt_llm_text = gr.TextArea(
                 label="Prompt Template",
-                # TODO 3: Modify the prompt template below for your specific AI task
-                value="""You are an expert quiz generator, skilled at creating engaging and educational multiple-choice questions.
-
-# Task Description
-Generate 3 multiple-choice questions about the given topic with 4
-options each. Include explanations for the correct answers.
-
-# Output Format
-- Q1: Question 1
-- A1: Option 1
-- A2: Option 2
-- A3: Option 3
-- A4: Option 4
-- Correct Answer: 1
-- Explanation: Explanation for the correct answer
-
-# Input Content
-{content}
-
-# Requirements
-1. Each question must have exactly 4 options
-2. Include clear explanations for correct answers
-3. Ensure questions test understanding, not just memorization
-4. Use clear, concise language
-5. Make sure all options are plausible""",
+                # Load the prompt template from the JSON file instead of hardcoding
+                value=prompt_template,
                 lines=10,
                 interactive=True,
                 container=True,
@@ -200,7 +201,9 @@ options each. Include explanations for the correct answers.
 
     def generate_llm_response(index, prompt_template):
         input_data = dataset["input"][index]
-        prompt = prompt_template.format(content=input_data["content"])
+        # Fix: Pass all input_data fields to the format method instead of just content
+        # This will allow the template to use any field like content, category, source, etc.
+        prompt = prompt_template.format(**input_data)
         response = prompt_llm(prompt)
         return response
 
