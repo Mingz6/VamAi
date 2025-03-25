@@ -1,3 +1,4 @@
+# Prompt: create a flask app with templates/index.html that gives us a search bar, call it deep research agent and when the user searches for something on the search bar display 3 results use duckduckgo_search for this
 from flask import Flask, render_template, request, jsonify
 from duckduckgo_search import DDGS
 import requests
