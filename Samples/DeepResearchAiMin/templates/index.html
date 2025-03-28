@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyrule Research Compendium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a6800;
+            --secondary-color: #ffd700;
+            --accent-color: #3c8dad;
+            --dark-color: #2c3e50;
+            --light-color: #f9f6e9;
+            --triforce-gold: #ffd700;
+            --hyrule-blue: #3c8dad;
+            --kokiri-green: #1a6800;
+            --gerudo-red: #a83232;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light-color);
+            background-image: url('https://i.imgur.com/JYmBNHm.png');
+            background-attachment: fixed;
+            background-size: cover;
+            color: var(--dark-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .parchment {
+            background-color: rgba(249, 246, 233, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 2px solid #d4b87b;
+        }
+        
+        h1, h2 {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            color: var(--kokiri-green);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        h1::before, h1::after {
+            content: "⚔️";
+            display: inline-block;
+            margin: 0 15px;
+            color: var(--triforce-gold);
+        }
+        
+        h2 {
+            font-size: 24px;
+            border-bottom: 2px solid var(--triforce-gold);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .search-container {
+            text-align: center;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 70%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid var(--hyrule-blue);
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .search-button {
+            padding: 15px 25px;
+            background-color: var(--kokiri-green);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+            transition: all 0.3s ease;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .search-button:hover {
+            background-color: #2a8c00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .results {
+            margin-top: 30px;
+        }
+        
+        .result-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 2px solid #d4b87b;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+        
+        .result-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .result-title {
+            color: var(--hyrule-blue);
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .result-title a {
+            color: var(--hyrule-blue);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .result-title a:hover {
+            color: var(--kokiri-green);
+            text-decoration: underline;
+        }
+        
+        .result-body {
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .result-url {
+            color: #6a8759;
+            font-size: 14px;
+            margin-bottom: 15px;
+            word-break: break-all;
+        }
+        
+        .zelda-button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--hyrule-blue);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .zelda-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.2) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transition: left 0.5s;
+        }
+        
+        .zelda-button:hover {
+            background-color: #2a7a9b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .zelda-button:hover::before {
+            left: 100%;
+        }
+        
+        .summary-button {
+            background-color: var(--hyrule-blue);
+        }
+        
+        .summary-container {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #d4b87b;
+            border-radius: 8px;
+            display: none;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .loading {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            padding: 10px;
+        }
+        
+        .loading::after {
+            content: "...";
+            animation: dots 1.5s infinite;
+        }
+        
+        @keyframes dots {
+            0%, 20% { content: "."; }
+            40% { content: ".."; }
+            60%, 100% { content: "..."; }
+        }
+        
+        .insights-section {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: rgba(60, 141, 173, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--hyrule-blue);
+            position: relative;
+        }
+        
+        .insights-section::before {
+            content: "🔍";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background-color: var(--light-color);
+            padding: 5px 10px;
+            border-radius: 50%;
+            border: 2px solid var(--hyrule-blue);
+            font-size: 20px;
+        }
+        
+        .insights-section h2 {
+            color: var(--hyrule-blue);
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 26px;
+        }
+        
+        .insights-button {
+            padding: 12px 24px;
+            background-color: var(--hyrule-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .insights-button:hover {
+            background-color: #2a7a9b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .insights-button:disabled {
+            background-color: #a0a0a0;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .insights-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--hyrule-blue);
+            border-radius: 8px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .insights-content ul {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        
+        .insights-content li {
+            margin-bottom: 15px;
+            line-height: 1.7;
+            color: #333;
+            position: relative;
+            padding-left: 10px;
+        }
+        
+        .insights-content li::before {
+            content: "⚡";
+            position: absolute;
+            left: -25px;
+            color: var(--hyrule-blue);
+        }
+        
+        .action-section {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: rgba(26, 104, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--kokiri-green);
+            position: relative;
+        }
+        
+        .action-section::before {
+            content: "🗡️";
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background-color: var(--light-color);
+            padding: 5px 10px;
+            border-radius: 50%;
+            border: 2px solid var(--kokiri-green);
+            font-size: 20px;
+        }
+        
+        .action-section h2 {
+            color: var(--kokiri-green);
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 26px;
+            border-bottom-color: var(--kokiri-green);
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .goal-input, .persona-input {
+            padding: 15px;
+            border: 2px solid var(--kokiri-green);
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .goal-input {
+            flex: 3;
+        }
+        
+        .persona-input {
+            flex: 2;
+            border-color: var(--triforce-gold);
+        }
+        
+        .persona-input::placeholder {
+            color: #b39700;
+        }
+        
+        .recommendations-button {
+            padding: 12px 24px;
+            background-color: var(--kokiri-green);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .recommendations-button:hover {
+            background-color: #2a8c00;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        .recommendations-button:disabled {
+            background-color: #a5d6a7;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .recommendations-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--kokiri-green);
+            border-radius: 8px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .recommendations-content ul {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        
+        .recommendations-content li {
+            margin-bottom: 15px;
+            line-height: 1.7;
+            color: #333;
+            position: relative;
+            padding-left: 10px;
+        }
+        
+        .recommendations-content li::before {
+            content: "🛡️";
+            position: absolute;
+            left: -25px;
+            color: var(--kokiri-green);
+        }
+        
+        .triforce {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 30px;
+            color: var(--triforce-gold);
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #d4b87b;
+        }
+        
+        .next-query-section {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(255, 215, 0, 0.1);
+            border-radius: 8px;
+            border: 1px dashed var(--triforce-gold);
+        }
+        
+        .next-query-title {
+            font-weight: bold;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .next-query-title::before {
+            content: "🔍";
+            margin-right: 8px;
+        }
+        
+        .next-query-content {
+            font-style: italic;
+            color: var(--hyrule-blue);
+        }
+        
+        .next-query-button {
+            background-color: var(--triforce-gold);
+            color: var(--dark-color);
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        
+        .next-query-button:hover {
+            background-color: #e6c200;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="parchment">
+        <h1>Hyrule Research Compendium</h1>
+        
+        <div class="search-container">
+            <form method="POST">
+                <input type="text" name="query" class="search-input" placeholder="What knowledge do you seek, adventurer?" value="{{ query }}">
+                <button type="submit" class="search-button">Discover</button>
+            </form>
+        </div>
+        
+        {% if results %}
+        <div class="results">
+            <h2>Ancient Scrolls</h2>
+            {% for result in results %}
+            <div class="result-item">
+                <div class="result-title">
+                    <a href="{{ result.href }}" target="_blank">{{ result.title }}</a>
+                </div>
+                <div class="result-body">{{ result.body }}</div>
+                <div class="result-url">{{ result.href }}</div>
+                <button class="zelda-button summary-button" data-url="{{ result.href }}">Decipher Scroll</button>
+                <div class="summary-container">
+                    <div class="loading">Deciphering ancient text</div>
+                    <div class="summary-content"></div>
+                </div>
+            </div>
+            {% endfor %}
+            
+            <div class="triforce">▲<br>▲ ▲</div>
+            
+            <div class="insights-section">
+                <h2>Sheikah Slate Insights</h2>
+                <button id="generate-insights-button" class="insights-button">Activate Sheikah Sensor</button>
+                <div id="insights-container" class="insights-container" style="display: none;">
+                    <div class="loading">The Sheikah Slate is analyzing</div>
+                    <div class="insights-content"></div>
+                </div>
+            </div>
+            
+            <div class="action-section">
+                <h2>Hero's Quest</h2>
+                <div class="input-group">
+                    <input type="text" id="goal-input" class="goal-input" placeholder="What is your quest, hero? (e.g., 'defeat Ganon', 'save Hyrule', 'find the Master Sword')">
+                    <input type="text" id="persona-input" class="persona-input" placeholder="Who are you, brave adventurer? (e.g., 'marketing manager', 'student', 'researcher')">
+                </div>
+                <button id="generate-recommendations-button" class="recommendations-button" disabled>Consult the Great Deku Tree</button>
+                <div id="recommendations-container" class="recommendations-container" style="display: none;">
+                    <div class="loading">The Great Deku Tree is contemplating</div>
+                    <div class="recommendations-content"></div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        
+        <footer>
+            Created by the Royal Scientists of Hyrule Castle • Powered by Ancient Sheikah Technology
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const summaryButtons = document.querySelectorAll('.summary-button');
+            const insightsButton = document.getElementById('generate-insights-button');
+            const insightsContainer = document.getElementById('insights-container');
+            const insightsLoading = insightsContainer.querySelector('.loading');
+            const insightsContent = insightsContainer.querySelector('.insights-content');
+            
+            const goalInput = document.getElementById('goal-input');
+            const recommendationsButton = document.getElementById('generate-recommendations-button');
+            const recommendationsContainer = document.getElementById('recommendations-container');
+            const recommendationsLoading = recommendationsContainer.querySelector('.loading');
+            const recommendationsContent = recommendationsContainer.querySelector('.recommendations-content');
+            
+            // Store summaries for later use
+            const summariesCache = {};
+            
+            // Store insights for later use with recommendations
+            let currentInsights = '';
+            
+            // Get all result URLs
+            function getAllUrls() {
+                const urls = [];
+                document.querySelectorAll('.summary-button').forEach(button => {
+                    urls.push(button.getAttribute('data-url'));
+                });
+                return urls;
+            }
+            
+            // Display a summary for a specific URL
+            function displaySummary(url, summary) {
+                const button = document.querySelector(`.summary-button[data-url="${url}"]`);
+                if (button) {
+                    const summaryContainer = button.nextElementSibling;
+                    const summaryContent = summaryContainer.querySelector('.summary-content');
+                    const loading = summaryContainer.querySelector('.loading');
+                    
+                    loading.style.display = 'none';
+                    summaryContent.style.display = 'block';
+                    summaryContent.textContent = summary;
+                    summaryContainer.style.display = 'block';
+                }
+            }
+            
+            summaryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const url = this.getAttribute('data-url');
+                    const summaryContainer = this.nextElementSibling;
+                    const summaryContent = summaryContainer.querySelector('.summary-content');
+                    const loading = summaryContainer.querySelector('.loading');
+                    
+                    // Toggle visibility
+                    if (summaryContainer.style.display === 'block') {
+                        summaryContainer.style.display = 'none';
+                        return;
+                    }
+                    
+                    summaryContainer.style.display = 'block';
+                    
+                    // Check if we already have the summary in cache
+                    if (summariesCache[url]) {
+                        loading.style.display = 'none';
+                        summaryContent.style.display = 'block';
+                        summaryContent.textContent = summariesCache[url];
+                        return;
+                    }
+                    
+                    loading.style.display = 'block';
+                    summaryContent.style.display = 'none';
+                    
+                    // Fetch summary from server
+                    fetch('/summarize', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ url: url })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        loading.style.display = 'none';
+                        summaryContent.style.display = 'block';
+                        
+                        if (data.error) {
+                            summaryContent.textContent = 'Error: ' + data.error;
+                        } else {
+                            summaryContent.textContent = data.summary;
+                            // Store the summary for later use
+                            summariesCache[url] = data.summary;
+                        }
+                    })
+                    .catch(error => {
+                        loading.style.display = 'none';
+                        summaryContent.style.display = 'block';
+                        summaryContent.textContent = 'Error fetching summary: ' + error.message;
+                    });
+                });
+            });
+            
+            // Handle insights generation
+            insightsButton.addEventListener('click', function() {
+                const urls = getAllUrls();
+                
+                if (urls.length === 0) {
+                    alert('No ancient scrolls available to analyze!');
+                    return;
+                }
+                
+                insightsContainer.style.display = 'block';
+                insightsLoading.style.display = 'block';
+                insightsContent.style.display = 'none';
+                
+                // Update button text and disable it
+                insightsButton.textContent = 'Analyzing...';
+                insightsButton.disabled = true;
+                
+                // Play activation sound
+                const activationSound = new Audio('https://www.zeldadungeon.net/wiki/images/3/3d/Sheikah-Slate-Activation.ogg');
+                activationSound.volume = 0.3;
+                activationSound.play().catch(e => console.log('Audio play failed:', e));
+                
+                // Fetch summaries and insights from server
+                fetch('/summarize_all', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ urls: urls })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    insightsLoading.style.display = 'none';
+                    insightsContent.style.display = 'block';
+                    
+                    // Re-enable button
+                    insightsButton.textContent = 'Activate Sheikah Sensor';
+                    insightsButton.disabled = false;
+                    
+                    if (data.error) {
+                        insightsContent.textContent = 'Error: ' + data.error;
+                    } else {
+                        // Store and display all summaries
+                        for (const [url, summary] of Object.entries(data.summaries)) {
+                            summariesCache[url] = summary;
+                            displaySummary(url, summary);
+                        }
+                        
+                        // Format the insights as bullet points
+                        const insights = data.insights.split('\n').map(insight => 
+                            `<li>${insight.replace(/^•\s*/, '')}</li>`
+                        ).join('');
+                        
+                        insightsContent.innerHTML = `<ul>${insights}</ul>`;
+                        
+                        // Store the raw insights for recommendations
+                        currentInsights = data.insights;
+                        
+                        // Enable the recommendations button
+                        recommendationsButton.disabled = false;
+                    }
+                })
+                .catch(error => {
+                    insightsLoading.style.display = 'none';
+                    insightsContent.style.display = 'block';
+                    insightsContent.textContent = 'Error generating insights: ' + error.message;
+                    
+                    // Re-enable button
+                    insightsButton.textContent = 'Activate Sheikah Sensor';
+                    insightsButton.disabled = false;
+                });
+            });
+            
+            // Enable/disable recommendations button based on goal input
+            goalInput.addEventListener('input', function() {
+                recommendationsButton.disabled = !this.value.trim() || !currentInsights;
+            });
+            
+            // Handle recommendations generation
+            recommendationsButton.addEventListener('click', function() {
+                const goal = goalInput.value.trim();
+                const persona = document.getElementById('persona-input').value.trim();
+                
+                if (!goal) {
+                    alert('Please enter your quest, brave hero!');
+                    return;
+                }
+                
+                if (!currentInsights) {
+                    alert('Please activate the Sheikah Sensor first!');
+                    return;
+                }
+                
+                recommendationsContainer.style.display = 'block';
+                recommendationsLoading.style.display = 'block';
+                recommendationsContent.style.display = 'none';
+                
+                // Update button text and disable it
+                recommendationsButton.textContent = 'Consulting...';
+                recommendationsButton.disabled = true;
+                
+                // Play wisdom sound
+                const wisdomSound = new Audio('https://www.zeldadungeon.net/wiki/images/e/e1/Get_Heart_Container.ogg');
+                wisdomSound.volume = 0.3;
+                wisdomSound.play().catch(e => console.log('Audio play failed:', e));
+                
+                // Fetch recommendations from server
+                fetch('/generate_recommendations', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        insights: currentInsights,
+                        summaries: Object.values(summariesCache),
+                        goal: goal,
+                        persona: persona
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    recommendationsLoading.style.display = 'none';
+                    recommendationsContent.style.display = 'block';
+                    
+                    // Re-enable button
+                    recommendationsButton.textContent = 'Consult the Great Deku Tree';
+                    recommendationsButton.disabled = false;
+                    
+                    if (data.error) {
+                        recommendationsContent.textContent = 'Error: ' + data.error;
+                    } else {
+                        // Format the recommendations as bullet points
+                        const recommendations = data.recommendations.split('\n').map(rec => 
+                            `<li>${rec.replace(/^•\s*/, '')}</li>`
+                        ).join('');
+                        
+                        // Add next query section if available
+                        let nextQueryHtml = '';
+                        if (data.next_query) {
+                            nextQueryHtml = `
+                                <div class="next-query-section">
+                                    <div class="next-query-title">Suggested Next Quest</div>
+                                    <div class="next-query-content">${data.next_query}</div>
+                                    <button class="next-query-button">Use This Quest</button>
+                                </div>
+                            `;
+                        }
+                        
+                        recommendationsContent.innerHTML = `<ul>${recommendations}</ul>${nextQueryHtml}`;
+                        
+                        // Add event listener for the next query button if it exists
+                        const nextQueryButton = recommendationsContent.querySelector('.next-query-button');
+                        if (nextQueryButton) {
+                            nextQueryButton.addEventListener('click', function() {
+                                const queryInput = document.querySelector('.search-input');
+                                queryInput.value = data.next_query;
+                                // Optional: auto-submit the form
+                                queryInput.form.submit();
+                            });
+                        }
+                    }
+                })
+                .catch(error => {
+                    recommendationsLoading.style.display = 'none';
+                    recommendationsContent.style.display = 'block';
+                    recommendationsContent.textContent = 'Error generating recommendations: ' + error.message;
+                    
+                    // Re-enable button
+                    recommendationsButton.textContent = 'Consult the Great Deku Tree';
+                    recommendationsButton.disabled = false;
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
