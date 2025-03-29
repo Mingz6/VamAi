@@ -71,6 +71,73 @@ def gen_image(prompt, width=256, height=256):
 
     return img
 
+class EmailResponseRetriever:
+    def __init__(self):
+        self.encoder = SentenceTransformer("all-MiniLM-L6-v2", use_auth_token=HGToken)
+        # Sample email responses - in production, this would come from a database
+        self.examples = {
+            "late_delivery": """
+                ORIGINAL EMAIL:
+                I haven't received my order yet and it's been 2 weeks. This is unacceptable.
+
+                MY RESPONSE:
+                I sincerely apologize for the delay in your order. I understand your frustration.
+                I've checked with our shipping department and your package is currently in transit.
+                I'll expedite this and send you the updated tracking information within the next hour.
+                Please let me know if you need anything else.
+            """,
+            "refund_request": """
+                ORIGINAL EMAIL:
+                The product I received is damaged. I want my money back immediately.
+
+                MY RESPONSE:
+                I'm very sorry to hear about the damaged product. I completely understand your concern.
+                I've initiated an immediate refund which will be processed within 2-3 business days.
+                Would you like a return shipping label to send the damaged item back to us?
+            """,
+            "product_inquiry": """
+                ORIGINAL EMAIL:
+                Does this come in different sizes? And what colors are available?
+
+                MY RESPONSE:
+                Thank you for your interest! Yes, this product comes in S, M, L, and XL.
+                We currently have it available in navy blue, forest green, and charcoal gray.
+                I can provide detailed measurements for any specific size you're interested in.
+            """,
+            "technical_support": """
+                ORIGINAL EMAIL:
+                The software keeps crashing when I try to export my project.
+
+                MY RESPONSE:
+                I understand how frustrating technical issues can be. Let's resolve this together.
+                First, please try clearing your cache and restarting the application.
+                If that doesn't work, could you send me your error log? You can find it at Settings > Help > Export Log.
+            """,
+        }
+        # Pre-compute embeddings for examples
+        self.example_embeddings = {
+            k: self.encoder.encode(v) for k, v in self.examples.items()
+        }
+
+    def get_relevant_example(self, query, top_k=2):
+        query_embedding = self.encoder.encode(query)
+        similarities = {
+            k: cosine_similarity([query_embedding], [emb])[0][0]
+            for k, emb in self.example_embeddings.items()
+        }
+        sorted_examples = sorted(similarities.items(), key=lambda x: x[1], reverse=True)
+
+        relevant_examples = []
+        for example_name, score in sorted_examples[:top_k]:
+            if score > 0.3:  # Similarity threshold
+                relevant_examples.append(self.examples[example_name])
+
+        return (
+            "\n\n".join(relevant_examples)
+            if relevant_examples
+            else "No relevant example found."
+        )
+
 class PolicyRetriever:
     def __init__(self):
         self.encoder = SentenceTransformer(
@@ -128,16 +195,22 @@ class PolicyRetriever:
         )
 
 class EmailAgent:
-    def __init__(self, role, client, policy_retriever=None):
+    def __init__(self, role, client, policy_retriever=None, example_retriever=None):
         self.role = role
         self.client = client
         self.policy_retriever = policy_retriever
+        self.example_retriever = example_retriever
 
     def process(self, content):
         # Get relevant policies if policy_retriever is available
         relevant_policies = ""
         if self.policy_retriever and self.role in ["analyzer", "drafter"]:
             relevant_policies = self.policy_retriever.get_relevant_policy(content)
+        
+        # Get relevant examples if example_retriever is available and role is drafter
+        relevant_examples = ""
+        if self.example_retriever and self.role == "drafter":
+            relevant_examples = self.example_retriever.get_relevant_example(content)
         
         prompts = {
             # Analyzer prompt - extracts key information from email
@@ -168,6 +241,9 @@ class EmailAgent:
             
             Relevant policies:
             {policies}
+            
+            Similar email examples for reference:
+            {examples}
 
             Create a professional email response that:
             1. Addresses all key points
@@ -201,25 +277,31 @@ class EmailAgent:
             Return either APPROVED or NEEDS_REVISION with specific feedback.""",
         }
 
-        return prompt_llm(prompts[self.role].format(content=content, policies=relevant_policies))
+        return prompt_llm(prompts[self.role].format(
+            content=content, 
+            policies=relevant_policies,
+            examples=relevant_examples
+        ))
 
 
 def process_email(email_content):
-    # Create policy retriever
+    # Create policy retriever and example retriever
     policy_retriever = PolicyRetriever()
+    example_retriever = EmailResponseRetriever()
     
-    # Get relevant policies
+    # Get relevant policies and examples
     relevant_policies = policy_retriever.get_relevant_policy(email_content)
+    relevant_examples = example_retriever.get_relevant_example(email_content)
     
     # Create agents
-    analyzer = EmailAgent("analyzer", client, policy_retriever)
-    drafter = EmailAgent("drafter", client, policy_retriever)
+    analyzer = EmailAgent("analyzer", client, policy_retriever, example_retriever)
+    drafter = EmailAgent("drafter", client, policy_retriever, example_retriever)
 
     # Process email
     analysis = analyzer.process(email_content)
     draft = drafter.process(analysis)
 
-    return analysis, draft, relevant_policies
+    return analysis, draft, relevant_policies, relevant_examples
 
 
 # Example emails
@@ -280,6 +362,9 @@ def main():
             policy_output = gr.Textbox(
                 lines=6, label="📋 Relevant Policies", show_copy_button=True
             )
+            example_output = gr.Textbox(
+                lines=6, label="📝 Similar Email Examples", show_copy_button=True
+            )
 
         # Set up event handlers
         next_button.click(
@@ -289,7 +374,7 @@ def main():
         process_button.click(
             process_email, 
             inputs=[email_input], 
-            outputs=[analysis_output, draft_output, policy_output]
+            outputs=[analysis_output, draft_output, policy_output, example_output]
         )
 
     demo.launch()
