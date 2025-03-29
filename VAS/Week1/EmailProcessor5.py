@@ -1,7 +1,6 @@
-# RAG that Finds the Best Email Response
-# - This program finds the most relevant pre-written email response based on a user's question.
-# - It uses a language model to compare the question with stored email examples and returns the best match.
-# Test case: sample queries ("My package hasn't arrived yet", "I got a broken item in the mail", "What sizes do you have?", and "The app keeps crashing")
+# AI-Powered Email Processing for Medical Policies
+# - This program analyzes, drafts, and reviews email responses by retrieving relevant medical policies and ensuring compliance.
+# - It uses AI models to process emails, determine sentiment, suggest policy-based responses, and refine drafts for clarity and adherence to regulations.
 
 from ApiKey import API_KEY, HGToken
 # import libraries
@@ -204,7 +203,7 @@ class EmailAgent:
         self.role = role
         self.client = client
         self.policy_retriever = policy_retriever or PolicyRetriever()
-        self.example_retriever = example_retriever
+        self.example_retriever = example_retriever or EmailResponseRetriever()
 
         # Move prompts to be an instance variable
         self.prompts = {
@@ -224,6 +223,9 @@ class EmailAgent:
             CONTEXT (Company Policies):
             {policies}
 
+            SIMILAR EMAILS:
+            {examples}
+
             Email: {content}""",
             "drafter": """SYSTEM: You are a professional email response specialist for a medical company.
             Draft responses that align with our policies and maintain HIPAA compliance.
@@ -240,6 +242,9 @@ class EmailAgent:
 
             CONTEXT (Relevant Policies):
             {policies}
+
+            SIMILAR RESPONSES:
+            {examples}
 
             Based on this analysis: {content}""",
             "reviewer": """SYSTEM: You are a senior email quality assurance specialist for a medical company.
@@ -283,16 +288,39 @@ class EmailAgent:
     def process(self, content):
         # Get relevant policies for the email content
         relevant_policies = self.policy_retriever.get_relevant_policy(content)
-        return prompt_llm(
-            self.prompts[self.role].format(content=content, policies=relevant_policies)
-        )
+        # Get relevant examples for the email content
+        relevant_examples = ""
+        if self.example_retriever:
+            relevant_examples = self.example_retriever.get_relevant_example(content)
+        
+        # Add examples to the prompt if available
+        if self.role in ["analyzer", "drafter"]:
+            return prompt_llm(
+                self.prompts[self.role].format(
+                    content=content, 
+                    policies=relevant_policies,
+                    examples=relevant_examples
+                )
+            )
+        else:
+            return prompt_llm(
+                self.prompts[self.role].format(
+                    content=content, 
+                    policies=relevant_policies
+                )
+            )
 
 class EmailProcessingSystem:
     def __init__(self, client):
-        self.analyzer = EmailAgent("analyzer", client)
-        self.drafter = EmailAgent("drafter", client)
-        self.reviewer = EmailAgent("reviewer", client)
-        self.policy_justifier = EmailAgent("policy_justifier", client)
+        # Create shared retrievers for all agents
+        self.policy_retriever = PolicyRetriever()
+        self.example_retriever = EmailResponseRetriever()
+        
+        # Initialize agents with both retrievers
+        self.analyzer = EmailAgent("analyzer", client, self.policy_retriever, self.example_retriever)
+        self.drafter = EmailAgent("drafter", client, self.policy_retriever, self.example_retriever)
+        self.reviewer = EmailAgent("reviewer", client, self.policy_retriever, self.example_retriever)
+        self.policy_justifier = EmailAgent("policy_justifier", client, self.policy_retriever, self.example_retriever)
 
     def process_email(self, email_content):
         max_attempts = 3
@@ -315,10 +343,9 @@ class EmailProcessingSystem:
             print("\nDrafting response based on analysis...")
             draft = self.drafter.process(analysis)
 
-            # Get relevant policies for display
-            relevant_policies = self.analyzer.policy_retriever.get_relevant_policy(
-                email_content
-            )
+            # Get relevant policies and examples for display
+            relevant_policies = self.policy_retriever.get_relevant_policy(email_content)
+            relevant_examples = self.example_retriever.get_relevant_example(email_content)
 
             # Add policy justification
             policy_justification = self.policy_justifier.process(
@@ -337,6 +364,9 @@ class EmailProcessingSystem:
             print(relevant_policies)
             print("\nPOLICY JUSTIFICATION:\n")
             print(policy_justification)
+            print("\n" + "=" * 50)
+            print("SIMILAR EMAIL EXAMPLES:\n")
+            print(relevant_examples)
             print("\n" + "=" * 50)
 
             # Ask user for feedback on the draft
@@ -360,6 +390,9 @@ class EmailProcessingSystem:
                     "analysis": analysis,
                     "final_draft": draft,
                     "review": review,
+                    "relevant_policies": relevant_policies,
+                    "relevant_examples": relevant_examples,
+                    "policy_justification": policy_justification
                 }
             else:
                 print(f"\nRevision needed. Feedback: {review}")
