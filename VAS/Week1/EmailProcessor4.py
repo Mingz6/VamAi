@@ -2,6 +2,7 @@ from ApiKey import API_KEY, HGToken
 # import libraries
 import requests
 from PIL import Image
+import numpy as np  # Added numpy import
 
 # suppress warnings
 import warnings
@@ -140,9 +141,7 @@ class EmailResponseRetriever:
 
 class PolicyRetriever:
     def __init__(self):
-        self.encoder = SentenceTransformer(
-            "all-MiniLM-L6-v2", use_auth_token=HGToken
-        )
+        self.encoder = SentenceTransformer("all-MiniLM-L6-v2", use_auth_token=HGToken)
         # Sample medical policies - in production, this would come from a database
         self.policies = {
             "privacy": """
@@ -198,91 +197,169 @@ class EmailAgent:
     def __init__(self, role, client, policy_retriever=None, example_retriever=None):
         self.role = role
         self.client = client
-        self.policy_retriever = policy_retriever
+        self.policy_retriever = policy_retriever or PolicyRetriever()
         self.example_retriever = example_retriever
 
-    def process(self, content):
-        # Get relevant policies if policy_retriever is available
-        relevant_policies = ""
-        if self.policy_retriever and self.role in ["analyzer", "drafter"]:
-            relevant_policies = self.policy_retriever.get_relevant_policy(content)
-        
-        # Get relevant examples if example_retriever is available and role is drafter
-        relevant_examples = ""
-        if self.example_retriever and self.role == "drafter":
-            relevant_examples = self.example_retriever.get_relevant_example(content)
-        
-        prompts = {
-            # Analyzer prompt - extracts key information from email
-            "analyzer": """SYSTEM: You are an expert email analyzer with years of experience in professional communication. Your role is to break down emails into their key components and provide clear, actionable insights.
-
-            As an email analyzer, examine this email content and extract:
-            1. Main topics and key points
-            2. Urgency level
-            3. Required actions
-            4. Tone of the message
+        # Move prompts to be an instance variable
+        self.prompts = {
+            "analyzer": """SYSTEM: You are an expert email analyzer for a medical company.
+            Your role is to break down emails into key components and provide clear, actionable insights.
 
             INSTRUCTIONS:
-            • Focus on extracting factual information without interpretation
-            • Identify any deadlines or time-sensitive elements
-            • Categorize the email priority (high/medium/low)
-            • Show output only - no explanations or additional commentary
+            • Extract main topics and key points from the email
+            • Determine urgency level (Low, Medium, High)
+            • List all required actions in bullet points
+            • Analyze tone of the message (formal, informal, urgent, etc.)
+            • Identify relevant company policies that apply
+            • Highlight any compliance concerns
+            • Limit response to 50 words maximum
+            • Show response only without additional commentary
 
-            Email: {content}
-
-            Relevant policies:
+            CONTEXT (Company Policies):
             {policies}
 
-            Provide a structured analysis.""",
-            # Drafter prompt - creates email response based on analysis
-            "drafter": """SYSTEM: You are a professional email response specialist with extensive experience in business communication. Your role is to craft clear, effective, and appropriate email responses based on provided analysis.
+            Email: {content}""",
+            "drafter": """SYSTEM: You are a professional email response specialist for a medical company.
+            Draft responses that align with our policies and maintain HIPAA compliance.
 
-            As an email response drafter, using this analysis: {content}
-            
-            Relevant policies:
+            INSTRUCTIONS:
+            • Address all key points from the original email
+            • Ensure response aligns with provided company policies
+            • Verify HIPAA compliance in all content
+            • Include clear next steps and action items
+            • Maintain professional and empathetic tone
+            • Add necessary disclaimers where applicable
+            • Limit response to 50 words maximum
+            • Show response only without additional commentary
+
+            CONTEXT (Relevant Policies):
             {policies}
-            
-            Similar email examples for reference:
-            {examples}
 
-            Create a professional email response that:
-            1. Addresses all key points
-            2. Matches the appropriate tone
-            3. Includes clear next steps
-            4. References relevant policies when applicable
+            Based on this analysis: {content}""",
+            "reviewer": """SYSTEM: You are a senior email quality assurance specialist for a medical company.
+            Ensure responses meet healthcare communication standards and comply with policies.
 
             INSTRUCTIONS:
-            • Maintain consistent professional tone throughout response
-            • Include specific details from the analysis
-            • End with clear actionable next steps
-            • Show output only - provide just the email response
+            • Verify compliance with all relevant policies
+            • Check for HIPAA violations
+            • Assess professional tone and clarity
+            • Review completeness of response
+            • Evaluate appropriate handling of sensitive information
+            • Confirm all action items are clearly stated
+            • Limit response to 50 words maximum
+            • Show response only without additional commentary
 
-            Write the complete response.""",
-            # Reviewer prompt - evaluates the draft response
-            "reviewer": """SYSTEM: You are a senior email quality assurance specialist with a keen eye for detail and professional standards. Your role is to ensure all email responses meet the highest standards of business communication.
+            CONTEXT (Relevant Policies):
+            {policies}
 
-            As an email quality reviewer, evaluate this draft response: {content}
-            Check for:
-            1. Professionalism and appropriateness
-            2. Completeness (all points addressed)
-            3. Clarity and tone
-            4. Potential improvements
+            Evaluate this draft response: {content}""",
+            "sentiment": """SYSTEM: You are an expert in analyzing email sentiment and emotional context in
+            healthcare communications.
 
             INSTRUCTIONS:
-            • Verify all original questions/requests are addressed
-            • Check for appropriate formality and politeness
-            • Ensure response is concise and well-structured
-            • Show output only - return APPROVED or NEEDS_REVISION with brief feedback
+            • Analyze overall sentiment (positive, negative, neutral)
+            • Identify emotional undertones
+            • Detect urgency or stress indicators
+            • Assess patient/sender satisfaction level
+            • Flag any concerning language
+            • Recommend tone adjustments if needed
+            • Limit response to 50 words maximum
+            • Show response only without additional commentary
 
-            Return either APPROVED or NEEDS_REVISION with specific feedback.""",
+            Email: {content}""",
+            "policy_justifier": """SYSTEM: You are a policy expert. In 2 lines, explain why the following policies are relevant
+            to this email content. Be specific and concise.
+
+            Email content: {content}
+            Selected policies: {policies}""",
         }
 
-        return prompt_llm(prompts[self.role].format(
-            content=content, 
-            policies=relevant_policies,
-            examples=relevant_examples
-        ))
+    def process(self, content):
+        # Get relevant policies for the email content
+        relevant_policies = self.policy_retriever.get_relevant_policy(content)
+        return prompt_llm(
+            self.prompts[self.role].format(content=content, policies=relevant_policies)
+        )
 
+class EmailProcessingSystem:
+    def __init__(self, client):
+        self.analyzer = EmailAgent("analyzer", client)
+        self.drafter = EmailAgent("drafter", client)
+        self.reviewer = EmailAgent("reviewer", client)
+        self.policy_justifier = EmailAgent("policy_justifier", client)
+
+    def process_email(self, email_content):
+        max_attempts = 3
+        attempt = 1
+
+        while attempt <= max_attempts:
+            print(f"\nProcessing email - Attempt {attempt}")
+
+            # Step 1: Analyze email
+            print("\nAnalyzing email content...")
+            analysis = self.analyzer.process(email_content)
+
+            # Step 2: Analyze sentiment
+            print("\nAnalyzing sentiment...")
+            sentiment = prompt_llm(
+                self.analyzer.prompts["sentiment"].format(content=email_content)
+            )
+
+            # Step 3: Draft response
+            print("\nDrafting response based on analysis...")
+            draft = self.drafter.process(analysis)
+
+            # Get relevant policies for display
+            relevant_policies = self.analyzer.policy_retriever.get_relevant_policy(
+                email_content
+            )
+
+            # Add policy justification
+            policy_justification = self.policy_justifier.process(
+                f"Email: {email_content}\nPolicies: {relevant_policies}"
+            )
+
+            # Display formatted output
+            print("\n" + "=" * 50)
+            print("ORIGINAL EMAIL:\n")
+            print(email_content)
+            print("\n" + "=" * 50)
+            print("DRAFT RESPONSE:\n")
+            print(draft)
+            print("\n" + "=" * 50)
+            print("POLICY USED:\n")
+            print(relevant_policies)
+            print("\nPOLICY JUSTIFICATION:\n")
+            print(policy_justification)
+            print("\n" + "=" * 50)
+
+            # Ask user for feedback on the draft
+            print("\nAre you satisfied with this draft? (y/n)")
+            user_feedback = input().lower()
+
+            if user_feedback != "y":
+                print("\nMoving to next attempt...")
+                attempt += 1
+                continue
+
+            # Step 4: Review response
+            print("\nReviewing draft response...")
+            review = self.reviewer.process(draft)
+            print("\nReview completed. Feedback:")
+            print(review)
+
+            if "APPROVED" in review:
+                return {
+                    "status": "success",
+                    "analysis": analysis,
+                    "final_draft": draft,
+                    "review": review,
+                }
+            else:
+                print(f"\nRevision needed. Feedback: {review}")
+                attempt += 1
+
+        return {"status": "failed", "message": "Maximum revision attempts reached"}
 
 def process_email(email_content):
     # Create policy retriever and example retriever
@@ -303,6 +380,24 @@ def process_email(email_content):
 
     return analysis, draft, relevant_policies, relevant_examples
 
+# Add the function to process emails with the new system
+def process_emails(emails_list):
+    email_system = EmailProcessingSystem(client)
+    results = {}
+
+    for email in emails_list:
+        print(f"\nProcessing email: {email}")
+        print("\nWould you like to process this email? (y/n)")
+
+        user_input = input().lower()
+        if user_input != "y":
+            print("Skipping this email...")
+            continue
+
+        result = email_system.process_email(email)
+        results[email] = result
+
+    return results
 
 # Example emails
 example_emails = [
@@ -317,6 +412,16 @@ The production server is currently experiencing issues. We need immediate assist
 Just wanted to follow up on the Q4 report. When can we expect the first draft for review?
 Thanks,
 Mike""",
+]
+
+# Add medical context examples
+medical_example_emails = [
+    """Subject: Patient Data Access Request
+    Hello, I'm a referring physician and need access to my patient's recent test results.
+    What's the procedure for requesting these records? Thanks.""",
+    """Subject: Insurance Coverage Question
+    Hi, I'm scheduled for a procedure next week and wanted to confirm if my insurance
+    is accepted at your facility. I have BlueCross BlueShield. Best regards.""",
 ]
 
 
@@ -381,4 +486,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    print("\n\nWelcome to the Medical Company Email Processing System!\n")
+    # Choose which interface to use - uncomment one of these
+    main()  # Launch the Gradio interface
+    # results = process_emails(medical_example_emails)  # Use command line interface
