@@ -3,6 +3,7 @@ from ApiKey import API_KEY, HGToken
 import requests
 from PIL import Image
 import numpy as np  # Added numpy import
+import sys  # Added sys import
 
 # suppress warnings
 import warnings
@@ -439,6 +440,40 @@ class EmailDemo:
 
 def main():
     print("LLM Ready!")
+    
+    # Test EmailResponseRetriever if specified
+    if len(sys.argv) > 1 and sys.argv[1] == "--test-retriever":
+        # Example usage
+        print("\nTesting EmailResponseRetriever...")
+        retriever = EmailResponseRetriever()
+
+        # Test queries with expected example matches
+        test_queries = [
+            "My package hasn't arrived yet",
+            "I got a broken item in the mail",
+            "What sizes do you have?",
+            "The app keeps crashing",
+        ]
+
+        for query in test_queries:
+            # Get similarity scores for all examples
+            query_embedding = retriever.encoder.encode(query)
+            similarities = {
+                k: cosine_similarity([query_embedding], [emb])[0][0]
+                for k, emb in retriever.example_embeddings.items()
+            }
+
+            # Get the most relevant example and its score
+            best_match = max(similarities.items(), key=lambda x: x[1])
+            example_name, score = best_match
+
+            print(f"\nQuery: {query}")
+            print("-" * 80)
+            print(f"Best matching example: {example_name}")
+            print(f"Similarity score: {score:.3f}")
+            print(f"Example content:\n{retriever.examples[example_name]}")
+            print("-" * 80)
+        return
     
     demo_state = EmailDemo()
 
