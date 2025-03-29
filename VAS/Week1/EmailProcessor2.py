@@ -10,6 +10,9 @@ warnings.filterwarnings("ignore")
 try:
     import gradio as gr
     from together import Together
+    import sentence_transformers
+    from sentence_transformers import SentenceTransformer
+    from sklearn.metrics.pairwise import cosine_similarity
 except ImportError:
     # Note: The pip install commands below won't work in a regular Python script
     # You'll need to install these packages before running this script
@@ -17,8 +20,11 @@ except ImportError:
     import subprocess
     subprocess.check_call(["pip", "install", "-q", "together"])
     subprocess.check_call(["pip", "install", "-q", "gradio"])
+    subprocess.check_call(["pip", "install", "-q", "sentence-transformers"])
     import gradio as gr
     from together import Together
+    from sentence_transformers import SentenceTransformer
+    from sklearn.metrics.pairwise import cosine_similarity
 
 # Get Client
 client = Together(api_key=API_KEY)
@@ -65,12 +71,74 @@ def gen_image(prompt, width=256, height=256):
 
     return img
 
+class PolicyRetriever:
+    def __init__(self):
+        self.encoder = SentenceTransformer(
+            "all-MiniLM-L6-v2", use_auth_token=HGToken
+        )
+        # Sample medical policies - in production, this would come from a database
+        self.policies = {
+            "privacy": """
+                Patient Privacy Policy:
+                - All patient information is confidential and protected under HIPAA
+                - Access to medical records requires patient consent
+                - Data sharing with third parties strictly regulated
+            """,
+            "appointments": """
+                Appointment Policy:
+                - 24-hour notice required for cancellations
+                - Telehealth options available for eligible consultations
+                - Emergency cases prioritized based on severity
+            """,
+            "insurance": """
+                Insurance Policy:
+                - We accept major insurance providers
+                - Pre-authorization required for specific procedures
+                - Co-pay due at time of service
+            """,
+            "medication": """
+                Medication Policy:
+                - Prescription refills require 48-hour notice
+                - Controlled substances have strict monitoring protocols
+                - Generic alternatives offered when available
+            """,
+        }
+        # Pre-compute embeddings for policies
+        self.policy_embeddings = {
+            k: self.encoder.encode(v) for k, v in self.policies.items()
+        }
+
+    def get_relevant_policy(self, query, top_k=2):
+        query_embedding = self.encoder.encode(query)
+        similarities = {
+            k: cosine_similarity([query_embedding], [emb])[0][0]
+            for k, emb in self.policy_embeddings.items()
+        }
+        sorted_policies = sorted(similarities.items(), key=lambda x: x[1], reverse=True)
+
+        relevant_policies = []
+        for policy_name, score in sorted_policies[:top_k]:
+            if score > 0.3:  # Similarity threshold
+                relevant_policies.append(self.policies[policy_name])
+
+        return (
+            "\n\n".join(relevant_policies)
+            if relevant_policies
+            else "No relevant policy found."
+        )
+
 class EmailAgent:
-    def __init__(self, role, client):
+    def __init__(self, role, client, policy_retriever=None):
         self.role = role
         self.client = client
+        self.policy_retriever = policy_retriever
 
     def process(self, content):
+        # Get relevant policies if policy_retriever is available
+        relevant_policies = ""
+        if self.policy_retriever and self.role in ["analyzer", "drafter"]:
+            relevant_policies = self.policy_retriever.get_relevant_policy(content)
+        
         prompts = {
             # Analyzer prompt - extracts key information from email
             "analyzer": """SYSTEM: You are an expert email analyzer with years of experience in professional communication. Your role is to break down emails into their key components and provide clear, actionable insights.
@@ -89,15 +157,23 @@ class EmailAgent:
 
             Email: {content}
 
+            Relevant policies:
+            {policies}
+
             Provide a structured analysis.""",
             # Drafter prompt - creates email response based on analysis
             "drafter": """SYSTEM: You are a professional email response specialist with extensive experience in business communication. Your role is to craft clear, effective, and appropriate email responses based on provided analysis.
 
             As an email response drafter, using this analysis: {content}
+            
+            Relevant policies:
+            {policies}
+
             Create a professional email response that:
             1. Addresses all key points
             2. Matches the appropriate tone
             3. Includes clear next steps
+            4. References relevant policies when applicable
 
             INSTRUCTIONS:
             • Maintain consistent professional tone throughout response
@@ -125,19 +201,25 @@ class EmailAgent:
             Return either APPROVED or NEEDS_REVISION with specific feedback.""",
         }
 
-        return prompt_llm(prompts[self.role].format(content=content))
+        return prompt_llm(prompts[self.role].format(content=content, policies=relevant_policies))
 
 
 def process_email(email_content):
+    # Create policy retriever
+    policy_retriever = PolicyRetriever()
+    
+    # Get relevant policies
+    relevant_policies = policy_retriever.get_relevant_policy(email_content)
+    
     # Create agents
-    analyzer = EmailAgent("analyzer", client)
-    drafter = EmailAgent("drafter", client)
+    analyzer = EmailAgent("analyzer", client, policy_retriever)
+    drafter = EmailAgent("drafter", client, policy_retriever)
 
     # Process email
     analysis = analyzer.process(email_content)
     draft = drafter.process(analysis)
 
-    return analysis, draft
+    return analysis, draft, relevant_policies
 
 
 # Example emails
@@ -193,6 +275,11 @@ def main():
             draft_output = gr.Textbox(
                 lines=8, label="✉️ Draft Response", show_copy_button=True
             )
+            
+        with gr.Row():
+            policy_output = gr.Textbox(
+                lines=6, label="📋 Relevant Policies", show_copy_button=True
+            )
 
         # Set up event handlers
         next_button.click(
@@ -200,7 +287,9 @@ def main():
         )
 
         process_button.click(
-            process_email, inputs=[email_input], outputs=[analysis_output, draft_output]
+            process_email, 
+            inputs=[email_input], 
+            outputs=[analysis_output, draft_output, policy_output]
         )
 
     demo.launch()
