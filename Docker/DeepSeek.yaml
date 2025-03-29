@@ -1,0 +1,74 @@
+# Run Ollama and open-webui to run deepseek-r1 locally.
+
+services:
+
+  ollama:
+    container_name: ollama
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ./run/ollama:/root/.ollama
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=1  # Ensure the container sees all GPUs      
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+              options: { "device": "1" }
+
+
+  open-webui:
+    container_name: open-webui
+    image: ghcr.io/open-webui/open-webui:latest
+    ports:
+      - "8080:8080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=0
+      - NVIDIA_DRIVER_CAPABILITIES=all
+      - COMFYUI_BASE_URL="http://host.docker.internal:7860/"
+      - ENABLE_IMAGE_GENERATION="True"
+
+    volumes:
+      - ./run/open-webui:/app/backend/data
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+              # Some versions support specifying device_ids via options:
+              options: { "device": "0" }
+
+  comfyui-nvidia:
+    image: mmartial/comfyui-nvidia-docker:latest
+    container_name: comfyui-nvidia
+    ports:
+      - 8188:8188
+    volumes:
+      - ./run/comfy:/comfy/mnt
+    environment:
+      - WANTED_UID=1000
+      - WANTED_GID=1000
+      - SECURITY_LEVEL=normal
+      - NVIDIA_VISIBLE_DEVICES=0
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+              options: { "device": "0" }
+
+volumes:
+  open-webui:
+  ollama:
+  comfy:
