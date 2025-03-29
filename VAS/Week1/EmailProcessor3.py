@@ -1,3 +1,6 @@
+# RAG to find the Best Matching Policy
+# - This code finds the most relevant medical policy based on a user's question by comparing the meaning of their query with stored policies using AI-powered text similarity.
+# - It processes example questions, retrieves the best-matching policy, and displays its content along with a similarity score to show how well the policy matches the question.
 from ApiKey import API_KEY, HGToken
 # import libraries
 import requests
