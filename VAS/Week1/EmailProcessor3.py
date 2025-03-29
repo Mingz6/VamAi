@@ -194,6 +194,38 @@ class PolicyRetriever:
             else "No relevant policy found."
         )
 
+
+# Test functionality for PolicyRetriever
+if __name__ == "__main__":
+    # Example usage
+    retriever = PolicyRetriever()
+
+    # Test queries with expected policy matches
+    test_queries = [
+        "I need to cancel my appointment tomorrow morning",
+        "Do you share my medical information with other doctors?",
+        "When do I need to pay my insurance copay?",
+        "How can I get my prescription refilled?",
+    ]
+
+    for query in test_queries:
+        # Get similarity scores for all policies
+        query_embedding = retriever.encoder.encode(query)
+        similarities = {
+            k: cosine_similarity([query_embedding], [emb])[0][0]
+            for k, emb in retriever.policy_embeddings.items()
+        }
+
+        # Get the most relevant policy and its score
+        best_match = max(similarities.items(), key=lambda x: x[1])
+        policy_name, score = best_match
+
+        print(f"\nQuery: {query}")
+        print(f"Best matching policy: {policy_name}")
+        print(f"Similarity score: {score:.3f}")
+        print(f"Policy content:\n{retriever.policies[policy_name]}")
+        print("-" * 80)
+
 class EmailAgent:
     def __init__(self, role, client, policy_retriever=None, example_retriever=None):
         self.role = role
