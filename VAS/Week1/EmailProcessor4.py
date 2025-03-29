@@ -1,3 +1,8 @@
+# RAG that Finds the Best Email Response
+# - This program finds the most relevant pre-written email response based on a user's question.
+# - It uses a language model to compare the question with stored email examples and returns the best match.
+# Test case: sample queries ("My package hasn't arrived yet", "I got a broken item in the mail", "What sizes do you have?", and "The app keeps crashing")
+
 from ApiKey import API_KEY, HGToken
 # import libraries
 import requests
