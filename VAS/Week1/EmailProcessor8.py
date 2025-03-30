@@ -97,11 +97,66 @@ class EmailResponseRetriever:
             else "No relevant example found."
         )
 
+class PolicyRetriever:
+    def __init__(self):
+        self.encoder = SentenceTransformer("all-MiniLM-L6-v2", use_auth_token=HGToken)
+        # Sample medical policies - in production, this would come from a database
+        self.policies = {
+            "privacy": """
+                Patient Privacy Policy:
+                - All patient information is confidential and protected under HIPAA
+                - Access to medical records requires patient consent
+                - Data sharing with third parties strictly regulated
+            """,
+            "appointments": """
+                Appointment Policy:
+                - 24-hour notice required for cancellations
+                - Telehealth options available for eligible consultations
+                - Emergency cases prioritized based on severity
+            """,
+            "insurance": """
+                Insurance Policy:
+                - We accept major insurance providers
+                - Pre-authorization required for specific procedures
+                - Co-pay due at time of service
+            """,
+            "medication": """
+                Medication Policy:
+                - Prescription refills require 48-hour notice
+                - Controlled substances have strict monitoring protocols
+                - Generic alternatives offered when available
+            """,
+        }
+        # Pre-compute embeddings for policies
+        self.policy_embeddings = {
+            k: self.encoder.encode(v) for k, v in self.policies.items()
+        }
+
+    def get_relevant_policy(self, query, top_k=2):
+        query_embedding = self.encoder.encode(query)
+        similarities = {
+            k: cosine_similarity([query_embedding], [emb])[0][0]
+            for k, emb in self.policy_embeddings.items()
+        }
+        sorted_policies = sorted(similarities.items(), key=lambda x: x[1], reverse=True)
+
+        relevant_policies = []
+        for policy_name, score in sorted_policies[:top_k]:
+            if score > 0.3:  # Similarity threshold
+                relevant_policies.append(self.policies[policy_name])
+
+        return (
+            "\n\n".join(relevant_policies)
+            if relevant_policies
+            else "No relevant policy found."
+        )
+
 class EmailAgent:
     def __init__(self, role, client):
         self.role = role
         self.client = client
         self.response_retriever = EmailResponseRetriever()
+        self.policy_retriever = PolicyRetriever()
 
         self.prompts = {
             "analyzer": """SYSTEM: You are an expert email analyzer for a medical company.
@@ -120,6 +175,9 @@ class EmailAgent:
             SIMILAR PAST RESPONSES:
             {examples}
 
+            RELEVANT POLICIES:
+            {policies}
+
             Email: {content}""",
             "drafter": """SYSTEM: You are a professional email response specialist for a medical company.
             Draft responses that align with our past successful responses while maintaining HIPAA compliance.
@@ -137,6 +195,9 @@ class EmailAgent:
             SIMILAR PAST RESPONSES:
             {examples}
 
+            RELEVANT POLICIES:
+            {policies}
+
             Based on this analysis: {content}""",
             "reviewer": """SYSTEM: You are a senior email quality assurance specialist for a medical company.
             Ensure responses meet healthcare communication standards and match our friendly tone.
@@ -153,6 +214,9 @@ class EmailAgent:
 
             SIMILAR PAST RESPONSES:
             {examples}
+
+            RELEVANT POLICIES:
+            {policies}
 
             Evaluate this draft response: {content}""",
             "sentiment": """SYSTEM: You are an expert in analyzing email sentiment and emotional context in
@@ -179,8 +243,9 @@ class EmailAgent:
     def process(self, content):
         # Get relevant example responses for the email content
         relevant_examples = self.response_retriever.get_relevant_response(content)
+        relevant_policies = self.policy_retriever.get_relevant_policy(content)
         return prompt_llm(
-            self.prompts[self.role].format(content=content, examples=relevant_examples),
+            self.prompts[self.role].format(content=content, examples=relevant_examples, policies=relevant_policies),
             self.client
         )
 
