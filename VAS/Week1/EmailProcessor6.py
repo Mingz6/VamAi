@@ -1,3 +1,7 @@
+# Sample questions: I want my medical records
+# AI Email Responder with Past Examples
+# - This program retrieves and adapts past email responses to draft new replies while ensuring compliance with healthcare policies.
+# - It analyzes the email, finds similar past responses, drafts a reply in a friendly tone, and reviews it for accuracy and compliance.
 from ApiKey import API_KEY, HGToken
 # import libraries
 import requests
@@ -78,6 +82,52 @@ class EmailResponseRetriever:
         self.encoder = SentenceTransformer("all-MiniLM-L6-v2", use_auth_token=HGToken)
         # Sample email responses - in production, this would come from a database
         self.examples = {
+            "medical_records": """
+                ORIGINAL EMAIL:
+                Hey there, I was hoping to get my medical records. What do I need to do?
+
+                MY RESPONSE:
+                Hi! Happy to help you get those records. We just need a few quick things:
+                1. Your signed OK (we'll send you the form)
+                2. A quick form to fill out
+                3. Your ID
+                Just upload everything to our secure portal and we'll take care of the rest! Let me know if you need help.
+            """,
+            "insurance_verification": """
+                ORIGINAL EMAIL:
+                Quick question - do you guys take Aetna insurance?
+
+                MY RESPONSE:
+                Hey there! Yes, we work with Aetna and most other major insurance companies.
+                Could you shoot me your:
+                - Member ID
+                - Group number
+                I'll double-check everything and get back to you super quick (usually within a day).
+                Sound good?
+            """,
+            "appointment_scheduling": """
+                ORIGINAL EMAIL:
+                Something came up and I need to move my appointment. Help!
+
+                MY RESPONSE:
+                Hey! No worries at all - life happens! 😊
+                I've got a couple of spots open:
+                - Tuesday @ 2pm
+                - Wednesday morning at 10am
+                Just let me know what works better for you and I'll get it switched right away!
+            """,
+            "medication_refill": """
+                ORIGINAL EMAIL:
+                Running low on my meds - need a refill asap!
+
+                MY RESPONSE:
+                Hey! Thanks for the heads up about your meds. I'm on it!
+                Here's what's happening next:
+                1. We'll review your refill request today
+                2. Give your pharmacy a call
+                3. They should have it ready in 1-2 days
+                Need it sooner? Just let me know!
+            """,
             "late_delivery": """
                 ORIGINAL EMAIL:
                 I haven't received my order yet and it's been 2 weeks. This is unacceptable.
@@ -114,7 +164,7 @@ class EmailResponseRetriever:
                 I understand how frustrating technical issues can be. Let's resolve this together.
                 First, please try clearing your cache and restarting the application.
                 If that doesn't work, could you send me your error log? You can find it at Settings > Help > Export Log.
-            """,
+            """
         }
         # Pre-compute embeddings for examples
         self.example_embeddings = {
@@ -139,6 +189,10 @@ class EmailResponseRetriever:
             if relevant_examples
             else "No relevant example found."
         )
+
+    # Add the alias method for compatibility
+    def get_relevant_response(self, query, top_k=2):
+        return self.get_relevant_example(query, top_k)
 
 class PolicyRetriever:
     def __init__(self):
