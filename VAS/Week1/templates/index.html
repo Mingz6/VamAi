@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Email Processing System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card {
+            margin-bottom: 20px;
+        }
+        .email-sample {
+            cursor: pointer;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .email-sample:hover {
+            background-color: #f8f9fa;
+        }
+        #processingSpinner {
+            display: none;
+        }
+        .section-card {
+            border-left: 4px solid #007bff;
+        }
+        #stats {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Medical Email Processing System</h1>
+        
+        <div class="row">
+            <!-- Email Input Section -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5>Email Input</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="emailForm">
+                            <div class="mb-3">
+                                <label for="emailContent" class="form-label">Email Content:</label>
+                                <textarea class="form-control" id="emailContent" rows="8" placeholder="Type or select an email sample..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Process Email</button>
+                            <div class="spinner-border text-primary mt-2" role="status" id="processingSpinner">
+                                <span class="visually-hidden">Processing...</span>
+                            </div>
+                        </form>
+                        
+                        <div class="mt-3">
+                            <h6>Sample Emails:</h6>
+                            <div id="sampleEmails">
+                                {% for email in emails %}
+                                <div class="email-sample">{{ email }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Analysis Section -->
+            <div class="col-md-8">
+                <div class="card section-card">
+                    <div class="card-header">
+                        <h5>Email Analysis</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="analysisResult">No analysis yet.</div>
+                    </div>
+                </div>
+                
+                <div class="card section-card">
+                    <div class="card-header">
+                        <h5>Draft Response</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="draftResult">No draft yet.</div>
+                        <div class="mt-3" id="responseActions" style="display:none;">
+                            <button class="btn btn-success btn-sm" id="approveBtn">Approve</button>
+                            <button class="btn btn-danger btn-sm" id="disapproveBtn">Disapprove</button>
+                            <div id="stats"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card section-card">
+                    <div class="card-header">
+                        <h5>Quality Review</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="reviewResult">No review yet.</div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Relevant Policies</h5>
+                            </div>
+                            <div class="card-body">
+                                <div id="policiesResult">No policies found.</div>
+                                <div id="policyJustification" class="mt-2 text-muted"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Similar Responses</h5>
+                            </div>
+                            <div class="card-body">
+                                <div id="examplesResult">No examples found.</div>
+                                <div id="exampleJustification" class="mt-2 text-muted"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card section-card">
+                    <div class="card-header">
+                        <h5>Sentiment Analysis</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="sentimentResult">No sentiment analysis yet.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Load initial stats
+            updateStats();
+            
+            // Handle sample email selection
+            $('.email-sample').click(function() {
+                $('#emailContent').val($(this).text());
+            });
+            
+            // Handle form submission
+            $('#emailForm').submit(function(e) {
+                e.preventDefault();
+                
+                const emailContent = $('#emailContent').val();
+                if (!emailContent) {
+                    alert('Please enter an email content.');
+                    return;
+                }
+                
+                $('#processingSpinner').show();
+                
+                $.ajax({
+                    url: '/process',
+                    method: 'POST',
+                    data: { email: emailContent },
+                    success: function(response) {
+                        if (response.status === 'success') {
+                            displayResults(response);
+                            $('#responseActions').show();
+                        } else {
+                            alert('Error: ' + response.message);
+                        }
+                        $('#processingSpinner').hide();
+                    },
+                    error: function() {
+                        alert('Server error occurred.');
+                        $('#processingSpinner').hide();
+                    }
+                });
+            });
+            
+            // Handle approve/disapprove buttons
+            $('#approveBtn').click(function() {
+                $.post('/approve', function(data) {
+                    updateStatsFromData(data);
+                });
+            });
+            
+            $('#disapproveBtn').click(function() {
+                $.post('/disapprove', function(data) {
+                    updateStatsFromData(data);
+                });
+            });
+            
+            function displayResults(data) {
+                // Display analysis
+                $('#analysisResult').html('<pre>' + data.analysis + '</pre>');
+                
+                // Display draft
+                $('#draftResult').html('<pre>' + data.final_draft + '</pre>');
+                
+                // Display review
+                $('#reviewResult').html('<pre>' + data.review + '</pre>');
+                
+                // Display policies
+                $('#policiesResult').html('<pre>' + data.policies + '</pre>');
+                $('#policyJustification').text(data.policy_justification);
+                
+                // Display examples
+                $('#examplesResult').html('<pre>' + data.examples + '</pre>');
+                $('#exampleJustification').text(data.example_justification);
+                
+                // Display sentiment
+                $('#sentimentResult').html('<pre>' + data.sentiment + '</pre>');
+            }
+            
+            function updateStats() {
+                $.get('/stats', function(data) {
+                    updateStatsFromData(data);
+                });
+            }
+            
+            function updateStatsFromData(data) {
+                $('#stats').html('<b>Approved:</b> ' + data.approved_count + ' | <b>Disapproved:</b> ' + data.disapproved_count);
+            }
+        });
+    </script>
+</body>
+</html>
