@@ -238,6 +238,11 @@ class EmailAgent:
 
             Email content: {content}
             Selected examples: {examples}""",
+            "policy_justifier": """SYSTEM: You are a policy expert. In 2 lines, explain why the following policies are relevant
+            to this email content. Be specific and concise.
+
+            Email content: {content}
+            Selected policies: {policies}""",
         }
 
     def process(self, content):
@@ -252,23 +257,34 @@ class EmailAgent:
 
 class EmailProcessingSystem:
     def __init__(self, client):
+        self.analyzer = EmailAgent("analyzer", client)
         self.drafter = EmailAgent("drafter", client)
         self.reviewer = EmailAgent("reviewer", client)
         self.example_justifier = EmailAgent("example_justifier", client)
+        self.policy_justifier = EmailAgent("policy_justifier", client)
 
     def process_email(self, email_content):
-        # Step 1: Analyze sentiment
+        # Step 1: Analyze email content
+        print("\nAnalyzing email content...")
+        analysis = self.analyzer.process(email_content)
+
+        # Step 2: Analyze sentiment
         sentiment = prompt_llm(
-            self.drafter.prompts["sentiment"].format(content=email_content),
-            self.drafter.client
+            self.analyzer.prompts["sentiment"].format(content=email_content),
+            self.analyzer.client
         )
 
-        # Step 2: Draft response
-        draft = self.drafter.process(email_content)
+        # Step 3: Draft response
+        print("\nDrafting response based on analysis...")
+        draft = self.drafter.process(analysis)
 
-        # Get relevant example responses for display
-        relevant_examples = self.drafter.response_retriever.get_relevant_response(
-            email_content
+        # Get relevant policies and example responses for display
+        relevant_policies = self.analyzer.policy_retriever.get_relevant_policy(email_content)
+        relevant_examples = self.analyzer.response_retriever.get_relevant_response(email_content)
+
+        # Add policy justification
+        policy_justification = self.policy_justifier.process(
+            f"Email: {email_content}\nPolicies: {relevant_policies}"
         )
 
         # Add example justification
@@ -276,15 +292,19 @@ class EmailProcessingSystem:
             f"Email: {email_content}\nExamples: {relevant_examples}"
         )
 
-        # Step 3: Review response
+        # Step 4: Review response
         review = self.reviewer.process(draft)
 
         return {
             "status": "success",
+            "analysis": analysis,
             "final_draft": draft,
             "review": review,
+            "policies": relevant_policies,
             "examples": relevant_examples,
-            "justification": example_justification,
+            "policy_justification": policy_justification,
+            "example_justification": example_justification,
+            "sentiment": sentiment
         }
 
 
@@ -330,9 +350,12 @@ def create_gradio_interface(client):
         state["results"][email] = result
 
         return (
+            result["analysis"],
             result["final_draft"],
+            result["policies"],
             result["examples"],
-            result["justification"],
+            result["policy_justification"],
+            result["example_justification"],
             state["approved_count"],
             state["disapproved_count"],
         )
@@ -396,23 +419,43 @@ def create_gradio_interface(client):
             lines=4,
             container=True,
         )
-        examples = gr.Textbox(
-            label="📚 Similar Examples",
-            lines=8,
-            container=True,
-        )
-        justification = gr.Textbox(
-            label="💡 Example Justification",
-            lines=2,
-            container=True,
-        )
-
         with gr.Row():
             approve_btn = gr.Button(
                 "✅ Approve Draft", interactive=False, variant="success"
             )
             disapprove_btn = gr.Button(
                 "❌ Disapprove Draft", interactive=False, variant="stop"
+            )
+        
+        with gr.Row():
+            policy_output = gr.Textbox(
+                label="📋 Relevant Policies",
+                lines=4,
+                container=True,
+            )
+            examples = gr.Textbox(
+                label="📚 Similar Examples",
+                lines=4,
+                container=True,
+            )
+            
+        with gr.Row():
+            policy_justification = gr.Textbox(
+                label="💡 Policy Justification",
+                lines=2,
+                container=True,
+            )
+            example_justification = gr.Textbox(
+                label="💡 Example Justification",
+                lines=2,
+                container=True,
+            )
+
+        with gr.Row():
+            analysis_output = gr.Textbox(
+                label="📊 Analysis",
+                lines=4,
+                container=True,
             )
 
         # Event handlers
@@ -435,9 +478,12 @@ def create_gradio_interface(client):
             fn=process_current_email,
             inputs=[email_index],
             outputs=[
+                analysis_output,
                 draft_response,
+                policy_output,
                 examples,
-                justification,
+                policy_justification,
+                example_justification,
                 approved_count,
                 disapproved_count,
             ],
@@ -454,9 +500,12 @@ def create_gradio_interface(client):
             fn=process_current_email,
             inputs=[email_index],
             outputs=[
+                analysis_output,
                 draft_response,
+                policy_output,
                 examples,
-                justification,
+                policy_justification,
+                example_justification,
                 approved_count,
                 disapproved_count,
             ],
