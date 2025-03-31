@@ -384,6 +384,27 @@ def create_gradio_interface(client):
         gr.Markdown("# 🏥 Medical Email Processing System")
         gr.Markdown("### Process and review medical email responses with AI assistance")
 
+        # Add custom CSS for better button visibility in dark mode
+        gr.HTML("""
+        <style>
+        .high-contrast-button {
+            background-color: #28a745 !important; 
+            color: white !important;
+            font-weight: bold !important;
+            border: 2px solid white !important;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5) !important;
+        }
+        /* Safari dark mode specific styles */
+        @media (prefers-color-scheme: dark) {
+            .high-contrast-button {
+                background-color: #2dbd4d !important;
+                border: 2px solid #ffffff !important;
+                box-shadow: 0 0 8px rgba(255, 255, 255, 0.7) !important;
+            }
+        }
+        </style>
+        """)
+
         with gr.Row():
             email_index = gr.Slider(
                 minimum=0,
@@ -421,10 +442,16 @@ def create_gradio_interface(client):
         )
         with gr.Row():
             approve_btn = gr.Button(
-                "✅ Approve Draft", interactive=False, variant="success"
+                "✅ Approve Draft", 
+                interactive=False, 
+                elem_id="approve-button",
+                elem_classes="high-contrast-button",
+                scale=1
             )
             disapprove_btn = gr.Button(
-                "❌ Disapprove Draft", interactive=False, variant="stop"
+                "❌ Disapprove Draft", 
+                interactive=False, 
+                variant="stop"
             )
         
         with gr.Row():
