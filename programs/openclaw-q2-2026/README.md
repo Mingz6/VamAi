@@ -21,7 +21,7 @@ VAM AI Meetup hackathon, Apr 24 – May 1, 2026.
 - `cartclaw/` — our team repo (will clone or fork once Sino sets it up)
 - `lectures/` — whisper transcripts + video-watcher digests
 - [`projects-summary.md`](./projects-summary.md) — snapshot of all listed projects and where `CartClaw` fits
-- [`../notes/projects/openclaw-hackathon-q2-2026-log.md`](../notes/projects/openclaw-hackathon-q2-2026-log.md) — personal log + open questions
+- [`../../notes/projects/openclaw-hackathon-q2-2026-log.md`](../../notes/projects/openclaw-hackathon-q2-2026-log.md) — personal log + open questions
 
 ## Lecture catch-up
 
