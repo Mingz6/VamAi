@@ -1,0 +1,209 @@
+{% extends "base.html" %}
+{% block title %}MoneyClaw — Access Gmail{% endblock %}
+{% block body_extra_style %}display: flex; flex-direction: column; height: 100vh;{% endblock %}
+{% block extra_style %}
+    .sidebar { width: 300px; }
+    .main-panel { flex: 1; overflow-y: auto; padding: 1.8rem 2rem; }
+    .key-row { display: flex; flex-direction: column; gap: 0.3rem; }
+    .key-input-row { display: flex; gap: 0.4rem; align-items: center; }
+    .key-input-row textarea { flex: 1; min-width: 0; font-size: 0.78rem; height: 70px; }
+    .btn-reveal { background: #fffbf0; border: 1.5px solid #ffe9a0; border-radius: 8px; padding: 0.4rem 0.6rem; font-size: 0.75rem; cursor: pointer; white-space: nowrap; flex-shrink: 0; align-self: flex-start; }
+    .btn-reveal:hover { background: #fff3cc; }
+    .btn-save-key { background: #f5a623; color: #fff; border: none; border-radius: 8px; font-size: 0.82rem; font-weight: 700; cursor: pointer; width: 100%; padding: 0.6rem; }
+    .btn-save-key:hover { opacity: 0.88; }
+    .key-status { font-size: 0.72rem; color: #059669; font-weight: 600; }
+    .key-status.missing { color: #dc2626; }
+    .setup-guide { background: #fffbf0; border: 1.5px solid #ffe9a0; border-radius: 10px; padding: 0.8rem 1rem; }
+    .guide-title { font-size: 0.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .steps { display: flex; flex-direction: column; gap: 0.35rem; padding: 0; }
+    .steps li { font-size: 0.78rem; color: #555; line-height: 1.45; list-style: none; padding-left: 0.9rem; position: relative; }
+    .steps li::before { content: "•"; position: absolute; left: 0; color: #f5a623; }
+    .steps code { background: #fff3cc; padding: 0.05rem 0.3rem; border-radius: 4px; font-size: 0.75rem; }
+    .field { display: flex; flex-direction: column; }
+    .results-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+    .results-header span { font-size: 0.78rem; font-weight: 700; color: #aaa; letter-spacing: 0.06em; }
+    .btn-download { background: #f5a623; color: #fff; border: none; border-radius: 8px; padding: 0.45rem 1rem; font-size: 0.82rem; font-weight: 700; cursor: pointer; }
+    .btn-download:hover { opacity: 0.88; }
+    .btn-run { background: #f5a623; color: #fff; border: none; border-radius: 8px; padding: 0.75rem; font-size: 0.95rem; font-weight: 700; cursor: pointer; width: 100%; }
+    .btn-run:hover { opacity: 0.88; } .btn-run:disabled { opacity: 0.5; cursor: not-allowed; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; border: 1.5px solid #ffe9a0; }
+    th { background: #fffbf0; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; color: #aaa; padding: 0.75rem 1rem; text-align: left; }
+    td { padding: 0.75rem 1rem; font-size: 0.87rem; border-top: 1px solid #fff3cc; }
+    tr:hover td { background: #fffbf0; }
+    .td-num { color: #aaa; } .td-from { font-weight: 600; }
+    .td-subject { max-width: 320px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .label-badge { display: inline-block; background: #d1fae5; color: #065f46; border-radius: 6px; font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.45rem; }
+    .empty { color: #bbb; text-align: center; margin-top: 4rem; font-size: 1rem; }
+{% endblock %}
+{% block content %}
+<div class="layout">
+  <aside class="sidebar">
+    <h1>Access Gmail</h1>
+    <p class="sidebar-desc">Fetch Gmail messages whose subject contains a keyword.</p>
+
+    <div class="field">
+      <label>SUBJECT KEYWORD</label>
+      <input type="text" id="subject" value="interac" placeholder="Subject keyword"/>
+    </div>
+    <div class="field">
+      <label>FROM (EMAIL)</label>
+      <input type="text" id="from_email" value="" placeholder="sender@example.com"/>
+    </div>
+    <div class="field">
+      <label>MAX RESULTS</label>
+      <input type="number" id="max_results" value="5" min="1" max="100"/>
+    </div>
+    <div class="field">
+      <label>DATE FROM</label>
+      <input type="date" id="date_from" value="2025-01-01"/>
+    </div>
+    <div class="field">
+      <label>DATE TO</label>
+      <input type="date" id="date_to" value="2025-01-31"/>
+    </div>
+
+    <button class="btn-run" id="run-btn" onclick="runFetch()">&#9654; Run</button>
+
+    <hr style="border:none;border-top:1.5px solid #ffe9a0;"/>
+
+    <div class="key-row">
+      <label>GOOGLE CREDENTIALS JSON <span id="cred-status" class="key-status missing">not set</span></label>
+      <div class="key-input-row">
+        <textarea id="cred-input" placeholder='Paste the full token JSON here...' style="display:none;"></textarea>
+      </div>
+      <button class="btn-reveal" id="cred-toggle" onclick="toggleCred()">Edit Credentials</button>
+    </div>
+    <button class="btn-save-key" id="cred-save" onclick="saveKey()" style="display:none;">Save Credentials</button>
+
+    <div class="setup-guide">
+      <div class="guide-title">📖 How to get credentials</div>
+      <ul class="steps">
+        <li>Go to <code>console.cloud.google.com</code></li>
+        <li><strong>APIs & Services → Library</strong> → enable <strong>Gmail API</strong></li>
+        <li><strong>OAuth consent screen</strong> → External → add Gmail scope & test user</li>
+        <li><strong>Credentials → Create → OAuth client ID</strong> → Desktop app</li>
+        <li>Run the auth flow once to generate a token JSON, then paste it above</li>
+      </ul>
+    </div>
+  </aside>
+
+  <div class="results-panel" id="results-panel">
+    <p class="empty">Configure inputs and click Run to fetch emails.</p>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}<script>
+  async function loadKey() {
+    const res = await fetch("/api/env/gmail");
+    const d = await res.json();
+    const st = document.getElementById("cred-status");
+    if (d.set) { st.textContent = "set ✓"; st.className = "key-status"; }
+    else { st.textContent = "not set"; st.className = "key-status missing"; }
+  }
+
+  function toggleCred() {
+    const ta = document.getElementById("cred-input");
+    const save = document.getElementById("cred-save");
+    const btn = document.getElementById("cred-toggle");
+    const visible = ta.style.display !== "none";
+    ta.style.display = visible ? "none" : "block";
+    save.style.display = visible ? "none" : "block";
+    btn.textContent = visible ? "Edit Credentials" : "Cancel";
+  }
+
+  async function saveKey() {
+    const val = document.getElementById("cred-input").value.trim();
+    if (!val) return;
+    await fetch("/api/env/gmail", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({credentials: val}) });
+    toggleCred();
+    loadKey();
+  }
+
+  document.addEventListener("DOMContentLoaded", loadKey);
+
+  async function runFetch() {
+    const btn = document.getElementById("run-btn");
+    btn.disabled = true;
+    btn.textContent = "Running...";
+    const panel = document.getElementById("results-panel");
+    panel.innerHTML = "";
+
+    const payload = {
+      subject: document.getElementById("subject").value,
+      from_email: document.getElementById("from_email").value,
+      max_results: parseInt(document.getElementById("max_results").value),
+      date_from: document.getElementById("date_from").value,
+      date_to: document.getElementById("date_to").value,
+    };
+
+    const t0 = Date.now();
+    try {
+      const res = await fetch("/api/gmail", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify(payload) });
+      const data = await res.json();
+      const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
+
+      if (data.error) {
+        panel.innerHTML = `<div class="error">${data.error}</div>`;
+      } else {
+        renderTable(panel, data.emails, elapsed);
+      }
+    } catch(e) {
+      panel.innerHTML = `<div class="error">${e.message}</div>`;
+    }
+
+    btn.disabled = false;
+    btn.textContent = "▶ Run";
+  }
+
+  function renderTable(panel, emails, elapsed) {
+    const header = `
+      <div class="results-header">
+        <span>RESULTS — ${emails.length} EMAIL${emails.length !== 1 ? "S" : ""} (${elapsed}s)</span>
+        <button class="btn-download" onclick="downloadCSV()">&#11015; Download</button>
+      </div>`;
+
+    if (!emails.length) {
+      panel.innerHTML = header + '<p class="empty">No emails found.</p>';
+      return;
+    }
+
+    const rows = emails.map((e, i) => `
+      <tr>
+        <td class="td-num">${i}</td>
+        <td class="td-from">${escHtml(senderName(e.from))}</td>
+        <td class="td-subject ${e.unread ? 'unread' : ''}">${escHtml(e.subject)}</td>
+        <td>${e.labels.map(l => `<span class="label-badge">${l}</span>`).join(" ")}</td>
+        <td>${escHtml(shortDate(e.date))}</td>
+      </tr>`).join("");
+
+    panel.innerHTML = header + `
+      <table>
+        <thead><tr><th>#</th><th>FROM</th><th>SUBJECT</th><th>LABELS</th><th>DATE</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+
+    window._emails = emails;
+  }
+
+  function senderName(from) {
+    const m = from.match(/^"?([^"<]+)"?\s*</);
+    return m ? m[1].trim() : from;
+  }
+  function shortDate(d) {
+    try { return new Date(d).toDateString().slice(4); } catch { return d; }
+  }
+  function escHtml(s) {
+    return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+
+  async function downloadCSV() {
+    const emails = window._emails || [];
+    const res = await fetch("/api/gmail/download", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ emails }),
+    });
+    const data = await res.json();
+    alert(data.message || data.error);
+  }
+</script>{% endblock %}

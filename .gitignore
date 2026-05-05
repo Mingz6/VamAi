@@ -6,4 +6,6 @@
 
 ApiKey.py
 config.json
-__pycache__
+__pycache__openclaw/comms/voice-memos/
+*.m4a
+*.qta

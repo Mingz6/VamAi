@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}MoneyClaw — Components{% endblock %}
+{% set active = 'components' %}
+{% block extra_style %}
+    .section { padding: 2.5rem 2.5rem; }
+    .section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
+    .section h2::after { content: ''; flex: 1; height: 1.5px; background: #ffe9a0; margin-left: 0.8rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1.2rem; }
+    .card { background: #fff; border: 1.5px solid #ffe9a0; border-radius: 14px; padding: 1.4rem 1.6rem; transition: box-shadow 0.15s; }
+    .card:hover { box-shadow: 0 4px 18px rgba(245,166,35,0.18); }
+    .card-top { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.5rem; }
+    .card-icon { font-size: 1.6rem; }
+    .card h3 { font-size: 1rem; font-weight: 700; }
+    .card p { font-size: 0.87rem; color: #666; line-height: 1.45; }
+    .section-data { background: #fffbf0; }
+    .section-agent { background: #fff; }
+    .section-tools { background: #fffbf0; }
+    footer { text-align: center; padding: 1.5rem; font-size: 0.85rem; color: #aaa; background: #fff; }
+{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>Components</h1>
+  <p>Reusable building blocks you can wire into your spending optimization flow.</p>
+</div>
+
+<section class="section section-data">
+  <h2>🟡 Data Connectors</h2>
+  <div class="grid">
+    <a href="/gmail" class="card" style="text-decoration:none;color:inherit;">
+      <div class="card-top"><span class="card-icon">📧</span><h3>Gmail</h3></div>
+      <p>Fetch transaction emails and receipts from Gmail by keyword or sender.</p>
+    </a>
+    <div class="card">
+      <div class="card-top"><span class="card-icon">📅</span><h3>Google Calendar</h3><span class="tag-todo" style="margin-left:auto;">not implemented yet</span></div>
+      <p>Pull upcoming meetings to correlate time spent with money spent.</p>
+    </div>
+    <a href="/notion" class="card" style="text-decoration:none;color:inherit;">
+      <div class="card-top"><span class="card-icon">📝</span><h3>Notion</h3></div>
+      <p>Read financial goals and budget pages from your Notion workspace.</p>
+    </a>
+  </div>
+</section>
+
+<section class="section section-agent">
+  <h2>🔵 Agent (Brain)</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-top"><span class="card-icon">🧠</span><h3>Memory</h3><span class="tag-todo" style="margin-left:auto;">not implemented yet</span></div>
+      <p>Persistent memory layer so the agent remembers past spending patterns and user preferences.</p>
+    </div>
+    <div class="card">
+      <div class="card-top"><span class="card-icon">🫀</span><h3>Soul</h3><span class="tag-todo" style="margin-left:auto;">not implemented yet</span></div>
+      <p>Editable persona and values that shape how the AI agent advises and communicates.</p>
+    </div>
+    <a href="/agent" class="card" style="text-decoration:none;color:inherit;">
+      <div class="card-top"><span class="card-icon">🤖</span><h3>AI Agent</h3><span class="tag-llm" style="margin-left:auto;">+ LLM</span></div>
+      <p>Core reasoning engine powered by OpenRouter + LangGraph that orchestrates all tools.</p>
+    </a>
+  </div>
+</section>
+
+<section class="section section-tools">
+  <h2>🔴 Tools (Services)</h2>
+  <div class="grid">
+    <a href="/search" class="card" style="text-decoration:none;color:inherit;">
+      <div class="card-top"><span class="card-icon">🔍</span><h3>Web Search</h3></div>
+      <p>Search the web for cheaper alternatives to current subscriptions and services.</p>
+    </a>
+    <a href="/telegram" class="card" style="text-decoration:none;color:inherit;">
+      <div class="card-top"><span class="card-icon">✈️</span><h3>Send to Telegram</h3></div>
+      <p>Push spending summaries and alerts directly to your Telegram chat.</p>
+    </a>
+    <div class="card">
+      <div class="card-top"><span class="card-icon">📄</span><h3>Create Report on Notion</h3><span class="tag-todo" style="margin-left:auto;">not implemented yet</span></div>
+      <p>Automatically generate a spending report page in Notion after each analysis.</p>
+    </div>
+    <a href="/dashboard" class="card" style="text-decoration:none;color:inherit;">
+      <div class="card-top"><span class="card-icon">📊</span><h3>Generate Dashboard</h3></div>
+      <p>Render an interactive spending dashboard as a web app with charts and breakdowns.</p>
+    </a>
+  </div>
+</section>
+<footer>© 2026 MoneyClaw. All rights reserved.</footer>
+{% endblock %}

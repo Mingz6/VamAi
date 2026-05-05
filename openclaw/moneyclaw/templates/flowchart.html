@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}MoneyClaw — Flowchart{% endblock %}
+{% block extra_style %}
+    .chart-wrap { display: flex; justify-content: center; align-items: center; padding: 2.5rem; }
+    .chart-wrap img { max-width: 100%; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.10); border: 1.5px solid #ffe9a0; }
+{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>Flowchart</h1>
+  <p>MoneyClaw system architecture — data sources, AI agent, and tools.</p>
+</div>
+<div class="chart-wrap">
+  <img src="/data/flowchart.jpg" alt="MoneyClaw Flowchart"/>
+</div>
+{% endblock %}

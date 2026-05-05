@@ -1,0 +1,3139 @@
+ All right, okay. So we can make this very interactive. So as I go along with like building
+ some components and talking to Cloud Code to build things for us, you can ask questions
+ at any time.
+ So Issam, I just have one question right there for you. So the other day, Pavel mentioned
+ that you can use Codex, which is equally as good.
+ Yeah.
+ So would you be giving the instructions, are the same instructions that are applicable
+ for Codex as well?
+ So I haven't used Codex, but since Pavel mentioned that they're equivalent, you could potentially
+ just use the same prompts.
+ Okay.
+ That's the one we'd be using for Cloud Code.
+ Got it.
+ Okay.
+ Yeah.
+ Okay.
+ So today we'll be building something called the MoneyClaw, which is about...
+ looking at your finances, like looking at your emails related to the amount of money you
+ have received or the amount of money you have given.
+ And then it analyzes that and it gives you a nice summary of these kinds of transactions,
+ and then send them to your Telegram and also generate a dashboard for that.
+ So this is what I'm going to be building.
+ So one of the tasks that we had was implementing that flowchart.
+ So this is the thing we're going to start with.
+ So we're going to implement a flowchart.
+ Let's me...
+ Excalibur is very nice for that.
+ Okay.
+ So let's create that flowchart.
+ So first, let's call this MoneyClaw.
+ And let me put some money in a second.
+ There you go, MoneyClaw.
+ And just better with me.
+ And this is for this MoneyClaw is like a Personal Assistant for Optimizing Spendings.
+ So this is the title.
+ And now we're going to put some flowchart with nodes and edges.
+ So remember when we talked about the flowchart includes the agent itself, like the AI model,
+ it also includes the data connectors and the tools.
+ So data connector could be Gmail.
+ And let's say this is where we gather all the transactions.
+ And then we can have, let's say, Google Calendar, which let's say contains some meetings.
+ Maybe based on the meetings, I mean, you don't have to really include that here.
+ But like, maybe the meetings can help you.
+ Let's say you're trying to optimize spendings or like you optimize your money.
+ Some meetings might be useful.
+ Some meetings might be not.
+ Let's say you're meeting with investors.
+ So you have to prioritize those first, for example.
+ So this is where the Google Calendar meetings can help with optimizing your spendings.
+ And then we can also have Notion.
+ So these are the data connectors.
+ Okay, Notion.
+ And let's say Notion has some of your high-level goals.
+ So a high-level goal is like how much you want to spend per month and what's your goal in like one year, two years, or three years.
+ So you can use that to guide your AI agent to give you the best next action items or what you need to prioritize so that you optimize your spending.
+ So it's just like a high-level goals could be your yearly goals, your monthly goals, and your daily and your weekly goals, for example.
+ So these are the data connectors.
+ And then we're going to add an AI agent.
+ And the service that we use for our AI agent is going to be OpenRouter plus LineGraph.
+ LineGraph is a nice Python library that allows you to implement good AI agents that are similar to cloud code.
+ So this is the AI agent that works in your app.
+ So you use cloud code, for example, to write your app.
+ But within the app itself, you can have an AI agent that does things for you, like summarize your transactions and so on.
+ So the data connectors, let's color code them as yellow.
+ And the AI agent is color coded as blue.
+ And then let's add some tools.
+ So a tool could be the web search.
+ So let's say, when you look at your Gmail and you look at your transactions,
+ some of the transactions could be like subscriptions you have to different services like Grave, Netflix, and so on.
+ So the web search can be used to see if there's any alternatives.
+ So let's say you're paying a lot for Netflix, let's say.
+ So the web search can find alternatives to Netflix based on your interest in terms of movies.
+ So maybe you don't need to subscribe to Netflix and you just need to,
+ you can just subscribe to, let's say, Amazon Prime.
+ Or to Grave, based on your interest in the type of movie.
+ So it might be able to help you reduce the amount of subscriptions that you have.
+ And now a lot of us have a lot of different subscriptions.
+ But that brings a question to me, Issam.
+ So doing the web search, right?
+ So this is an agent who, like, is that a second agent?
+ No, right?
+ It's only one agent who can perform this web search.
+ Exactly.
+ Yeah, yes, exactly.
+ Okay.
+ So you have one AI agent and it's orchestrating all these, like, tools and data connectors.
+ So when it color coded as red, that means it's a tool, like a service.
+ It's like web search.
+ Okay.
+ Another, yeah, exactly.
+ So another tool could be send to Telegram.
+ Oops.
+ Send to Telegram.
+ And this could be used for summarization.
+ And then you can have another tool, which is create report on Notion, which could have like,
+ which could summarize all your spendings.
+ Let me just make them all the same size.
+ And then you can have another tool, which is about generating a dashboard.
+ So it's always, it's always nice to have like a dashboard that shows all your spendings,
+ especially like tax season, right?
+ And when it comes to tax season, it's always a good opportunity to see all your expenses and all your
+ income to see how you have spent your money over the last year, for example.
+ So it's always nice to have like a dashboard of where you've been spending your money.
+ Okay.
+ So now let's put some connectors.
+ By connectors, I mean like how things interact with each other.
+ So you have these.
+ So you have Google Calendar goes to the agents.
+ You have Notion that goes to the agent as well.
+ And then you have this agent that does.
+ So from the AI agent, it goes to the tools themselves, because this is what it's using.
+ And the data connectors go to the agent itself.
+ So the AI agent here goes to this, sending to telegram.
+ Let me just finish this quickly.
+ There you go.
+ There you go.
+ All right.
+ So this is our figure.
+ And something cool to put is to put a legend.
+ So let's put this this way.
+ And we can.
+ Legend is always nice to put in a figure to understand like what each node represents.
+ So I'm just building a legend here.
+ This one here.
+ If there's any confusion or anything.
+ Yeah.
+ What is the legend?
+ Yeah.
+ So this is.
+ So this box is the legend.
+ So it specifies what each node represents based on the color.
+ Okay.
+ So yellow here is data connectors.
+ Let's make them medium.
+ And then blue here means LLMs.
+ You can have multiple LMs.
+ It doesn't have to be one only.
+ And then the.
+ Yeah.
+ Go ahead, Edward.
+ Yeah.
+ Basically, I have a question about connectors and tools and the difference between connectors
+ and tools in this case, because, you know, in my, according to my personal feeling,
+ connectors are doing almost the same as tools should do.
+ Yeah.
+ They're very similar.
+ I mean, everything can be considered as a tool or everything can be considered as a component.
+ The only distinguishing factor here is like, where do you get your data from?
+ And then the tools here is like the things that the agent interacts with to perform an action.
+ So the tool here is like the agent will use the web search to find things or sense
+ to telegram or create a report.
+ Yeah.
+ Because basically, telegram by itself should be a connector, in my opinion.
+ But, you know, it's just a difference in definitions and maybe not so important details.
+ Yeah, yeah, exactly.
+ I mean, they can all be called tools, like you said.
+ But if you go like more specific, the main difference here is that the tools is like the
+ thing that the agent performs and the data connectors is like the data sources.
+ You can even call it data sources instead of data connectors.
+ So you can call them data sources.
+ Yeah.
+ Or call tools tasks or jobs that the agent does?
+ Yeah, exactly.
+ Yeah, yeah.
+ Or a service.
+ This tool is a bit confusing.
+ I'm also like when I think of tools, I think of either LLM or like an actual tool.
+ LLM could be a tool as well.
+ Yeah.
+ So what?
+ Yeah, go ahead.
+ No, no.
+ It's all semantics.
+ It's just the words.
+ Isam, is it that you are talking, you're saying this as tool because Telegram itself
+ as a tool, Notion as a tool, and Web App as a tool, and then the action itself is sending it,
+ you know, to Telegram.
+ Like that is the action that is being performed by the agent.
+ Exactly.
+ I mean, it could be cool.
+ So another semantics tools could be also called like services.
+ So it's connecting to these services to generate dashboard reports.
+ So a tool could also be an LLM, right?
+ But the LLM here, what I mean by LLMs here, means like the brain.
+ It's like, this is the brain or the orchestrator.
+ The one that, so it's got the decision making, basically.
+ Exactly.
+ So it grabs the things from the data sources or the data connections.
+ Maybe data source is even better word.
+ I mean, these are all, you know, so there's no specific standard.
+ So this could be called data sources.
+ This is the brain.
+ And these tools are like the services where the agent like sends things to.
+ Does that make sense?
+ Sorry, I'm a bit confused about the AI agent part.
+ Doesn't more have to go in for this to be an agent?
+ Because like the agent is a consolidation of the brain, the skills, the personality
+ and everything, right?
+ It's like an integration type thing.
+ Yeah.
+ So within the AI agent itself, we can have other things like, for example, memory.
+ So memory, like the things that keeps track of your, let's say, your personality or like what you've
+ been doing so far.
+ So the agent is more than just the LLM.
+ Yeah.
+ Maybe an agent is even better than.
+ Yeah.
+ Like agent itself is like a better way to describe it.
+ Right?
+ Yeah.
+ Yeah.
+ Yeah.
+ Yeah.
+ Yeah.
+ Yeah.
+ Yeah.
+ So you can call it an agent.
+ Exactly.
+ Yeah.
+ Yeah.
+ Yeah.
+ Right.
+ Except like in this example here, we would be focusing on just like direct LLM invoking,
+ but an agent is, yeah, it would say like it's a better word here.
+ But yes, the whole harness around the LLM.
+ It's not just the LLM.
+ It's like, it's a brain.
+ So you remember, like we talked about memory and Saul.
+ Saul could be the personality of the agent itself.
+ So all of these are part of the agent, these blue parts.
+ So you have here, for example.
+ All right.
+ So this is our figure.
+ Does that make sense of like what are we trying to implement?
+ I have a question here related to Saul.
+ So what if you don't put a soul, like you don't put a personality,
+ then what a personality would, does it opt for?
+ So the most basic personality that these LLMs have is like, you are a helpful AI assistant.
+ That's pretty much it.
+ Okay.
+ Do you want to add some other attributes?
+ Sorry?
+ Yeah, attributes.
+ Exactly.
+ And what are the other attributes?
+ Like you are a helpful agent.
+ But like, you know, when we would be explicitly talking about Saul,
+ we would mention a lot of creative details, so to say.
+ But over here in this case, if it is just AI assistant, like,
+ is there anything else to it or that's about it?
+ Well, so instead of just your helpful AI assistant, it could be you are
+ an accountant who understands finance.
+ So it's like a system prompt to give it a personality.
+ You're an accountant.
+ Okay.
+ Here's an example.
+ You're an accountant who is focused on optimizing spendings.
+ And then you can say, make sure the amount of money that you spend is only $500 per month.
+ Okay, that's maybe not realistic.
+ $5,000 a month, let's say.
+ And any time there's more than $5,000, it's a red flag.
+ Or any time you're not spending that much, you can spend other things.
+ You can add all those like details, like the goals, the values, the personality, your goals.
+ So you can imagine all your goals, all your personal goals and
+ and your view of where you should spend on like your priorities could be put in the soul.
+ You know, that's the idea.
+ Got it.
+ Thank you.
+ You're welcome.
+ Okay, so this will be our basis of our agent.
+ We're not going to implement everything, but I'm just going to show you like how to
+ implement some of them.
+ So that's like when you work on your own personal assistant,
+ you'll have an idea on how to implement all the different components and the workflows.
+ Okay, so first things first, let's go to GitHub and create a repository name.
+ If you don't know GitHub, so GitHub is just a repository where,
+ well, GitHub is a platform where you can create projects
+ and maintain all your code bases.
+ It's a very nice way to do what we call version control.
+ Because, you know, like when you interact with cloud,
+ cloud code and so on, and you make changes to your code,
+ sometimes things break.
+ And sometimes you want to revert back to previous versions.
+ So GitHub is a very nice way to keep track of all the versions that you have.
+ So let's call this MoneyClaw.
+ MoneyClaw exists.
+ Let's make it private.
+ It's always nice to start as private.
+ Is this in case?
+ Because when you have all these data connectors and tools,
+ you'll be using a lot of API keys.
+ And there's a big risk of like accidentally pushing API keys into the repository.
+ So that's why starting with private to make sure that nothing is being,
+ nothing sensitive is being published first before turning it into a public.
+ And you only want to turn it into a public if you want other people to collaborate on it,
+ or if you want to open source your code so that people can use your code.
+ And then to help the world use like your new software, for example.
+ So let's create this.
+ This is I think is in module four.
+ All right.
+ So we're going to clone this repo, which is empty, or let's create a readme file.
+ Commit changes.
+ Okay, so that's, let me clone this into my computer.
+ One second.
+ Let's see the projects.
+ Hit clone.
+ There you go.
+ Now I'm cloning the MoneyClaw, the project.
+ So I'm going to open that folder.
+ As you can see, I have a lot of projects here.
+ There you go.
+ You see, there's the readme and so on.
+ Okay, first things first.
+ Here are some standards that are very, very, very, very, very, very, very, very important.
+ First one is gitignore.
+ So gitignore is that when you push to GitHub,
+ there are certain things that you don't want to push at all.
+ Like for example, your API keys.
+ And other files that are not needed to be displayed into GitHub.
+ It's actually very standard.
+ So I'm just copy pasting all of this.
+ But if you ask ChatGPT to give you the .gitignore for any Python project,
+ this is the type of gitignore.
+ So all of these folders will be ignored from being pushed to GitHub.
+ One of the main things that you really need to,
+ one of the main files that really need to be ignored is .env.
+ Because .env is where you put all your API keys.
+ So API keys are the things that allow you to interact with this, say your Gmail,
+ your maybe Luma, your Notion, and so on.
+ So these are kept secret.
+ If you see this grayed out, it means it's not going to be pushed in GitHub.
+ We will start, this will be filled up with different API keys soon.
+ Okay, so you have gitignore, you have .env.
+ One thing that's also very important, which I will upload it into the website,
+ is having this cloud.md.
+ So cloud.md, I'm pretty sure Codex has something similar.
+ So cloud.md will have any instructions
+ that you want your AI agent to follow every time it generates code.
+ So I'm going to put some instructions here.
+ I'm just going to copy paste it, but I'm going to put it online.
+ In the website.
+ So these are some instructions.
+ Like for example, writing code.
+ Always be concise and use the minimum number of code in libraries.
+ Make sure to keep things modular.
+ Don't repeat code.
+ Use templates.
+ If you see repeated code, consolidate them.
+ So all of these are instructions to minimize the number of tokens
+ and to make sure that your code is structured in a way
+ that makes it easy for your AI assistants to build on it.
+ Does that make sense?
+ Yeah.
+ And you prompted, where did you get the prompt from to write this?
+ So this is something I built myself, but you can ask ChatGPT, like,
+ give me some instructions that I should give to my AI assistant.
+ Oh, yeah.
+ Yeah.
+ Minimize the clutter and to keep things very simple, you know?
+ Okay.
+ Okay.
+ But you made it, all of these instructions are given by you?
+ Like you have handwritten them?
+ Yeah, exactly.
+ Okay.
+ Like, because I built so many different apps and so on.
+ Like, I found that these instructions make it easy for me not to spend, like, hundreds of dollars.
+ Mm-hmm.
+ Every time to create an event.
+ Yeah.
+ And it creates some project code.
+ Cool.
+ Thank you.
+ Yeah.
+ So, like, be concise, short answers, no fillers.
+ There's also this thing which I'm not doing here.
+ It's called, like, talk like a caveman, which makes it very interesting and reduces the number
+ of tokens.
+ So, instead of, like, saying huge paragraphs of what is going on, you can talk like a caveman.
+ So, a caveman just says, like, one sentence to describe the whole thing.
+ Like, two, three words to explain the same thing, basically.
+ Yeah.
+ Like, bug here, fix this, wrong here, like a caveman.
+ Yeah, yeah.
+ But have you said that?
+ Like, does it work for you?
+ Like, are you spending less token?
+ Yeah, I have done it, like, a while ago, but I haven't done it here because I think you have
+ to be very precise in how you describe the caveman personality, but there's one called
+ caveman, like, that you can find online on GitHub that you can copy-paste.
+ Okay.
+ That exists.
+ Okay.
+ Yeah.
+ Oh, cool.
+ This is just to show you, like, different ways you can prompt your AI assistant so that
+ it becomes as efficient as possible.
+ Mm, great.
+ They say with a caveman approach, you can reduce 75% of the number of tokens.
+ What?
+ So, instead of 1,000, you only, like, instead of 1,000 tokens,
+ basically, you're just spending, let's say, 250 tokens.
+ Right, right.
+ Okay.
+ Okay.
+ So, this is the Cloud MD.
+ So, now, one second.
+ Now, so, I'm going to create things using Flask, because that's my favorite tool.
+ Some people prefer Node.js.
+ I mean, Node.js is a standard for web development.
+ But I always like Flask, because I always like Python.
+ Python just makes things very simple and very readable and so on.
+ So, let's do something here.
+ Okay.
+ So, the first prompt, we're going to create a minimal Flask app.
+ Let's say, create a minimal Flask app called Moneyclaw with a nice landing page.
+ You can see it here.
+ Okay.
+ I'm not sure if this is, okay, maybe I should zoom in.
+ Okay.
+ With a nice landing page, it's about optimizing spending.
+ Use port 7010.
+ So, you can use any port above 5000, because when you run your app, it creates a port number.
+ So, that you can see the website based on that port.
+ And then use templates.
+ So, this is where I want to generate the HTML.
+ HTML.
+ As you can see, stuff like that requires some, like, small coding knowledge.
+ But that's okay.
+ Even if you don't have coding knowledge, just copy-pasting these kind of paths is enough, you know.
+ And then, a good thing is to add something, to add the word.
+ A good thing is to always add the word minimal code, so that it doesn't create some crazy amount of code.
+ And when you just write this and you have a generate code, most of the time, it gives you dark theme.
+ Personally, I always prefer a brighter theme.
+ So, you can say, make the theme bright.
+ So, the theme is like the colors of the website.
+ So, let's do it.
+ So, Issam, you wrote minimal code, but I'm assuming that in your cloud.md, you would have already
+ mentioned it, right?
+ So, is there a need for you to explicitly re-mention it?
+ Yeah.
+ Sometimes you have to mention things like three times or four times so that it's in its brain.
+ Yeah.
+ There's this thing called the lost in the middle, which means if you're, let's say, so you can
+ imagine this cloud descriptions here is going to be part of your prompt.
+ Right.
+ So, on top of this, all of this cloud.md would be appended to it.
+ Correct.
+ So, in the middle is like when your prompt is big, sometimes some instructions get lost.
+ Oh.
+ So, it's worth repeating the things that you want to emphasize, you know?
+ Okay.
+ Yeah.
+ So, let's create this.
+ I have a question.
+ Yeah.
+ Am I audible?
+ Okay.
+ So, if I didn't use the cloud extension, cloud code extension, and I actually use code,
+ does the file then can still be called cloud.md or it's just semantic?
+ So, I'm not hearing you well.
+ Maybe, are you close the microphone?
+ Yeah.
+ Yeah.
+ Yeah.
+ Okay.
+ I will, I'll type my questions.
+ Okay.
+ So, you said like if you're using not cloud code, something else?
+ Yeah, she's going to type her question, she said.
+ Okay.
+ Yeah.
+ Are you using codex?
+ I never used codex personally, but I would say it's similar.
+ So, it should be similar.
+ You can just type the same.
+ I don't think it's called cloud.md.
+ I haven't explored it, but they must have something similar.
+ Okay.
+ There you go.
+ Thomas mentioned this.
+ You can use agents.md.
+ I think agents.md is more universal.
+ So, it works for all AI assistants.
+ Just to confirm, Ism, you're using cloud code desktop app, right?
+ Like not the cloud extension VS code.
+ No, no.
+ So, this is VS code.
+ So, here I installed VS code.
+ If you go to extensions and you do cloud code, you'll find it here.
+ You see here?
+ Okay.
+ This is the extension VS code.
+ Okay.
+ This is the extension, yeah.
+ So, you install this and you get this thing.
+ So, when you open VS code, you have two things.
+ You have this chat.
+ So, this chat is not cloud code.
+ This is co-pilot.
+ This actually doesn't work very well.
+ This is the default.
+ Yeah.
+ You want to interact with this cloud code.
+ So, you see this icon here.
+ When you see this icon, you know that you're interacting with cloud code.
+ The reason why we use VS code is because it gives you a lot of visibility.
+ Like you can see all your files.
+ You can see a lot of different things.
+ You can see your terminal.
+ And you can see everything that's happening here.
+ So, it just gives you more.
+ It's like an integrated development environment, you know.
+ It's an IDE.
+ A nice IDE.
+ So, what's the difference between actually using Cursor and then using Sonnet or Opus models there
+ versus, you know, installing cloud code extension VS code?
+ Yeah, it's a good question.
+ So, Cursor is very similar, but Cursor doesn't have cloud code.
+ So, Cursor, you can use Sonnet and Opus.
+ That's true.
+ Yeah.
+ But, and also cloud code, if you see here, uses like Sonnet or Opus or Haiku.
+ But cloud code itself has, for me, what I noticed is that it has a much better harness.
+ So, it does the planning better, in my view.
+ It does execution of the commands better and so on.
+ Because it's more than just the LLM.
+ The Sonnet and Opus are just the LLM.
+ LLM, you have the harness, like the planning, keeping track of memory,
+ what to do next, executing commands.
+ So, cloud code, I found it to have a better harness.
+ Gotcha.
+ Yeah.
+ It's okay.
+ So, let's put this back in.
+ Let's run it.
+ Hopefully, it goes fast.
+ As you can see, I have 83% used.
+ But it will reset in three days.
+ I can't wait.
+ $700.
+ Really?
+ 700?
+ Yeah.
+ Well, that's part of the company.
+ Oh, okay.
+ Okay.
+ So, you have cloud.md.
+ I'm running this.
+ As you can see, okay, it's doing a lot of different things.
+ You don't have to keep track of these things.
+ I usually don't read them.
+ I usually just drink coffee at this building.
+ But as you can see, it built this app.py.
+ So, I know some people don't have experience with code or haven't read much code before.
+ But part of this HACA course is to just have some experience with maybe reading a bit of the code.
+ But you don't have to understand what different statements are doing.
+ There you go.
+ App is running.
+ It created this app.py.
+ It created some files like HTML.
+ So, HTML is what is used to display your website.
+ And there you go.
+ So, we have this thing.
+ So, let's run this.
+ So, you see this play button.
+ When you click here, it actually runs it.
+ It's running already because I already had.
+ Okay.
+ There you go.
+ You see this thing?
+ HTTP 127.0.0.1.
+ So, this is what we call the local host.
+ So, you just copy paste this thing in your browser.
+ You can do a command and you click this.
+ And you get something.
+ You get something like this.
+ You see?
+ That was quick.
+ There you go.
+ Very nice, right?
+ Okay.
+ So, now what are we going to do?
+ We're going to build components.
+ We're going to build the components based on the thing.
+ Based on that Excalibur or that figure that we have built earlier.
+ So, remember this figure?
+ So, we're going to build those components.
+ Okay.
+ Let me see the prompt for this.
+ Okay.
+ So, we're going to do multiple things.
+ So, this is the prompt.
+ It's always nice to add the navigation bar.
+ So, what is the navigation bar?
+ Let me.
+ Okay.
+ There's a way to add a browser here.
+ I think.
+ View.
+ Browser.
+ Yeah.
+ And then I'm going to put the URL here.
+ So, that we can see.
+ How it's updating.
+ So, this is our website, right?
+ So, the navigation bar is the thing at the top here.
+ So, in the navigation.
+ Okay.
+ In the navigation bar.
+ Let's remove these features, pricing and login.
+ Remove features, pricing and login.
+ And instead, add a tab.
+ Call components.
+ And clicking on it should take you to components.html.
+ It's like a website.
+ And there you have three subsections.
+ You have data connectors.
+ You have agents.
+ And you have tools.
+ As shown in the figure.
+ The figure is the one we showed in Xcaida.
+ Show them as cards similar to the ones in the dashboard.
+ Okay.
+ So, I'm going to move around a bit.
+ Okay.
+ Let me also put this in the browser here.
+ View.
+ Browser.
+ Okay.
+ So, remember.
+ This is our Excalibur, right?
+ So, you can take a screenshot of this.
+ And then we can add this here.
+ So, once you create your figure, you can add it.
+ As you can see here, you can add it as an image here.
+ So, you want to show like what are your data connectors, your agent and tools.
+ But remember in the kickoff, we had this very nice components dashboard that I showed earlier.
+ You can also add that as a screenshot so that it can create that components dashboard.
+ Just bear with me and we'll run it.
+ Just bear with me, please.
+ I would like to have like another screen.
+ Okay.
+ So, remember this dashboard that we had before?
+ So, I will like share it in the, well, it's already shared in the hackathon website.
+ But you can also take the screenshot.
+ You can take the screenshot.
+ And then you put it here as well.
+ So, now we put two screenshots.
+ One for the flowchart and one for the, how we want the dashboard to look like.
+ So, we said, okay, show them as cards similar to the other dashboard screenshot.
+ Do not implement any of these components yet.
+ And for components that haven't been implemented, add a tag that says not implemented yet.
+ Okay.
+ Let's remove this.
+ Okay, let's go into the landing page.
+ It's adding a components.
+ There you go.
+ It's creating a components page.
+ Well, it's because it's still creating it.
+ You can, if you have any questions while it's building, feel free.
+ It's actually good that it takes a bit of time so that we all digest what's happening.
+ Right now, we're creating the components dashboard.
+ Because the idea here is that we have all these components
+ and we want to implement them one by one.
+ And once we implement them one by one, then we can create the workflows that we want.
+ So, here you are trying to create that new component on the nav bar.
+ However, this particular side that we are seeing right now, then what would this do?
+ Is it more like some place where you get the results
+ and component is where the real action is happening?
+ Yeah.
+ So, components is like where you have all these tools and data connectors.
+ Right.
+ Like here.
+ You see here?
+ Yeah.
+ Yeah.
+ So, you have Gmail, Google Calendar, Notion.
+ Okay.
+ The agent brain should only be AI agent.
+ Oh, yeah.
+ All these three.
+ Yeah.
+ We have the soul, the memory.
+ So, you see editable persona.
+ And then you have the tools.
+ Webster, sent to Telegram, generated dashboard, create report.
+ You see?
+ Does that make sense?
+ Mm-hmm.
+ So, now if I want to in the future update the data connectors, would it just implement on top
+ of it automatically?
+ Yeah.
+ So, once you have this, you can just say add a new data connector.
+ Okay.
+ Okay.
+ Add a new data connector.
+ I don't know.
+ So, a new data connector could be Outlook, SharePoint.
+ Right.
+ What else is there?
+ Examples of data connectors.
+ A database.
+ It could be Supabase.
+ It could be Cloudflare, buckets where you save all your data.
+ All kinds of data connectors, right?
+ Anything where you can get data.
+ Oh, it could be KGG.
+ That's a data connector.
+ It could be Craigslist.
+ It could be your bank, credit card, statements, and so on.
+ Does that make sense?
+ Yeah.
+ Wherever you get the data from in order to make a certain decision for a certain thing.
+ Exactly.
+ Yes.
+ Exactly.
+ Right.
+ Whatever is the component of that particular decision-making in short.
+ Exactly.
+ Yeah.
+ Yeah.
+ Okay.
+ So, first things first, we're going to implement the Gmail components.
+ You're going to implement some of these components.
+ So, the first one is Gmail.
+ Okay.
+ Oh, no, no.
+ Actually, before the Gmail, I would recommend building this AI agent.
+ So, the AI agent that we can interact with.
+ It's different from Cloud Code.
+ This is the agent that lives in your app.
+ Okay.
+ I'm going to copy paste what I had.
+ Okay.
+ Let me explain it.
+ So, now create the agent similar to the screenshot here.
+ And we're going to add the screenshot soon.
+ I'm going to also give it a path.
+ It's always nice when you build something.
+ It's always nice to tell Cloud Code or Codex, for that matter,
+ to give it exactly where you should implement it.
+ That way, it doesn't create like many, many different files.
+ So, I just want to implement the agent, this SRC.
+ So, the folder SRC is very common in coding.
+ SRCLMs.
+ It will do it by itself.
+ And two very good libraries is OpenRouter, which allows you to connect to different models.
+ and LANGraph.
+ And another thing that's very good is to say, add any libraries needed in requirements.
+ Because for your Python programming language, to use, let's say, OpenRouter LANGraph,
+ it has to install some libraries.
+ It has to install OpenRouter and it has to install LANGraph.
+ So, you can put it in what we call requirements.txt, so that it's automatically installed.
+ And we're going to give it some features.
+ Allow me to chat with the agent.
+ And here's another thing that's very cool.
+ I would very recommend this.
+ As you're creating components, like accessing Gmail or accessing OpenRouter,
+ there's some steps that you have to follow to get the API keys.
+ In order to know what are the steps, you can tell Cloud Code to add to the README.
+ So, the README is this README file.
+ So, it's empty right now.
+ To add to the README and how to acquire the API key.
+ And it will give you the steps, like which website to go to, how to register and so on.
+ I always like to make things into bullet points so that it's not overwhelming.
+ And at the end, clicking on the AI agent card.
+ Remember, we had this AI agent card.
+ So, when I click this AI agent card, it should take me to that interface similar to the screenshot.
+ I'll show you the screenshot shortly.
+ One second, there's a chat message.
+ Which model are you using now?
+ I'm using Sonnet right now.
+ I could use Haiku, but I think with Haiku, you might need a few iterations.
+ But Sonnet is a safe choice.
+ Opus is more expensive.
+ I think it's double the price.
+ But it can be used to be way more ambitious.
+ You can even maybe tell Opus, create a whole personal assistant that does all these things.
+ But I think Opus is good for like one shot different things instead of like having an iterative process.
+ I always recommend iterative process, like building from the ground up.
+ Because that way, you yourself are not overwhelmed.
+ And the AI agent is not overwhelmed in the sense that you do not get confused in how to extend and so on.
+ Yeah, so Molan, so use Opus if you have a very highly ambitious goal.
+ Like say, create a personal assistant for finances.
+ That's it.
+ And it does it for you.
+ How would we change the model it's using?
+ So you see here, there's this button here.
+ You can click it.
+ And then you can switch model here, you see.
+ And you can also specify the effort and how much thinking is required.
+ Okay, so let me show the screenshot.
+ I will share the screenshots in the website as well.
+ Okay, so this is a chatbot I built a while ago.
+ So I'm going to take the screenshot.
+ And then I'm going to paste it here.
+ Okay, let's hope it works.
+ Let's hope it works.
+ Enter.
+ So I, what exactly is line graph doing within this agent?
+ That was our question in the zoom.
+ So line graph allows you to have a, so a line graph makes it easy to build a harness.
+ So it makes it easy to let us, so remember we said we had LLMs and we had everything around it.
+ The things around it could be memory, the solve, could be long-term memory, short-term memory,
+ could be cron jobs, could be planning, could be executing different commands.
+ So line graph helps with doing these things quickly and efficiently.
+ So it doesn't have to implement everything from scratch.
+ Line graph is like one of the state of the art for building the harness around the LLMs.
+ So it makes things agentic very efficiently.
+ All right.
+ So now it's creating the.
+ So when you say that codex doesn't have a better harness than Claude, what do you mean?
+ What does it not have then?
+ Uh, no.
+ So codex also has its own harness.
+ Cloud code has its own harness, but based on what Powell said, they're comparable.
+ Right.
+ So maybe they have like similar ways of like planning, executing, breaking down the task
+ and so on.
+ As you can see here, you see how it breaks down the task?
+ Reading this, edit this, write this.
+ So this planning is involved.
+ Okay.
+ So that's the harness.
+ You can see visually basically.
+ Yeah, you can see.
+ Well, yeah, you can see visually, but it's also implemented at the back end.
+ Okay.
+ Like breaking down the task and doing things one by one.
+ Like all these thinking, no update, write this, write that.
+ So that requires a harness to do all of this.
+ Because what's the difference between a harness and just an LLM?
+ Is this an LLM?
+ Is this question answering?
+ Like you ask the LLM a question and it gives you back an answer.
+ The harness is like, how do you break things down?
+ How do you start things in memory?
+ How do you follow up?
+ So that's the harness.
+ Okay.
+ Okay.
+ So it seems like it created the agent.
+ Okay.
+ So we have, let's refresh this.
+ There you go.
+ You see here, Monte Claw, you have this agent.
+ You can choose different agents.
+ Let's do a GPT-4 or mini because it's cheaper.
+ Let's see if it works.
+ All right.
+ Hopefully it works.
+ Maybe if when it's like in VS code, it doesn't do it so well.
+ Just one second.
+ Do you need to set any key for this?
+ Oh yeah, you need.
+ So I'll show you that in a second.
+ First, I want to just check if this works.
+ So components, AI agent, let's say hi.
+ Okay, so I'm using this one.
+ Oh, I know why it's not working because we don't have the key.
+ Yeah, exactly.
+ That's right.
+ Yeah, you're right.
+ So let's go to the readme.
+ You see here?
+ There you go.
+ Getting an open router API key.
+ Go to open router and sign up.
+ Navigate to keys.
+ It gives you all the steps.
+ Create this.
+ Set it as this.
+ Open router supports some free tier models.
+ No credit card needed to start.
+ So you go to here.
+ I think it can just add.
+ Okay, let me just delete everything else.
+ Let's do the browser.
+ Let's do another browser.
+ So this is the open router.
+ It's like an API key.
+ So I have the key.
+ I'm just going to copy paste it.
+ Let me add another browser.
+ New integrated browser.
+ And just one second.
+ I'm just, I know I'm looking at all this code here.
+ I'm just going to put the code here.
+ Okay.
+ I'm just going to, so how do you paste the key?
+ You see the readme?
+ It says set it as open router API key.
+ So you go to this dot end.
+ This is, so dot end is where you keep all your keys.
+ And they're all secret.
+ And then I need to put the API key here.
+ So I'm going to put the API key here.
+ I'm going to like make this smaller.
+ So that you don't see the whole key.
+ So you don't steal all my money.
+ But I have it here.
+ Open router API key.
+ So I'll paste it here.
+ There you go.
+ So this is my key here.
+ So now hopefully, and now I think it should work.
+ And when you put an API key,
+ sometimes you have to rerun your program.
+ So I'm going to rerun it.
+ And then there you go.
+ Let's see.
+ Come on, don't fail me.
+ There you go.
+ You see, it responded.
+ Let's add.
+ Yeah.
+ Okay.
+ So now it responded.
+ Let me think what I should do next.
+ Yeah.
+ Okay.
+ So now it's like a.
+ What is the best way to spend money in one day?
+ It's just a random question.
+ So that takes time because it's like it's thinking and stuff.
+ Okay, here's something here.
+ You see, like it gives you this.
+ So it's not rendered properly, but you can tell your cloud code to render this nicely
+ and add emojis and stuff.
+ You can even say to add it to give it a personality.
+ You know, does this make sense so far?
+ Yeah.
+ Okay, good.
+ So now let's go to open claw.
+ Okay.
+ So can you please go back?
+ Yeah.
+ What is that total 45 in 285 out on?
+ Oh, yeah, yeah.
+ Because I also said how many tokens.
+ So I can keep track of my spendings because you spend money per token.
+ Yeah.
+ Yeah.
+ So these are 45 tokens, I think.
+ And then you have 287 outside.
+ Based on how many tokens you sent and how many tokens you get back.
+ You can even say to give you an estimated amount of money every time you call it.
+ You can even have it report here, like the amount of money that you have spent.
+ So you can add all of those things.
+ Okay.
+ Yeah.
+ So there's a question.
+ Are you going to configure specific states for every use case and flow?
+ Well, not in this case.
+ But you're, yeah, you're welcome to like based, like you're on this agent and based on how it performs,
+ you can have an analysis of your agent of where are the bottlenecks and so on.
+ And then you can optimize them.
+ So you can do all of those things.
+ But it's always best to start with something minimal that doesn't have a lot of
+ bells and whistles, as they say.
+ And then based on your needs, you can add stuff.
+ It's always good to start simple and then add layers after that.
+ Okay.
+ Now that we have this agent next, let's do that Gmail.
+ So AI agent, we, I also added the stack of whether it has an LLM or not.
+ It's always nice to know which components have LLM and which components do not.
+ Okay.
+ So now let's do the Gmail.
+ So for the Gmail component.
+ Okay.
+ Let me paste this.
+ Now create a component.
+ So it's also good to give where the components should live.
+ That way you can keep things modular.
+ So I'm going to create a folder here.
+ Let's call it components.
+ So every component will have a single file under this folder components.
+ Okay.
+ So now create a component.
+ Let's call it accessgmail.py.
+ Similar to the screenshot that allows me to access my Gmail account.
+ I will share the screenshot shortly.
+ And then in the readme, show me how to create an API that connects with Google,
+ including in how to get the credentials from Google and the API key.
+ Show all the steps and the URL to get that API.
+ You know, creating API key for Google is actually not that simple.
+ It's not that complicated, but it's very convoluted.
+ It's very confusing.
+ So having it in the readme will make it very easy.
+ So now let me add a screenshot.
+ For this, just one second.
+ I have a lot of tabs.
+ So that's why I'm like, I'm just removing some tabs here.
+ Okay.
+ Just, just bear with me.
+ I'm going to add a nice screenshot here.
+ All these prompts that I'm showing here, I'm going to add them online in the website.
+ And maybe I should add more instructions.
+ So I'm going to add this thing here.
+ When clicking on the card, like the Gmail card, show a similar view as the screenshot that I showed.
+ Okay.
+ Should only load the page.
+ Okay.
+ But where did you define that?
+ There are two parts to it, right?
+ One is the access of the Gmail itself.
+ And then using that information to show us over here.
+ So in terms of the access itself, are you giving it instruction on what emails to go after?
+ So in this case, for example, they're all expenditure related.
+ Yeah, exactly.
+ Yeah.
+ Sorry.
+ What was the question?
+ So my question is that, are you defining it anywhere that when you go and access Gmail,
+ you have to access these XYZ type of email only?
+ Yeah.
+ Yeah.
+ So, yeah.
+ So as you can see here.
+ For, for Gmail, right?
+ So, yeah.
+ So I'm saying, so I gave the dates.
+ Okay.
+ Like from this month to this month and from who.
+ I can add some keywords like interact and so on.
+ So for example, I want only the emails that has the word interact.
+ Right.
+ Right.
+ Got it.
+ Okay.
+ So now I'm going to add.
+ Yeah.
+ So in the Gmail component, have interact to be the default subject keyword box and only
+ display the first five emails because I don't want to like display a lot of emails.
+ And also I can add, I'm just adding more like filters, basically.
+ I'm just adding filters and only have the date from and end to be the first and end of January.
+ So I just want the emails from the person to the end of January.
+ Okay.
+ Let's, let's, let's run this.
+ All right.
+ So this is good.
+ This is very good.
+ So now it's creating this file called access Gmail.
+ You see.
+ So it's always nice to have like one file per component.
+ Just because it makes it very modular.
+ Now, today is 7:30.
+ The Luma event 7:30.
+ Yeah.
+ Okay.
+ It's creating all these things.
+ Time moves very fast.
+ Okay.
+ Accessing Gmail.
+ Hopefully it doesn't fast.
+ Come on.
+ I like doing live coding.
+ Like I know that I can just have this maybe pre-recorded or just show it quickly.
+ Like already done.
+ I'm like, I already done this like five hours ago.
+ But it's always nice to see how this works in live, like in real time, because that gives you an idea
+ of how to deal with like issues or how to see like what you expect and how the AI agent is building your code.
+ So that's why I like doing live coding.
+ And also we can like be more dynamic.
+ So if we want to make any changes and so on.
+ Okay.
+ So this is all the Google API.
+ Okay.
+ You see here setting up Google API credentials.
+ All right.
+ So let's go to this money claw.
+ Reload components.
+ There's the components.
+ This is the Gmail.
+ There you go.
+ You see.
+ So this will not work because I don't have the API key.
+ So let's go to the readme.
+ It says setting up Google API credentials.
+ So the idea is to go.
+ Okay.
+ So let me do something here.
+ Let me do something fancy.
+ View browser.
+ So you're going to go to this console here.
+ Ah.
+ Okay.
+ I can do this.
+ Okay.
+ Let me put it this here.
+ I want to show you.
+ Show it to you side by side.
+ We go to the readme.
+ So this is the readme.
+ So it says.
+ Let me.
+ Go to this console.
+ So this is the console.
+ And then create a new project.
+ So if you go here.
+ It says new project.
+ There's a lot of YouTube videos on how to do this.
+ But it can get very confusing.
+ So let's say.
+ My app.
+ Or Moneyclaw.
+ We're just going to follow here.
+ So now the project name Moneyclaw.
+ Create project.
+ And then it says here.
+ Go to API and services.
+ You see.
+ So API and services.
+ And then.
+ You go to this.
+ OAuth.
+ You see.
+ OAuth consent screen.
+ It's always very confusing.
+ Okay.
+ OAuth consent screen.
+ Maybe settings.
+ It feels like it's always different.
+ Okay.
+ Ah.
+ Clients.
+ Okay.
+ I already have one.
+ But the idea.
+ Okay.
+ And then you do.
+ Create client.
+ You see here.
+ Oh.
+ It's because it's doing test.
+ Okay.
+ Moneyclaw.
+ Okay.
+ Then you do like.
+ You show your app information.
+ So let's say.
+ Moneyclaw.
+ And you just put your email.
+ Next.
+ So you specify external.
+ As defined here.
+ Next.
+ And Google likes to change things.
+ Every.
+ Every now and then.
+ So that's why it gets confusing.
+ I agree.
+ Continue.
+ Create.
+ Okay.
+ And then you do this.
+ Create OAuth.
+ Client.
+ There's a lot of YouTube videos.
+ Then you do this desktop app.
+ As it says here.
+ Desktop app.
+ Create this.
+ And this is your client secrets.
+ You can download this JSON.
+ So now I'm going to go to my.
+ I'm just going to copy paste it.
+ All right.
+ Let me shorten this.
+ You see here the dot end.
+ And then you're going to create.
+ Another key here.
+ And let me just copy paste it.
+ You see this.
+ Google credentials path.
+ So whatever you download there.
+ You just copy paste it here.
+ And that will give you access.
+ To all your Google stuff.
+ Yeah.
+ Farah.
+ So.
+ What about the login and password?
+ Like where is it getting the password.
+ For your Google from?
+ So.
+ So.
+ You see this website here.
+ I'm already logged in.
+ You see as my Gmail.
+ So that API key already has information.
+ About my password.
+ And user.
+ And username.
+ Okay.
+ And next time.
+ When you change your password then.
+ It doesn't matter.
+ So that one already just accesses.
+ All your Google stuff.
+ That's.
+ So you see this credentials.
+ Because.
+ Right.
+ And it is already connected to your account.
+ So anyone who has this.
+ Can access everything in your Gmail.
+ That's why you should be very careful.
+ OK.
+ So this is the key.
+ It can access all your Gmail stuff.
+ So it doesn't matter if you're changing your password.
+ Whatever you're doing.
+ Exactly.
+ Yes.
+ OK.
+ Yeah.
+ Because that's the API key.
+ Which is defined here.
+ As you can see.
+ Got it.
+ OK.
+ Yeah.
+ There's a question from Helen.
+ Yeah.
+ Let's see.
+ Yeah.
+ You had previously gotten API keys from open router.
+ And Gmail.
+ So.
+ Some apps.
+ Some services.
+ It's very easy to get the API key.
+ Other services.
+ Like Gmail.
+ Is very difficult.
+ For some reason.
+ So.
+ Based on the service.
+ Some API keys are much easier to get.
+ So that's why.
+ We had to do a lot of steps.
+ For Gmail.
+ Just because.
+ I think the reason.
+ Why they make it very difficult.
+ Is because Gmail.
+ Can contain many sensitive data.
+ So they want to make sure.
+ That people are very.
+ Intentional about.
+ How they're going to use their API key.
+ Does that make sense, Helen?
+ Yeah.
+ So now you can also add some scopes.
+ So what is a scope.
+ That we can add.
+ Let's see.
+ Okay.
+ So my scopes is like.
+ Because now I have API key.
+ That's accessing my Gmail.
+ A scope is like.
+ Can it read.
+ Can it read my Gmail?
+ So the API key is.
+ My Google account.
+ So we can add a scope.
+ So can it access my Gmail?
+ Is it read only?
+ Is it write?
+ Is it.
+ Can it access my calendar?
+ Like all these things.
+ So one scope that we can add.
+ Which is including the readme.
+ Is this.
+ See this.
+ Google APIs read only.
+ So we add this.
+ So now.
+ The API key will allow me to read my Gmail.
+ Does that make sense?
+ So that means if you had wanted.
+ It to create an email.
+ It wouldn't be able to do so currently.
+ Based on the scope.
+ You.
+ Exactly.
+ I cannot create emails.
+ I cannot send emails.
+ Okay.
+ You cannot delete emails.
+ Which is very important.
+ So I really recommend.
+ Just sticking to like.
+ Read only for now.
+ Okay.
+ So I mean.
+ Do you have to explicitly mention.
+ About the delete part.
+ Which you said.
+ Just now.
+ So these are all the scopes.
+ That I have.
+ The write part.
+ Does not exist.
+ By default.
+ At all.
+ Okay.
+ Yeah.
+ It doesn't exist by default.
+ Yeah.
+ Okay.
+ So now we have this.
+ Google credentials.
+ Let's hope it works now.
+ Gmail.
+ Ah.
+ Okay.
+ Uh.
+ I think I know why.
+ Just for a second.
+ Because it's expecting.
+ This credentials.json.
+ I use the.
+ Google credentials.
+ From .in.
+ For accessing.
+ Because there's multiple ways.
+ And how to make it a link.
+ To your credentials.
+ One way is.
+ To create that json.
+ But ideally.
+ I recommend just.
+ Having it in .in.
+ And just make it access from here.
+ So it's going to be.
+ Uh.
+ Okay.
+ Let's do this thing.
+ Okay.
+ Now Google credentials.
+ Is read from this.
+ Okay.
+ There you go.
+ Uh.
+ Let's hope it.
+ Uh.
+ It works now.
+ It has read.
+ All this.
+ Subject.
+ Interact.
+ Only get five.
+ And.
+ There you go.
+ So now I can access my Gmail.
+ Does that make sense?
+ It's good.
+ So one thing I want to do.
+ Is that if I click on download.
+ I wanted to download these emails.
+ Into a file.
+ So.
+ Okay.
+ Oops.
+ Okay.
+ So here.
+ I said.
+ We're clicking on download.
+ Saves them in data.
+ With headers only.
+ So headers.
+ I mean like.
+ Just the subject line.
+ Okay.
+ So now we're gonna run it.
+ So it's gonna.
+ Allow me to download it in.
+ As a file.
+ And under data.
+ So it's always nice.
+ To have a folder called data.
+ Where you save all your things.
+ So let me refresh this.
+ Okay.
+ So next is.
+ Let's access notion.
+ So.
+ Let's go to notion.
+ I'm gonna show it shortly.
+ So this is my notion.
+ Agent Watson.
+ My goals are.
+ It's a simple goal.
+ Like it could.
+ Ideally you have all your goals.
+ For the year.
+ And so on.
+ So my goals are.
+ Optimize my money.
+ For the year.
+ So this is my notion.
+ So I want my.
+ AI app.
+ To be able to access.
+ This notion.
+ So we're gonna create.
+ The notion component.
+ Sometimes I'm not reading.
+ Okay.
+ So now.
+ We're gonna do this thing.
+ Now create a component.
+ As SRC components.
+ Access notion.
+ That allows me.
+ To view my page.
+ And this.
+ So you see this link here.
+ Is basically the link.
+ Here above.
+ You see the URL here.
+ Is just here.
+ Okay.
+ And then.
+ Always add.
+ Whenever you build a component.
+ Say.
+ In the readme.
+ Show me how to obtain the API key.
+ For notion.
+ For that page.
+ And then one clicking.
+ I'm gonna do the same thing as before.
+ When clicking on the card.
+ Show a similar view as the screenshot.
+ I'll show the screenshot.
+ However, it should only show the page.
+ Okay.
+ There you go.
+ There you go.
+ And then allow me to edit it.
+ So where's the screenshot?
+ Access notion.
+ Yeah.
+ Go ahead for it.
+ Issam.
+ So here you have.
+ You know explicitly.
+ Taken the URL of that agent Watson page.
+ However, what if there are multiple folders.
+ Inside of notion.
+ Which you want the agent to access.
+ Then are you creating one agent per link?
+ No, no.
+ So for here.
+ We're just.
+ We're just fixing it to one page.
+ But you can make it.
+ Access all your pages.
+ How would you do that?
+ Because you just.
+ Used a URL.
+ And the.
+ If there are multiple folders.
+ That means there are multiple URLs.
+ Right?
+ So you just paste all of them together.
+ Yeah.
+ The only reason I did this.
+ Because I have a lot of pages.
+ And there's like.
+ Private information.
+ Right, right, right.
+ But I could potentially just say.
+ Allow me to access all my files.
+ And then.
+ And then.
+ Okay.
+ One way you could do is like.
+ Allow me to access all my files.
+ And have a drop down.
+ Like a drop down in my component.
+ That allows me to.
+ Switch between the notion pages.
+ Okay.
+ So you can do that.
+ Yeah.
+ Okay.
+ So this is my.
+ Well, the other notion page.
+ I mean.
+ I'll take a screenshot of this.
+ But you know like.
+ The screenshot here is more about.
+ How to organize how it looks.
+ So.
+ It's not necessary to build the component.
+ It's just because.
+ This is how I want the component to look like.
+ But you don't.
+ Like when you build your own app.
+ You don't need this kind of screenshot.
+ So I'm going to put that screenshot here.
+ And then I'm going to press into.
+ Uh.
+ Did I talk about the readme?
+ Yeah.
+ The readme.
+ Show me how to obtain the API keys.
+ For that notion.
+ For that page.
+ We might be a bit over time.
+ If you guys are okay.
+ Well.
+ You know.
+ The session is recorded.
+ So.
+ Yeah.
+ Yeah.
+ I do it.
+ Yes.
+ Sorry.
+ Maybe I have missed something.
+ But.
+ What purpose notion.
+ Is going to be used for.
+ So.
+ You could imagine.
+ So.
+ It could be.
+ So.
+ Here.
+ The goal.
+ Of.
+ Because this is.
+ A money claw.
+ So.
+ Money claw.
+ The idea is to optimize your spendings.
+ Right.
+ So.
+ You could imagine.
+ Let's say.
+ You have your yearly goals.
+ So.
+ One thing could be like.
+ I want to buy.
+ A house.
+ In five years.
+ I want to.
+ Travel.
+ Three times a year.
+ So.
+ You can put all your goals in notion.
+ So.
+ That's when your AI agent.
+ Looks at your.
+ Spendings.
+ It can also look at your goals.
+ From notion.
+ You know what I mean?
+ Yes.
+ But at the same time.
+ We have a chat window.
+ With the help of which.
+ We also can.
+ Kind of communicate with agent.
+ So.
+ Is it.
+ Is it an additional.
+ Way to communicate with agent.
+ In this case.
+ Or is it.
+ A midterm memory.
+ Or.
+ How should we treat it?
+ Yeah.
+ Yeah.
+ So you could potentially.
+ Just copy pages.
+ And send it to the agent.
+ That's true.
+ But.
+ This is more like a long-term memory.
+ Like fixed.
+ So the things that are more static.
+ Or long-term.
+ You can have them in notion.
+ So that you don't have to rewrite.
+ Your goals.
+ Every time you talk to your agent.
+ Does that make sense?
+ Okay.
+ Thank you.
+ So it's like.
+ You have all your long-term goals.
+ Like everything about your life.
+ That.
+ All your values.
+ Your goals.
+ Your vision.
+ Yeah.
+ And basically.
+ One pile.
+ Yeah.
+ Because of that.
+ I have asked one question in the chat.
+ But as you have said before.
+ You are not checking the chat.
+ So I would.
+ May I kindly ask you.
+ To describe data flow.
+ Or data flows.
+ For these particular apps.
+ Or agents.
+ Use cases.
+ Or at least one use case.
+ Because right now.
+ I'm trying to understand.
+ What do we expect.
+ From this agent.
+ And how do we expect it to work.
+ And how do we expect it to.
+ Go through everything that we have.
+ Yeah.
+ So the idea is that.
+ Okay.
+ You have these things.
+ Right.
+ So you get all your transactions.
+ From your Gmail.
+ Maybe some meetings.
+ Related to finances.
+ But Notion.
+ Is like.
+ Has all your goals.
+ Also.
+ It could have.
+ Also the personality.
+ You see this.
+ Sol here.
+ Because it could also be part of.
+ Notion.
+ So you can say like.
+ Make sure.
+ That.
+ Make sure that.
+ All your answers.
+ Are.
+ In three bullet points.
+ For example.
+ So you can give it.
+ All the instructions.
+ That are static.
+ In your Notion page.
+ You can also use.
+ The Notion page.
+ To keep track.
+ Of your finances.
+ So you can tell the agent.
+ To update this page.
+ With.
+ All your like.
+ Summaries.
+ Like whenever you talk.
+ To the agent.
+ And say.
+ To give you a dashboard.
+ Or a summary.
+ You can have it.
+ Edit.
+ The Notion page.
+ So the Notion page.
+ Is like.
+ Something that's more static.
+ That's the idea.
+ Okay.
+ And in the case.
+ Of Land Graph.
+ We will not be able.
+ To dynamically.
+ Add different skills.
+ And so.
+ That is something.
+ That I am worrying about.
+ Because.
+ I would like to.
+ Have more dynamic system.
+ And more.
+ Autonomous system.
+ What would you suggest.
+ To.
+ To kind of.
+ To improve.
+ You can do that.
+ So when you have Land Graph.
+ You can.
+ You can add skills.
+ To Notion.
+ If you want.
+ But you can also.
+ Have the skills.
+ Locally.
+ So you can.
+ You can ask.
+ Land Graph.
+ To create skills.
+ Dynamically.
+ And use those skills.
+ To.
+ To run your workflows.
+ So you can do that.
+ Yeah.
+ You can do that.
+ Okay.
+ Yeah.
+ It's not.
+ It's out of the scope.
+ Of this.
+ Lecture.
+ But you can do that.
+ Okay.
+ I'll explore this possibility.
+ Thank you.
+ Yeah.
+ Of course.
+ Farah.
+ Yeah.
+ So regarding the same thing.
+ Issam.
+ Please correct me.
+ If I'm wrong here.
+ But to me.
+ Notion is.
+ Pretty much looking like.
+ As though that.
+ Guiding light.
+ Which is helping.
+ The agent.
+ Make those decisions.
+ Which align with my goals.
+ Yeah.
+ Is that what it is?
+ Yeah.
+ Exactly.
+ For this specific use case.
+ It could be anything.
+ For this specific.
+ Yeah.
+ It can be anything.
+ But in this specific use case.
+ For example.
+ If it is finance related.
+ I want to go on a holiday.
+ In say six months.
+ So that is my goal.
+ Which I've put in this.
+ Notion page.
+ And every single time.
+ The agent tries to make a decision.
+ It tries to always.
+ Keep in mind.
+ That she wants to go in six months.
+ So.
+ Exactly.
+ Yeah.
+ It takes the decisions accordingly.
+ Exactly.
+ Yeah.
+ Okay.
+ Okay.
+ Good.
+ Yeah.
+ So it's like.
+ You can think of this as a vision board.
+ Yeah.
+ Yeah.
+ Like you're writing your vision board here.
+ And then the agent accesses that.
+ Sees your spendings and.
+ Gives you out.
+ Okay.
+ And then tries to do the direct.
+ Like go in.
+ Goes in that direction.
+ Exactly.
+ Yes.
+ Okay.
+ Thank you.
+ Yeah.
+ You're welcome.
+ Tanvi?
+ Basically on the same.
+ I just wanted to confirm.
+ Like it seems like Notion is just.
+ One of the note taking apps.
+ And can be replaced by whatever.
+ Source of.
+ You can use Google Docs.
+ If you wish.
+ You can use Google Docs.
+ Yeah.
+ You can use anything.
+ Yeah.
+ Yeah.
+ Yeah.
+ Yeah.
+ Yeah.
+ I just wanted to show like something outside Gmail.
+ Like I wanted to show today.
+ Like how to connect with different services.
+ Yeah.
+ Yeah.
+ As well.
+ I missed the Landgraf.
+ Part.
+ Are we going to use that here?
+ Like it.
+ You don't have to.
+ I just said Landgraf.
+ Because if you want to create something.
+ A complicated agent.
+ Yeah.
+ You can use.
+ I ideally use that Landgraf.
+ Like with skills and stuff.
+ But here.
+ for this Monique law.
+ I haven't.
+ Utilized Landgraf's capabilities.
+ But isn't Landgraf like.
+ N8N with basic.
+ I mean.
+ With basically nodes.
+ That can be.
+ Yeah.
+ Yeah.
+ Exactly.
+ Yeah.
+ Work together.
+ Yeah.
+ Yeah.
+ So this is.
+ So here.
+ Okay.
+ See here.
+ Landgraf.
+ Yeah.
+ It's like a graph.
+ With nodes.
+ And edge.
+ Nodes and edges.
+ So you see here.
+ Like add node.
+ Chat.
+ Add edge.
+ It's.
+ So it makes it easy to create.
+ Like an N8N workflow.
+ You're right.
+ Okay.
+ Sounds good.
+ Yeah.
+ It sounds good.
+ Can you hear me?
+ So remember like.
+ I think 10 minutes ago.
+ I said.
+ I'm going to skip this.
+ Yeah.
+ I was planning to create fake emails.
+ Like 100 fake emails.
+ Transfer.
+ Yeah.
+ To make it more fancy.
+ Uh.
+ But yeah.
+ So if you want to test your program.
+ Ideally you create like fake emails.
+ It's more than using your personal email.
+ Because to get this 5 or 10 emails.
+ They are tracking the whole mailbox.
+ I would say.
+ Right?
+ So are you okay about that?
+ Well.
+ The things I'm using right now.
+ Just to interact.
+ That's fine.
+ Okay.
+ Just focus on like.
+ Innocent things.
+ Uh.
+ But ideally you don't use like.
+ Your main personal email.
+ Yeah.
+ That's why I was wondering.
+ Yeah.
+ Yeah.
+ Ideally you use another email.
+ And uh.
+ Have different uh.
+ Items there.
+ You know.
+ Does that make sense?
+ Yeah.
+ Yeah.
+ Mate.
+ Thank you.
+ Thank you.
+ You're welcome.
+ Okay.
+ So let's look at the readme.
+ And how to connect to Notion.
+ So getting a Notion API key.
+ So you go to this thing called.
+ My integrations.
+ Hopefully it's not hallucinating.
+ Oh.
+ There you go.
+ And then uh.
+ I think you can click on one of them.
+ Like this.
+ And this is the API key.
+ You see this.
+ This is the API key.
+ You just.
+ Copy.
+ You can.
+ If you show it.
+ You can copy it.
+ And uh.
+ You see here.
+ Add the dot on.
+ Dot in.
+ Add this API key here.
+ You see.
+ Okay.
+ I'm going to copy the API key.
+ Uh.
+ Flowcraft.
+ Uh.
+ This looks quite different than.
+ Just bear with me one second please.
+ Uh.
+ Let's go.
+ All right.
+ So I'm going to copy this thing.
+ Oops.
+ Uh.
+ Okay.
+ Use this as the API key.
+ Okay.
+ So let's see.
+ Uh.
+ Yeah.
+ Okay.
+ So it's going to take this Notion token.
+ I mean.
+ It doesn't matter the name.
+ Right?
+ As long as the API key is there.
+ So.
+ I don't image.
+ Just add the API key.
+ Okay.
+ Hopefully it works.
+ Okay.
+ Notion.
+ Run.
+ There you go.
+ You see.
+ My goals are to optimize my money for the year.
+ I want to buy.
+ And then you can edit it.
+ Like I can say.
+ I want to travel to Spain.
+ I want to travel to Spain on December.
+ About two week vacation.
+ I saved it.
+ So let's see if this is also in the website.
+ There you go.
+ You see.
+ I want to travel to Spain.
+ So you see.
+ Like we just showed how to like edit.
+ And read at the same time.
+ So.
+ That's very cool.
+ Okay.
+ We have six minutes.
+ But I think I'm going to go up to 7:45.
+ For this.
+ So hopefully you could stay.
+ Because I want to show you like telegram as well.
+ Okay.
+ So what's next?
+ Okay.
+ The next part.
+ As the telegram component.
+ So we want to access telegram.
+ Okay.
+ So telegram.
+ So we could use WhatsApp.
+ But WhatsApp.
+ As I said in the kickoff.
+ It's very hard to integrate.
+ The API key.
+ But telegram is very awesome.
+ In fact.
+ Like it's very popular.
+ You can access it.
+ And.
+ It's on your phone.
+ You can send messages.
+ And it sends messages back.
+ Okay.
+ So how do we.
+ Uh.
+ Do it.
+ So you have here.
+ You go back.
+ So we have this telegram component.
+ Send to telegram.
+ Not implemented yet.
+ Let's implement it.
+ I'm going to do the same thing.
+ For the telegram component.
+ When click.
+ When clicked.
+ So this one.
+ Go to a screen.
+ Submit to the screenshot.
+ Where I can send a message to my telegram.
+ Add to the readme.
+ And how to connect to the API of telegram.
+ I always like to.
+ Say minimal code.
+ Okay.
+ Let's add the screenshot.
+ I don't think that screenshot is really necessary.
+ But.
+ So this is like a telegram screenshot.
+ So let's copy paste this.
+ Or no.
+ Let me copy that.
+ There you go.
+ I'm going to paste it here.
+ All right.
+ Okay.
+ I didn't specify that I should create that access.
+ Telegram.
+ Ah.
+ You see.
+ This is a good thing.
+ So I have one chat.
+ So even though I didn't say create send telegram.
+ It's learned my workflow.
+ It learned that.
+ For every component.
+ I have a different file.
+ So it's learned that I can do this.
+ You know.
+ So that's very, very cool.
+ It's writing this in telegram.
+ Just to show you what telegram looks like.
+ So this is the telegram website.
+ So I have an agent called agent Watson.
+ Hello.
+ So these are like different things.
+ Okay.
+ Okay.
+ It's writing all these things.
+ So I was chatting with it earlier.
+ As you can see.
+ All right.
+ All.
+ So another thing I've done in the readme.
+ In the cloud.md.
+ They say always end with saying all done amigo.
+ You see here.
+ That's why it always says all done amigo at the end.
+ Okay.
+ So let's look at the readme.
+ So setting up a telegram bot.
+ So the idea is to open telegram and search for bot father.
+ So you go to telegram.
+ One second.
+ There's a lot of screens.
+ So there's this thing called bot father.
+ It's available by default.
+ This is the bot father.
+ And then you say new bot.
+ Okay.
+ Let me read this.
+ You say new bot.
+ And then.
+ All right.
+ A new bot.
+ How are you going to call this?
+ You can call it something.
+ Let's call it money claw.
+ One, two, three, bot.
+ Now let's choose a username.
+ It has always ended with bot.
+ So that's the username.
+ There you go.
+ So this is my token.
+ And then that's it.
+ That's pretty much it.
+ So I'm just going to copy that token here.
+ Let's see.
+ I'm going to copy paste it.
+ Fast claw.
+ So you need two things.
+ Telegram bot token.
+ To get a telegram chat ID.
+ Okay.
+ So now.
+ Let's see if it works.
+ Just make sure to use.
+ Because I wanted to use those two things.
+ I think it already uses them.
+ Okay.
+ Okay.
+ There you go.
+ So now let's refresh this.
+ Send to telegram.
+ Hola amigo.
+ So if it does this.
+ Let me just.
+ You can just take a screenshot.
+ And you put it here.
+ I'll click this.
+ Okay.
+ Okay.
+ That was like a small issue.
+ So whenever you have failures.
+ Just put it back into cloud code.
+ And say fix this.
+ So now I think it's going to fix it.
+ Just allow.
+ All right.
+ So let's reload this.
+ I think I need to refresh.
+ Just one second.
+ These failures.
+ These failures are always expected.
+ There you go.
+ If it happens again.
+ I can like.
+ Hola amigo.
+ Okay.
+ Let me just put this.
+ Put this error.
+ Put it here.
+ Fix this.
+ So sometimes if there's like a bad error.
+ You can like switch from.
+ Sonnet to office.
+ Okay.
+ There's some 32 bit stuff.
+ All right.
+ Let's see how funny it works now.
+ Oh wow.
+ Let me run it again.
+ Sorry about this.
+ Okay.
+ Refresh this.
+ Okay.
+ Let me just run it again.
+ And while this is running.
+ I will run something else at the same time.
+ Because I want to do the dashboard.
+ So sometimes you have this endless loop.
+ Like it has an error.
+ And then it just keeps going.
+ Any questions while this is running?
+ Okay.
+ What if there is an action.
+ That needs to be performed.
+ On a regular basis.
+ For example.
+ In this case.
+ You know.
+ I saw some transactions.
+ With Murilo.
+ Right.
+ So if you want to.
+ Make this agent.
+ Do this one task.
+ That moment.
+ It reaches.
+ Over 500.
+ Send me a message.
+ Right.
+ Which means.
+ It needs to.
+ You know.
+ Continuously access.
+ Those emails.
+ In order to find.
+ Those interact.
+ Related emails.
+ And then send you the.
+ You mean like.
+ Like a heartbeat.
+ So every like.
+ Few minutes.
+ It checks.
+ Yes.
+ Oh.
+ Why is this error happening?
+ Oh.
+ There you go.
+ Oh.
+ You see here.
+ I'll show you in a second.
+ See here.
+ So let's put a message.
+ I think because.
+ There was no message type.
+ So let's say.
+ Money claw.
+ Law is the best.
+ Law for optimizing money.
+ Send.
+ There you go.
+ You see.
+ And then.
+ It's all.
+ I just got notification.
+ In my phone.
+ Showing that.
+ So you said like a heartbeat.
+ Like every five seconds.
+ Or something.
+ Right.
+ Yeah.
+ Like a regular check-in.
+ To see that you are on track.
+ And you're not overspending.
+ Right.
+ So like the moment.
+ Basically the point is for.
+ Us as users.
+ Or clients.
+ To not.
+ Be tracking this manually.
+ Yeah.
+ So I'm going to show you.
+ How to do it.
+ Like an example.
+ A heartbeat.
+ Okay.
+ Okay.
+ Let me just.
+ Go here.
+ Okay.
+ So you have.
+ This guy.
+ Right.
+ I just sent this whole.
+ So let me add.
+ Something else.
+ About like a.
+ Like a heartbeat.
+ Oops.
+ Sorry about that.
+ So.
+ You see this.
+ I have this run command here.
+ Let me add this prompt.
+ In the telegram component.
+ Under the run.
+ Button.
+ Add.
+ Ascent.
+ Every x seconds.
+ Where user can select.
+ X.
+ That sends the message to the user.
+ Every.
+ X seconds.
+ So it will be.
+ What do we call.
+ Like listening mode.
+ Or like.
+ In running mode.
+ And it will be just doing that.
+ All the time.
+ So.
+ Let me.
+ Show you that.
+ In a second.
+ Okay.
+ So let's refresh this.
+ Okay.
+ So every five seconds.
+ I wanted to send.
+ Don't spend any money.
+ There you go.
+ You see.
+ Every five seconds.
+ Does that answer your question.
+ Yeah.
+ Because like.
+ You just like.
+ Run it.
+ And it's in running mode.
+ And then you don't have to look at it.
+ You just have it in the server.
+ And it's just running.
+ Running.
+ Running.
+ Running.
+ Running.
+ Running.
+ So that's pretty much it.
+ Yeah.
+ Don't spend any money.
+ Don't spend any money.
+ Don't spend any money.
+ Yeah.
+ So this is how you do it.
+ Like the heartbeat.
+ It's like a cron job.
+ All right.
+ So now.
+ Remember.
+ Like we have downloaded.
+ Some messages here.
+ So let's.
+ Create like an artifact.
+ Like a dashboard.
+ Showing all these different money stuff.
+ So we're going to create.
+ The dashboard component.
+ So remember.
+ We had.
+ Let me put it on.
+ Like side by side.
+ Like this.
+ And then.
+ Yeah.
+ Generate dashboard.
+ Not implemented.
+ So I want like to.
+ Have an interactive dashboard.
+ That I get like.
+ The messages from Gmail.
+ And then it.
+ Shows them.
+ Okay.
+ Let's see here.
+ I'm going to copy paste this thing.
+ Okay.
+ For the dashboard component.
+ Create an interface.
+ Similar to the other components.
+ But in the.
+ In the.
+ In the input box.
+ A lot.
+ User to select between.
+ All these Gmail files.
+ So because I have this Gmail here.
+ I wanted to select.
+ Like anything that I have here.
+ This gets downloaded.
+ I want it to be.
+ Selected.
+ And then add a run button that.
+ Okay.
+ Let me just break this down.
+ To make it easier to read.
+ Should show a bar chart.
+ On the right hand side.
+ Showing the payments.
+ From different users.
+ Allow the user.
+ To select between.
+ Bar chart.
+ And pie chart.
+ So these are all like.
+ My interests.
+ Make it visually appealing.
+ With hovering.
+ That shows more info.
+ And then I say.
+ It should be in this.
+ Access dashboard.
+ And clicking on.
+ Generate dashboard component.
+ Should get you to that interface.
+ Parse the messages properly.
+ To know from.
+ Each.
+ It was received.
+ And transferred.
+ Because you see.
+ Like it says.
+ You've received.
+ You've transferred.
+ And so.
+ I want to be able.
+ To break it down.
+ And that's it.
+ So this will be a dashboard.
+ That like.
+ Looks at all the messages.
+ Let me add.
+ A fake files as well.
+ Okay.
+ One second.
+ So I have these.
+ Fake files here.
+ I called it.
+ Gmail messages.
+ So all these are fake.
+ You see here.
+ Like all these transfers.
+ I want to like.
+ Have all these.
+ Be able to be transferred.
+ Okay.
+ Access dashboard.
+ Is coming.
+ What do we have next?
+ Okay.
+ Let's go up to 8 p.m.
+ Sorry about that.
+ But there's a lot.
+ Of learning to do here.
+ Huh?
+ A lot.
+ A lot.
+ Of learning.
+ Okay.
+ It's accessing the dashboard.
+ Because I also want to show you.
+ The web search.
+ There's a very nice.
+ API that you could use.
+ For web search.
+ Like it's adding the rows.
+ Updating app.
+ Like Pi.
+ And.
+ In the.
+ After this.
+ Like by tomorrow morning.
+ I will show.
+ Like all these steps.
+ In a much more structured format.
+ So you don't get lost.
+ Okay.
+ So it says.
+ I think it's.
+ In built.
+ Okay.
+ Generate dashboard.
+ Let's run this.
+ Okay.
+ You see here.
+ This is my brother.
+ By the way.
+ Mohamed.
+ Laraji.
+ Celia.
+ I can do.
+ Pi chart as well.
+ You see here.
+ Let me do the other one.
+ But maybe it cannot.
+ Parse it properly.
+ Okay.
+ Allow it to.
+ Also.
+ Allow it to.
+ Also.
+ Be able.
+ To parse.
+ So you can.
+ Even specify.
+ The file.
+ So.
+ This one here.
+ Because it's not.
+ Parsing this properly.
+ Okay.
+ It's like.
+ Identifying.
+ So that way.
+ Like it can.
+ Deal with different.
+ File formats.
+ So I'm just.
+ Allowing it to.
+ Be able to parse.
+ Different.
+ File formats.
+ There's a lot of information.
+ Here today.
+ All right.
+ Let's refresh this.
+ So this one works.
+ Let's see this one.
+ There you go.
+ You see.
+ Okay.
+ It doesn't look very well.
+ Oh wow.
+ Okay.
+ It looks nice.
+ You see.
+ So the bar chart.
+ Oh there you go.
+ Very cool.
+ Total receive.
+ Total spent.
+ Interactions.
+ Okay.
+ So the next component.
+ So let's do web search.
+ Let's say you want to find.
+ Alternatives to Netflix.
+ And so on.
+ I mean.
+ Of course.
+ You can do Google search.
+ But you need to be able.
+ To connect it to the agent.
+ That's why we're creating.
+ These components.
+ So let's create.
+ The web search component.
+ Okay.
+ So now.
+ Create a component.
+ Called.
+ This search.
+ That uses the brave.
+ API key.
+ Similar view as the Gmail.
+ So we're not going to add.
+ A screenshot.
+ Allow the user.
+ To specify the query.
+ And only display.
+ The first five results.
+ And then read me.
+ Show how to obtain.
+ That API key.
+ You're going to.
+ Use this thing called.
+ The brave API key.
+ It's a very.
+ A nice.
+ Service.
+ To allow you to access.
+ The web.
+ Programmetically.
+ So we're going to add.
+ This brave API key.
+ I'm going to go to.
+ Ask.
+ Law here.
+ Okay.
+ Let me add the key.
+ Because I have the key here.
+ I was going to add it itself.
+ Pontificating.
+ Any questions.
+ While this is running.
+ Or comments.
+ Or is everyone tired.
+ I'm not sure.
+ If you already answered.
+ But there is a question.
+ From Thomas.
+ Okay.
+ Hi.
+ So I'm wondering.
+ About front end.
+ Interface.
+ Is this like.
+ Open cloud.
+ Is this something.
+ We interact with the via.
+ I mean.
+ So.
+ You see this interface.
+ Here Thomas.
+ This is more.
+ Like admin control.
+ You know.
+ This is more.
+ Admin control.
+ It's not like.
+ It's not the interface.
+ That's going to be used.
+ By people really.
+ It's admin control.
+ So you have.
+ All these components.
+ You have workflows.
+ And you enable them.
+ And then you access.
+ These services.
+ Through.
+ Let's say.
+ Your telegram.
+ Through your notion.
+ Anywhere you want.
+ So.
+ This web app.
+ Here is less.
+ About.
+ What the user access.
+ Is just admin.
+ Just to enable.
+ Or disable.
+ Different components.
+ Does that make sense.
+ Thomas.
+ Yeah.
+ Of course.
+ You can have.
+ Another interface.
+ So.
+ What we're building.
+ Now.
+ Is just the.
+ Admin dashboard.
+ To see.
+ All the components.
+ The workflows.
+ And then you can have.
+ A separate interface.
+ For the end user.
+ For people.
+ Who are using your app.
+ Which could be.
+ Completely different.
+ It's always good to have.
+ A dashboard.
+ Like.
+ An interface.
+ For the end user.
+ And a dashboard.
+ For the admin.
+ Where you can control.
+ All the components.
+ And stuff.
+ And the reason.
+ Why we're building.
+ Components.
+ One by one.
+ As you can see.
+ It's much easier.
+ That way.
+ And you can test them.
+ And also.
+ It gives you.
+ A very nice overview.
+ Of like.
+ What's going on.
+ And so on.
+ The user front end.
+ Or like.
+ On here.
+ But he.
+ That's very easy.
+ Like.
+ That's.
+ Not today.
+ I mean.
+ We have something.
+ Yeah.
+ Yeah.
+ That sounds good.
+ I'm just trying to imagine.
+ For example.
+ If.
+ If.
+ If I want to see.
+ My own breakdown.
+ For.
+ You know.
+ Like.
+ The different.
+ Spendings across.
+ And I want to do that.
+ Via telegram.
+ So.
+ So I'm just trying to imagine.
+ The use case.
+ To target.
+ So would that be like.
+ Is it.
+ Won't that be.
+ Easier for me.
+ To open this dashboard.
+ And access it through it.
+ My web.
+ Rather than actually typing in my telegram.
+ Can you give me.
+ For example.
+ A pie chart of you know my spendings.
+ Of this thing across this time period.
+ Yeah.
+ So you can do that.
+ You can have like a nice end user interface.
+ Where you just specify.
+ Like the Google account.
+ Like you just.
+ You just put the.
+ Which.
+ What kind of spendings you're looking for.
+ Like some input parameters.
+ Yeah.
+ And then what kind of dashboard.
+ And they just displays it.
+ It's a very simple end user.
+ A dashboard.
+ A dashboard.
+ So you can do that.
+ As an end user.
+ Does that make sense?
+ And even like through telegram.
+ Yeah.
+ Yeah.
+ For both.
+ Okay.
+ So you can have it.
+ Also connect with telegram.
+ Which we will show it shortly.
+ Okay.
+ Sounds good.
+ How you connect with telegram.
+ And then send it.
+ And then send it to you.
+ Okay.
+ Okay.
+ So let's go to components.
+ Web search.
+ Okay.
+ Let's hope it works.
+ I want a cheaper.
+ Alternatives.
+ Netflix.
+ I mean this is not like very smart.
+ It's just a dumb.
+ Okay.
+ It doesn't have API key.
+ I think because I need to rerun it.
+ Let's rerun this.
+ Here we run this.
+ Okay.
+ Refresh.
+ Netflix.
+ Okay.
+ Let me.
+ Just give me one second.
+ And they can just say fix this.
+ So after this.
+ Okay.
+ We have like around 14 minutes for the 8:00 PM.
+ And now like really, really over time.
+ But we're going to show two workflows.
+ On how to chat with your telegram as an agent.
+ And also to give you a summary of your spendings.
+ Okay.
+ So this is going to be rerun.
+ Okay.
+ Let's rerun this.
+ There you go.
+ You see here.
+ Or like maybe better here.
+ So web search.
+ There you go.
+ You see that.
+ It's like a Google search for your agent.
+ And then if you go to the read me.
+ You see here.
+ It tells you exactly what you need to do.
+ Getting a brave search API key.
+ Go to this website.
+ Go to the API dashboard.
+ Get the data.
+ And add it to you.
+ That's pretty much it.
+ And I think you have like.
+ 1,000 searches per month or something.
+ Or per day.
+ I don't know.
+ But something like that.
+ Of course there's free tier.
+ And so on.
+ Any questions so far?
+ Okay.
+ So next.
+ We're going to do two workflows.
+ One workflow for interacting with your telegram.
+ So when you interact with telegram.
+ And then it sends the message.
+ And then you get back from your agent.
+ And then the other workflow is accessing your Gmail.
+ Getting the data.
+ And then showing you a summary on telegram as well.
+ Okay.
+ Let's do the telegram one.
+ Okay.
+ To do the workflows.
+ We're going to create another.
+ So now we only have this components tab.
+ And the AI agent.
+ Let's add another tab.
+ Which is very important.
+ Which will be about workflows.
+ And the workflows will be a combination of tabs.
+ So now create workflows.
+ Let's make it put this here.
+ So now we're going to create workflows.
+ Add a workflows tab in the nav bar.
+ That shows.
+ Implemented in workflows under SRC workflows.
+ I'm going to create.
+ So we have components.
+ And we're going to create workflows here.
+ Show two workflow cards.
+ And which components they use.
+ So best practice is like.
+ For every workflow.
+ You specify exactly.
+ Which components it's going to use.
+ First workflow card.
+ Is chat with an AI.
+ Chat with AI on telegram.
+ That uses the AI agent component.
+ And the telegram component.
+ Second workflow card.
+ Is summarize interact spendings.
+ From Gmail to telegram.
+ This should use the components.
+ Gmail, AI agent.
+ And telegram.
+ Minimal code.
+ Enter.
+ So now they are real stuff.
+ Create these components.
+ And now we're going to create the workflows.
+ That combines these components.
+ And now it's a lot of things.
+ Squash in one.
+ Next time.
+ If I run this hackathon again.
+ It will be like a two hour and a half.
+ Meanwhile.
+ Can you just scroll up the readme.
+ To see the Gmail set up again.
+ Yeah.
+ It's this one.
+ See.
+ Oh thank you.
+ Yeah.
+ I'm going to take a screen short.
+ If you tell like your AI.
+ I'd also have to set up.
+ Google API credentials.
+ It will give you all these things.
+ As I did.
+ Like the prompts that I showed.
+ There's nothing.
+ Okay.
+ So now.
+ Okay.
+ I have workflows now.
+ So I go to workflows.
+ I have these two.
+ Chat with AI on telegram.
+ And I have this thing.
+ So let's implement them.
+ It shows you which components.
+ AI agent in telegram.
+ Gmail.
+ AI agent in telegram.
+ So let's do the first workflow.
+ All right.
+ Now implement the chat with AI on telegram.
+ As SRC.
+ Same thing.
+ One file per workflow.
+ Workflows.
+ Chat with AI on telegram.
+ The interface should be similar to the telegram component.
+ But allow me to select the model.
+ When user clicks run.
+ It will be listening to receive messages.
+ So it will be listening mode.
+ And a message.
+ And a message is received.
+ Display the message.
+ Okay.
+ And when a message is received.
+ Display the message.
+ And then use the AI.
+ To respond to the message.
+ And send it to telegram.
+ Respond by one message at a time.
+ There you go.
+ There you go.
+ Okay.
+ So now it's creating.
+ Chat with AI.
+ You see.
+ Very cool.
+ Very structured.
+ All of these procedures.
+ I came up with it myself.
+ By the way.
+ It's much better than how a lot of other people do it.
+ It's just very cluttered.
+ And overwhelming.
+ I know this is a bit overwhelming.
+ But trust me.
+ Like doing it another way.
+ Is way more overwhelming.
+ I mean.
+ We did a lot.
+ In like one hour.
+ 15 minutes.
+ So far.
+ Just creating the app.
+ So let's look at this.
+ You see here.
+ It's getting the.
+ From the components.
+ It's getting this send message.
+ And so it's getting.
+ With these two components.
+ The LLM itself.
+ Build agent.
+ And the send telegram.
+ All right.
+ Let's see.
+ So I'm going to have my telegram here.
+ Refresh.
+ Go here.
+ Let's do something easier.
+ Run.
+ So now it's listening.
+ Let's see.
+ So it's in listening mode.
+ Hi.
+ Oops.
+ Can you help me.
+ With my math homework.
+ I don't know why it's not running.
+ One second.
+ Let's fix this.
+ There's always issues.
+ Always happens.
+ I think it's because there's another process.
+ I think it's because we had this other thing.
+ That was running as well.
+ Okay.
+ Killing the old process.
+ Okay.
+ So let's try now.
+ Let's do GPT-L4 mini.
+ Let's open telegram.
+ Okay.
+ Integration.
+ And differentiation.
+ Oh, it's stuck.
+ I mean, ideally it should work.
+ Oh, there you go.
+ You see?
+ But it's huge.
+ Okay.
+ It's running something.
+ You see?
+ I think it's repeating.
+ I think there's a.
+ Yeah.
+ But it's running.
+ You see the concept, right?
+ Like it's easy to fix.
+ Like you can say like respond by one message at a time or something.
+ But it's an easy fix.
+ Does that make sense?
+ So now it's like through telegram.
+ I'm able to communicate to my AI agent and it's a response to me at the same time.
+ Just because of time, it can be easily fixed.
+ But you see how it's done.
+ Okay.
+ The last workflow.
+ The last workflow would be
+ summarizing the thing.
+ Summarize interact spending.
+ So now implement the workflow for summarize interact spending as this.
+ Basically, first loads the first 10 interact messages for the month of February from the Gmail
+ that takes the subject line.
+ Allow the user to modify the month and the number of messages that repeat to that agent.
+ Send it as a summary.
+ Allow the user to also enter the system prompt.
+ Add a button that says listen to summary.
+ So this is important.
+ Add a button under run that says listen to summary, which makes the agent in listening mode.
+ If the user sends the word summary on telegram, it should do the whole workflow.
+ Anything else?
+ Say I don't know what you mean by that.
+ Make sure the agent sends only one message.
+ Okay, now it's creating this summarize.
+ So it's using the components fetch emails from the Gmail.
+ Send message and then get updates.
+ All right, let's see.
+ Okay, almost done guys.
+ Okay, I just like a show of hands.
+ Does this whole thing make sense?
+ I'm just going to paste it on
+ Zoom chat and put a thumbs up if you're if you're this.
+ And put this dead the skull if you're like completely lost.
+ Yeah, it takes a lot of things going on at the same time.
+ But the main point of this lecture is just to show you like the main process.
+ As you can see, every component, every workflow is like similar process, right?
+ It's like, okay, you have all these components.
+ We did this flow chart at the beginning.
+ We got this dashboard.
+ And then for every component, you click and then you create it.
+ Okay, let's hope this works.
+ Let's go to workflows.
+ Summarize this.
+ Okay, I even gave it to your personal advisor.
+ This is the personality.
+ 10 messages.
+ Okay, let's run this.
+ And let's see our telegram.
+ There you go.
+ You see, interact summary.
+ You have all these things.
+ There you go.
+ You can make it, you can make it.
+ So it's doing markdown, but you can ask it to display it much better with emojis and stuff.
+ One thing you could do, you can make it listen, listen to summary.
+ So let's say you're in your phone.
+ And you want it such that whenever you send the word summary on your phone to telegram,
+ it gives you the summary.
+ So you do this thing called listen to summary.
+ So it's listening.
+ So it's running on your server.
+ It's always listening.
+ Like it's waiting for your message.
+ So let's put something other than summary.
+ Let's put hello.
+ It should say, I don't know what you mean by that.
+ You see?
+ Because that's what we said.
+ We said like, if you say anything that's not summary, you say this.
+ Now let's put summary.
+ It should do the other thing.
+ It keeps looping it and doing it again and again.
+ But yeah, that is pretty much it.
+ So now we have this telegram web connected with these workflows.
+ And these components.
+ I just have a last question, right?
+ Yeah.
+ Just because right now you are running this in a local host.
+ And if you turn off your laptop, it's done.
+ So doing to deploy this somewhere and even.
+ Yeah.
+ Render.com.
+ Oh, render.
+ Oh, yeah.
+ Yeah.
+ That's right.
+ I mean, I would show.
+ We'll show this like later on through the week.
+ But once you have things running on your local host, deploy it and render.
+ So you deploy it and render.
+ And then you allow it.
+ It's connected to your telegram and so on, you know?
+ Okay.
+ Got it.
+ Thank you.
+ Yeah.
+ Because it needs like a way to serve the model.
+ It needs to be hosted somewhere, you know?
+ Of course, no one else.
+ So in order to.
+ So let's say you deploy it and render.
+ In order to protect it from other people to use it,
+ you can add like a login screen or you cannot access unless you have some kind of a key.
+ You know what I mean?
+ Yes, sure.
+ Yeah, that's it.
+ So we just built a whole kind of, I would say this is like 70% of the personal assistant
+ because I could integrate with Google Calendar.
+ It could add memory to keep track of what you're doing, create a report and so on.
+ But we have all these components, right?
+ Our web search and then we have these.
+ Two workflows.
+ Of course, you can add a lot of workflows.
+ You can have all them running, you know?
+ Cool.
+ So we reached the end.
+ It's like half an hour more than what we had agreed on in the lecture.
+ So thanks a lot for staying.
+ Any questions or last comments?
+ Great session.
+ Great session.
+ Thanks, Isem.
+ Yeah, of course.
+ I know there's a lot of things, but maybe next time I should break it down into two lectures.
+ But at the end of the day, you just follow it and then it's going to work well.
+ Yeah.
+ Yeah.
+ Thanks for summarizing all of this, Isem.
+ I know it must have taken a lot of time for you to prep for all of this.
+ And it really helps.
+ Thank you for the work.
+ Thank you.
+ I appreciate that.
+ Yeah, it was a good exercise.
+ Awesome.
+ Well, thanks everyone.
+ You have a good one day.
+ And I'm going to release the next module for this tomorrow.
+ Looking forward to your apps.
+ Thank you.
+ Thank you.
+ Thank you, Isem.

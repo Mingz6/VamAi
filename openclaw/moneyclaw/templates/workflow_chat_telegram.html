@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% block title %}MoneyClaw — Chat with AI on Telegram{% endblock %}
+{% set active = 'workflows' %}
+{% block body_extra_style %}display: flex; flex-direction: column; height: 100vh;{% endblock %}
+{% block extra_style %}
+    .main-panel { flex: 1; overflow-y: auto; padding: 1.5rem 2rem; display: flex; flex-direction: column; gap: 1rem; }
+    .btn-run { background: #f5a623; color: #fff; border: none; border-radius: 8px; padding: 0.75rem; font-size: 0.95rem; font-weight: 700; cursor: pointer; width: 100%; }
+    .btn-run:hover { opacity: 0.88; }
+    .btn-stop { background: #dc2626; color: #fff; border: none; border-radius: 8px; padding: 0.75rem; font-size: 0.95rem; font-weight: 700; cursor: pointer; width: 100%; display: none; }
+    .btn-stop:hover { opacity: 0.88; }
+    .event-card { background: #fff; border: 1.5px solid #ffe9a0; border-radius: 12px; padding: 1rem 1.2rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    .msg-row { display: flex; flex-direction: column; gap: 0.2rem; }
+    .msg-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; color: #aaa; }
+    .bubble { padding: 0.6rem 0.9rem; border-radius: 10px; font-size: 0.9rem; line-height: 1.5; white-space: pre-wrap; }
+    .bubble.received { background: #fffbf0; border: 1.5px solid #ffe9a0; }
+    .bubble.reply { background: #f5a623; color: #fff; }
+{% endblock %}
+{% block content %}
+<div class="layout">
+  <aside class="sidebar">
+    <h1>Chat with AI on Telegram</h1>
+    <p class="sidebar-desc">Listens for Telegram messages and replies with AI. Send a message to your bot to test it.</p>
+
+    <div>
+      <label>MODEL</label>
+      <select id="model-select">
+        {% for m in models %}
+        <option value="{{ m }}">{{ m }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="status-text"><span class="status-dot" id="dot"></span><span id="status-label">Idle</span></div>
+    <button class="btn-run" id="run-btn" onclick="startListening()">&#9654; Run</button>
+    <button class="btn-stop" id="stop-btn" onclick="stopListening()">⏹ Stop</button>
+  </aside>
+
+  <div class="main-panel" id="main-panel">
+    <div class="ready-state" id="ready">
+      <div class="icon">⚡</div>
+      <strong>Ready to run</strong>
+      <p>Select a model and click Run — then send a message to your Telegram bot</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}<script>
+  let pollTimer = null;
+  let offset = 0;
+
+  function setStatus(listening) {
+    document.getElementById("dot").className = "status-dot" + (listening ? " listening" : "");
+    document.getElementById("status-label").textContent = listening ? "Listening..." : "Idle";
+    document.getElementById("run-btn").style.display = listening ? "none" : "block";
+    document.getElementById("stop-btn").style.display = listening ? "block" : "none";
+  }
+
+  function startListening() {
+    setStatus(true);
+    poll();
+    pollTimer = setInterval(poll, 3000);
+  }
+
+  function stopListening() {
+    clearInterval(pollTimer);
+    pollTimer = null;
+    setStatus(false);
+  }
+
+  async function poll() {
+    const model = document.getElementById("model-select").value;
+    try {
+      const res = await fetch("/api/workflows/chat-telegram/poll", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ model, offset }),
+      });
+      const data = await res.json();
+      if (data.error) { addError(data.error); stopListening(); return; }
+
+      offset = data.offset;
+      data.events.forEach(addEvent);
+    } catch(e) {
+      addError(e.message); stopListening();
+    }
+  }
+
+  function addEvent(ev) {
+    document.getElementById("ready")?.remove();
+    const card = document.createElement("div");
+    card.className = "event-card";
+    card.innerHTML = `
+      <div class="msg-row">
+        <div class="msg-label">RECEIVED FROM TELEGRAM</div>
+        <div class="bubble received">${escHtml(ev.received)}</div>
+      </div>
+      <div class="msg-row">
+        <div class="msg-label">AI REPLY SENT</div>
+        <div class="bubble reply">${escHtml(ev.reply)}</div>
+      </div>`;
+    const panel = document.getElementById("main-panel");
+    panel.appendChild(card);
+    panel.scrollTop = panel.scrollHeight;
+  }
+
+  function addError(msg) {
+    const el = document.createElement("div");
+    el.className = "error";
+    el.textContent = msg;
+    document.getElementById("main-panel").appendChild(el);
+  }
+
+  function escHtml(s) {
+    return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+</script>{% endblock %}

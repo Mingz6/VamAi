@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+{% block title %}MoneyClaw — Access Notion{% endblock %}
+{% block body_extra_style %}display: flex; flex-direction: column; height: 100vh;{% endblock %}
+{% block extra_style %}
+    .sidebar { width: 320px; }
+    .main-panel { flex: 1; overflow-y: auto; padding: 2rem 2.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+    .btn-run { background: #f5a623; color: #fff; border: none; border-radius: 8px; padding: 0.75rem; font-size: 0.95rem; font-weight: 700; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: center; }
+    .key-row { display: flex; flex-direction: column; gap: 0.3rem; }
+    .key-input-row { display: flex; gap: 0.4rem; align-items: center; }
+    .key-input-row input { flex: 1; min-width: 0; }
+    .btn-reveal { background: #fffbf0; border: 1.5px solid #ffe9a0; border-radius: 8px; padding: 0.4rem 0.6rem; font-size: 0.75rem; cursor: pointer; white-space: nowrap; flex-shrink: 0; }
+    .btn-reveal:hover { background: #fff3cc; }
+    .btn-save-key { background: #f5a623; color: #fff; border: none; border-radius: 8px; font-size: 0.82rem; font-weight: 700; cursor: pointer; width: 100%; padding: 0.6rem; }
+    .btn-save-key:hover { opacity: 0.88; }
+    .key-status { font-size: 0.72rem; color: #059669; font-weight: 600; }
+    .key-status.missing { color: #dc2626; }
+    .setup-guide { background: #fffbf0; border: 1.5px solid #ffe9a0; border-radius: 10px; padding: 0.8rem 1rem; }
+    .guide-title { font-size: 0.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .steps { display: flex; flex-direction: column; gap: 0.35rem; padding: 0; }
+    .steps li { font-size: 0.78rem; color: #555; line-height: 1.45; list-style: none; padding-left: 0.9rem; position: relative; }
+    .steps li::before { content: "•"; position: absolute; left: 0; color: #f5a623; }
+    .steps code { background: #fff3cc; padding: 0.05rem 0.3rem; border-radius: 4px; font-size: 0.75rem; }
+    .btn-run:hover { opacity: 0.88; } .btn-run:disabled { opacity: 0.5; cursor: not-allowed; }
+    .page-title { font-size: 1.6rem; font-weight: 900; }
+    .block-item { background: #fff; border: 1.5px solid #ffe9a0; border-radius: 10px; padding: 0.9rem 1.1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+    .block-text { font-size: 0.92rem; line-height: 1.55; white-space: pre-wrap; }
+    .block-text.heading1 { font-size: 1.4rem; font-weight: 800; } .block-text.heading2 { font-size: 1.15rem; font-weight: 700; } .block-text.heading3 { font-size: 1rem; font-weight: 700; }
+    .block-text.bulleted { padding-left: 1rem; } .block-text.bulleted::before { content: "• "; }
+    .block-text.code { font-family: monospace; background: #f3f4f6; padding: 0.5rem 0.8rem; border-radius: 6px; font-size: 0.85rem; }
+    .block-actions { display: flex; gap: 0.5rem; }
+    .btn-edit { font-size: 0.75rem; padding: 0.25rem 0.7rem; border-radius: 6px; border: 1.5px solid #ffe9a0; background: #fffbf0; cursor: pointer; }
+    .btn-edit:hover { background: #fff3cc; }
+    .btn-save { font-size: 0.75rem; padding: 0.25rem 0.7rem; border-radius: 6px; border: none; background: #f5a623; color: #fff; cursor: pointer; font-weight: 700; }
+    .edit-area { width: 100%; border: 1.5px solid #f5a623; border-radius: 6px; padding: 0.5rem 0.7rem; font-size: 0.92rem; font-family: inherit; resize: vertical; outline: none; background: #fffbf0; }
+    .append-box { background: #fff; border: 1.5px solid #ffe9a0; border-radius: 10px; padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    .btn-append { align-self: flex-start; background: #f5a623; color: #fff; border: none; border-radius: 8px; padding: 0.45rem 1.1rem; font-size: 0.88rem; font-weight: 700; cursor: pointer; }
+{% endblock %}
+{% block content %}
+<div class="layout">
+  <aside class="sidebar">
+    <h1>Access Notion</h1>
+    <p class="sidebar-desc">View and edit your Notion page.</p>
+    <button class="btn-run" id="run-btn" onclick="loadPage()">&#9654; Run</button>
+
+    <hr style="border:none;border-top:1.5px solid #ffe9a0;"/>
+
+    <div class="key-row">
+      <label>NOTION TOKEN <span id="token-status" class="key-status missing">not set</span></label>
+      <div class="key-input-row">
+        <input type="password" id="token-input" placeholder="secret_xxx..."/>
+        <button class="btn-reveal" onclick="toggleReveal('token-input', this)">Show</button>
+      </div>
+    </div>
+    <div class="key-row">
+      <label>PAGE ID <span id="pageid-status" class="key-status missing">not set</span></label>
+      <div class="key-input-row">
+        <input type="password" id="pageid-input" placeholder="34e1a0b0cce9..."/>
+        <button class="btn-reveal" onclick="toggleReveal('pageid-input', this)">Show</button>
+      </div>
+    </div>
+    <button class="btn-save-key" onclick="saveKeys()">Save Keys</button>
+
+    <div class="setup-guide">
+      <div class="guide-title">📖 How to get your keys</div>
+      <ul class="steps">
+        <li>Go to <code>notion.so/my-integrations</code> and sign in</li>
+        <li>Click <strong>+ New integration</strong>, name it, click Submit</li>
+        <li>Copy the <strong>Integration Secret</strong> — that's your Token</li>
+        <li>Open your Notion page → <strong>⋯ menu → Connect to</strong> → select your integration</li>
+        <li>Copy the page ID from the URL (32-char hex after the last <code>-</code>)</li>
+      </ul>
+    </div>
+  </aside>
+
+  <div class="main-panel" id="main-panel">
+    <div class="ready-state">
+      <div class="icon">⚡</div>
+      <strong>Ready to run</strong>
+      <p>Fill in the inputs and click Run</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}<script>
+  async function loadKeys() {
+    const res = await fetch("/api/env/notion");
+    const d = await res.json();
+    const ti = document.getElementById("token-input"), ts = document.getElementById("token-status");
+    if (d.token_set) { ti.value = d.token_masked; ti.dataset.masked = "1"; ts.textContent = "set ✓"; ts.className = "key-status"; }
+    else { ts.textContent = "not set"; ts.className = "key-status missing"; }
+    const pi = document.getElementById("pageid-input"), ps = document.getElementById("pageid-status");
+    if (d.page_id_set) { pi.value = d.page_id_masked; pi.dataset.masked = "1"; ps.textContent = "set ✓"; ps.className = "key-status"; }
+    else { ps.textContent = "not set"; ps.className = "key-status missing"; }
+  }
+  function toggleReveal(id, btn) {
+    const inp = document.getElementById(id);
+    inp.type = inp.type === "password" ? "text" : "password";
+    btn.textContent = inp.type === "password" ? "Show" : "Hide";
+  }
+  async function saveKeys() {
+    const ti = document.getElementById("token-input"), pi = document.getElementById("pageid-input");
+    const payload = {};
+    if (!ti.dataset.masked) payload.token = ti.value.trim();
+    if (!pi.dataset.masked) payload.page_id = pi.value.trim();
+    if (!Object.keys(payload).length) return;
+    await fetch("/api/env/notion", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify(payload) });
+    ti.dataset.masked = ""; pi.dataset.masked = "";
+    loadKeys();
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    loadKeys();
+    ["token-input","pageid-input"].forEach(id => document.getElementById(id).addEventListener("input", function(){ this.dataset.masked=""; }));
+  });
+
+  let pageBlocks = [];
+
+  async function loadPage() {
+    const btn = document.getElementById("run-btn");
+    btn.disabled = true; btn.textContent = "Loading...";
+    const panel = document.getElementById("main-panel");
+    panel.innerHTML = "";
+
+    try {
+      const res = await fetch("/api/notion/page");
+      const data = await res.json();
+      if (data.error) { panel.innerHTML = `<div class="error">${data.error}</div>`; return; }
+
+      pageBlocks = data.blocks;
+      const title = data.title;
+
+      let html = `<div class="page-title">${escHtml(title)}</div>`;
+      html += pageBlocks.map((b, i) => renderBlock(b, i)).join("");
+      html += `
+        <div class="append-box">
+          <label>APPEND NEW PARAGRAPH</label>
+          <textarea id="append-text" rows="3" placeholder="Type new content..."></textarea>
+          <button class="btn-append" onclick="appendBlock()">+ Append</button>
+        </div>`;
+
+      panel.innerHTML = html;
+    } catch(e) {
+      panel.innerHTML = `<div class="error">${e.message}</div>`;
+    }
+    btn.disabled = false; btn.textContent = "▶ Run";
+  }
+
+  function renderBlock(b, i) {
+    const text = blockText(b);
+    const cls = blockClass(b.type);
+    return `
+      <div class="block-item" id="block-${i}">
+        <div class="block-text ${cls}" id="text-${i}">${escHtml(text)}</div>
+        <div class="block-actions">
+          <button class="btn-edit" onclick="startEdit(${i})">Edit</button>
+        </div>
+      </div>`;
+  }
+
+  function blockText(b) {
+    const rt = b[b.type]?.rich_text || [];
+    return rt.map(r => r.plain_text || "").join("");
+  }
+
+  function blockClass(type) {
+    return {
+      heading_1: "heading1", heading_2: "heading2", heading_3: "heading3",
+      bulleted_list_item: "bulleted", code: "code",
+    }[type] || "";
+  }
+
+  function startEdit(i) {
+    const b = pageBlocks[i];
+    const text = blockText(b);
+    const item = document.getElementById(`block-${i}`);
+    item.innerHTML = `
+      <textarea class="edit-area" id="edit-${i}" rows="3">${escHtml(text)}</textarea>
+      <div class="block-actions">
+        <button class="btn-save" onclick="saveBlock(${i}, '${b.id}')">Save</button>
+        <button class="btn-edit" onclick="cancelEdit(${i})">Cancel</button>
+      </div>`;
+  }
+
+  function cancelEdit(i) {
+    const b = pageBlocks[i];
+    const item = document.getElementById(`block-${i}`);
+    const text = blockText(b);
+    const cls = blockClass(b.type);
+    item.innerHTML = `
+      <div class="block-text ${cls}" id="text-${i}">${escHtml(text)}</div>
+      <div class="block-actions"><button class="btn-edit" onclick="startEdit(${i})">Edit</button></div>`;
+  }
+
+  async function saveBlock(i, blockId) {
+    const text = document.getElementById(`edit-${i}`).value;
+    const res = await fetch("/api/notion/block", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ block_id: blockId, text }),
+    });
+    const data = await res.json();
+    if (data.error) { alert(data.error); return; }
+    pageBlocks[i][pageBlocks[i].type].rich_text = [{ plain_text: text }];
+    cancelEdit(i);
+  }
+
+  async function appendBlock() {
+    const text = document.getElementById("append-text").value.trim();
+    if (!text) return;
+    const res = await fetch("/api/notion/append", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({ text }),
+    });
+    const data = await res.json();
+    if (data.error) { alert(data.error); return; }
+    document.getElementById("append-text").value = "";
+    loadPage();
+  }
+
+  function escHtml(s) {
+    return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+</script>{% endblock %}

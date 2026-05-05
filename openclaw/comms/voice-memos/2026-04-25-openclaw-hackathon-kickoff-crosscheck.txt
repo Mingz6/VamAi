@@ -1,0 +1,1320 @@
+ 24 hours per week, and this is one week.
+ In fact, you can see this as a compression of the ability
+ to react in six weeks in one week.
+ And it's compressing things these days
+ due to time constraints.
+ OK, so yes, one week starts today.
+ And then we will have demo day next week on Saturday,
+ where people can present their apps here in this same room.
+ And it's about creating your own open block.
+ So people who are facilitating, there's me, Bishan Raji,
+ and there's Paul right here.
+ There you go.
+ And thanks to our sponsors.
+ Well, one sponsor is the North Pacific Rescue,
+ which gives us this space for free, which is really nice.
+ Although, after a month, they will ask us to buy insurance.
+ It's someone who finds some great sites.
+ And we also have two sponsors.
+ There's Illuminate Universe, which
+ is going to be sponsoring some prizes.
+ And there's also Young Town Dental Boutique in Claire.
+ It works-- it's a very nice dental boutique.
+ It's like a dental spa.
+ Very cool.
+ And she's sponsoring the buildings,
+ which is really nice.
+ And she's also sponsoring some gift cards.
+ There's some gift cards right there
+ for anyone who wants to save some costs for their teeth
+ cleaning or teeth enhancements.
+ And also, there will be prizes from-- also
+ from Young Town Dental Boutique, a $300 prize.
+ There will be a lot of prizes for the winners.
+ And if you haven't done so already,
+ please join the Discord, because that's
+ where all the communication is happening.
+ And throughout the week, it's mostly going to be online.
+ So I want the support to be online and sharing your work.
+ The first intro to robots--
+ does anyone know that robots--
+ the word robots started from 1920, right?
+ Weeks here.
+ So the word robot comes from the Czech word robota, which
+ means forced labor and servitude.
+ It started as a playwright, like a theater play.
+ And we don't know the word Czech Republic.
+ It's next to Germany, Austria, and Poland.
+ And Poland as well, because you're a neighbor.
+ And the idea is to showcase how having something like robots
+ can do human labor at scale very efficiently.
+ It spread really quickly through Europe
+ when that day came up.
+ It's funny, because the critics of the theater,
+ they were pretty harsh on the theater play,
+ but people really loved this.
+ Loved it in the sense they were very interested
+ about the concept.
+ And a lot of it was driven by fear,
+ because it shows that humans can be replaced by machines.
+ So all this fear about AI replacing us started from 1920.
+ Fear would never go away.
+ OK, after that, the actual real robot
+ that started autonomous robot was 1948.
+ This LC, the torch voice.
+ And it had a very simple task.
+ All it did was it can move around, and all it needs--
+ all it does is it can see light and goes towards it.
+ So if you're in a spot in a cave and you have this torch voice,
+ it can guide you maybe through the light at the end
+ of the tunnel, as they say.
+ And it had some nice functionality.
+ It wasn't very sophisticated, because it was the first one.
+ And it can avoid obstacles.
+ The good thing is like Roomba, the vacuum in your home.
+ It can go back and recharge whenever it needs batteries.
+ OK, so personal assistants are very, very important.
+ I'm not sure how many people here watched Star Wars,
+ but we saw how useful they were in Star Wars.
+ There's these two very popular bots or agents, C-3PO and R2D2
+ from 1977 Star Wars movie.
+ And they did two things.
+ So C-3PO mostly talks.
+ So it was good with language communication.
+ It was like an interface to humans.
+ And R2D2, well, it didn't do much talking.
+ It was just like people.
+ That's all it does, basically.
+ But it does incredible things.
+ It can hack, it can repair, it can execute all the tasks
+ and so on.
+ Very cool.
+ So when they did Star Wars, well, they did a lot of things.
+ Like they hacked doors.
+ They fixed all ships.
+ So you can imagine fixing ships is like fixing your food.
+ And they did a lot of support, negotiating with allies.
+ They were very, very useful.
+ Of course, but there's human and noobs that didn't replace,
+ for example, Luke, right?
+ They didn't replace the humans in Star Wars, the Jedi's.
+ That's not human and noobs.
+ Even if there's powerful agents, AI bots like these,
+ they still need humans.
+ OK.
+ So right now we are at the age of personal assistants,
+ an age that can do personal assistant.
+ It started really, really big with OpenCon
+ because it was a very nice, what we call orchestration layer
+ of all the capabilities with AI models,
+ LLMs, like large language models.
+ Put them all together so it can do tasks for you.
+ So now we are at the age of building
+ your own personal assistant.
+ The reason why right now it's becoming more and more popular
+ is because LLMs, or large language models,
+ are strong enough.
+ Foundation of these agents is strong enough
+ to do tasks for you.
+ So it all started from like CHA-GPT, November 30, 2022.
+ At the beginning, it wasn't the best.
+ But over time, people saw the potential.
+ They trained many models, and they made it very strong.
+ So you can ask them many different questions,
+ like explain AI by emails, feedback code,
+ and it can give you a lot of the face
+ of all these personal assistants.
+ You can imagine the CHA-GPT of these two
+ agents from Star Wars, the foundation, their brain.
+ OK.
+ So AI evolution started, I would say,
+ from 2022, these strong questions answering bots.
+ So in 2022, we had mostly just answering questions
+ and then over time, towards 2025,
+ they're able to suggest different follow ups
+ or solutions.
+ Now, they're even able to plan.
+ So if you give them a very big emissions task,
+ they can break it down and plan it and achieve the task.
+ Then you can execute each step.
+ If you use bot code, you will see it breaks down your tasks.
+ Then it does each step, execution each step one by one
+ until they can choose the goal.
+ And then you can also monitor it down.
+ So we went from like chatbot to agents.
+ And basically, the main difference is that agents can act.
+ They can execute things.
+ So the goal of this hackathon is to create
+ your own personal assistant.
+ So you have ambitious tasks or high level tasks.
+ I find my meeting with Bob.
+ I try to make slides.
+ And to Bob, he just asks for so many different tasks
+ that the AI assistants can go through the meeting notes
+ and do web search for you.
+ And then he can create slides for you
+ and then sends it to Bob.
+ Very cool.
+ So this is the idea of this hackathon is to build something
+ like this, not necessarily about after meeting summarization,
+ but it could be anything.
+ Ideally, it's something you care about,
+ where you want the analysis.
+ So we can see OpenClaw as a personal assistant-agent
+ harness.
+ We call this a harness.
+ Harness is like everything around the LLM,
+ like connecting with the services, the tools, the data,
+ like Gmail, Calendar, Notion, sending to Telegram, emails,
+ all of that around it.
+ And it's called a harness.
+ And it kind of made it alive by Peter Steinberger, who
+ the way he started is he wanted to create
+ his own personal assistant for fun.
+ He didn't think it would blow up.
+ And then it just exploded.
+ So let's look at this here at OpenClaw.
+ So this is like a high level visualization of OpenClaw.
+ So you have data connectors like Calendar, Gmail, and Notion.
+ The center of this is like an AI agent.
+ Could be a chat, UBT, Gemini, or pod code.
+ And then it has a bunch of tools, data connectors, tools,
+ it could be anything, like send telegraph, create invoice,
+ send email, summarize, book meetings.
+ Any of these can be tools that you connect.
+ However, there's also extra things
+ that you need to add, which is memory.
+ So it needs to go through you, install OpenClaw.
+ It writes a markdown file called Notes.
+ So every time you write it, it writes
+ notes to keep track of your interests, or safeguards,
+ or anything that you've been doing,
+ so that when you ask it for a new task, it can serve you better.
+ Because now it knows more about you as you use it.
+ And there's also this thing called Sol.
+ So Sol is like an extension of a persona.
+ It's like a character, values, goals, the North Stars.
+ And Sol is an agent's Sol.
+ That's why they call it Sol.mp.
+ So if you go to OpenClaw.ai, or like their website,
+ you install OpenClaw on your computer.
+ And there's like a bunch of steps that it guides you through.
+ The first step, when you run it, when you install it,
+ just like when you install a game,
+ or you install the software, the first step
+ is to decide which model you're going to use.
+ AI, Quent, Synthemic, Venice AI, Google,
+ Copilot, OpenRouter, and so on, so on.
+ For this hackathon, the way we're going to encourage--
+ you can use anything you want, but we're
+ going to show with plot code.
+ I personally find plot code very powerful.
+ But you can use anything you want.
+ And then it will ask you to select some channels.
+ It's like, what do you want to connect it with?
+ So you can connect with Google, Discord, Telegram, Slack,
+ Signal, all of these things.
+ Of course, different channels have different challenges
+ in connecting them.
+ For example, Telegram is very easy to connect with.
+ I connect with it in like 10 minutes,
+ and it wants to be able to send me messages.
+ WhatsApp is a bit more challenging.
+ It might log you off, and it might throttle your messages
+ and so on.
+ You need to buy a business API if you
+ want to connect it properly, but that's very expensive.
+ But Telegram is free.
+ This part as well.
+ You will also show how to connect with Google and so on.
+ So these are what we call the data connectors, connecting
+ with different data sources.
+ And then there's tools.
+ There's a lot of tools, like Apple Notes.
+ If you wanted to allow it to use your password to log in
+ into different systems, you can have it access one password.
+ So one password I use personally.
+ I'm not sure how many-- how many people here
+ use one password?
+ Yeah, that's one of my favorites.
+ I have more than 300 websites that I've signed up here.
+ I can't memorize all those 300 passwords.
+ One password is one of the best ways
+ to access different websites without having
+ to remember all of them.
+ But there's a lot of different tools.
+ It could be Obsidian, which just keeps
+ track of different documents.
+ It could be summarization.
+ So this is like OpenClog, if you install it in your machine.
+ But we're not going to use OpenClog,
+ even though this is OpenClog and it's something else.
+ Tricks, OK.
+ OpenClog is the inspiration.
+ In fact, if you watch YouTube videos on OpenClog,
+ a lot of them will recommend building your own OpenClog,
+ because you'll have more control over security.
+ You'll have a lot more flexibility.
+ You can create your own service providers,
+ your own data connectors and tools.
+ And potentially a lot more useful,
+ because OpenClog has its own harness.
+ It might not be useful for your use case.
+ But if you're using something like Clog code to build it,
+ chances are you'll get a much more useful harness.
+ It's actually very easy.
+ For the people who did workshops on Clog code,
+ you can just go open Clog code, and you ask it,
+ create a connector for Notion, or Telegram, VDC, et cetera.
+ And then it will guide you.
+ OK, you hit your NPI key, go to this website, link it.
+ It creates a file, and then it presents it to you.
+ So it's very, very powerful.
+ So these are some of the tools that I created myself,
+ like Accessi and Excel sheet, Gmail, and other tools.
+ Does that make sense?
+ Any questions?
+ We're not going to use other tools.
+ [LAUGHTER]
+ [INAUDIBLE]
+ One thing that's to worry about.
+ Yeah, yeah.
+ We don't need to use other tools.
+ We call it OpenClog for [INAUDIBLE]
+ Clickbait.
+ Clickbait.
+ Yeah.
+ Clickbait.
+ [LAUGHS]
+ Yeah, that's right.
+ OK, so yeah, this is how it works.
+ But let me show you an example.
+ So this is a website I built myself.
+ So one of the best ways to use Cloud Code
+ is to install VS Code.
+ It's a nice interface.
+ And then install an extension called Cloud Code.
+ So the chat looks like this.
+ When you open VS Code, you'll also
+ be presented with a co-pilot, ignore a co-pilot.
+ Sometimes I get tricked, and I accidentally
+ tell a co-pilot to do things for me,
+ but it doesn't do it as well.
+ So Cloud Code is the one that I recommend using.
+ So all the files, as you can see there.
+ So yeah, this is Cloud Code.
+ This is the agent that you chat with to build your app,
+ your Visual Assistant app.
+ This is the code it creates.
+ If you don't read a coder, you don't
+ have to look at this as much.
+ But it's just files that it organizes.
+ So it's nice to see what files it has to be created.
+ And each file could be accessing different services.
+ And then this is the website that it created,
+ which I will demonstrate in a second.
+ OK, so let me show you that website
+ that I created yesterday.
+ First, I'll show you the landing page, so Automate Anything
+ with AI Components.
+ So instead of tools, I call them components,
+ because there are tools and data connectors.
+ Components for me is anything, like tools, data connectors,
+ services, and so on.
+ So these are all different things
+ that I have created myself.
+ So for example, access Excel sheets.
+ So I told it to connect to my Google account.
+ I run this.
+ It's actually, like, something, and these are actions.
+ Access Google.
+ So this gives me all the Google events.
+ You see here?
+ So I don't have to go to the Google website.
+ I can just retrieve them by the API.
+ Access Notion.
+ So I can, like, search for different Notion documents
+ that I have.
+ Or I can create a new one.
+ So let's say, build [INAUDIBLE]
+ It creates it, and then now I can open in Notion.
+ So this is very cool, right?
+ Because that means-- the fact that I can do it
+ in a different website like that,
+ that means you can have agents that automate all of that.
+ You can have-- you can send something to Telegram,
+ and it creates Notion for you, or it gives you
+ a list of Google events that you have, and so on.
+ I built a bunch of things just for fun.
+ It was very quick to build all these things.
+ Find grants.
+ You're looking for, like, a two-bedroom.
+ There, you've got a two-bedroom, and you can see it in the map.
+ I built this in, like, 10 minutes.
+ I just ask, give me something that
+ accesses, like, Zoom per retail, and so on.
+ And then I can ask it in a plain language,
+ and then you just face the whole thing.
+ Pretty more cool stuff.
+ All Zoom meetings.
+ It shows me all the Zoom meetings,
+ so you don't have to go to that annoying Zoom interface.
+ So this is another very useful thing
+ for having your own personal assistant.
+ If you're tired of navigating different web apps, like Zoom,
+ or learning how to use Zoom, learning how to use Notion,
+ learning how to use NUMA, you can have it
+ all in your own interface, or you can have it in Telegram.
+ That's the beauty of this.
+ That's why they say SaaS, Software as a Service, is dying.
+ Because you don't need these softwares anymore.
+ You can just have an agent that just accesses this,
+ and displays it in a very nice dashboard.
+ What else do we have?
+ Google Calendar.
+ There you go.
+ Search marketplace.
+ We created this for fun.
+ We made the same searching for bikes.
+ We went to PGG and Craigslist.
+ Very cool, right?
+ And then you can create a chatbot.
+ So you can go here, and it can give you a personality.
+ So I called it Sol, a personality.
+ So it can only say, ah.
+ Let's just see if it works.
+ It's using open router.
+ So open router is something else we're going to use.
+ There you go.
+ Or be pretty wise, like Nisha.
+ It's thinking now, because it's wise.
+ Using Sonnet.
+ So Sonnet is a very expensive model.
+ There you go.
+ [INAUDIBLE]
+ So I just created a chatbot, basically, with a persona.
+ And it just took, also, 10 minutes to create.
+ Yeah?
+ I have a quick-- the Create List one.
+ Did you tell it which places to go to to find those listings?
+ Ah, OK, good question.
+ So the question was, for the Create List component or tool,
+ did I ask the bot to go to Create List specific to PGG?
+ I didn't.
+ I just said, give me listings of different items around the area.
+ And then it suggests a second.
+ Do you want PGG increases?
+ And then I said, yes.
+ It also found out which places to go for.
+ So if there are some places which you trust,
+ you can also tell it to actually exclusively access those?
+ Yeah, yeah, yeah, yeah.
+ Teachable mode?
+ Yeah, so you see this chatbot that we had here?
+ So all these that I'm showing are different components.
+ At the end, you'll have workflows,
+ which is just a mix of these components together.
+ So you can imagine connecting the chatbot
+ with the Create List item and Telegram.
+ So now you go to Telegram, you send a message.
+ The message goes to your chatbot.
+ The chatbot accesses a component for retrieving items
+ from Create List, then goes back to Telegram.
+ So you're connecting different components.
+ Yeah, exactly.
+ Conversation would be another example.
+ Text-to-speech could be another component.
+ So if you want Telegram to give you audio,
+ you can add a text-to-speech component using a lot of apps.
+ And then it gives you the audio file or--
+ [INAUDIBLE]
+ So you can do it locally-- so for example, here,
+ I'm using OpenRouter.
+ But you can have a model running on your machine that's
+ connected to your phone.
+ The question was, what the statement was,
+ can we just combine these components
+ to do something together, right?
+ Yeah, yeah, exactly.
+ So this component's idea--
+ I mean, it's there, but it's not really standardized.
+ But now I'm seeing it more and more.
+ In fact, there's this thing called QClaw,
+ which does this component thing.
+ I thought I came up with this idea.
+ And then I just-- last week, I saw this QClaw,
+ which is putting all these components
+ like a dashboard like this.
+ You can imagine this as a marketplace
+ for all the services and components
+ that you want to integrate into your personal assistant.
+ So one of the asks for this hackathon
+ is to ask you to create a marketplace like this,
+ like a dashboard like this, for every component
+ that you want for your app.
+ So if you went to the previous workshops
+ in building your AI apps, the goal
+ was just to build an app, right, if it does its own thing.
+ Now one of the three quizzes that I will really recommend
+ is to first build all the components that you want,
+ like text-to-speech, chatbot, telegram, and so on.
+ And have them-- when you click on them,
+ there's a way to test them.
+ So when you run it, it should give you the output, like here.
+ So you can test them.
+ And then, on top of components, you
+ can have workflows, components and workflows.
+ Workflows is a combination of them.
+ Yeah?
+ So is it a good idea to have only one--
+ So the question was, is it--
+ can you have one personal assistant versus many?
+ Yeah.
+ And so it depends on how far the use cases are from each other.
+ So if all the use cases are about the same taxes,
+ just one personal assistant, unless maybe there's
+ many different kinds of taxes.
+ It depends how different your use cases are.
+ They can be clustered very independently.
+ I would recommend having a personal assistant--
+ two different personal assistants.
+ Based on the domain.
+ Based on the domain.
+ Because if you have independent domains,
+ and you have one personal assistant, it's just too much.
+ You're cooking a clutter.
+ There won't be a lot of coupling.
+ So one of the main practices of software engineering
+ is minimizing coupling.
+ Keeping your-- yeah, dependencies.
+ Dependencies when there's none.
+ There shouldn't be dependencies.
+ So emphasizing modularity.
+ So this is very important when you build your code
+ and your app.
+ Always make sure to ask your agent
+ to make things very modular.
+ Otherwise, things will be intertwined,
+ and then you'll be spending a million tokens
+ every time you call it.
+ So it doesn't know where things are, and so on.
+ Is this a personal assistant?
+ This is a personal assistant for me.
+ But then the things that you have listed out here
+ are not related to each other and such.
+ So you just said that if--
+ So this is a meta--
+ OK, so this is more like a meta personal assistant.
+ OK, so this is not--
+ OK, this is maybe not really a personal assistant.
+ This is more of a marketplace of all the components
+ that will help you create--
+ yeah, that I use to help me create my own personal assistant.
+ Yeah, so this is just a market.
+ I can say this is less of a personal assistant.
+ At the end of the word, it's just words.
+ But yeah, that's a very good thing to do.
+ So each of these things, each of these tabs, in and of itself
+ is a personal assistant.
+ But integrated together, it's not a personal assistant.
+ That's what you're saying?
+ So each of these tabs is like a--
+ OK, so let's say I want to access Notion, right?
+ Or generate Excalator, for example.
+ This allows me to generate figures,
+ which is actually very cool.
+ Well, you can say this is kind of a personal assistant.
+ But it's not really a personal assistant.
+ It's a service, because when I see a personal assistant,
+ somebody can interact with it.
+ A network-- well, this is more of a connector.
+ So a personal assistant is something
+ that you can go back and forth, keeps track
+ of what you've been doing all your time.
+ Components are like--
+ Components are like connectors, exactly.
+ It's more of a connector, like a single service.
+ Personal assistant has-- so a personal assistant,
+ as I showed you here, is more like this.
+ It has a use case, and it has memory, has its own persona,
+ does different things.
+ But it has concrete workflows, a set of workflows.
+ So a personal assistant could be like,
+ let's say, I'm organizing these back events.
+ There's a lot of things that go into this.
+ I need to first book the meeting.
+ I need to get sponsorships.
+ I need to see the costs, get the insurance, and so on.
+ So a component would be just booking the room.
+ Personal assistant is doing all that thing together.
+ The use case is higher level when
+ it comes to personal assistant.
+ It's automating workflows.
+ That's what a personal assistant is.
+ Automating workflows, yeah.
+ Whereas what you just presented is part of that one pane
+ of glass.
+ Exactly, it's one task.
+ It's like doing one task.
+ So automating workflows, but maybe
+ doesn't have to be fully automated.
+ Like, could you automate with a human in the loop?
+ You just guide it to make sure things don't go crazy.
+ [INAUDIBLE]
+ Yeah, so that's actually a good question.
+ Good statement.
+ So the statement was that you can
+ have an agent on top of this.
+ So let's say you have 1,000 components.
+ This is like a marketplace for your agent.
+ You have 10,000 components.
+ And you tell your cloud code or your agent,
+ create a personal assistant for booking events here and there.
+ Then it will decide which components are useful
+ and create workflows on top of it.
+ Yeah?
+ Yeah.
+ By itself, by itself.
+ So I don't tell it a protocol of like, in the workflow,
+ I have step A to B happening first, and then step B,
+ and that's how you do it.
+ Or should I just tell it, create your own workflows?
+ Exactly, create your workflows.
+ But you can vet it.
+ So you create the workflows, and you can say,
+ oh, my god, this is a good nice workflow, or this is bad.
+ So here's the thing.
+ If you use upper cloud or cloud code,
+ you can even skip the part of components
+ and just say, cloud code, create workflows for me
+ to book AI events without giving it any components.
+ So you can go even higher level.
+ But I recommend against that, because then you
+ will have a lot of risks.
+ Because then it will create its own components in its own way.
+ You don't know if they're secure.
+ You don't know if you're going to do the right thing,
+ and so on.
+ So how many things in components first so you can vet them?
+ Because it's always nice to have each component to be audited.
+ So each component, you make sure it doesn't access data
+ that is sensitive.
+ Or you make sure it doesn't leak to your files or something.
+ So if you enforce your agent to build
+ workflows based on your components,
+ you already have some guarantees in terms of security and safety.
+ This is the trend of enterprise and organizations.
+ They're going from just asking cloud code to do things for you
+ to first build things in components,
+ and then cloud code can only do things based on those.
+ Very, very important.
+ You have more control to tell it which components you use.
+ Exactly.
+ You can go one step further.
+ You have these components.
+ You ask the agent to build a workflow for you.
+ Now you have a set of workflows.
+ You can also vet those.
+ So if you have a workflow for booking events,
+ you can just rerun that workflow.
+ If you don't have that workflow saved,
+ it will just create--
+ every time you ask cloud code to build a workflow,
+ it will create new workflows every time.
+ You're wasting tokens.
+ There's a lot of risks of doing something wrong.
+ Things are not predictable, because every time
+ it creates a workflow, even for the same domain,
+ for the same task, because all these models are probabilistic.
+ It's not deterministic.
+ You just recreate the workflow from scratch.
+ This is the idea of [INAUDIBLE] creating workflows from scratch.
+ So the more I'm thinking about it-- so basically,
+ the realistic use case, you're trying
+ to make a personal assistant for every department of your life.
+ So the same as finance.
+ So for events, or XYZ, whatever it is.
+ Exactly.
+ You can make a personal assistant for each of them.
+ And they can have their own components
+ which interact with each other in order
+ to give you the results.
+ Exactly, yeah.
+ So you have a personal assistant for every domain.
+ In fact, this is actually a good exercise in life.
+ You can see our lives are just made of workflows.
+ How do I present?
+ How do I create slides?
+ How do I walk?
+ How do I buy the cheapest drinks or something?
+ You can imagine all these are workflows.
+ How do I do my taxes?
+ So you can create these once, and then reuse them
+ all the time.
+ Imagine you have a workflow for all the major things you
+ have in life.
+ It will save a lot of time, right?
+ And trust that?
+ Well, you audit them once.
+ So once you audit the workflow, you trust it, trust it.
+ You just need to know the workflow,
+ like the range of outputs it can have.
+ So if you have, let's say, a workflow of finding bikes,
+ you can buy yourself a TGT, fix this, all these websites,
+ interact with them, message the seller and so on.
+ You can have that as a workflow.
+ And that's it.
+ You just rerun the workflow.
+ And in that workflow, you can allow the user
+ to type messages, like, OK, send to all the people who
+ are selling bikes with costs as of 50, so you have the agent.
+ Send them all the messages through this workflow.
+ And then send up a message to yourself
+ so it can tell you if it has actually
+ sent a message today to someone or not
+ if they got a deal on some bike.
+ Exactly.
+ And one of the best ways for the agent to send me messages
+ is to connect to a telegram.
+ Like, I have this telegram here.
+ Hola, there you go.
+ Something happened.
+ I'm not sure why that happened.
+ [INAUDIBLE]
+ Maybe you need a workflow to also fix.
+ You can have also a layer to fix if anything goes down.
+ We actually call this heartbeat.
+ In OpenClaw, there's a concept called heartbeat.
+ So heartbeat is like, every minute, every 10 minutes,
+ you check something.
+ Like, you check if you buy a new response.
+ You check if your ads are down.
+ You check this, and then do something based on the heartbeat.
+ So in OpenClaw, there's a single app.
+ Heartbeat, which we will integrate as well.
+ There's also, like, for example, send email.
+ So I want to send an email to this, right next.
+ So there's going to be an error.
+ I did that in purpose because I prevented the agent
+ from sending emails to just prevent
+ the case of sending wrong emails to the wrong person.
+ So a lot of my accesses are, like, read only.
+ There's another good thing to keep in mind.
+ Start with read only.
+ Another thing I wanted to show is this cool thing.
+ So there's this thing called, I learned about it recently,
+ generate Excalidraw.
+ Anyone here know Excalidraw?
+ Excalidraw is, like, a very nice way to create figures.
+ See, like, these ones that I created.
+ So I created an agent that I'll just
+ start creating a flowchart in Excalidraw
+ for amigos, amigos, amigos.
+ And I created a JSON file that you can copy, paste.
+ Excalidraw creates the chart.
+ It was working, but let me see.
+ I'm using class 74.
+ So why can't we have another component to copy this code
+ and then--
+ Yeah, yeah, so because this is one-- yeah, we can.
+ We can.
+ We can have another component that copies that to there
+ and retrains it, and that becomes a workflow.
+ So workflow is just a series of components.
+ Let's say we copy this.
+ Hopefully it works.
+ Oh, there you go.
+ There you go.
+ There you go.
+ Very cool.
+ So you can, like, whenever you want
+ to create a figure that is cool, you can have it as a component.
+ One thing that I want to tell people--
+ remember, this guy is not here.
+ He's a software engineer.
+ He's like, ah, I want to create a QR code.
+ All these online ones are paid or as ads.
+ And they just ask [INAUDIBLE] create a simple script.
+ So it's like, create this.
+ You have a QR code.
+ It stays forever.
+ It's actually a very simple formula.
+ People think it's insane.
+ But because people think it's insane,
+ there's, like, hundreds of QR codes online.
+ Some of them ask you to register, spam, track you.
+ It's very simple, even, really.
+ I don't want to see anyone here using those websites for QR code.
+ Does that make sense?
+ Those online, does it make sense?
+ Yeah, go ahead.
+ For each of these, you give them access
+ to your 1Password account, the password to log--
+ Now, I will strongly recommend connecting it to 1Password.
+ All right?
+ All costs.
+ All they give them is an API key.
+ API key to 1Password.
+ Yeah, yeah.
+ So if you log into Zoom, for example,
+ or you log in to Excalidraw or Notion, there's a set up.
+ It's called a path set up.
+ There, you can get an API.
+ How do you control it so it accesses your 1Password?
+ Doesn't get access to some other account
+ that you don't like to share with.
+ So if it has access to 1Password, it technically
+ has access to all your passwords in the app, right?
+ And people were doing it, and a lot of them were not doing it.
+ So be really careful.
+ So there's another component called browser MCP,
+ for example.
+ So browser MCP could be a component
+ which allows your computer to interact with the web.
+ So let's say you want to tell your agent
+ to log into your Gmail or log into an app.
+ You can go to 1Password or achieve the login information
+ and go to the website through browser MCP
+ because it can click.
+ But also, browser MCP is very risky.
+ I recommend having a phone for that because it can click.
+ Or you can get an advertisement that says, oh, you
+ want iPhone 14, click here.
+ And then the agent's like, oh, I will satisfy my master.
+ Which of these components or their capabilities
+ are limited to the API that you're accessing?
+ Yeah.
+ Like your Zoom, it depends on what they're willing to share.
+ Exactly, so that's another thing to watch out for,
+ the limitations on these API keys.
+ There are ways to go beyond API keys, like MCPs.
+ And there are some tricks, but usually they're frail.
+ But API keys is one of the best ways to go with it.
+ So don't trust API keys.
+ And are you adding some form of protection
+ within these components?
+ For example, I could ask the assistant
+ to find the best price for a car.
+ I could send a message to all my friends,
+ what car do you recommend?
+ Yeah.
+ Right, that wasn't my intention.
+ It wasn't my intention.
+ It was to go and do research, right?
+ How do you control it so it doesn't go out of bounds?
+ Well, the agent can only use that.
+ So first you have to create the components.
+ Like the WhatsApp, for example.
+ Like the WhatsApp, although this one doesn't work.
+ I don't want to do WhatsApp to send everybody
+ a message asking--
+ So when it creates the workflow for you,
+ based on components, you can look at the workflow
+ and remove the things you don't like.
+ So here people know NA10, right?
+ So you could imagine--
+ so this is like an NA10 for people who use NA10.
+ It's like a very popular workflow instruction.
+ So you just link here, like Slack,
+ and then you have AI agent that does that.
+ So you can imagine that workflow that it builds
+ is just something like this.
+ You can remove things.
+ And then you ask, OK, why do we use Kotlin, not just NA10?
+ Even though NA10 looks easy to use,
+ it's actually very difficult if you
+ want something outside the nodes that they give you.
+ And then every node has its own behavior.
+ Maybe it's not very flexible.
+ Every node has a lot of constraints.
+ So that's the problem.
+ So it's like basically creating an NA10 on demand.
+ That's the idea, creating an NA10.
+ So if you create the workflow, and then
+ one of the components that you decided
+ to add while sending it to everyone,
+ you can just delete that.
+ And then when you run the workflow, it doesn't run that.
+ You can think of components also nodes, and so on.
+ And the component is just a concept I came up with.
+ The component could be a workflow in itself.
+ Right, I understand the idea of workflow,
+ which is pre-planned.
+ I kind of imagined the system creatively come up
+ with a better way of doing it.
+ Yeah.
+ So I really-- so this is where we're heading.
+ Now the recommendation is not to just allow it
+ to dynamically create workflows for different tasks,
+ because there's a lot of danger.
+ You can run a lot of tokens, and things are not consistent.
+ One of the best ways to do this is to allow it
+ to create a workflow.
+ And then you vet it.
+ It's like, OK, is this nice?
+ And then you run the workflow.
+ You can have an agent that does limited interactions,
+ like just send an email.
+ The workflow doesn't mean static.
+ The workflow can also have inputs that you can give,
+ like messages to send and so on.
+ But it's way more restricted.
+ There's another way to handle the API keys or any other
+ secrets that you need for the agent to run properly.
+ Especially with one password, you can create one vault,
+ and then you can put it in different--
+ OK, good idea.
+ OK, so for people who want to use one password,
+ you can have different vaults, and you just give it the vault.
+ So there's actually a cool idea.
+ I've seen people do it.
+ So you know like in Twitter or on the internet,
+ where there's a lot of announcement of prices.
+ It's like, join this, and then you
+ have a 5% probability of winning an award.
+ So some people create an agent, which
+ just logs in to all of these services,
+ and then goes into the draw of prices, and then it wins.
+ Because it's went into like 10 million draws
+ of many different events on Twitter and so on.
+ It just got prices.
+ So you just give it a vault. One of the reasons I said that,
+ is you can give it a vault to keep track of only the passwords
+ and usernames for websites that you don't care about.
+ Gmail.
+ Gmail, you should remember.
+ Regarding the Kelly draw, it resulted in one flowchart.
+ But I don't like it.
+ I want something else.
+ Yes, it can happen to me.
+ So how do we do it?
+ I want it to be able to give me the best version possible.
+ So what can I do for it to satisfy what I want as a result,
+ and then use that to create the--
+ OK, so it's like a combination of different components.
+ One component is the chatbot, and then you
+ have the Skype draw that generates the flowchart,
+ and then the image that you get from the Skype.
+ So you have all these three interacting.
+ So if you look at the output, and then you talk to the agent,
+ you say, I don't like this color.
+ Can you change it?
+ And then you just change it.
+ Can I give it a reference that I want to create something?
+ Yeah, you can upload a picture.
+ Can you do anything you want?
+ One, because time is passing fast,
+ but all of these are good questions.
+ Discord is nice and alive, asking us many questions.
+ There will be prizes for people who ask a lot.
+ So let me show you some different workflows
+ that people have built. So personal assistant.
+ So this is going to also answer the question of what
+ is a personal assistant.
+ So you can think of all these different nodes as components
+ for tools.
+ So there's a YouTube guy named Matthew Berman.
+ He's actually very good.
+ I like watching his YouTube videos.
+ And he created-- he has a YouTube video called 21 Use
+ Cases of Up and Far Talk.
+ And he also generated these with [INAUDIBLE]
+ This is a CRM system, Customer Relation and Management system.
+ So let's say you want to--
+ you're selling services, let's say you're selling metals,
+ but you have a relationship with different customers.
+ So let's say you're connected to a Deloitte,
+ you're connected to a VMO, you're
+ connected to many different companies and potential clients.
+ So CRMs, a lot of companies have their own CRMs,
+ which is about managing your relationships
+ with your clients or customers.
+ So you can keep track of all the Gmail calendar and knowledge
+ base of these clients.
+ You scan them.
+ And then if there's a movement in the relationship,
+ one of the customers is like, oh, I don't like this office.
+ I want to go somewhere else.
+ You maybe automatically send them an email.
+ Personal assistant could be meetings.
+ You know, like AI companion.
+ So you can think of AI companion as a personal assistant.
+ That transcribes the chat in your Zoom.
+ So you can have that as a personal assistant.
+ It takes transcript.
+ OK, maybe it matches it to the CRM that you had earlier.
+ Finds to-do action items, and then
+ adds them to your to-do list as a task.
+ So to-do list is a very nice app that gives you--
+ well, it helps you keep track of your to-do list.
+ But you can also make it after meeting ends.
+ You can have it send action items to your Notion,
+ for example, and then you open Notion, or to your Telegram.
+ So you can do whatever you want.
+ But you see here that the main difference
+ is how we built in our previous workshops in here.
+ In the previous workshop, you just had more of a static app.
+ Right now, you have data connectors,
+ and you have these services that you connect to, and actions.
+ You can also have knowledge base.
+ Let's say you want to keep up to date with all the latest
+ papers.
+ So I have that.
+ All the latest papers in AI are like different domains.
+ You can connect it to different articles, YouTube, Twitter.
+ Although Twitter API is pretty intense,
+ I think they have a very high cost,
+ and the free version's not very good.
+ You can ingest all of that, and you can send it to Slack,
+ and then it can send you on Telegram.
+ So, oh, I found five papers.
+ You can have social media tracking.
+ Morning briefings is a very good one.
+ This is one that we specifically have.
+ It connects with your account, and it tells you, OK,
+ what should we do to this?
+ Like, my tipper-hand told me today
+ I have to do this defense.
+ Good reminder, right?
+ Imagine what we're doing.
+ So when it comes to workflows, there
+ are different strategies to think about.
+ So remember, the workflow is saying
+ getting items from Craigslist.
+ The one we were mentioning right now is called--
+ the one-off workflow.
+ You run it.
+ You run it, and it doesn't work.
+ But you can also have cron jobs and heartbeats.
+ The cron jobs is scheduled.
+ So daily briefings can be scheduled every morning.
+ Every morning is scheduled, and it sends you the briefing.
+ So cron jobs is scheduled.
+ It just waits, let's say, every 6 AM, and it does it.
+ It's like the rooster in the morning when we do the alarm.
+ Alarm is a good cron job.
+ Heartbeat is a bit different.
+ Heartbeat means like every 30 minutes or every one hour,
+ it does something.
+ It's like every one hour is like paycheck on this client.
+ Is he happy?
+ Is he not?
+ Is he angry or something?
+ Heartbeat is like a pulse check.
+ Your heart is sending oxygen, [INAUDIBLE]
+ These are different strategies you can use to run workflows.
+ So heartbeat is a constant that came out of public law.
+ So it doesn't make a differentiator here,
+ but cron jobs could be heartbeats.
+ Well, there's cron jobs like every time,
+ but it could also be every 30 minutes.
+ It's the same thing.
+ But as you can see, schedule at a time versus you thinking,
+ there's like a subtle difference,
+ but they're both under cron.
+ They're all like terms that are kind of Jewish.
+ It's not like it's a standard term.
+ You need these components plus that.
+ But if you really like us to see things
+ in the form of components or tools, that's so fast.
+ OK, so how does the hackathon help?
+ OK, this week's overview.
+ Today, Saturday, we're doing the kickoff, as you can see.
+ After this, we're going to have socials.
+ We're going to go somewhere.
+ We're going to have pizza there.
+ We're going to play some board games.
+ And you can just follow me.
+ Socials are great.
+ Socials is the best way to connect.
+ For me, my biggest career growth was
+ connecting with other people who are building.
+ So Sunday and Tuesday--
+ or Sunday and Monday, we'll figure this out.
+ We'll have app building lectures.
+ We're going to do two lectures.
+ One lecture will be me, the one on Sunday.
+ I'll show you how to build personal assistance from
+ scratch.
+ And the lecture after that will be by Powell about security.
+ In fact, when I created a website for this hackathon,
+ it immediately sent me this cloud analysis of some
+ potential loophole that it has.
+ But don't worry about it.
+ But it's a good idea.
+ Whenever you build an app, send it to a cloud or something
+ that's so secure.
+ [INAUDIBLE]
+ They're the same thing.
+ The CLI agent or cloud code or VS code, they're the same.
+ It's just the VS code that makes it easier to view things.
+ Because then you can see the files.
+ You can see the code.
+ You can mention about these codes.
+ Huh?
+ You can mention about-- there's also codecs.
+ Meaning that if you're already paying for open AI,
+ which are GPT, you can use alternatively codecs.
+ Well, so the things we're showing right now
+ is another scaffolding on top of the other scaffolding that
+ already exists.
+ So cloud code has its own scaffolding, right?
+ It can plan.
+ It can do things for you.
+ The components, you can think of these components that we have.
+ There's an extra scaffolding.
+ It's like having a building that's your scaffolding
+ and then adding others.
+ And then Monday and Thursday, we're
+ going to go to WeWork together.
+ These are also one of the best places to be at.
+ More like inspiring each other and making a lot of progress.
+ We've seen a lot of people come to WeWork in those days
+ and then spend the whole night just working.
+ It's very addicting.
+ How long does it take to build a pipe?
+ One week is a lot of time.
+ But it's also enough time to build it.
+ Like that thing I built, I mean, maybe I have experience.
+ But you can build something if you have all miners.
+ But it's doable.
+ I've seen it.
+ Also access the-- everything is in the Hackathon website.
+ So you go to the website that I sent in the glass and Discord
+ and so on.
+ Go there, log in.
+ You can use your roommate email and password.
+ Password is 123, security loopholes.
+ But you can change the password where you're in.
+ There isn't much information about you anyways.
+ The only information is like the thing
+ that the tasks you have completed and so on.
+ It's pretty much-- and then you can see there's a leaderboard.
+ So there's a leaderboard about how many people
+ have finished their tasks.
+ And the leaderboard's sorted by how many have finished.
+ So you're last.
+ I mean, there's always a last, no matter how good everyone is.
+ And then one day, what we're going to ask
+ is to create a demo video of 1.5 minutes max.
+ That'll go beyond 1.5 minutes.
+ No slides at all.
+ Not slides before, just the lives.
+ You interact with the app.
+ So this is a nice app for the AI system
+ that helps people do homework for our previous cohorts
+ from a different program.
+ And I've shown this in 1.5 minutes.
+ And then we're going to display the video,
+ so you don't have to do a live demo.
+ Then people ask you questions.
+ You submit this, you'll get your certificate of completion.
+ And you'll have the chance to win the prizes.
+ So all this needs to be done at the end, only the level.
+ Yeah, the winners get prizes.
+ So from Eliminate the Universe, first place, $150.00,
+ second place, $100.00, third place, $50.00.
+ From Dental Boutique, you're going
+ to get this very nice package.
+ They're happy.
+ $300.00.
+ So instead of leaving the video, it's really nice, yeah?
+ The best people in Greeting.
+ Trust me, based on how people greet you,
+ you'll be attracted to one person, yeah?
+ Yeah, and these are some of the judges.
+ Alina is from Eliminate the Universe.
+ Claire, from behind, will be one of the judges.
+ So make sure you--
+ You're good with her.
+ [LAUGHTER]
+ Maybe if you come to her, Dental Boutique,
+ you get bonus points with some prizes.
+ She's there at the front desk.
+ Oh, I've seen your app.
+ Elaine, so OK, I'll send the address.
+ Elaine, I'll send the address.
+ I'll send it in this one.
+ Today, right?
+ Yeah.
+ OK, I'll do a very quick control by myself.
+ I did my PhD at UBC, postdoc at McGill.
+ Now I work as a research scientist at UBC.
+ And now I'm managing other research scientists.
+ A lot of AI.
+ I've been doing AI more than 14 years before it became big.
+ That time when I was doing AI, it was during the AI winter.
+ Paul, do you want to introduce yourself?
+ Do you want to, like, so that people can hear you?
+ Because I'm using your laptop.
+ Actually, I believe some of you already know me.
+ Hi, I'm Paul.
+ I'm a senior data scientist at JBS and Fortline.
+ So I work in a digital innovation domain.
+ And the domain is based on actually building
+ agenda systems, primarily for, like, deep airlines.
+ I find AI solutions in general innovations.
+ And I'll be helping you some to guide you through the process.
+ And I want to focus especially on aspects
+ of debugging and security.
+ This is very important.
+ And you might have heard that open domain exploded.
+ Right away, there's, like, adoption in the industry.
+ But we're so focused on sandboxing the solutions
+ and the security.
+ One primary example is Nemobor from NPDI.
+ And if you read anything about Nemobor,
+ you will notice that big part of that so-called open shell,
+ we gave you the idea to sandbox access to code execution,
+ that data availability.
+ And yet, usually, we are dealing with a trade-off.
+ So the more flexibility and independence your agent has,
+ the more useful it gets.
+ But the higher the risks.
+ So I guess we need to find some trade-off.
+ My background is in computer science.
+ I use all of the coding agents in databases,
+ both private projects and enterprise-level cloud code,
+ process-grade products from OpenAI.
+ And we were briefly mentioning [INAUDIBLE]
+ which is really, really great.
+ But at the same time, if you're already
+ paying for OpenAI, charge GPT, charge GPT and OpenAI
+ has this thing called [INAUDIBLE]
+ And there are three main components for OpenAI,
+ which is, like, CLI, running the terminal, the visual code
+ flagging, which is so great.
+ And I highly recommend using visual code
+ because it gives you much more visibility
+ into what's happening in the code that you're building.
+ And of course, the desktop app, both the cloud and the products
+ have about desktop apps.
+ The last but not least, you can use it
+ to build your own AI agent and personal assistant.
+ But also, once you get those components,
+ which is kind of like a tool or a speed server,
+ you can essentially use it from within--
+ blogs, products, class, personal assistant.
+ And the last but not least, later in my head,
+ sometimes you talk about it, but there
+ are different agentic SDKs that you can use.
+ And one of them is called agent SDK, which essentially
+ is a full harness that I'm talking about already built.
+ And you can plug in all of those components,
+ and you can do something with it in fact [INAUDIBLE]
+ So hopefully we'll be able to do that.
+ Thanks, Mal.
+ It's good.
+ So we're going to have a quick break.
+ We're going to come back--
+ let's come back at 12.30.
+ We're going to come back at 12.30.
+ Feel free to grab those gift cards from that top.
+ It's $50, whether you're insured or not.
+ So we'll have a quick presentation on this part of this.
+ And one thing is that keep your laptops ready,
+ because the next part will be we're going to group together,
+ and we're going to build a spring app.
+ It has a landing page and some walkout components.
+ Even those online, we're going to tell you how to do it.
+ So you get your PS code with Cloud Code or CodeX ready,
+ so you can build that landing page.
+ And then you get the chance to present.
+ So let's go.
+ Let's come back at 12.30.
+ [NON-ENGLISH SPEECH]
+ [INAUDIBLE]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [INAUDIBLE]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]
+ [NON-ENGLISH SPEECH]

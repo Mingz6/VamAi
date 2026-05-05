@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}MoneyClaw — Workflows{% endblock %}
+{% set active = 'workflows' %}
+{% block extra_style %}
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; padding: 2.5rem; }
+    .card { background: #fff; border: 1.5px solid #ffe9a0; border-radius: 16px; padding: 1.6rem; display: flex; flex-direction: column; gap: 1rem; transition: box-shadow 0.15s; }
+    .card:hover { box-shadow: 0 4px 20px rgba(245,166,35,0.2); }
+    .card-top { display: flex; align-items: center; gap: 0.8rem; }
+    .card-icon { font-size: 1.8rem; }
+    .card h3 { font-size: 1.05rem; font-weight: 800; }
+    .card p { font-size: 0.88rem; color: #555; line-height: 1.5; }
+    .components-used { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .comp-tag { font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.7rem; border-radius: 20px; background: #fffbf0; border: 1.5px solid #ffe9a0; }
+{% endblock %}
+{% block content %}
+<div class="page-header">
+  <h1>Workflows</h1>
+  <p>End-to-end automations built from components.</p>
+</div>
+<div class="grid">
+  <a href="/workflows/chat-telegram" class="card" style="text-decoration:none;color:inherit;">
+    <div class="card-top"><span class="card-icon">💬</span><h3>Chat with AI on Telegram</h3></div>
+    <p>Chat with an AI agent directly from Telegram. Send a message, get a smart reply delivered back to you.</p>
+    <div class="components-used"><span class="comp-tag">🤖 AI Agent</span><span class="comp-tag">✈️ Telegram</span></div>
+  </a>
+  <a href="/workflows/summarize-interac" class="card" style="text-decoration:none;color:inherit;">
+    <div class="card-top"><span class="card-icon">📊</span><h3>Summarize Interac Spending from Gmail to Telegram</h3></div>
+    <p>Fetch Interac e-Transfer emails from Gmail, summarize your spending with AI, and send the report to Telegram.</p>
+    <div class="components-used"><span class="comp-tag">📧 Gmail</span><span class="comp-tag">🤖 AI Agent</span><span class="comp-tag">✈️ Telegram</span></div>
+  </a>
+</div>
+{% endblock %}

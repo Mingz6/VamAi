@@ -1,0 +1,7176 @@
+1
+00:00:00,000 --> 00:00:11,140
+ The most random specific topic but I think it's actually kind of cool. There's so much
+
+2
+00:00:11,140 --> 00:00:17,040
+ to dig into this. Just a few quick things, we'll do a quick intro. I just want to set
+
+3
+00:00:17,040 --> 00:00:21,960
+ the set expectations for what we can do in the next hour. So I would say the only difference
+
+4
+00:00:21,960 --> 00:00:27,140
+ between me and you is I just spend more time than me. That's basically it, right? So I'm
+
+5
+00:00:27,140 --> 00:00:33,200
+ not the big expert that has all the answers. If we do, I've loaded this all to GPP and
+
+6
+00:00:33,200 --> 00:00:36,920
+ then we can ask together and then discover together. So that's where I come. I just spend
+
+7
+00:00:36,920 --> 00:00:42,120
+ a lot more time trying to understand this. My hope is you bring in, maybe because of
+
+8
+00:00:42,120 --> 00:00:47,440
+ your background, you maybe understand very specific aspects of these in different ways.
+
+9
+00:00:47,440 --> 00:00:52,360
+ Maybe you see different applications in the way, in the work that you do. So that's kind
+
+10
+00:00:52,360 --> 00:01:01,800
+ of the baseline on the set. So quick intro. I've been, gosh, I've been interested in AI
+
+11
+00:01:01,800 --> 00:01:06,200
+ since like the NLP days. If I tell somebody what NLP now is, I don't think they'll understand,
+
+12
+00:01:06,200 --> 00:01:11,760
+ oh, NLP, like what is that? But 10 years ago, that's where I started a lot of my explorations.
+
+13
+00:01:11,760 --> 00:01:17,600
+ I'm primarily an engineering and startup guy. Right now, I actually spend a lot of my time
+
+14
+00:01:17,600 --> 00:01:23,240
+ training young people for like 10 months, how to do cool things with AI. I'm also an
+
+15
+00:01:23,240 --> 00:01:27,480
+ adjunct professor at UBC. So I teach the first year of UBC engineering class. So if anyone
+
+16
+00:01:27,480 --> 00:01:31,680
+ comes into UBC engineering, I'm the first face that welcomes him into the engineering
+
+17
+00:01:31,680 --> 00:01:34,840
+ experience. That's a little bit about me. So what we'll do is we'll go--
+
+18
+00:01:34,840 --> 00:01:35,840
+ [INAUDIBLE]
+
+19
+00:01:35,840 --> 00:01:36,840
+ Yeah.
+
+20
+00:01:36,840 --> 00:01:37,840
+ Oh, yeah.
+
+21
+00:01:37,840 --> 00:01:38,840
+ Have you gone to my class?
+
+22
+00:01:38,840 --> 00:01:39,840
+ Yeah, I go to my class.
+
+23
+00:01:39,840 --> 00:01:40,840
+ What?
+
+24
+00:01:40,840 --> 00:01:49,480
+ So it's funny. Right after this, I teach a dance class at Baza, 830. So if you ever do
+
+25
+00:01:49,480 --> 00:01:51,480
+ salsa dancing or bachata, come.
+
+26
+00:01:51,480 --> 00:01:58,400
+ We'll do a completely different reading. OK. So we have quite a few people. So we'll keep
+
+27
+00:01:58,400 --> 00:02:03,400
+ this short. But I still want to hear from you. So here's what I'm looking for. Name
+
+28
+00:02:03,400 --> 00:02:11,520
+ your AI readiness. So for me, number one is you use chat GPT. 10 is you spend a lot of
+
+29
+00:02:11,520 --> 00:02:16,160
+ your time understanding research papers, digging in, and whatnot. And I'm just looking to understand
+
+30
+00:02:16,160 --> 00:02:21,920
+ how much have you dug under the hood. So do you use GPT? Or have you spent some time understanding
+
+31
+00:02:21,920 --> 00:02:26,240
+ what is this transformer thing, KB cache thing, vector thing? I just want to understand how
+
+32
+00:02:26,240 --> 00:02:30,720
+ are we feeling underneath the hood. Well, according to that, I will real time adjust
+
+33
+00:02:30,720 --> 00:02:33,720
+ how we guide our discussion today.
+
+34
+00:02:33,720 --> 00:02:34,720
+ Cool.
+
+35
+00:02:34,720 --> 00:02:43,800
+ Hi, everybody. I'm Farah Hussain. And in terms of my ranking on that scale, I think I'm somewhere
+
+36
+00:02:43,800 --> 00:02:44,800
+ at three.
+
+37
+00:02:44,800 --> 00:02:46,680
+ OK, awesome. Perfect. Great.
+
+38
+00:02:46,680 --> 00:02:50,640
+ Hey, I'm Mullen. I'd say I'm at five probably.
+
+39
+00:02:50,640 --> 00:02:51,640
+ OK.
+
+40
+00:02:51,640 --> 00:02:54,360
+ Actually, maybe a little bit of-- I don't want to go into your whole background of what
+
+41
+00:02:54,360 --> 00:02:58,620
+ you do. So I don't know how to ask that question without going into--
+
+42
+00:02:58,620 --> 00:02:59,620
+ Too much detail.
+
+43
+00:02:59,620 --> 00:03:00,620
+ Too much detail.
+
+44
+00:03:00,620 --> 00:03:04,120
+ So maybe as short as you can keep it, what do you think is important to know as it relates
+
+45
+00:03:04,120 --> 00:03:05,120
+ to this conversation?
+
+46
+00:03:05,120 --> 00:03:11,000
+ OK. So I think, in short, don't want to be left behind. That's why I'm here.
+
+47
+00:03:11,000 --> 00:03:15,000
+ OK. That's a good answer. That's what she wanted us hoping for. Good. FOMO.
+
+48
+00:03:15,000 --> 00:03:16,000
+ FOMO. FOMO.
+
+49
+00:03:16,000 --> 00:03:17,000
+ OK.
+
+50
+00:03:17,000 --> 00:03:24,520
+ So yeah, my name is Min. I'm a developer. So I would say like 80% or 80% for using the
+
+51
+00:03:24,520 --> 00:03:27,520
+ AI stuff. So FOMO as well.
+
+52
+00:03:27,520 --> 00:03:32,840
+ OK, awesome. I'm Thomas. I'd say like four to six, somewhere in that range. And I'm just
+
+53
+00:03:32,840 --> 00:03:35,920
+ like trying to get back into computer science something right now.
+
+54
+00:03:35,920 --> 00:03:36,920
+ Awesome.
+
+55
+00:03:36,920 --> 00:03:43,200
+ So there, I mean, I don't know how to say like a three, I think. I mean, I'm just like
+
+56
+00:03:43,200 --> 00:03:45,920
+ trying to get to like know more about the AI stuff.
+
+57
+00:03:45,920 --> 00:03:46,920
+ Cool. OK.
+
+58
+00:03:46,920 --> 00:03:47,920
+ If it's three, I'm two.
+
+59
+00:03:47,920 --> 00:03:48,920
+ Two? OK.
+
+60
+00:03:48,920 --> 00:03:49,920
+ [LAUGHTER]
+
+61
+00:03:49,920 --> 00:03:58,000
+ Yeah, don't run them like that. It's like, how dare you say that? You're hurting my feelings.
+
+62
+00:03:58,000 --> 00:04:04,600
+ You should have heard what he was talking about. But I want to know, what's interesting
+
+63
+00:04:04,600 --> 00:04:10,520
+ for me is when I get into a case, I want to know when to come to that algorithm and try
+
+64
+00:04:10,520 --> 00:04:14,320
+ to figure things out. I don't need to know them, but I need to know.
+
+65
+00:04:14,320 --> 00:04:15,320
+ OK.
+
+66
+00:04:15,320 --> 00:04:16,320
+ [INAUDIBLE]
+
+67
+00:04:16,320 --> 00:04:24,880
+ All right. My name is Noah. I would say I'm about a seven. I spent a lot of time, when
+
+68
+00:04:24,880 --> 00:04:31,320
+ I was with Pranav last year, taking into the transformer and the architecture [INAUDIBLE]
+
+69
+00:04:31,320 --> 00:04:32,320
+ OK.
+
+70
+00:04:32,320 --> 00:04:39,320
+ I'm Zen. I also spent a lot of time with Pranav. I would say I'm about a six. He's going into
+
+71
+00:04:39,320 --> 00:04:44,320
+ computer science. I'm going to engineering. So a little less focus on AI, but, yeah.
+
+72
+00:04:44,320 --> 00:04:45,320
+ Cool. OK.
+
+73
+00:04:45,320 --> 00:04:51,320
+ Sorry, just before you go, have you applied a lot of this in your work, likely today as
+
+74
+00:04:51,320 --> 00:04:52,320
+ well?
+
+75
+00:04:52,320 --> 00:04:53,320
+ Yeah.
+
+76
+00:04:53,320 --> 00:04:54,320
+ OK. Very interesting.
+
+77
+00:04:54,320 --> 00:04:55,320
+ Hi.
+
+78
+00:04:55,320 --> 00:04:56,320
+ OK. I'm just making notes. Yes.
+
+79
+00:04:56,320 --> 00:04:57,320
+ My name is Cyrus. I say I'm a four, but I came here to catch myself back up to what
+
+80
+00:04:57,320 --> 00:04:58,320
+ is currently happening.
+
+81
+00:04:58,320 --> 00:04:59,320
+ OK. Great.
+
+82
+00:04:59,320 --> 00:05:00,320
+ My name is Rachel. If you're a four, then I'd probably like a two.
+
+83
+00:05:00,320 --> 00:05:01,320
+ [LAUGHTER]
+
+84
+00:05:01,320 --> 00:05:16,320
+ It's the same reason I put it on.
+
+85
+00:05:16,320 --> 00:05:19,320
+ [LAUGHTER]
+
+86
+00:05:19,320 --> 00:05:23,320
+ We're going to normalize this out.
+
+87
+00:05:23,320 --> 00:05:24,320
+ [INAUDIBLE]
+
+88
+00:05:24,320 --> 00:05:27,320
+ Yeah, exactly. Yes.
+
+89
+00:05:27,320 --> 00:05:32,320
+ I think I'm maybe a two.
+
+90
+00:05:32,320 --> 00:05:33,320
+ Cool.
+
+91
+00:05:33,320 --> 00:05:34,320
+ I'm just here to learn more about [INAUDIBLE]
+
+92
+00:05:34,320 --> 00:05:35,320
+ What is this?
+
+93
+00:05:35,320 --> 00:05:36,320
+ Yeah.
+
+94
+00:05:36,320 --> 00:05:37,320
+ Cool.
+
+95
+00:05:37,320 --> 00:05:38,320
+ This is my birth.
+
+96
+00:05:38,320 --> 00:05:39,320
+ [LAUGHTER]
+
+97
+00:05:39,320 --> 00:05:40,320
+ Hi.
+
+98
+00:05:40,320 --> 00:05:41,320
+ We'll catch you at some point.
+
+99
+00:05:41,320 --> 00:05:42,320
+ [LAUGHTER]
+
+100
+00:05:42,320 --> 00:06:11,320
+ [INAUDIBLE]
+
+101
+00:06:11,320 --> 00:06:27,320
+ [INAUDIBLE]
+
+102
+00:06:27,320 --> 00:06:30,320
+ Man, what was the deal with these infinitely playable games?
+
+103
+00:06:30,320 --> 00:06:33,320
+ So you're saying having PCs that can always be [INAUDIBLE]
+
+104
+00:06:33,320 --> 00:06:34,320
+ That's interesting.
+
+105
+00:06:34,320 --> 00:06:36,320
+ OK. Very cool. Very cool. OK.
+
+106
+00:06:36,320 --> 00:06:37,320
+ [INAUDIBLE]
+
+107
+00:06:37,320 --> 00:06:39,320
+ Hi. My name is Dom.
+
+108
+00:06:39,320 --> 00:06:51,320
+ I would say my recognition is around [INAUDIBLE]
+
+109
+00:06:51,320 --> 00:06:54,320
+ With regards to mental health, like,
+
+110
+00:06:54,320 --> 00:06:57,320
+ classifying mental health levels.
+
+111
+00:06:57,320 --> 00:07:12,320
+ [INAUDIBLE]
+
+112
+00:07:12,320 --> 00:07:38,320
+ [INAUDIBLE]
+
+113
+00:07:38,320 --> 00:07:45,320
+ [INAUDIBLE]
+
+114
+00:07:45,320 --> 00:08:07,320
+ [INAUDIBLE]
+
+115
+00:08:07,320 --> 00:08:13,320
+ [LAUGHTER]
+
+116
+00:08:13,320 --> 00:08:14,320
+ All of us. Yeah.
+
+117
+00:08:14,320 --> 00:08:17,320
+ I'm actually here because there's something about [INAUDIBLE]
+
+118
+00:08:17,320 --> 00:08:19,320
+ I don't know if you guys have read this paper,
+
+119
+00:08:19,320 --> 00:08:25,320
+ but this is the most revolutionary paper that has ever come out in two years.
+
+120
+00:08:25,320 --> 00:08:27,320
+ And I'm looking to make --
+
+121
+00:08:27,320 --> 00:08:32,320
+ I'm basically looking to make the link to this paper.
+
+122
+00:08:32,320 --> 00:08:33,320
+ Cool.
+
+123
+00:08:33,320 --> 00:08:34,320
+ Awesome.
+
+124
+00:08:34,320 --> 00:08:39,320
+ I think I'm around two, but based on what you said,
+
+125
+00:08:39,320 --> 00:08:41,320
+ I think I learned a lot of these two.
+
+126
+00:08:41,320 --> 00:08:42,320
+ [LAUGHTER]
+
+127
+00:08:42,320 --> 00:08:43,320
+ First negative number.
+
+128
+00:08:43,320 --> 00:08:44,320
+ Yeah.
+
+129
+00:08:44,320 --> 00:08:48,320
+ I'm still going to learn more about this.
+
+130
+00:08:48,320 --> 00:08:49,320
+ OK.
+
+131
+00:08:49,320 --> 00:08:51,320
+ [INAUDIBLE]
+
+132
+00:08:51,320 --> 00:09:07,320
+ [INAUDIBLE]
+
+133
+00:09:07,320 --> 00:09:08,320
+ This is crazy.
+
+134
+00:09:08,320 --> 00:09:09,320
+ Yeah.
+
+135
+00:09:09,320 --> 00:09:10,320
+ You bet.
+
+136
+00:09:10,320 --> 00:09:11,320
+ OK.
+
+137
+00:09:11,320 --> 00:09:12,320
+ Welcome back.
+
+138
+00:09:12,320 --> 00:09:13,320
+ [LAUGHTER]
+
+139
+00:09:13,320 --> 00:09:14,320
+ Yeah, good to hear from you.
+
+140
+00:09:14,320 --> 00:09:15,320
+ Good.
+
+141
+00:09:15,320 --> 00:09:16,320
+ Hi.
+
+142
+00:09:16,320 --> 00:09:20,320
+ I'm [INAUDIBLE]
+
+143
+00:09:20,320 --> 00:09:24,320
+ I started in work in AI, but my current role is not really in AI.
+
+144
+00:09:24,320 --> 00:09:31,320
+ That's why I'm here to catch up.
+
+145
+00:09:31,320 --> 00:09:33,320
+ So my name is Sahil.
+
+146
+00:09:33,320 --> 00:09:35,320
+ I would say I'm like six.
+
+147
+00:09:35,320 --> 00:09:38,320
+ I use a lot of AI at work.
+
+148
+00:09:38,320 --> 00:09:42,320
+ And apart from work, there's two things.
+
+149
+00:09:42,320 --> 00:09:44,320
+ [INAUDIBLE]
+
+150
+00:09:44,320 --> 00:09:47,320
+ So I don't really go into the blackboard,
+
+151
+00:09:47,320 --> 00:09:52,320
+ but opportunities like this and just talking to AI about it
+
+152
+00:09:52,320 --> 00:09:56,320
+ like this as well is what I'm trying to do.
+
+153
+00:09:56,320 --> 00:09:57,320
+ Awesome.
+
+154
+00:09:57,320 --> 00:09:58,320
+ Cool.
+
+155
+00:09:58,320 --> 00:09:59,320
+ [INAUDIBLE]
+
+156
+00:09:59,320 --> 00:10:00,320
+ All right.
+
+157
+00:10:00,320 --> 00:10:17,320
+ [INAUDIBLE]
+
+158
+00:10:17,320 --> 00:10:18,320
+ Yeah, hi.
+
+159
+00:10:18,320 --> 00:10:20,320
+ My name is Anthony.
+
+160
+00:10:20,320 --> 00:10:24,320
+ [INAUDIBLE]
+
+161
+00:10:24,320 --> 00:10:31,320
+ I took computer science and UBC back in the '80s, actually.
+
+162
+00:10:31,320 --> 00:10:36,320
+ I worked as a systems engineer for one of the big banks.
+
+163
+00:10:36,320 --> 00:10:38,320
+ I recently retired.
+
+164
+00:10:38,320 --> 00:10:43,320
+ I have to say that even in reading papers like this,
+
+165
+00:10:43,320 --> 00:10:47,320
+ even back in the '80s, we published Shannon's theory
+
+166
+00:10:47,320 --> 00:10:48,320
+ of [INAUDIBLE]
+
+167
+00:10:48,320 --> 00:10:49,320
+ Oh.
+
+168
+00:10:49,320 --> 00:10:51,320
+ That's a fundamental theory of information storage
+
+169
+00:10:51,320 --> 00:10:52,320
+ and transformation.
+
+170
+00:10:52,320 --> 00:10:55,320
+ Yeah, yeah, yeah.
+
+171
+00:10:55,320 --> 00:10:58,320
+ If you want to talk about the very first sentence
+
+172
+00:10:58,320 --> 00:11:01,320
+ of this thing, if you don't know the Shannon theory,
+
+173
+00:11:01,320 --> 00:11:02,320
+ then you can.
+
+174
+00:11:02,320 --> 00:11:05,320
+ [INAUDIBLE]
+
+175
+00:11:05,320 --> 00:11:07,320
+ I can throw a few tickets on that.
+
+176
+00:11:07,320 --> 00:11:08,320
+ Cool.
+
+177
+00:11:08,320 --> 00:11:09,320
+ [INAUDIBLE]
+
+178
+00:11:09,320 --> 00:11:10,320
+ Awesome.
+
+179
+00:11:10,320 --> 00:11:11,320
+ Yeah.
+
+180
+00:11:11,320 --> 00:11:17,320
+ This whole paper is founded on that underlying first principle
+
+181
+00:11:17,320 --> 00:11:18,320
+ knowledge.
+
+182
+00:11:18,320 --> 00:11:19,320
+ OK.
+
+183
+00:11:19,320 --> 00:11:20,320
+ Yeah.
+
+184
+00:11:20,320 --> 00:11:23,320
+ [INAUDIBLE]
+
+185
+00:11:23,320 --> 00:11:24,320
+ Yeah.
+
+186
+00:11:24,320 --> 00:11:25,320
+ Yeah.
+
+187
+00:11:25,320 --> 00:11:26,320
+ Cool.
+
+188
+00:11:26,320 --> 00:11:27,320
+ OK.
+
+189
+00:11:27,320 --> 00:11:30,320
+ [INAUDIBLE]
+
+190
+00:11:30,320 --> 00:11:31,320
+ OK.
+
+191
+00:11:31,320 --> 00:11:32,320
+ My name is Murillo.
+
+192
+00:11:32,320 --> 00:11:34,320
+ I'm one of the [INAUDIBLE]
+
+193
+00:11:34,320 --> 00:11:37,320
+ And I will say my number is nine,
+
+194
+00:11:37,320 --> 00:11:40,320
+ but not because I know a lot, just because every day
+
+195
+00:11:40,320 --> 00:11:45,320
+ I'm into some AI stuff, trying to learn by myself,
+
+196
+00:11:45,320 --> 00:11:50,320
+ trying to build some [INAUDIBLE]
+
+197
+00:11:50,320 --> 00:11:53,320
+ And absolutely [INAUDIBLE]
+
+198
+00:11:53,320 --> 00:11:54,320
+ So talk about that.
+
+199
+00:11:54,320 --> 00:11:58,320
+ I'm pushing myself more right now.
+
+200
+00:11:58,320 --> 00:12:02,320
+ And yeah, I've been [INAUDIBLE]
+
+201
+00:12:02,320 --> 00:12:07,320
+ And since I came here, every week I tried to do something.
+
+202
+00:12:07,320 --> 00:12:10,320
+ That's why I was doing that.
+
+203
+00:12:10,320 --> 00:12:15,320
+ I did not agree with you about the view of AI.
+
+204
+00:12:15,320 --> 00:12:17,320
+ That's how much I am into AI right now.
+
+205
+00:12:17,320 --> 00:12:20,320
+ So your mind is like, I'm that passionate about it.
+
+206
+00:12:20,320 --> 00:12:21,320
+ Yeah.
+
+207
+00:12:21,320 --> 00:12:22,320
+ Every day, every day.
+
+208
+00:12:22,320 --> 00:12:23,320
+ I love it.
+
+209
+00:12:23,320 --> 00:12:24,320
+ I love it.
+
+210
+00:12:24,320 --> 00:12:25,320
+ OK, cool.
+
+211
+00:12:25,320 --> 00:12:29,320
+ OK, so I'm [INAUDIBLE]
+
+212
+00:12:29,320 --> 00:12:30,320
+ Thank you.
+
+213
+00:12:30,320 --> 00:12:32,320
+ And he's 11 or 10.
+
+214
+00:12:32,320 --> 00:12:33,320
+ Yeah.
+
+215
+00:12:33,320 --> 00:12:35,320
+ Yeah, you can see.
+
+216
+00:12:35,320 --> 00:12:37,320
+ So AI is my escapism.
+
+217
+00:12:37,320 --> 00:12:40,320
+ So you can go to 12, 5, or 10, because it's
+
+218
+00:12:40,320 --> 00:12:43,320
+ like a way of feeling comfortable.
+
+219
+00:12:43,320 --> 00:12:44,320
+ Cool.
+
+220
+00:12:44,320 --> 00:12:48,320
+ [INAUDIBLE]
+
+221
+00:12:48,320 --> 00:13:03,320
+ Yeah, cool.
+
+222
+00:13:03,320 --> 00:13:05,320
+ OK, let's dive in.
+
+223
+00:13:05,320 --> 00:13:09,320
+ So the issue with this setup, too,
+
+224
+00:13:09,320 --> 00:13:11,320
+ is it feels like I'm the lecturer,
+
+225
+00:13:11,320 --> 00:13:12,320
+ and we're participants.
+
+226
+00:13:12,320 --> 00:13:14,320
+ I hope that we don't do that.
+
+227
+00:13:14,320 --> 00:13:17,320
+ It is like, interrupt me, bring up points that--
+
+228
+00:13:17,320 --> 00:13:19,320
+ imagine we had a really big roundtable.
+
+229
+00:13:19,320 --> 00:13:22,320
+ That's really the intention of [INAUDIBLE]
+
+230
+00:13:22,320 --> 00:13:24,320
+ Because I definitely don't want to be lecturing
+
+231
+00:13:24,320 --> 00:13:26,320
+ for an hour on this.
+
+232
+00:13:26,320 --> 00:13:28,320
+ OK, so what I'm going to do is-- yes, you're right.
+
+233
+00:13:28,320 --> 00:13:31,320
+ This is actually very little app layer stuff.
+
+234
+00:13:31,320 --> 00:13:34,320
+ This is going to go into the very first principles
+
+235
+00:13:34,320 --> 00:13:37,320
+ of what the heck is a vector, and how do we get from that
+
+236
+00:13:37,320 --> 00:13:38,320
+ to all this.
+
+237
+00:13:38,320 --> 00:13:40,320
+ So I want to spend maybe 10 minutes,
+
+238
+00:13:40,320 --> 00:13:43,320
+ because I know a lot of you are in the two to four range,
+
+239
+00:13:43,320 --> 00:13:45,320
+ because if we don't understand the fundamentals,
+
+240
+00:13:45,320 --> 00:13:46,320
+ we can't actually understand the paper.
+
+241
+00:13:46,320 --> 00:13:48,320
+ So the first 10 minutes will just
+
+242
+00:13:48,320 --> 00:13:51,320
+ be a quick crash course on the basics we need to know,
+
+243
+00:13:51,320 --> 00:13:53,320
+ and then we'll open up the paper.
+
+244
+00:13:53,320 --> 00:13:57,320
+ OK, so I mean, really simply, when I think about AI search,
+
+245
+00:13:57,320 --> 00:13:59,320
+ it is like, I have a need for information.
+
+246
+00:13:59,320 --> 00:14:03,320
+ There's lots of candidates of information sources I can have,
+
+247
+00:14:03,320 --> 00:14:07,320
+ and I need some way of scoring which matched the need.
+
+248
+00:14:07,320 --> 00:14:11,320
+ And historically, what we do search is you match words,
+
+249
+00:14:11,320 --> 00:14:12,320
+ you figure out phrases.
+
+250
+00:14:12,320 --> 00:14:14,320
+ Maybe there's like algorithmic ways
+
+251
+00:14:14,320 --> 00:14:16,320
+ to search for something based on weights.
+
+252
+00:14:16,320 --> 00:14:20,320
+ But with AI and transformers, a big part of that
+
+253
+00:14:20,320 --> 00:14:23,320
+ is all of it is now based in vectors
+
+254
+00:14:23,320 --> 00:14:25,320
+ and how it relates to each other.
+
+255
+00:14:25,320 --> 00:14:30,320
+ So if I were to really put this fundamentally simply,
+
+256
+00:14:30,320 --> 00:14:32,320
+ if we have a query for something,
+
+257
+00:14:32,320 --> 00:14:34,320
+ we're converting that as a vector, right?
+
+258
+00:14:34,320 --> 00:14:36,320
+ All the things, the documents, the things that we want
+
+259
+00:14:36,320 --> 00:14:37,320
+ are also vectors.
+
+260
+00:14:37,320 --> 00:14:40,320
+ And we're basically trying to find what matches closely
+
+261
+00:14:40,320 --> 00:14:41,320
+ to it.
+
+262
+00:14:41,320 --> 00:14:47,320
+ That's really the most first principles fundamental to this.
+
+263
+00:14:47,320 --> 00:14:51,320
+ So I don't know if anyone's taken a linear algebra class,
+
+264
+00:14:51,320 --> 00:14:54,320
+ but I think a lot of you have taken a linear algebra class.
+
+265
+00:14:54,320 --> 00:14:57,320
+ Yeah, there is one of my favorite books.
+
+266
+00:14:57,320 --> 00:15:02,320
+ [INTERPOSING VOICES]
+
+267
+00:15:02,320 --> 00:15:08,320
+ There is this book from Anil on how machines think.
+
+268
+00:15:08,320 --> 00:15:09,320
+ I forgot the name of the book.
+
+269
+00:15:09,320 --> 00:15:12,320
+ It's like one of my favorite math AI books.
+
+270
+00:15:12,320 --> 00:15:14,320
+ He starts in the Perceptron, right?
+
+271
+00:15:14,320 --> 00:15:17,320
+ Like the very early machine learning 1960s
+
+272
+00:15:17,320 --> 00:15:19,320
+ and then works his way up in math.
+
+273
+00:15:19,320 --> 00:15:20,320
+ It's one of my favorite ones.
+
+274
+00:15:20,320 --> 00:15:24,320
+ And a lot of that actually was my early interest
+
+275
+00:15:24,320 --> 00:15:26,320
+ in looking behind the hood, right?
+
+276
+00:15:26,320 --> 00:15:30,320
+ So baseline is we're working with vectors, right?
+
+277
+00:15:30,320 --> 00:15:33,320
+ So if you had a three-dimensional space
+
+278
+00:15:33,320 --> 00:15:36,320
+ on these three coordinates, we have x, y, and z.
+
+279
+00:15:36,320 --> 00:15:38,320
+ And if you throw an arrow in, I'm sure all of us
+
+280
+00:15:38,320 --> 00:15:41,320
+ know we can represent this as x, y, and z.
+
+281
+00:15:41,320 --> 00:15:42,320
+ And this is a vector.
+
+282
+00:15:42,320 --> 00:15:45,320
+ It's a line pointing in the direction, right?
+
+283
+00:15:45,320 --> 00:15:48,320
+ GPT, we're working with many dimensions.
+
+284
+00:15:48,320 --> 00:15:50,320
+ Many, many, many, many, many dimensions.
+
+285
+00:15:50,320 --> 00:15:54,320
+ So we're just simplifying it to this one.
+
+286
+00:15:54,320 --> 00:15:57,320
+ The second thing to understand is dot product.
+
+287
+00:15:57,320 --> 00:15:59,320
+ Very, very important.
+
+288
+00:15:59,320 --> 00:16:02,320
+ The simplest way I like to think about dot product
+
+289
+00:16:02,320 --> 00:16:06,320
+ is how similar are two concepts, right?
+
+290
+00:16:06,320 --> 00:16:07,320
+ That's basically it.
+
+291
+00:16:07,320 --> 00:16:10,320
+ If I have a concept A and I have a concept B,
+
+292
+00:16:10,320 --> 00:16:13,320
+ how similar are they, right?
+
+293
+00:16:13,320 --> 00:16:16,320
+ So if they're kind of here, they're similar.
+
+294
+00:16:16,320 --> 00:16:21,320
+ If they're here, maybe not as-- not similar at all, right?
+
+295
+00:16:21,320 --> 00:16:24,320
+ Again, I'm hyper-simplifying this.
+
+296
+00:16:24,320 --> 00:16:25,320
+ It's a lot more complex.
+
+297
+00:16:25,320 --> 00:16:27,320
+ But whenever you hear dot product,
+
+298
+00:16:27,320 --> 00:16:29,320
+ or things like cosine similarity, things like that,
+
+299
+00:16:29,320 --> 00:16:32,320
+ it's just like, how similar are they?
+
+300
+00:16:32,320 --> 00:16:34,320
+ I think it's just a mental model to use.
+
+301
+00:16:34,320 --> 00:16:35,320
+ How do you go through this?
+
+302
+00:16:35,320 --> 00:16:36,320
+ [INAUDIBLE]
+
+303
+00:16:36,320 --> 00:16:39,320
+ Cosine, if they were exactly the same cosine,
+
+304
+00:16:39,320 --> 00:16:40,320
+ but with the angles--
+
+305
+00:16:40,320 --> 00:16:41,320
+ Yes.
+
+306
+00:16:41,320 --> 00:16:43,320
+ [INAUDIBLE]
+
+307
+00:16:43,320 --> 00:16:44,320
+ Yes.
+
+308
+00:16:44,320 --> 00:16:47,320
+ So it goes 1, if it's 90, 0, negative 1.
+
+309
+00:16:47,320 --> 00:16:49,320
+ [INAUDIBLE]
+
+310
+00:16:49,320 --> 00:16:50,320
+ Exactly.
+
+311
+00:16:50,320 --> 00:16:52,320
+ [INAUDIBLE]
+
+312
+00:16:52,320 --> 00:16:56,320
+ And then we have this concept, vector embedding.
+
+313
+00:16:56,320 --> 00:16:58,320
+ The simplest way to put it is when we have text,
+
+314
+00:16:58,320 --> 00:17:00,320
+ objects can be plotted and things.
+
+315
+00:17:00,320 --> 00:17:03,320
+ If we have text, we put them through an embedding model,
+
+316
+00:17:03,320 --> 00:17:07,320
+ and we represent that text as these vectors, right?
+
+317
+00:17:07,320 --> 00:17:10,320
+ So GP doesn't really understand English.
+
+318
+00:17:10,320 --> 00:17:13,320
+ It all just understands big matrixes, right?
+
+319
+00:17:13,320 --> 00:17:14,320
+ So that's what we do.
+
+320
+00:17:14,320 --> 00:17:16,320
+ We take these objects, and we figure out some ways
+
+321
+00:17:16,320 --> 00:17:19,320
+ to make them into these embeddings.
+
+322
+00:17:19,320 --> 00:17:21,320
+ Of course, we're not going to go into the very specifics.
+
+323
+00:17:21,320 --> 00:17:24,320
+ There's a whole tokenization, all those
+
+324
+00:17:24,320 --> 00:17:25,320
+ we don't want to get into.
+
+325
+00:17:25,320 --> 00:17:27,320
+ But that's just the basics.
+
+326
+00:17:27,320 --> 00:17:28,320
+ It's a nice figure.
+
+327
+00:17:28,320 --> 00:17:29,320
+ Very nice figure.
+
+328
+00:17:29,320 --> 00:17:32,320
+ Yeah, it's just so clean to understand.
+
+329
+00:17:32,320 --> 00:17:33,320
+ And then we have--
+
+330
+00:17:33,320 --> 00:17:34,320
+ I just want to show you this video.
+
+331
+00:17:34,320 --> 00:17:37,320
+ One of my favorite YouTubers on the planet
+
+332
+00:17:37,320 --> 00:17:39,320
+ is 3Blue1Brown.
+
+333
+00:17:39,320 --> 00:17:42,320
+ He was the guy that helped me understand what the heck KQV,
+
+334
+00:17:42,320 --> 00:17:46,320
+ and just understanding how the key, and the query,
+
+335
+00:17:46,320 --> 00:17:49,320
+ and the values all come together in these big tabular formats.
+
+336
+00:17:49,320 --> 00:17:52,320
+ So what I want to do is just play that first bit,
+
+337
+00:17:52,320 --> 00:17:57,320
+ so we can better understand just what these similarities mean.
+
+338
+00:17:57,320 --> 00:17:59,320
+ So how do we go from a sentence to this?
+
+339
+00:17:59,320 --> 00:18:01,320
+ It's like 20 or 30 seconds, but I just highly
+
+340
+00:18:01,320 --> 00:18:02,320
+ recommend this channel.
+
+341
+00:18:02,320 --> 00:18:03,320
+ So good.
+
+342
+00:18:03,320 --> 00:18:05,320
+ The first step in a transformer is
+
+343
+00:18:05,320 --> 00:18:09,320
+ to associate each token with a high dimensional vector, what
+
+344
+00:18:09,320 --> 00:18:10,320
+ we call its embedding.
+
+345
+00:18:10,320 --> 00:18:12,320
+ Now, the most important idea I want you to have in mind
+
+346
+00:18:12,320 --> 00:18:15,320
+ is how directions in this high dimensional space
+
+347
+00:18:15,320 --> 00:18:18,320
+ of all possible embeddings can correspond
+
+348
+00:18:18,320 --> 00:18:20,320
+ with semantic meaning.
+
+349
+00:18:20,320 --> 00:18:21,320
+ In the last chapter, we saw an example
+
+350
+00:18:21,320 --> 00:18:24,320
+ for how direction can correspond to gender,
+
+351
+00:18:24,320 --> 00:18:27,320
+ in the sense that adding a certain step in this space
+
+352
+00:18:27,320 --> 00:18:29,320
+ can take you from the embedding of a masculine noun
+
+353
+00:18:29,320 --> 00:18:32,320
+ to the embedding of the corresponding feminine noun.
+
+354
+00:18:32,320 --> 00:18:33,320
+ That's just one example.
+
+355
+00:18:33,320 --> 00:18:35,320
+ You could imagine how many other directions
+
+356
+00:18:35,320 --> 00:18:37,320
+ in this high dimensional space could
+
+357
+00:18:37,320 --> 00:18:41,320
+ correspond to numerous other aspects of a word's meaning.
+
+358
+00:18:41,320 --> 00:18:44,320
+ The aim of a transformer is to progressively adjust
+
+359
+00:18:44,320 --> 00:18:46,320
+ these embeddings so that they don't merely
+
+360
+00:18:46,320 --> 00:18:49,320
+ encode an individual word, but instead they
+
+361
+00:18:49,320 --> 00:18:52,320
+ bake in some much, much richer contextual meaning.
+
+362
+00:18:52,320 --> 00:18:54,320
+ I should say up front that a lot of people
+
+363
+00:18:54,320 --> 00:18:57,320
+ find the attention mechanism, this key piece in a transformer--
+
+364
+00:18:57,320 --> 00:18:59,320
+ We'll get into attention mechanism in a second.
+
+365
+00:18:59,320 --> 00:19:01,320
+ But I hope we understood that.
+
+366
+00:19:01,320 --> 00:19:02,320
+ It's like we're taking these words
+
+367
+00:19:02,320 --> 00:19:05,320
+ and just representing them in this end dimensional space.
+
+368
+00:19:05,320 --> 00:19:07,320
+ I don't know about you guys, but that's just so frickin'
+
+369
+00:19:07,320 --> 00:19:08,320
+ interesting.
+
+370
+00:19:08,320 --> 00:19:10,320
+ The fact that-- I don't know if you guys see this video.
+
+371
+00:19:10,320 --> 00:19:14,320
+ Like, if you take king and remove something--
+
+372
+00:19:14,320 --> 00:19:16,320
+ if you take king and then add them as a feminine piece,
+
+373
+00:19:16,320 --> 00:19:19,320
+ you'll see the vector changes so that it actually
+
+374
+00:19:19,320 --> 00:19:20,320
+ represents queen.
+
+375
+00:19:20,320 --> 00:19:24,320
+ I'm like, it's crazy that all of that is just math, right?
+
+376
+00:19:24,320 --> 00:19:27,320
+ And this is why I'm like, if I think about application layer
+
+377
+00:19:27,320 --> 00:19:29,320
+ exploration and I think research expert,
+
+378
+00:19:29,320 --> 00:19:30,320
+ this is so much more interesting.
+
+379
+00:19:30,320 --> 00:19:32,320
+ I'm like, there's so much to dig into
+
+380
+00:19:32,320 --> 00:19:36,320
+ and understand artistically how all this comes about.
+
+381
+00:19:36,320 --> 00:19:39,320
+ So that is just to get a sense of, OK,
+
+382
+00:19:39,320 --> 00:19:42,320
+ if it's in a particular direction,
+
+383
+00:19:42,320 --> 00:19:45,320
+ there is a meaning and semantics attachment.
+
+384
+00:19:45,320 --> 00:19:46,320
+ Cool.
+
+385
+00:19:46,320 --> 00:19:51,320
+ The next thing is to understand this thing called attention.
+
+386
+00:19:51,320 --> 00:19:55,320
+ Again, if I were to explain this super, super simply,
+
+387
+00:19:55,320 --> 00:19:57,320
+ we have our input text.
+
+388
+00:19:57,320 --> 00:19:58,320
+ It's tokenized.
+
+389
+00:19:58,320 --> 00:20:01,320
+ It means it's flipped into these individual components.
+
+390
+00:20:01,320 --> 00:20:04,320
+ And it goes through our GPT transformer
+
+391
+00:20:04,320 --> 00:20:06,320
+ and then has an output.
+
+392
+00:20:06,320 --> 00:20:08,320
+ So that's kind of how GPT just fundamentally works.
+
+393
+00:20:08,320 --> 00:20:12,320
+ But if I were to ask, what is attention?
+
+394
+00:20:12,320 --> 00:20:16,320
+ I kind of just put this as the one line.
+
+395
+00:20:16,320 --> 00:20:21,320
+ So it is taking information from the past tokens
+
+396
+00:20:21,320 --> 00:20:23,320
+ and helping it inform the current token
+
+397
+00:20:23,320 --> 00:20:25,320
+ so we can figure out what the next one is.
+
+398
+00:20:25,320 --> 00:20:27,320
+ And again, the simplest way to understand
+
+399
+00:20:27,320 --> 00:20:31,320
+ that is the more-- it allows me to understand
+
+400
+00:20:31,320 --> 00:20:34,320
+ in a particular sentence, oh, what pieces of information
+
+401
+00:20:34,320 --> 00:20:35,320
+ do I need to consider now?
+
+402
+00:20:35,320 --> 00:20:38,320
+ So I can figure out predictably what
+
+403
+00:20:38,320 --> 00:20:40,320
+ is the next token going to be.
+
+404
+00:20:40,320 --> 00:20:43,320
+ So if I have more attention layers,
+
+405
+00:20:43,320 --> 00:20:47,320
+ as you know, in GPT there's a whole bunch of attention layers.
+
+406
+00:20:47,320 --> 00:20:51,320
+ That just simply means spending more time thinking about it
+
+407
+00:20:51,320 --> 00:20:54,320
+ and then updates the vectors.
+
+408
+00:20:54,320 --> 00:20:56,320
+ So all of this is still a little bit confusing.
+
+409
+00:20:56,320 --> 00:20:58,320
+ I think the basic thing to remember
+
+410
+00:20:58,320 --> 00:21:01,320
+ is attention is how tokens relate to each other.
+
+411
+00:21:01,320 --> 00:21:03,320
+ So it understands what the previous information
+
+412
+00:21:03,320 --> 00:21:07,320
+ and packs more context into the part one.
+
+413
+00:21:07,320 --> 00:21:08,320
+ Cool.
+
+414
+00:21:08,320 --> 00:21:10,320
+ Just in case, I remember now there
+
+415
+00:21:10,320 --> 00:21:13,320
+ is one amazing paper called "Attention is All You Need."
+
+416
+00:21:13,320 --> 00:21:14,320
+ Yes.
+
+417
+00:21:14,320 --> 00:21:16,320
+ [LAUGHTER]
+
+418
+00:21:16,320 --> 00:21:18,320
+ So I mean, attention is all you need.
+
+419
+00:21:18,320 --> 00:21:22,320
+ It's the birth of this, all of this, right?
+
+420
+00:21:22,320 --> 00:21:23,320
+ And I highly recommend it.
+
+421
+00:21:23,320 --> 00:21:25,320
+ I highly recommend it to others.
+
+422
+00:21:25,320 --> 00:21:29,320
+ It literally-- I mean, it is where all this comes from.
+
+423
+00:21:29,320 --> 00:21:31,320
+ Have you ever done-- and attention is all you need.
+
+424
+00:21:31,320 --> 00:21:33,320
+ Like old school-- I got to say old school.
+
+425
+00:21:33,320 --> 00:21:34,320
+ It's a long time ago.
+
+426
+00:21:34,320 --> 00:21:36,320
+ Have you done a reading group on attention?
+
+427
+00:21:36,320 --> 00:21:37,320
+ Long time ago, yeah.
+
+428
+00:21:37,320 --> 00:21:38,320
+ In Montreal.
+
+429
+00:21:38,320 --> 00:21:40,320
+ It might be worth bringing that up at some point.
+
+430
+00:21:40,320 --> 00:21:42,320
+ So if Google hadn't published it,
+
+431
+00:21:42,320 --> 00:21:44,320
+ are there people who would have known?
+
+432
+00:21:44,320 --> 00:21:47,320
+ Yeah, I guess.
+
+433
+00:21:47,320 --> 00:21:51,320
+ I think the industry was going in this direction.
+
+434
+00:21:51,320 --> 00:21:54,320
+ It would have happened at some point.
+
+435
+00:21:54,320 --> 00:21:55,320
+ Yeah.
+
+436
+00:21:55,320 --> 00:21:57,320
+ OK, I just want to pause here.
+
+437
+00:21:57,320 --> 00:21:59,320
+ Any quick questions?
+
+438
+00:21:59,320 --> 00:22:01,320
+ Again, the goal is not to get the details.
+
+439
+00:22:01,320 --> 00:22:03,320
+ Imagine we have a watercolor painting.
+
+440
+00:22:03,320 --> 00:22:04,320
+ That's all I'm looking for.
+
+441
+00:22:04,320 --> 00:22:06,320
+ I'm not looking for branches in the leaves
+
+442
+00:22:06,320 --> 00:22:07,320
+ in your understanding of this yet.
+
+443
+00:22:07,320 --> 00:22:08,320
+ But so far, are we good?
+
+444
+00:22:08,320 --> 00:22:09,320
+ Any questions?
+
+445
+00:22:09,320 --> 00:22:10,320
+ OK, cool.
+
+446
+00:22:10,320 --> 00:22:11,320
+ OK.
+
+447
+00:22:11,320 --> 00:22:13,320
+ And then we have this thing called kidney cache.
+
+448
+00:22:13,320 --> 00:22:14,320
+ That's going to come up a little.
+
+449
+00:22:14,320 --> 00:22:19,320
+ That's basically the crux of this paper, right?
+
+450
+00:22:19,320 --> 00:22:21,320
+ And the way I just think about it, very simply,
+
+451
+00:22:21,320 --> 00:22:25,320
+ is this attention mechanism spends a lot of time
+
+452
+00:22:25,320 --> 00:22:29,320
+ looking at previous tokens and words to inform
+
+453
+00:22:29,320 --> 00:22:30,320
+ what has to come next.
+
+454
+00:22:30,320 --> 00:22:32,320
+ So instead of writing this every time
+
+455
+00:22:32,320 --> 00:22:36,320
+ and processing it every time, it just keeps a cache
+
+456
+00:22:36,320 --> 00:22:38,320
+ of all the different-- keeps a cache.
+
+457
+00:22:38,320 --> 00:22:39,320
+ And the best way to think about it
+
+458
+00:22:39,320 --> 00:22:41,320
+ is this information about past tokens.
+
+459
+00:22:41,320 --> 00:22:43,320
+ And it just remembers that.
+
+460
+00:22:43,320 --> 00:22:47,320
+ So you can imagine if we work with really big,
+
+461
+00:22:47,320 --> 00:22:52,320
+ really big vectors and sizes, that cache gets really big.
+
+462
+00:22:52,320 --> 00:22:55,320
+ And so this entire paper today is
+
+463
+00:22:55,320 --> 00:22:58,320
+ how do we basically quantize it?
+
+464
+00:22:58,320 --> 00:23:00,320
+ And that's the fundamental understanding.
+
+465
+00:23:00,320 --> 00:23:01,320
+ It's like a very big conversation history.
+
+466
+00:23:01,320 --> 00:23:02,320
+ Yes.
+
+467
+00:23:02,320 --> 00:23:04,320
+ You want to keep track of it, right?
+
+468
+00:23:04,320 --> 00:23:07,320
+ I think I started using GPT in one chat way too long.
+
+469
+00:23:07,320 --> 00:23:10,320
+ And then it starts to slow down rapidly.
+
+470
+00:23:10,320 --> 00:23:12,320
+ That's because the kidney cache is growing too big.
+
+471
+00:23:12,320 --> 00:23:14,320
+ There's just so much context.
+
+472
+00:23:14,320 --> 00:23:15,320
+ Yes.
+
+473
+00:23:15,320 --> 00:23:18,320
+ One small aspect of it is that, yes.
+
+474
+00:23:18,320 --> 00:23:20,320
+ And this is going really, really large.
+
+475
+00:23:20,320 --> 00:23:22,320
+ It's quadratic, which means yeah, right?
+
+476
+00:23:22,320 --> 00:23:23,320
+ Is that so?
+
+477
+00:23:23,320 --> 00:23:24,320
+ Yeah, quadratic.
+
+478
+00:23:24,320 --> 00:23:26,320
+ Because the attention is quadratic.
+
+479
+00:23:26,320 --> 00:23:27,320
+ OK.
+
+480
+00:23:27,320 --> 00:23:29,320
+ I searched it up because I was like,
+
+481
+00:23:29,320 --> 00:23:31,320
+ what is the KB cache before this?
+
+482
+00:23:31,320 --> 00:23:33,320
+ And the KB cache is a key value cache, right?
+
+483
+00:23:33,320 --> 00:23:35,320
+ But then doesn't that mean that it's a hash map?
+
+484
+00:23:35,320 --> 00:23:36,320
+ Because it's a key value pair.
+
+485
+00:23:36,320 --> 00:23:39,320
+ And wouldn't that mean that it's always in constant time?
+
+486
+00:23:39,320 --> 00:23:43,320
+ Or why does it get slower the more that it gets
+
+487
+00:23:43,320 --> 00:23:46,320
+ if a key value pair you can just do it using a hash map
+
+488
+00:23:46,320 --> 00:23:49,320
+ and it's supposed to be constant time?
+
+489
+00:23:49,320 --> 00:23:53,320
+ My understanding of this is that it just
+
+490
+00:23:53,320 --> 00:23:57,320
+ adds to the computation speed.
+
+491
+00:23:57,320 --> 00:24:00,320
+ KB cache is added part of the vector.
+
+492
+00:24:00,320 --> 00:24:03,320
+ So if you have to constantly, in your attention mechanisms,
+
+493
+00:24:03,320 --> 00:24:09,320
+ go back, that is actually quite a bit to process.
+
+494
+00:24:09,320 --> 00:24:11,320
+ So that's kind of my understanding of it.
+
+495
+00:24:11,320 --> 00:24:12,320
+ Unless anyone else has a different date.
+
+496
+00:24:12,320 --> 00:24:13,320
+ Yeah.
+
+497
+00:24:13,320 --> 00:24:35,320
+ [INAUDIBLE]
+
+498
+00:24:35,320 --> 00:24:36,320
+ Is that what you're asking?
+
+499
+00:24:36,320 --> 00:24:37,320
+ Yeah.
+
+500
+00:24:37,320 --> 00:24:38,320
+ Did you understand what KB cache meant?
+
+501
+00:24:38,320 --> 00:24:41,320
+ Or were you just asking why is it so big and ballooned up?
+
+502
+00:24:41,320 --> 00:24:43,320
+ Yeah, like why does it slow down?
+
+503
+00:24:43,320 --> 00:24:46,320
+ Why does it get bigger?
+
+504
+00:24:46,320 --> 00:24:48,320
+ I mean--
+
+505
+00:24:48,320 --> 00:24:50,320
+ Go for it, please.
+
+506
+00:24:50,320 --> 00:24:54,320
+ I was going to say, I think this whole paper talks
+
+507
+00:24:54,320 --> 00:24:59,320
+ about the efficiency of storing the KB cache
+
+508
+00:24:59,320 --> 00:25:06,320
+ data in the finite amount of hardware memory on the GPU.
+
+509
+00:25:06,320 --> 00:25:11,320
+ So if you have an Nvidia graphics card like a 5,000
+
+510
+00:25:11,320 --> 00:25:15,320
+ or a Blackbook GPU plugged inside your computer,
+
+511
+00:25:15,320 --> 00:25:20,320
+ it has 8 gigabytes of PPR5 memory.
+
+512
+00:25:20,320 --> 00:25:24,320
+ So it comes down to how much data
+
+513
+00:25:24,320 --> 00:25:28,320
+ can be efficiently crammed into that memory
+
+514
+00:25:28,320 --> 00:25:32,320
+ in order to keep your AI working as quickly
+
+515
+00:25:32,320 --> 00:25:34,320
+ as possible.
+
+516
+00:25:34,320 --> 00:25:36,320
+ We're going to talk about that in so much depth today.
+
+517
+00:25:36,320 --> 00:25:37,320
+ Yeah.
+
+518
+00:25:37,320 --> 00:25:39,320
+ That's the point of this.
+
+519
+00:25:39,320 --> 00:25:55,320
+ [INAUDIBLE]
+
+520
+00:25:55,320 --> 00:25:59,320
+ But doesn't it conceptually mean the more--
+
+521
+00:25:59,320 --> 00:26:02,320
+ the longer it gets, let's say sentence versus paragraph
+
+522
+00:26:02,320 --> 00:26:07,320
+ versus the longer it gets, we need more information
+
+523
+00:26:07,320 --> 00:26:10,320
+ to maintain the semantics of that.
+
+524
+00:26:10,320 --> 00:26:11,320
+ What's important?
+
+525
+00:26:11,320 --> 00:26:15,320
+ So that's-- isn't that why it gets slower anyway?
+
+526
+00:26:15,320 --> 00:26:17,320
+ Slower because of memory.
+
+527
+00:26:17,320 --> 00:26:21,320
+ So KB cache, these things, are stored in memory.
+
+528
+00:26:21,320 --> 00:26:24,320
+ And a lot of the memory is like, I need to access it fast.
+
+529
+00:26:24,320 --> 00:26:28,320
+ But memory can't-- you guys know the simplest analogies
+
+530
+00:26:28,320 --> 00:26:30,320
+ like the RAM and storage, right?
+
+531
+00:26:30,320 --> 00:26:31,320
+ Yeah.
+
+532
+00:26:31,320 --> 00:26:33,320
+ And then your RAM has like--
+
+533
+00:26:33,320 --> 00:26:35,320
+ it's to get quick.
+
+534
+00:26:35,320 --> 00:26:37,320
+ It's to be able to do quick operations.
+
+535
+00:26:37,320 --> 00:26:38,320
+ In nanoseconds.
+
+536
+00:26:38,320 --> 00:26:39,320
+ Yeah.
+
+537
+00:26:39,320 --> 00:26:40,320
+ That memory access--
+
+538
+00:26:40,320 --> 00:26:41,320
+ Yeah.
+
+539
+00:26:41,320 --> 00:26:43,320
+ [INAUDIBLE]
+
+540
+00:26:43,320 --> 00:26:44,320
+ Exactly.
+
+541
+00:26:44,320 --> 00:26:47,320
+ So KB cache, if it keeps growing, the memory gets full.
+
+542
+00:26:47,320 --> 00:26:48,320
+ And then it just--
+
+543
+00:26:48,320 --> 00:26:51,320
+ the latency starts to crash as things start to crash.
+
+544
+00:26:51,320 --> 00:26:54,320
+ So I would say that's one of the bottlenecks.
+
+545
+00:26:54,320 --> 00:26:56,320
+ It's because memory is only limited.
+
+546
+00:26:56,320 --> 00:26:59,320
+ So the storage, which is different, then there's memory.
+
+547
+00:26:59,320 --> 00:27:02,320
+ And that's one of the reasons why memory chips have not
+
+548
+00:27:02,320 --> 00:27:03,320
+ been priced that way.
+
+549
+00:27:03,320 --> 00:27:06,320
+ Because as they build out more and more of these AI data
+
+550
+00:27:06,320 --> 00:27:11,320
+ centers, the manufacturers are switching their DRAM--
+
+551
+00:27:11,320 --> 00:27:13,320
+ their production in DRAM.
+
+552
+00:27:13,320 --> 00:27:16,320
+ It is high bandwidth memory.
+
+553
+00:27:16,320 --> 00:27:19,320
+ And so when you go to the computer store to buy memory,
+
+554
+00:27:19,320 --> 00:27:21,320
+ it's in short supply, right?
+
+555
+00:27:21,320 --> 00:27:22,320
+ Because--
+
+556
+00:27:22,320 --> 00:27:23,320
+ Let's see.
+
+557
+00:27:23,320 --> 00:27:26,320
+ All the manufacturers like Vipron Technologies
+
+558
+00:27:26,320 --> 00:27:29,320
+ are making this high-speed memory
+
+559
+00:27:29,320 --> 00:27:31,320
+ for all the AI data centers.
+
+560
+00:27:31,320 --> 00:27:32,320
+ [INAUDIBLE]
+
+561
+00:27:32,320 --> 00:27:35,320
+ [LAUGHTER]
+
+562
+00:27:35,320 --> 00:27:36,320
+ Right?
+
+563
+00:27:36,320 --> 00:27:37,320
+ Yeah.
+
+564
+00:27:37,320 --> 00:27:38,320
+ That's insane.
+
+565
+00:27:38,320 --> 00:27:40,320
+ It hasn't changed in the last five years.
+
+566
+00:27:40,320 --> 00:27:42,320
+ It's like doubled, huh?
+
+567
+00:27:42,320 --> 00:27:45,320
+ [INAUDIBLE]
+
+568
+00:27:45,320 --> 00:27:47,320
+ Yeah, you can afford it if you bought any videos.
+
+569
+00:27:47,320 --> 00:27:48,320
+ Oh, so look at that.
+
+570
+00:27:48,320 --> 00:27:52,320
+ Prices for-- the kids have surged.
+
+571
+00:27:52,320 --> 00:27:53,320
+ Yeah.
+
+572
+00:27:53,320 --> 00:27:54,320
+ This is interesting.
+
+573
+00:27:54,320 --> 00:27:59,320
+ So it has surged three to four times their early 2025 lows.
+
+574
+00:27:59,320 --> 00:28:04,320
+ So between early 2025 and now, it's surged three to four times.
+
+575
+00:28:04,320 --> 00:28:05,320
+ This is precisely why.
+
+576
+00:28:05,320 --> 00:28:07,320
+ Yeah, I have a buddy who was buying RAM
+
+577
+00:28:07,320 --> 00:28:09,320
+ like it was [INAUDIBLE]
+
+578
+00:28:09,320 --> 00:28:12,320
+ [INTERPOSING VOICES]
+
+579
+00:28:12,320 --> 00:28:17,320
+ The reason is because the manufacturers, like Samsung,
+
+580
+00:28:17,320 --> 00:28:21,320
+ have switched their production from DRAM, which
+
+581
+00:28:21,320 --> 00:28:25,320
+ is usually used for new computers, to HBM then.
+
+582
+00:28:25,320 --> 00:28:27,320
+ Oh, yeah, we're going to talk about that too.
+
+583
+00:28:27,320 --> 00:28:28,320
+ HBM, yeah.
+
+584
+00:28:28,320 --> 00:28:29,320
+ [INAUDIBLE]
+
+585
+00:28:29,320 --> 00:28:40,320
+ Oh, this is good.
+
+586
+00:28:40,320 --> 00:28:43,320
+ This is actually perfect because we're going to get into it.
+
+587
+00:28:43,320 --> 00:28:46,320
+ I guess, literally, this is basically setting up
+
+588
+00:28:46,320 --> 00:28:50,320
+ what you asked, which is this grows so quickly
+
+589
+00:28:50,320 --> 00:28:55,320
+ that the-- man, it just requires so many more computations.
+
+590
+00:28:55,320 --> 00:28:57,320
+ And we just need to find a way to make this cheaper
+
+591
+00:28:57,320 --> 00:28:59,320
+ and not lose accuracy.
+
+592
+00:28:59,320 --> 00:29:03,320
+ So that's how we're going to slowly start to get into this.
+
+593
+00:29:03,320 --> 00:29:05,320
+ So if you have your papers, let's work it out.
+
+594
+00:29:05,320 --> 00:29:06,320
+ Let's get into this.
+
+595
+00:29:06,320 --> 00:29:11,320
+ OK.
+
+596
+00:29:11,320 --> 00:29:12,320
+ Actually, you know what?
+
+597
+00:29:12,320 --> 00:29:13,320
+ Give me my-- sorry.
+
+598
+00:29:13,320 --> 00:29:14,320
+ Let's spend some time.
+
+599
+00:29:14,320 --> 00:29:15,320
+ I love-- oh, my god.
+
+600
+00:29:15,320 --> 00:29:17,320
+ I spent so much time really understanding
+
+601
+00:29:17,320 --> 00:29:20,320
+ Shannon's source point, but if you want to spend just one
+
+602
+00:29:20,320 --> 00:29:22,320
+ or two minutes, what do you understand about it?
+
+603
+00:29:22,320 --> 00:29:25,320
+ So what I was thinking topside.
+
+604
+00:29:25,320 --> 00:29:26,320
+ And then it's in 1980s?
+
+605
+00:29:26,320 --> 00:29:29,320
+ Way back in the Stone Age, in 1980s.
+
+606
+00:29:29,320 --> 00:29:30,320
+ [INAUDIBLE]
+
+607
+00:29:30,320 --> 00:29:31,320
+ Did you do punch?
+
+608
+00:29:31,320 --> 00:29:33,320
+ Because I remember university.
+
+609
+00:29:33,320 --> 00:29:35,320
+ Yeah, my first day we did punch.
+
+610
+00:29:35,320 --> 00:29:37,320
+ Don't go there, man.
+
+611
+00:29:37,320 --> 00:29:39,320
+ So the Shannon theory--
+
+612
+00:29:39,320 --> 00:29:40,320
+ No problem.
+
+613
+00:29:40,320 --> 00:29:43,320
+ The way that it was explained to me was--
+
+614
+00:29:43,320 --> 00:29:44,320
+ Yeah.
+
+615
+00:29:44,320 --> 00:29:50,320
+ You know, the Shannon theorem was written in the 1920s.
+
+616
+00:29:50,320 --> 00:29:55,320
+ And it had to do with how to encode information, right,
+
+617
+00:29:55,320 --> 00:29:58,320
+ at maximum efficiency.
+
+618
+00:29:58,320 --> 00:30:01,320
+ So the basic idea was, let's say you
+
+619
+00:30:01,320 --> 00:30:05,320
+ have somebody doing something similar to Morse code.
+
+620
+00:30:05,320 --> 00:30:07,320
+ How fast can you transfer information
+
+621
+00:30:07,320 --> 00:30:11,320
+ over a pair of copper wires using tap, tap, tap, tap?
+
+622
+00:30:11,320 --> 00:30:14,320
+ How can you encode your information, your letters
+
+623
+00:30:14,320 --> 00:30:17,320
+ of the alphabet, as efficiently as possible,
+
+624
+00:30:17,320 --> 00:30:20,320
+ to transmit as much information as possible
+
+625
+00:30:20,320 --> 00:30:23,320
+ over an OG communication panel?
+
+626
+00:30:23,320 --> 00:30:26,320
+ That was the basic premise of the Shannon theory.
+
+627
+00:30:26,320 --> 00:30:27,320
+ Yeah.
+
+628
+00:30:27,320 --> 00:30:29,320
+ And it's about information and coding.
+
+629
+00:30:29,320 --> 00:30:31,320
+ And you guys have-- so if you watch the video
+
+630
+00:30:31,320 --> 00:30:33,320
+ that I sent across, the example that I love that he gave
+
+631
+00:30:33,320 --> 00:30:36,320
+ is, if you had two text files, one text file
+
+632
+00:30:36,320 --> 00:30:38,320
+ is a file just with the letter A.
+
+633
+00:30:38,320 --> 00:30:40,320
+ And you have another text file that
+
+634
+00:30:40,320 --> 00:30:42,320
+ is a bunch of random ones.
+
+635
+00:30:42,320 --> 00:30:44,320
+ The first text file is going to be 7MB.
+
+636
+00:30:44,320 --> 00:30:46,320
+ You can get it down to a few--
+
+637
+00:30:46,320 --> 00:30:47,320
+ Little points, yeah.
+
+638
+00:30:47,320 --> 00:30:49,320
+ The other one, the latter one, not as much.
+
+639
+00:30:49,320 --> 00:30:50,320
+ Maybe 1.2.
+
+640
+00:30:50,320 --> 00:30:51,320
+ Yes.
+
+641
+00:30:51,320 --> 00:30:53,320
+ And the primary reason why is A, A, it's predictable.
+
+642
+00:30:53,320 --> 00:30:55,320
+ The more predictable it is, the easier it is to compress
+
+643
+00:30:55,320 --> 00:30:56,320
+ something, right?
+
+644
+00:30:56,320 --> 00:30:57,320
+ And the less predictable it is.
+
+645
+00:30:57,320 --> 00:30:59,320
+ The conversion breaks it down in December.
+
+646
+00:30:59,320 --> 00:31:00,320
+ Yeah.
+
+647
+00:31:00,320 --> 00:31:02,320
+ And that's when the Shannon theory and [INAUDIBLE]
+
+648
+00:31:02,320 --> 00:31:03,320
+ And there's that two axes.
+
+649
+00:31:03,320 --> 00:31:05,320
+ One is like, how much information can you take?
+
+650
+00:31:05,320 --> 00:31:06,320
+ Yeah.
+
+651
+00:31:06,320 --> 00:31:08,320
+ [INAUDIBLE]
+
+652
+00:31:08,320 --> 00:31:09,320
+ Yeah.
+
+653
+00:31:09,320 --> 00:31:10,320
+ [INAUDIBLE]
+
+654
+00:31:10,320 --> 00:31:13,320
+ So the fact that we got back to that page
+
+655
+00:31:13,320 --> 00:31:16,320
+ full of letter A's is one big symbol.
+
+656
+00:31:16,320 --> 00:31:17,320
+ [INAUDIBLE]
+
+657
+00:31:17,320 --> 00:31:19,320
+ Because it was told it was one big symbol.
+
+658
+00:31:19,320 --> 00:31:20,320
+ [INAUDIBLE]
+
+659
+00:31:20,320 --> 00:31:21,320
+ Yeah.
+
+660
+00:31:21,320 --> 00:31:23,320
+ So there's-- oh, god.
+
+661
+00:31:23,320 --> 00:31:24,320
+ There's so much we can--
+
+662
+00:31:24,320 --> 00:31:26,320
+ I'm now realizing what Assam was saying.
+
+663
+00:31:26,320 --> 00:31:27,320
+ Yeah.
+
+664
+00:31:27,320 --> 00:31:29,320
+ In the last reading group, only spent half the research--
+
+665
+00:31:29,320 --> 00:31:31,320
+ like, we were building it for half, because I could see.
+
+666
+00:31:31,320 --> 00:31:33,320
+ So many interesting things there.
+
+667
+00:31:33,320 --> 00:31:34,320
+ OK.
+
+668
+00:31:34,320 --> 00:31:37,320
+ So there's a lot of math and a lot to peruse through.
+
+669
+00:31:37,320 --> 00:31:40,320
+ So perhaps the way we want to get through this is--
+
+670
+00:31:40,320 --> 00:31:42,320
+ you'll notice I highlighted a few things.
+
+671
+00:31:42,320 --> 00:31:44,320
+ Mean squared error, a huge component of that today.
+
+672
+00:31:44,320 --> 00:31:46,320
+ We'll get into it.
+
+673
+00:31:46,320 --> 00:31:49,320
+ But if I were to explain turboquant
+
+674
+00:31:49,320 --> 00:31:55,320
+ in two to three sentences, what you're basically doing
+
+675
+00:31:55,320 --> 00:32:00,320
+ is you're trying to get these vectors,
+
+676
+00:32:00,320 --> 00:32:03,320
+ and we're trying to quantize them.
+
+677
+00:32:03,320 --> 00:32:05,320
+ And so what we're going to go through today
+
+678
+00:32:05,320 --> 00:32:08,320
+ is, OK, how do they actually do that?
+
+679
+00:32:08,320 --> 00:32:10,320
+ There's this rotation piece.
+
+680
+00:32:10,320 --> 00:32:12,320
+ There is this residual piece.
+
+681
+00:32:12,320 --> 00:32:16,320
+ We'll kind of piece together what all those components are.
+
+682
+00:32:16,320 --> 00:32:19,320
+ But what's interesting about this paper is it takes--
+
+683
+00:32:19,320 --> 00:32:21,320
+ it's like it takes together two concepts from what's
+
+684
+00:32:21,320 --> 00:32:23,320
+ already been done before.
+
+685
+00:32:23,320 --> 00:32:26,320
+ So this one bit quantized scale transform method
+
+686
+00:32:26,320 --> 00:32:27,320
+ was there before.
+
+687
+00:32:27,320 --> 00:32:29,320
+ And they're actually introducing that as a way
+
+688
+00:32:29,320 --> 00:32:34,320
+ to make sure that all of these get lost in our compression.
+
+689
+00:32:34,320 --> 00:32:36,320
+ We have some way to bring that back.
+
+690
+00:32:36,320 --> 00:32:37,320
+ That's what that is.
+
+691
+00:32:37,320 --> 00:32:39,320
+ So we'll go into a lot of detail.
+
+692
+00:32:39,320 --> 00:32:41,320
+ Don't worry about it too much.
+
+693
+00:32:41,320 --> 00:32:42,320
+ But I would say this--
+
+694
+00:32:42,320 --> 00:32:47,320
+ the big piece to remember in this first piece
+
+695
+00:32:47,320 --> 00:32:50,320
+ as we read this is--
+
+696
+00:32:50,320 --> 00:32:53,320
+ yeah, we're essentially trying to reduce them.
+
+697
+00:32:53,320 --> 00:32:56,320
+ But the two ways that we figure out, OK, how good
+
+698
+00:32:56,320 --> 00:32:59,320
+ or how effective this compression has been
+
+699
+00:32:59,320 --> 00:33:02,320
+ is to these two things called mean squared error
+
+700
+00:33:02,320 --> 00:33:05,320
+ and inner product errors.
+
+701
+00:33:05,320 --> 00:33:06,320
+ Does anyone have a sense--
+
+702
+00:33:06,320 --> 00:33:08,320
+ or have a sense of don't explain,
+
+703
+00:33:08,320 --> 00:33:10,320
+ or they've gone through it themselves,
+
+704
+00:33:10,320 --> 00:33:12,320
+ what really a mean squared error is?
+
+705
+00:33:12,320 --> 00:33:14,320
+ Does anyone have a chance to have a look into that?
+
+706
+00:33:14,320 --> 00:33:15,320
+ Want to give it a shot?
+
+707
+00:33:15,320 --> 00:33:17,320
+ [INAUDIBLE]
+
+708
+00:33:17,320 --> 00:33:18,320
+ Yeah.
+
+709
+00:33:18,320 --> 00:33:20,320
+ But intuitively, do we have a sense of what that means?
+
+710
+00:33:20,320 --> 00:33:24,320
+ Intuitively, what is a mean squared error?
+
+711
+00:33:24,320 --> 00:33:26,320
+ Yeah, give it a shot.
+
+712
+00:33:26,320 --> 00:33:27,320
+ Yeah.
+
+713
+00:33:27,320 --> 00:33:29,320
+ Like, how do I look in stats?
+
+714
+00:33:29,320 --> 00:33:31,320
+ Because I'm taking 80 stats right now.
+
+715
+00:33:31,320 --> 00:33:32,320
+ Like, when you do linear regression,
+
+716
+00:33:32,320 --> 00:33:34,320
+ the mean squared error, it's like--
+
+717
+00:33:34,320 --> 00:33:36,320
+ because you want to square it because you
+
+718
+00:33:36,320 --> 00:33:38,320
+ have on top of the line or on the bottom of the line.
+
+719
+00:33:38,320 --> 00:33:40,320
+ So it's just a regularized version
+
+720
+00:33:40,320 --> 00:33:43,320
+ of adding up all the mean squared.
+
+721
+00:33:43,320 --> 00:33:45,320
+ And I like to think of, yeah, if something
+
+722
+00:33:45,320 --> 00:33:47,320
+ has a really high mean squared error,
+
+723
+00:33:47,320 --> 00:33:50,320
+ that means our original vector and our depressed vector
+
+724
+00:33:50,320 --> 00:33:52,320
+ are kind of not similar.
+
+725
+00:33:52,320 --> 00:33:53,320
+ Right?
+
+726
+00:33:53,320 --> 00:33:56,320
+ And this is an analogy of the face and the blurry faces.
+
+727
+00:33:56,320 --> 00:33:58,320
+ If you put it together, how similar are they?
+
+728
+00:33:58,320 --> 00:34:00,320
+ And the mean squared error will tell us, OK, are they--
+
+729
+00:34:00,320 --> 00:34:04,320
+ like, how similar is similar?
+
+730
+00:34:04,320 --> 00:34:06,320
+ Anyone thought-- sense of what inner part error looks
+
+731
+00:34:06,320 --> 00:34:08,320
+ like as we're looking through?
+
+732
+00:34:08,320 --> 00:34:10,320
+ Let me give it a shot.
+
+733
+00:34:10,320 --> 00:34:12,320
+ And we're reading the paper.
+
+734
+00:34:12,320 --> 00:34:13,320
+ What they thought it meant.
+
+735
+00:34:13,320 --> 00:34:18,320
+ OK.
+
+736
+00:34:18,320 --> 00:34:20,320
+ OK, so we'll go into a little more detail.
+
+737
+00:34:20,320 --> 00:34:22,320
+ That whole paper is about these two things.
+
+738
+00:34:22,320 --> 00:34:23,320
+ So we'll come to it at some point.
+
+739
+00:34:23,320 --> 00:34:27,320
+ But I just wonder if anyone had some early ideas on that.
+
+740
+00:34:27,320 --> 00:34:28,320
+ OK.
+
+741
+00:34:28,320 --> 00:34:31,320
+ So this actually now comes to answer your question.
+
+742
+00:34:31,320 --> 00:34:33,320
+ So as LM capabilities depend heavily
+
+743
+00:34:33,320 --> 00:34:36,320
+ on their model and size and context length,
+
+744
+00:34:36,320 --> 00:34:39,320
+ serving them requires substantial memory demands
+
+745
+00:34:39,320 --> 00:34:42,320
+ and increase into inference latency.
+
+746
+00:34:42,320 --> 00:34:44,320
+ And this is what you were talking about, [INAUDIBLE]
+
+747
+00:34:44,320 --> 00:34:46,320
+ I highlighted this because I wanted
+
+748
+00:34:46,320 --> 00:34:48,320
+ to go down a whole rabbit hole, but I didn't have time.
+
+749
+00:34:48,320 --> 00:34:51,320
+ [INAUDIBLE]
+
+750
+00:34:58,320 --> 00:35:00,320
+ You have a finite amount of memory.
+
+751
+00:35:00,320 --> 00:35:01,320
+ Hardware memory.
+
+752
+00:35:01,320 --> 00:35:02,320
+ Right?
+
+753
+00:35:02,320 --> 00:35:05,320
+ [INAUDIBLE]
+
+754
+00:35:05,320 --> 00:35:20,320
+ Yeah, so what we're trying to do is,
+
+755
+00:35:20,320 --> 00:35:24,320
+ can we try to compress this while preserving
+
+756
+00:35:24,320 --> 00:35:25,320
+ the inner product?
+
+757
+00:35:25,320 --> 00:35:28,320
+ So the way that I would think about preserving
+
+758
+00:35:28,320 --> 00:35:35,320
+ the inner product is, what MSC is trying to do is like, hey,
+
+759
+00:35:35,320 --> 00:35:39,320
+ can we take this vector and when we compress it,
+
+760
+00:35:39,320 --> 00:35:41,320
+ I'll assimilate it.
+
+761
+00:35:41,320 --> 00:35:47,320
+ But the inner product, I actually did a-- there we go.
+
+762
+00:35:47,320 --> 00:35:49,320
+ So inner products ever measures how much the similarities
+
+763
+00:35:49,320 --> 00:35:52,320
+ between the vector changes at the compression.
+
+764
+00:35:52,320 --> 00:35:56,320
+ And what means better is just understanding, OK,
+
+765
+00:35:56,320 --> 00:35:58,320
+ if a higher MSC means, the compressed vector
+
+766
+00:35:58,320 --> 00:36:00,320
+ changed a lot more than the original.
+
+767
+00:36:00,320 --> 00:36:05,320
+ And a lower MSC just means it stayed closer to the original.
+
+768
+00:36:05,320 --> 00:36:07,320
+ So I would kind of think of this as distortion.
+
+769
+00:36:07,320 --> 00:36:08,320
+ So high MSC means greater.
+
+770
+00:36:08,320 --> 00:36:11,320
+ This just has moved quite a bit.
+
+771
+00:36:11,320 --> 00:36:13,320
+ Lower MSC means it's closer to the original.
+
+772
+00:36:13,320 --> 00:36:15,320
+ So I keep these two in mind because this
+
+773
+00:36:15,320 --> 00:36:18,320
+ is what we'll kind of look at throughout the entire paper
+
+774
+00:36:18,320 --> 00:36:21,320
+ as we keep going.
+
+775
+00:36:21,320 --> 00:36:24,320
+ OK, any other thoughts or comments that we keep going?
+
+776
+00:36:24,320 --> 00:36:26,320
+ Yeah, MSC and inner product are related
+
+777
+00:36:26,320 --> 00:36:29,320
+ because A minus B squared, if you open it up,
+
+778
+00:36:29,320 --> 00:36:31,320
+ there is B minus AB.
+
+779
+00:36:31,320 --> 00:36:32,320
+ Minus two AB?
+
+780
+00:36:32,320 --> 00:36:33,320
+ Yes.
+
+781
+00:36:33,320 --> 00:36:35,320
+ [INAUDIBLE]
+
+782
+00:36:35,320 --> 00:36:37,320
+ At some point, I have the whole math break down
+
+783
+00:36:37,320 --> 00:36:39,320
+ because I was like, we have to get into the math.
+
+784
+00:36:39,320 --> 00:36:42,320
+ So we will get into that.
+
+785
+00:36:42,320 --> 00:36:45,320
+ OK, I actually wanted to read this product.
+
+786
+00:36:45,320 --> 00:36:47,320
+ So these models must store key value embeddings
+
+787
+00:36:47,320 --> 00:36:50,320
+ from previously generated tokens in the key to cash.
+
+788
+00:36:50,320 --> 00:36:51,320
+ We just talked about that.
+
+789
+00:36:51,320 --> 00:36:53,320
+ So you have some context now.
+
+790
+00:36:53,320 --> 00:36:56,320
+ The size of which scales with model size.
+
+791
+00:36:56,320 --> 00:36:59,320
+ So if you have bigger models, that means more attention heads.
+
+792
+00:36:59,320 --> 00:37:04,320
+ More attention heads means higher kd cash.
+
+793
+00:37:04,320 --> 00:37:06,320
+ Scaling is a significant bottleneck
+
+794
+00:37:06,320 --> 00:37:09,320
+ in terms of memory usage and computational speed.
+
+795
+00:37:09,320 --> 00:37:10,320
+ Therefore, reducing the kd cash.
+
+796
+00:37:10,320 --> 00:37:13,320
+ I just look at repetition of why this is important.
+
+797
+00:37:13,320 --> 00:37:16,320
+ Again and again and again.
+
+798
+00:37:16,320 --> 00:37:20,320
+ Additionally, any improvement in this?
+
+799
+00:37:20,320 --> 00:37:22,320
+ Like you're improving the whole world
+
+800
+00:37:22,320 --> 00:37:24,320
+ because everyone is using all these [INAUDIBLE]
+
+801
+00:37:24,320 --> 00:37:28,320
+ to improve by 5% means you're using 5% for everyone
+
+802
+00:37:28,320 --> 00:37:31,320
+ in the world because kd cash is a very fundamental.
+
+803
+00:37:31,320 --> 00:37:33,320
+ So the impact is huge.
+
+804
+00:37:33,320 --> 00:37:35,320
+ Any progress in that is huge.
+
+805
+00:37:35,320 --> 00:37:37,320
+ Yeah, I can't wait to get the implementation of this stuff
+
+806
+00:37:37,320 --> 00:37:40,320
+ because that's where this stuff gets a little more typical.
+
+807
+00:37:40,320 --> 00:37:42,320
+ Because we're still in theory land.
+
+808
+00:37:42,320 --> 00:37:44,320
+ We're still theoretically assessing what this looks like.
+
+809
+00:37:44,320 --> 00:37:46,320
+ We'll get to the implementation in a second.
+
+810
+00:37:46,320 --> 00:37:47,320
+ See, OK, to what extent?
+
+811
+00:37:47,320 --> 00:37:49,320
+ There's actually some experiments here at the end
+
+812
+00:37:49,320 --> 00:37:52,320
+ that shows, OK, how much will we actually
+
+813
+00:37:52,320 --> 00:37:56,320
+ be able to get a meaningful improvement in these models
+
+814
+00:37:56,320 --> 00:37:59,320
+ or improvement in being able to get the right information
+
+815
+00:37:59,320 --> 00:38:02,320
+ with the compression.
+
+816
+00:38:02,320 --> 00:38:04,320
+ OK, what the hell is this?
+
+817
+00:38:04,320 --> 00:38:05,320
+ Additional nearest neighbor search
+
+818
+00:38:05,320 --> 00:38:07,320
+ and high dimensional spaces for inner product
+
+819
+00:38:07,320 --> 00:38:08,320
+ and full size similarity is a corner
+
+820
+00:38:08,320 --> 00:38:10,320
+ shown in the vector of the business.
+
+821
+00:38:10,320 --> 00:38:13,320
+ This is basically what I showed you earlier in that video,
+
+822
+00:38:13,320 --> 00:38:16,320
+ which is if you want to do search,
+
+823
+00:38:16,320 --> 00:38:19,320
+ understanding the inner product and cosine similarity
+
+824
+00:38:19,320 --> 00:38:22,320
+ of those two vectors is how we understand.
+
+825
+00:38:22,320 --> 00:38:25,320
+ This is how we pull stuff from vector databases.
+
+826
+00:38:25,320 --> 00:38:27,320
+ So we're still in this early setting up
+
+827
+00:38:27,320 --> 00:38:28,320
+ the stage for the paper.
+
+828
+00:38:28,320 --> 00:38:30,320
+ We're not actually getting into much stuff yet.
+
+829
+00:38:30,320 --> 00:38:32,320
+ This is just why it's important.
+
+830
+00:38:32,320 --> 00:38:38,320
+ OK, and then we get into the first summary of what this is.
+
+831
+00:38:38,320 --> 00:38:41,320
+ So it's a two stage process.
+
+832
+00:38:41,320 --> 00:38:44,320
+ So first, we develop a vector quantizer
+
+833
+00:38:44,320 --> 00:38:48,320
+ with optimal distortion rate in terms of the mean spread error.
+
+834
+00:38:48,320 --> 00:38:49,320
+ What the heck does that mean?
+
+835
+00:38:49,320 --> 00:38:50,320
+ Don't worry about it.
+
+836
+00:38:50,320 --> 00:38:51,320
+ We'll get into it.
+
+837
+00:38:51,320 --> 00:38:55,320
+ Subsequently, we apply a one bit quantizer
+
+838
+00:38:55,320 --> 00:39:00,320
+ to the residual, resulting in an unbiased and low distortion
+
+839
+00:39:00,320 --> 00:39:02,320
+ inner product quantizer.
+
+840
+00:39:02,320 --> 00:39:03,320
+ When I read that first, I was like,
+
+841
+00:39:03,320 --> 00:39:05,320
+ I have no idea what that is.
+
+842
+00:39:05,320 --> 00:39:06,320
+ They make me feel the same way.
+
+843
+00:39:06,320 --> 00:39:07,320
+ They're like, what?
+
+844
+00:39:07,320 --> 00:39:08,320
+ No idea.
+
+845
+00:39:08,320 --> 00:39:12,320
+ But we'll get into it.
+
+846
+00:39:12,320 --> 00:39:13,320
+ So this is good.
+
+847
+00:39:13,320 --> 00:39:16,320
+ This is where we start to explore that first half.
+
+848
+00:39:16,320 --> 00:39:19,320
+ So this is where they're kind of getting into this bit.
+
+849
+00:39:19,320 --> 00:39:25,320
+ So how do we do that first quantizing bit
+
+850
+00:39:25,320 --> 00:39:28,320
+ before we add the one bit later on?
+
+851
+00:39:28,320 --> 00:39:31,320
+ So our MSE optimal quantizer starts
+
+852
+00:39:31,320 --> 00:39:36,320
+ by randomly rotating d-dimensional input vectors,
+
+853
+00:39:36,320 --> 00:39:39,320
+ observing the key fact that each coordinates
+
+854
+00:39:39,320 --> 00:39:44,320
+ in the rotated vectors and then follows a beta distribution.
+
+855
+00:39:44,320 --> 00:39:47,320
+ And then they design a Lloyd-Max quantizer
+
+856
+00:39:47,320 --> 00:39:51,320
+ for each coordinate by solving continuous [INAUDIBLE]
+
+857
+00:39:51,320 --> 00:39:55,320
+ They're like, what does any of that mean?
+
+858
+00:39:55,320 --> 00:39:56,320
+ We will, again, get into it.
+
+859
+00:39:56,320 --> 00:39:58,320
+ But I just wanted to set up all the things before.
+
+860
+00:39:58,320 --> 00:40:02,320
+ I have a whole thing on getting into it step by step.
+
+861
+00:40:02,320 --> 00:40:04,320
+ With the related work, we already
+
+862
+00:40:04,320 --> 00:40:06,320
+ went through Shannon's seminal work.
+
+863
+00:40:06,320 --> 00:40:12,320
+ How do people understand online versus offline quantization?
+
+864
+00:40:12,320 --> 00:40:13,320
+ Does anyone remember?
+
+865
+00:40:13,320 --> 00:40:15,320
+ How do you understand?
+
+866
+00:40:15,320 --> 00:40:16,320
+ Never heard of it.
+
+867
+00:40:16,320 --> 00:40:21,320
+ So the way I understood it-- and please correct me
+
+868
+00:40:21,320 --> 00:40:23,320
+ if anyone else has spent a lot more time than this.
+
+869
+00:40:23,320 --> 00:40:26,320
+ I actually wrote it down here.
+
+870
+00:40:26,320 --> 00:40:28,320
+ So offline methods, they actually
+
+871
+00:40:28,320 --> 00:40:32,320
+ start by understanding the structure of the data
+
+872
+00:40:32,320 --> 00:40:37,320
+ before they do the quantization.
+
+873
+00:40:37,320 --> 00:40:40,320
+ Online methods do it so a little bit more real-time.
+
+874
+00:40:40,320 --> 00:40:41,320
+ Yeah.
+
+875
+00:40:41,320 --> 00:40:43,320
+ So online is like the speed is a big factor.
+
+876
+00:40:43,320 --> 00:40:44,320
+ Yes.
+
+877
+00:40:44,320 --> 00:40:45,320
+ Because you need to do it--
+
+878
+00:40:45,320 --> 00:40:48,320
+ offline, you can make it more easy.
+
+879
+00:40:48,320 --> 00:40:50,320
+ Is it overnight, for example?
+
+880
+00:40:50,320 --> 00:40:51,320
+ Because there's more time.
+
+881
+00:40:51,320 --> 00:40:53,320
+ And I'd imagine it gives more accurate information.
+
+882
+00:40:53,320 --> 00:40:54,320
+ And that's kind of like a trade-off
+
+883
+00:40:54,320 --> 00:40:58,320
+ in this between the online versus offline.
+
+884
+00:40:58,320 --> 00:41:00,320
+ But what we're working with is primarily,
+
+885
+00:41:00,320 --> 00:41:02,320
+ I believe, online.
+
+886
+00:41:02,320 --> 00:41:03,320
+ Yeah, because you have to do it real-time.
+
+887
+00:41:03,320 --> 00:41:04,320
+ Exactly.
+
+888
+00:41:04,320 --> 00:41:05,320
+ Because you were talking to the [INAUDIBLE]
+
+889
+00:41:05,320 --> 00:41:07,320
+ and wanted to be able to compress real-time.
+
+890
+00:41:07,320 --> 00:41:08,320
+ Yes.
+
+891
+00:41:08,320 --> 00:41:09,320
+ Yeah.
+
+892
+00:41:09,320 --> 00:41:11,320
+ And then there's the last concept.
+
+893
+00:41:11,320 --> 00:41:14,320
+ And this is where we start to get a little bit more technical.
+
+894
+00:41:14,320 --> 00:41:17,320
+ Code books or product quantization.
+
+895
+00:41:17,320 --> 00:41:18,320
+ Are those concepts?
+
+896
+00:41:18,320 --> 00:41:19,320
+ I guess if you've seen the video,
+
+897
+00:41:19,320 --> 00:41:22,320
+ you'll learn a little bit more about what code books are.
+
+898
+00:41:22,320 --> 00:41:24,320
+ Does it even have a sense?
+
+899
+00:41:24,320 --> 00:41:25,320
+ What?
+
+900
+00:41:25,320 --> 00:41:26,320
+ Yeah, the colors.
+
+901
+00:41:26,320 --> 00:41:27,320
+ Yes, yes.
+
+902
+00:41:27,320 --> 00:41:28,320
+ So you know what?
+
+903
+00:41:28,320 --> 00:41:30,320
+ Let's bring that again back in when we do it from front
+
+904
+00:41:30,320 --> 00:41:33,320
+ to back versus going into it deep now.
+
+905
+00:41:33,320 --> 00:41:35,320
+ I just want to see if there's anything else we missed
+
+906
+00:41:35,320 --> 00:41:37,320
+ before we get into things.
+
+907
+00:41:37,320 --> 00:41:39,320
+ OK, I think we're ready.
+
+908
+00:41:39,320 --> 00:41:42,320
+ We're ready to get into the details a little bit.
+
+909
+00:41:42,320 --> 00:41:43,320
+ How are we doing so far?
+
+910
+00:41:43,320 --> 00:41:45,320
+ Any questions before we go even deeper?
+
+911
+00:41:45,320 --> 00:41:48,320
+ Because now we're actually going into an understanding.
+
+912
+00:41:48,320 --> 00:41:51,320
+ What is this rotation around this thing?
+
+913
+00:41:51,320 --> 00:41:53,320
+ Is it the sphere?
+
+914
+00:41:53,320 --> 00:41:54,320
+ We'll go into the details.
+
+915
+00:41:54,320 --> 00:41:56,320
+ Anything before we get here?
+
+916
+00:41:56,320 --> 00:41:58,320
+ At least are we having an intuitive understanding?
+
+917
+00:41:58,320 --> 00:42:00,320
+ It doesn't matter if you understand all the details,
+
+918
+00:42:00,320 --> 00:42:01,320
+ but intuitively?
+
+919
+00:42:01,320 --> 00:42:02,320
+ Yeah.
+
+920
+00:42:02,320 --> 00:42:04,320
+ OK.
+
+921
+00:42:04,320 --> 00:42:12,320
+ So I actually have it right here.
+
+922
+00:42:12,320 --> 00:42:13,320
+ And we have two people to help.
+
+923
+00:42:13,320 --> 00:42:16,320
+ How can I understand this step by step?
+
+924
+00:42:16,320 --> 00:42:19,320
+ If I take a vector, that should go through the process
+
+925
+00:42:19,320 --> 00:42:22,320
+ one by one.
+
+926
+00:42:22,320 --> 00:42:24,320
+ And then we'll pause at every step.
+
+927
+00:42:24,320 --> 00:42:26,320
+ So we can understand why does that matter.
+
+928
+00:42:26,320 --> 00:42:27,320
+ So we start with a vector.
+
+929
+00:42:27,320 --> 00:42:29,320
+ We'll start very simple.
+
+930
+00:42:29,320 --> 00:42:32,320
+ We have a 1, 0, 0.
+
+931
+00:42:32,320 --> 00:42:37,320
+ And then we apply this 3D rotation.
+
+932
+00:42:37,320 --> 00:42:38,320
+ Does anyone know why?
+
+933
+00:42:38,320 --> 00:42:39,320
+ Let's start there.
+
+934
+00:42:39,320 --> 00:42:40,320
+ Why do we need to rotate this stuff?
+
+935
+00:42:40,320 --> 00:42:42,320
+ Yeah, why is there a why?
+
+936
+00:42:42,320 --> 00:42:44,320
+ Does that matter?
+
+937
+00:42:44,320 --> 00:42:45,320
+ Yeah, exactly.
+
+938
+00:42:45,320 --> 00:42:48,320
+ Does anyone have a sense of why we need to rotate this?
+
+939
+00:42:48,320 --> 00:42:52,320
+ Why can we just use this and continue with this initial vector?
+
+940
+00:42:52,320 --> 00:42:54,320
+ Why do we need to use this rotation piece?
+
+941
+00:42:54,320 --> 00:42:58,320
+ [INAUDIBLE]
+
+942
+00:42:58,320 --> 00:42:59,320
+ OK.
+
+943
+00:42:59,320 --> 00:43:01,320
+ But why is it important?
+
+944
+00:43:01,320 --> 00:43:03,320
+ Why do you think it might be important?
+
+945
+00:43:03,320 --> 00:43:05,320
+ Can you do it on its own?
+
+946
+00:43:05,320 --> 00:43:07,320
+ [INAUDIBLE]
+
+947
+00:43:07,320 --> 00:43:08,320
+ Yeah.
+
+948
+00:43:08,320 --> 00:43:10,320
+ Yeah.
+
+949
+00:43:10,320 --> 00:43:11,320
+ Yeah.
+
+950
+00:43:11,320 --> 00:43:14,320
+ It's hard to do compression when you have some spiky vector
+
+951
+00:43:14,320 --> 00:43:16,320
+ in that way.
+
+952
+00:43:16,320 --> 00:43:19,320
+ So again, my understanding of this,
+
+953
+00:43:19,320 --> 00:43:22,320
+ I'm going to do 10 minutes of extra time in quantization.
+
+954
+00:43:22,320 --> 00:43:24,320
+ But in the time that I spent, I was like, OK,
+
+955
+00:43:24,320 --> 00:43:25,320
+ why do we need to do this?
+
+956
+00:43:25,320 --> 00:43:27,320
+ I really broke my head on this.
+
+957
+00:43:27,320 --> 00:43:29,320
+ And I think as I understood it is
+
+958
+00:43:29,320 --> 00:43:32,320
+ if we need to quantize it accurately
+
+959
+00:43:32,320 --> 00:43:36,320
+ without losing a lot of its meaning,
+
+960
+00:43:36,320 --> 00:43:39,320
+ what we need to be able to do is it's almost
+
+961
+00:43:39,320 --> 00:43:41,320
+ like we are striking out the spikes
+
+962
+00:43:41,320 --> 00:43:44,320
+ across a different dimension.
+
+963
+00:43:44,320 --> 00:43:48,320
+ So it's just easier to start to process a lot of information.
+
+964
+00:43:48,320 --> 00:43:51,320
+ Because if we have a sphere and we run through the mean square
+
+965
+00:43:51,320 --> 00:43:54,320
+ error, this stuff will be really big.
+
+966
+00:43:54,320 --> 00:43:55,320
+ Because this is a spike.
+
+967
+00:43:55,320 --> 00:43:57,320
+ If anything's really big and you want errors on it,
+
+968
+00:43:57,320 --> 00:44:00,320
+ that just gets even more.
+
+969
+00:44:00,320 --> 00:44:02,320
+ So that's what it's intuition for.
+
+970
+00:44:02,320 --> 00:44:03,320
+ OK.
+
+971
+00:44:03,320 --> 00:44:04,320
+ We need that rotation.
+
+972
+00:44:04,320 --> 00:44:06,320
+ So whatever.
+
+973
+00:44:06,320 --> 00:44:07,320
+ [INAUDIBLE]
+
+974
+00:44:07,320 --> 00:44:11,320
+ But why specifically do you [INAUDIBLE]
+
+975
+00:44:11,320 --> 00:44:12,320
+ Why specifically--
+
+976
+00:44:12,320 --> 00:44:13,320
+ [INAUDIBLE]
+
+977
+00:44:13,320 --> 00:44:14,320
+ Yes.
+
+978
+00:44:14,320 --> 00:44:15,320
+ Oh, these are random.
+
+979
+00:44:15,320 --> 00:44:16,320
+ [INAUDIBLE]
+
+980
+00:44:16,320 --> 00:44:18,320
+ Yeah, that's a good question.
+
+981
+00:44:18,320 --> 00:44:21,320
+ Is it randomized or intentional?
+
+982
+00:44:21,320 --> 00:44:23,320
+ Yeah, it's randomized.
+
+983
+00:44:23,320 --> 00:44:26,320
+ If it's intentional, that means then--
+
+984
+00:44:26,320 --> 00:44:27,320
+ There's bias.
+
+985
+00:44:27,320 --> 00:44:28,320
+ Yeah, there's bias.
+
+986
+00:44:28,320 --> 00:44:29,320
+ There's going to be a lot of bias.
+
+987
+00:44:29,320 --> 00:44:32,320
+ So we're adding a random notation.
+
+988
+00:44:32,320 --> 00:44:33,320
+ Yes.
+
+989
+00:44:33,320 --> 00:44:36,320
+ [INAUDIBLE]
+
+990
+00:44:36,320 --> 00:44:38,320
+ So then that's a concept.
+
+991
+00:44:38,320 --> 00:44:41,320
+ But if you do that [INAUDIBLE]
+
+992
+00:44:41,320 --> 00:45:00,320
+ [INAUDIBLE]
+
+993
+00:45:00,320 --> 00:45:01,320
+ Interesting.
+
+994
+00:45:01,320 --> 00:45:03,320
+ Because what I was thinking about is, wait,
+
+995
+00:45:03,320 --> 00:45:05,320
+ doesn't it lose meaning after it rotates?
+
+996
+00:45:05,320 --> 00:45:06,320
+ I was like, what?
+
+997
+00:45:06,320 --> 00:45:11,320
+ And then I learned that the rotation happens [INAUDIBLE]
+
+998
+00:45:11,320 --> 00:45:14,320
+ And I was like, OK, what does that mean in this context?
+
+999
+00:45:14,320 --> 00:45:16,320
+ And the way to explain it is you can take a map
+
+1000
+00:45:16,320 --> 00:45:18,320
+ and rotate a map.
+
+1001
+00:45:18,320 --> 00:45:20,320
+ Within it, everything still is similar.
+
+1002
+00:45:20,320 --> 00:45:23,320
+ You're working with each other.
+
+1003
+00:45:23,320 --> 00:45:25,320
+ So it's still the same thing where internally,
+
+1004
+00:45:25,320 --> 00:45:27,320
+ we're only taking one vector vector.
+
+1005
+00:45:27,320 --> 00:45:29,320
+ If we're looking at the vectors around it
+
+1006
+00:45:29,320 --> 00:45:31,320
+ and then we're rotating it, rotation
+
+1007
+00:45:31,320 --> 00:45:33,320
+ is happening all across the board.
+
+1008
+00:45:33,320 --> 00:45:36,320
+ And so as a result of that, it still
+
+1009
+00:45:36,320 --> 00:45:39,320
+ doesn't lose its meaning to the type of other vectors around it.
+
+1010
+00:45:39,320 --> 00:45:40,320
+ That's how I understand it.
+
+1011
+00:45:40,320 --> 00:45:41,320
+ It was a wave.
+
+1012
+00:45:41,320 --> 00:45:42,320
+ It didn't lose meaning.
+
+1013
+00:45:42,320 --> 00:45:47,320
+ But this random rotation is applied to also other vectors
+
+1014
+00:45:47,320 --> 00:45:48,320
+ in that.
+
+1015
+00:45:48,320 --> 00:45:51,320
+ So it's like the whole thing is moving together,
+
+1016
+00:45:51,320 --> 00:45:53,320
+ is how I understand it.
+
+1017
+00:45:53,320 --> 00:45:58,320
+ [INAUDIBLE]
+
+1018
+00:45:58,320 --> 00:46:02,320
+ Yeah, so it still rotates independently.
+
+1019
+00:46:02,320 --> 00:46:07,320
+ But I would think of this as it's a--
+
+1020
+00:46:07,320 --> 00:46:09,320
+ the rotational matrix that we're adding
+
+1021
+00:46:09,320 --> 00:46:13,320
+ is the same, but the vector is very different.
+
+1022
+00:46:13,320 --> 00:46:15,320
+ But for example, the instructions
+
+1023
+00:46:15,320 --> 00:46:17,320
+ of how we're going to rotate is the same.
+
+1024
+00:46:17,320 --> 00:46:20,320
+ But for every vector, because of what their vectors are,
+
+1025
+00:46:20,320 --> 00:46:23,320
+ that individually will look different.
+
+1026
+00:46:23,320 --> 00:46:24,320
+ It's how-- OK.
+
+1027
+00:46:24,320 --> 00:46:27,320
+ [INAUDIBLE]
+
+1028
+00:46:27,320 --> 00:46:28,320
+ OK.
+
+1029
+00:46:28,320 --> 00:46:32,320
+ [INAUDIBLE]
+
+1030
+00:46:32,320 --> 00:46:34,320
+ Right, so you'll be rotating with the same randomized R
+
+1031
+00:46:34,320 --> 00:46:35,320
+ that's coming in.
+
+1032
+00:46:35,320 --> 00:46:38,320
+ And every vector in that is subject
+
+1033
+00:46:38,320 --> 00:46:42,320
+ to the same randomized R. The R is similar.
+
+1034
+00:46:42,320 --> 00:46:44,320
+ It's the same for a [INAUDIBLE]
+
+1035
+00:46:44,320 --> 00:46:45,320
+ It's how I understand it.
+
+1036
+00:46:45,320 --> 00:46:47,320
+ We can actually double check this.
+
+1037
+00:46:47,320 --> 00:46:48,320
+ I'll bring up GPT later.
+
+1038
+00:46:48,320 --> 00:46:53,320
+ [INAUDIBLE]
+
+1039
+00:46:53,320 --> 00:46:55,320
+ Oh, I don't know what you're going to say.
+
+1040
+00:46:55,320 --> 00:46:56,320
+ So you're asking?
+
+1041
+00:46:56,320 --> 00:46:57,820
+ I'm just trying to see intuitively.
+
+1042
+00:46:57,820 --> 00:47:02,320
+ You're asking does the rotation of the matrix--
+
+1043
+00:47:02,320 --> 00:47:03,320
+ [INAUDIBLE]
+
+1044
+00:47:03,320 --> 00:47:04,320
+ So I understand.
+
+1045
+00:47:04,320 --> 00:47:08,320
+ [INAUDIBLE]
+
+1046
+00:47:08,320 --> 00:47:08,820
+ OK.
+
+1047
+00:47:08,820 --> 00:47:09,320
+ Yeah.
+
+1048
+00:47:09,320 --> 00:47:16,320
+ [INAUDIBLE]
+
+1049
+00:47:16,320 --> 00:47:20,320
+ [INAUDIBLE]
+
+1050
+00:47:20,320 --> 00:47:20,820
+ Oh, OK.
+
+1051
+00:47:20,820 --> 00:47:24,320
+ So I think the reason I'm going to answer that yet
+
+1052
+00:47:24,320 --> 00:47:25,820
+ is because I don't know--
+
+1053
+00:47:25,820 --> 00:47:28,320
+ the second user word, decompression, that tells me
+
+1054
+00:47:28,320 --> 00:47:30,820
+ that you may not look ahead at what's
+
+1055
+00:47:30,820 --> 00:47:33,320
+ happening with the processes yet.
+
+1056
+00:47:33,320 --> 00:47:35,320
+ So how would we pause that?
+
+1057
+00:47:35,320 --> 00:47:37,320
+ And once we get to the end step, if there's still
+
+1058
+00:47:37,320 --> 00:47:40,320
+ that question there, I think it would clarify itself
+
+1059
+00:47:40,320 --> 00:47:41,320
+ five steps please.
+
+1060
+00:47:41,320 --> 00:47:43,320
+ But if not, we'll come back to it.
+
+1061
+00:47:43,320 --> 00:47:43,820
+ OK.
+
+1062
+00:47:43,820 --> 00:47:44,320
+ First one.
+
+1063
+00:47:44,320 --> 00:47:46,820
+ We can spend forever on this first step.
+
+1064
+00:47:46,820 --> 00:47:49,820
+ But if it's rotation, I think it was already there apparently.
+
+1065
+00:47:49,820 --> 00:47:51,820
+ It wasn't you in this paper.
+
+1066
+00:47:51,820 --> 00:47:54,320
+ [INAUDIBLE]
+
+1067
+00:47:54,320 --> 00:47:55,820
+ No, that's the actual one, right?
+
+1068
+00:47:55,820 --> 00:47:58,320
+ But this rotation piece is like a very common--
+
+1069
+00:47:58,320 --> 00:48:00,820
+ it's like a vector quantization.
+
+1070
+00:48:00,820 --> 00:48:03,820
+ It's not like a brand new concept.
+
+1071
+00:48:03,820 --> 00:48:05,820
+ [INAUDIBLE]
+
+1072
+00:48:05,820 --> 00:48:06,320
+ Yeah.
+
+1073
+00:48:06,320 --> 00:48:07,820
+ Is that what we just said?
+
+1074
+00:48:07,820 --> 00:48:09,820
+ [INAUDIBLE]
+
+1075
+00:48:09,820 --> 00:48:10,820
+ That was the previous one?
+
+1076
+00:48:10,820 --> 00:48:12,320
+ Yeah, the previous one.
+
+1077
+00:48:12,320 --> 00:48:13,320
+ What's it called?
+
+1078
+00:48:13,320 --> 00:48:20,320
+ [INAUDIBLE]
+
+1079
+00:48:20,320 --> 00:48:21,820
+ Did you say [INAUDIBLE]
+
+1080
+00:48:21,820 --> 00:48:22,820
+ [INAUDIBLE]
+
+1081
+00:48:22,820 --> 00:48:24,820
+ [INAUDIBLE]
+
+1082
+00:48:24,820 --> 00:48:25,820
+ Oh, polar quant.
+
+1083
+00:48:25,820 --> 00:48:26,820
+ Oh, polar quant.
+
+1084
+00:48:26,820 --> 00:48:27,320
+ OK, OK.
+
+1085
+00:48:27,320 --> 00:48:28,320
+ Yes, yes, yes.
+
+1086
+00:48:28,320 --> 00:48:33,820
+ So you're saying-- man, I use so much of the quads
+
+1087
+00:48:33,820 --> 00:48:36,320
+ that every time I go to Google, it thinks that I'm a robot.
+
+1088
+00:48:36,320 --> 00:48:38,320
+ And I do it all the way.
+
+1089
+00:48:38,320 --> 00:48:40,320
+ OK.
+
+1090
+00:48:40,320 --> 00:48:41,320
+ Yeah, so that's going to--
+
+1091
+00:48:41,320 --> 00:48:43,320
+ I noticed that this is actually not
+
+1092
+00:48:43,320 --> 00:48:45,820
+ a new concept within this paper.
+
+1093
+00:48:45,820 --> 00:48:46,320
+ OK.
+
+1094
+00:48:46,320 --> 00:48:48,820
+ Well, that's step one.
+
+1095
+00:48:48,820 --> 00:48:49,820
+ So OK.
+
+1096
+00:48:49,820 --> 00:48:52,820
+ Step two is now very interesting.
+
+1097
+00:48:52,820 --> 00:48:55,320
+ And it gets a little bit more gnarly.
+
+1098
+00:48:55,320 --> 00:48:56,320
+ So OK.
+
+1099
+00:48:56,320 --> 00:48:58,320
+ So we're just on the rotation.
+
+1100
+00:48:58,320 --> 00:49:03,320
+ Now we're entering this quantizing section.
+
+1101
+00:49:03,320 --> 00:49:07,320
+ Does anyone know why this now quantized version of y
+
+1102
+00:49:07,320 --> 00:49:10,820
+ is just this number but in positive numbers?
+
+1103
+00:49:10,820 --> 00:49:15,320
+ [INAUDIBLE]
+
+1104
+00:49:15,320 --> 00:49:16,820
+ Or in that case, let's say, in this case,
+
+1105
+00:49:16,820 --> 00:49:20,820
+ because the one bit is 2.7.
+
+1106
+00:49:20,820 --> 00:49:22,820
+ I would say in this particular example,
+
+1107
+00:49:22,820 --> 00:49:25,820
+ because we're doing a simplified version, it's one bit.
+
+1108
+00:49:25,820 --> 00:49:28,320
+ So it's 0 and 1.
+
+1109
+00:49:28,320 --> 00:49:34,820
+ OK, so to explain that, when we are quantizing,
+
+1110
+00:49:34,820 --> 00:49:37,820
+ there's something called a quantizing level.
+
+1111
+00:49:37,820 --> 00:49:39,820
+ And the best way to think about that
+
+1112
+00:49:39,820 --> 00:49:42,820
+ is the number of bits we want to quantize something by.
+
+1113
+00:49:42,820 --> 00:49:46,820
+ So one bit is 2.
+
+1114
+00:49:46,820 --> 00:49:48,820
+ It's versions 0 and 1, right?
+
+1115
+00:49:48,820 --> 00:49:50,820
+ So the way you know the number of bits and how many outcomes
+
+1116
+00:49:50,820 --> 00:49:52,820
+ is 2 to the power 10.
+
+1117
+00:49:52,820 --> 00:49:57,820
+ So if we have two bits, that is 4.
+
+1118
+00:49:57,820 --> 00:50:01,820
+ But each time we have more bits, that, again,
+
+1119
+00:50:01,820 --> 00:50:02,820
+ goes back to the same problem.
+
+1120
+00:50:02,820 --> 00:50:04,820
+ We blow things up again, right?
+
+1121
+00:50:04,820 --> 00:50:05,820
+ So we're simplifying this.
+
+1122
+00:50:05,820 --> 00:50:09,820
+ We're going to use one bit, 0 and 1.
+
+1123
+00:50:09,820 --> 00:50:14,820
+ One bit, so it's basically two particular outcomes.
+
+1124
+00:50:14,820 --> 00:50:16,820
+ So in this case, we just randomly set.
+
+1125
+00:50:16,820 --> 00:50:17,820
+ You know what?
+
+1126
+00:50:17,820 --> 00:50:24,820
+ We'll quantize it just by either plus 0.7 or negative 0.7.
+
+1127
+00:50:24,820 --> 00:50:26,820
+ This you can set.
+
+1128
+00:50:26,820 --> 00:50:27,820
+ So that's not what I meant.
+
+1129
+00:50:27,820 --> 00:50:28,820
+ No.
+
+1130
+00:50:28,820 --> 00:50:30,820
+ And why do we choose 0.7?
+
+1131
+00:50:30,820 --> 00:50:32,820
+ And this is where you have-- this also
+
+1132
+00:50:32,820 --> 00:50:35,820
+ gets into some part of the optimization problem.
+
+1133
+00:50:35,820 --> 00:50:37,820
+ Which one do you choose?
+
+1134
+00:50:37,820 --> 00:50:40,820
+ We'll get to this when we get the mean square error.
+
+1135
+00:50:40,820 --> 00:50:42,820
+ Because that's where it all relates.
+
+1136
+00:50:42,820 --> 00:50:45,820
+ So the way you pick this is like, what's the right number?
+
+1137
+00:50:45,820 --> 00:50:48,820
+ Where we can first figure out, OK,
+
+1138
+00:50:48,820 --> 00:50:54,820
+ once we try to quantize this, for example, now 0.6.
+
+1139
+00:50:54,820 --> 00:50:56,820
+ So we're here.
+
+1140
+00:50:56,820 --> 00:51:02,820
+ OK, so if it quantizes 0.7, 0.6 is closer to plus 0.6--
+
+1141
+00:51:02,820 --> 00:51:03,820
+ plus 0.7.
+
+1142
+00:51:03,820 --> 00:51:05,820
+ So we add that as 0.7.
+
+1143
+00:51:05,820 --> 00:51:07,820
+ Negative 0.5 is closest to negative 0.7.
+
+1144
+00:51:07,820 --> 00:51:09,820
+ That's what we have out here.
+
+1145
+00:51:09,820 --> 00:51:14,820
+ 0.6 is closest to 0.7, hence 0.7.
+
+1146
+00:51:14,820 --> 00:51:16,820
+ And again, I would say the intuitive way to understand this
+
+1147
+00:51:16,820 --> 00:51:20,820
+ is when you quantize something, the way I think about it
+
+1148
+00:51:20,820 --> 00:51:26,820
+ is we have to latch it onto a grid, a fixed grid.
+
+1149
+00:51:26,820 --> 00:51:28,820
+ And again, I think the best way to bring that up
+
+1150
+00:51:28,820 --> 00:51:31,820
+ is actually this piece right here.
+
+1151
+00:51:31,820 --> 00:51:33,820
+ You guys remember this from the video?
+
+1152
+00:51:33,820 --> 00:51:39,820
+ OK, so the way I personally understood this
+
+1153
+00:51:39,820 --> 00:51:44,820
+ is when we only have two colors, then everything needs to fit
+
+1154
+00:51:44,820 --> 00:51:47,820
+ and either sort itself into this or this.
+
+1155
+00:51:47,820 --> 00:51:49,820
+ So if you have something that's a bit more orange,
+
+1156
+00:51:49,820 --> 00:51:51,820
+ it won't go into the green button.
+
+1157
+00:51:51,820 --> 00:51:54,820
+ It would go into the orange button.
+
+1158
+00:51:54,820 --> 00:51:58,820
+ But if we increase that to more bits
+
+1159
+00:51:58,820 --> 00:52:01,820
+ and then we get to K equal, let's say, to 64,
+
+1160
+00:52:01,820 --> 00:52:06,820
+ that means this kind of green can go closer to this kind of green
+
+1161
+00:52:06,820 --> 00:52:08,820
+ and we're getting a bit more detail.
+
+1162
+00:52:08,820 --> 00:52:12,820
+ So I think about it as, OK, which color does this need to snap to?
+
+1163
+00:52:12,820 --> 00:52:17,820
+ Now, when you have a one-bit thing, there's only two things to snap to.
+
+1164
+00:52:17,820 --> 00:52:19,820
+ In this case, it's red and green.
+
+1165
+00:52:19,820 --> 00:52:24,820
+ In this case, we can decide if 0.7 or negative 0.7.
+
+1166
+00:52:24,820 --> 00:52:27,820
+ So we need to snap to something.
+
+1167
+00:52:27,820 --> 00:52:33,820
+ And then the thing with signs here is just positive is one, negative is zero.
+
+1168
+00:52:33,820 --> 00:52:36,820
+ OK, I'll pause here.
+
+1169
+00:52:36,820 --> 00:52:43,820
+ So I saw that you can snap to something so that you can unsnap.
+
+1170
+00:52:43,820 --> 00:52:46,820
+ If you unsnap back to the original space, you don't know about it.
+
+1171
+00:52:46,820 --> 00:52:48,820
+ We're not unsnapping yet.
+
+1172
+00:52:48,820 --> 00:52:51,820
+ That's where the residual comes in, and we'll talk about that.
+
+1173
+00:52:51,820 --> 00:52:53,820
+ Yeah, that's after.
+
+1174
+00:52:53,820 --> 00:52:59,820
+ So once we snap this, of course there's the mean that's lost.
+
+1175
+00:52:59,820 --> 00:53:01,820
+ I think about this photo.
+
+1176
+00:53:01,820 --> 00:53:07,820
+ Once we snap to the red and green, we've lost some mean, some definition, some line.
+
+1177
+00:53:07,820 --> 00:53:09,820
+ We've lost that sign.
+
+1178
+00:53:09,820 --> 00:53:15,820
+ So we lose certain definitions as we do this, but that's the point of quantizing.
+
+1179
+00:53:15,820 --> 00:53:17,820
+ We need to -- that's the whole point.
+
+1180
+00:53:17,820 --> 00:53:21,820
+ We need to quantize it and that this is the first step to that.
+
+1181
+00:53:21,820 --> 00:53:23,820
+ OK. Let's go to step three.
+
+1182
+00:53:23,820 --> 00:53:25,820
+ And again, if you're not sure, please ask.
+
+1183
+00:53:25,820 --> 00:53:29,820
+ I'm not sure we'll ask that today, right?
+
+1184
+00:53:29,820 --> 00:53:30,820
+ OK.
+
+1185
+00:53:30,820 --> 00:53:34,820
+ Well, this is similar to what I was saying when you do great things with JPEG.
+
+1186
+00:53:34,820 --> 00:53:37,820
+ Sometimes you can reduce a lot the size.
+
+1187
+00:53:37,820 --> 00:53:43,820
+ And the idea is that when you reduce the size of the PNG to JPEG,
+
+1188
+00:53:43,820 --> 00:53:45,820
+ it doesn't look very different to the human eye.
+
+1189
+00:53:45,820 --> 00:53:48,820
+ So you're able to do the quantizing without much difference.
+
+1190
+00:53:48,820 --> 00:53:50,820
+ Yeah, and think about the number of colors, right?
+
+1191
+00:53:50,820 --> 00:53:56,820
+ So if you have RGB, R, P, and I can see you've seen the RGB colors, right?
+
+1192
+00:53:56,820 --> 00:54:01,820
+ Yeah, but I guess beyond that, like 4K, for example, I don't know if you guys know that,
+
+1193
+00:54:01,820 --> 00:54:05,820
+ but it's like R2, actually, like 4K and under is literally --
+
+1194
+00:54:05,820 --> 00:54:06,820
+ It's like 18.
+
+1195
+00:54:06,820 --> 00:54:07,820
+ It's hard to tell.
+
+1196
+00:54:07,820 --> 00:54:08,820
+ It's hard to tell.
+
+1197
+00:54:08,820 --> 00:54:09,820
+ Yeah.
+
+1198
+00:54:09,820 --> 00:54:10,820
+ I think similar things here.
+
+1199
+00:54:10,820 --> 00:54:12,820
+ It's just like, OK, can we quantize it in one bit?
+
+1200
+00:54:12,820 --> 00:54:15,820
+ But again, once we do this, we lose a lot of information.
+
+1201
+00:54:15,820 --> 00:54:16,820
+ So where do we do that?
+
+1202
+00:54:16,820 --> 00:54:17,820
+ So let me just recap so far.
+
+1203
+00:54:17,820 --> 00:54:19,820
+ So number one is we have our vector.
+
+1204
+00:54:19,820 --> 00:54:22,820
+ We rotate it in some ways so that the things that are more spiky,
+
+1205
+00:54:22,820 --> 00:54:25,820
+ we even it out at the end of the day.
+
+1206
+00:54:25,820 --> 00:54:28,820
+ That reduces the amount of errors that we have.
+
+1207
+00:54:28,820 --> 00:54:32,820
+ And number two is we have that big vector, and then we need to quantize it.
+
+1208
+00:54:32,820 --> 00:54:37,820
+ The way we do that is there's a bunch of numbers.
+
+1209
+00:54:37,820 --> 00:54:41,820
+ We need to just quantize it to either this number or this number.
+
+1210
+00:54:41,820 --> 00:54:44,820
+ So let's say 0.6.
+
+1211
+00:54:44,820 --> 00:54:47,820
+ What is that closest to, 0.7 or negative 0.7?
+
+1212
+00:54:47,820 --> 00:54:49,820
+ [INAUDIBLE]
+
+1213
+00:54:49,820 --> 00:54:50,820
+ That's what that would be.
+
+1214
+00:54:50,820 --> 00:54:53,820
+ And that's how we get this vector [INAUDIBLE]
+
+1215
+00:54:53,820 --> 00:55:00,820
+ So whenever you see y hat, that means it's basically the [INAUDIBLE]
+
+1216
+00:55:00,820 --> 00:55:08,820
+ [INAUDIBLE]
+
+1217
+00:55:08,820 --> 00:55:12,820
+ I mean, to be honest, we haven't even done meaningful compression yet.
+
+1218
+00:55:12,820 --> 00:55:15,820
+ Because we've lost a shit ton of information now, right?
+
+1219
+00:55:15,820 --> 00:55:18,820
+ From this to this, we've lost so much information.
+
+1220
+00:55:18,820 --> 00:55:21,820
+ So that's the next problem to solve is what do we do then, right?
+
+1221
+00:55:21,820 --> 00:55:23,820
+ OK.
+
+1222
+00:55:23,820 --> 00:55:25,820
+ So that's where residual is.
+
+1223
+00:55:25,820 --> 00:55:27,820
+ We compute what we lost.
+
+1224
+00:55:27,820 --> 00:55:29,820
+ So how do we compute what we lost is actually very simple.
+
+1225
+00:55:29,820 --> 00:55:31,820
+ You just subtract the two vectors.
+
+1226
+00:55:31,820 --> 00:55:34,820
+ So we have your y minus y hat.
+
+1227
+00:55:34,820 --> 00:55:36,820
+ So that is our residual.
+
+1228
+00:55:36,820 --> 00:55:43,820
+ So this is the error that is now in our compression because we lost this information.
+
+1229
+00:55:43,820 --> 00:55:46,820
+ OK, that's step three.
+
+1230
+00:55:46,820 --> 00:55:48,820
+ [INAUDIBLE]
+
+1231
+00:55:48,820 --> 00:55:51,820
+ OK, step four, what do we do with residual?
+
+1232
+00:55:51,820 --> 00:55:55,820
+ That's kind of the-- we're now getting to [INAUDIBLE]
+
+1233
+00:55:55,820 --> 00:55:58,820
+ So the residual is a compression.
+
+1234
+00:55:58,820 --> 00:55:59,820
+ It's like a compression.
+
+1235
+00:55:59,820 --> 00:56:00,820
+ Yes.
+
+1236
+00:56:00,820 --> 00:56:03,820
+ It is the-- it's just that what was lost.
+
+1237
+00:56:03,820 --> 00:56:04,820
+ Yeah, what was lost.
+
+1238
+00:56:04,820 --> 00:56:07,820
+ Yeah, it's just what was lost.
+
+1239
+00:56:07,820 --> 00:56:15,820
+ [INAUDIBLE]
+
+1240
+00:56:15,820 --> 00:56:21,820
+ OK, so the question now is what do we do with this R that we have?
+
+1241
+00:56:21,820 --> 00:56:24,820
+ Now, this is where it gets a tiny bit more complex.
+
+1242
+00:56:24,820 --> 00:56:27,820
+ And I tried my best to be like, how do I simplify this?
+
+1243
+00:56:27,820 --> 00:56:28,820
+ I had a hard time.
+
+1244
+00:56:28,820 --> 00:56:30,820
+ So we'll try our best.
+
+1245
+00:56:30,820 --> 00:56:33,820
+ OK, so we have our R finally, our residual.
+
+1246
+00:56:33,820 --> 00:56:38,820
+ Negative 0.1, positive 0.2, negative 0.1.
+
+1247
+00:56:38,820 --> 00:56:41,820
+ So what they say here is restore a tiny sketch.
+
+1248
+00:56:41,820 --> 00:56:46,820
+ By the way, there's like 10 steps underneath the step four that I matched.
+
+1249
+00:56:46,820 --> 00:56:48,820
+ Because it was getting too specific.
+
+1250
+00:56:48,820 --> 00:56:52,820
+ So I'll explain it as soon as I can.
+
+1251
+00:56:52,820 --> 00:56:54,820
+ So I don't have to actually do that kind of analogy.
+
+1252
+00:56:54,820 --> 00:56:55,820
+ I don't have an idea.
+
+1253
+00:56:55,820 --> 00:57:02,820
+ So the way to understand this particular piece and this tiny sketch is let's say we have our face.
+
+1254
+00:57:02,820 --> 00:57:05,820
+ OK?
+
+1255
+00:57:05,820 --> 00:57:08,820
+ We took this face that was really clear.
+
+1256
+00:57:08,820 --> 00:57:10,820
+ We quantized it.
+
+1257
+00:57:10,820 --> 00:57:13,820
+ Now we have a little bit of a blurry face.
+
+1258
+00:57:13,820 --> 00:57:23,820
+ So we're trying to figure out, OK, how do we now bring back information that we have without blowing it up back again?
+
+1259
+00:57:23,820 --> 00:57:29,820
+ So what I would do is I would look at the residual, at all the stuff that we lost.
+
+1260
+00:57:29,820 --> 00:57:34,820
+ And I'm just going to basically extract some hints from it.
+
+1261
+00:57:34,820 --> 00:57:38,820
+ So what that means is it might be like a line, like a casing.
+
+1262
+00:57:38,820 --> 00:57:45,820
+ It might not be the whole thing, but it might be like a line, might be like a particular, like a feature.
+
+1263
+00:57:45,820 --> 00:57:48,820
+ And that's what this is basically.
+
+1264
+00:57:48,820 --> 00:57:55,820
+ So instead of taking the whole R, you just take a bit from it.
+
+1265
+00:57:55,820 --> 00:58:01,820
+ And that allows us to better understand, because at the end of the day, what's the point of all this?
+
+1266
+00:58:01,820 --> 00:58:08,820
+ What we're trying to do is when we have a new vector that's coming in and we're trying to do a document search, for example.
+
+1267
+00:58:08,820 --> 00:58:12,820
+ We just want to say, is this kind of similar to this image?
+
+1268
+00:58:12,820 --> 00:58:13,820
+ You don't really need the whole image.
+
+1269
+00:58:13,820 --> 00:58:17,820
+ You don't really need the blurry image, but with those lines.
+
+1270
+00:58:17,820 --> 00:58:19,820
+ So that's what this residual bit does.
+
+1271
+00:58:19,820 --> 00:58:26,820
+ We're not including the entire thing, because then there's no point of it.
+
+1272
+00:58:26,820 --> 00:58:32,820
+ We're just taking a small aspect of that.
+
+1273
+00:58:32,820 --> 00:58:44,820
+ Maybe I can go more into depth.
+
+1274
+00:58:44,820 --> 00:58:50,820
+ No, we're still in two.
+
+1275
+00:58:50,820 --> 00:58:53,820
+ No, no, no, we're still one bit.
+
+1276
+00:58:53,820 --> 00:58:57,820
+ That's only zero and one.
+
+1277
+00:58:57,820 --> 00:59:02,820
+ We're still working in -- it's still one bit, but one bit has two possibilities.
+
+1278
+00:59:02,820 --> 00:59:04,820
+ That's what it is.
+
+1279
+00:59:04,820 --> 00:59:25,820
+ [ Inaudible ]
+
+1280
+00:59:25,820 --> 00:59:27,820
+ But it does some really cool things.
+
+1281
+00:59:27,820 --> 00:59:41,820
+ For example, this one component here, so what this R does, or the way we get to finally what parts of this R we want, these are really cool projection techniques.
+
+1282
+00:59:41,820 --> 00:59:51,820
+ So where they look at this vector from one point in this space and they project it manually with the light shining on it.
+
+1283
+00:59:51,820 --> 00:59:58,820
+ And they're just understanding, is it going with the vector or opposite the vector?
+
+1284
+00:59:58,820 --> 01:00:05,820
+ That's how we get -- that's how we get -- is it on the plus side or the negative side?
+
+1285
+01:00:05,820 --> 01:00:08,820
+ So that's where it comes in.
+
+1286
+01:00:08,820 --> 01:00:10,820
+ A couple of random views of the vector.
+
+1287
+01:00:10,820 --> 01:00:19,820
+ [ Inaudible ]
+
+1288
+01:00:19,820 --> 01:00:24,820
+ So this doesn't convert --
+
+1289
+01:00:24,820 --> 01:00:33,820
+ [ Inaudible ]
+
+1290
+01:00:33,820 --> 01:00:37,820
+ In this paper, it's only given in really complex math.
+
+1291
+01:00:37,820 --> 01:00:39,820
+ And that makes it very difficult.
+
+1292
+01:00:39,820 --> 01:00:56,820
+ [ Inaudible ]
+
+1293
+01:00:56,820 --> 01:01:02,820
+ So we have this residual vector, but we can't get this whole thing because then it's the same --
+
+1294
+01:01:02,820 --> 01:01:04,820
+ [ Inaudible ]
+
+1295
+01:01:04,820 --> 01:01:11,820
+ But we need to have some way of including this lost information back into our compressed quantized version.
+
+1296
+01:01:11,820 --> 01:01:13,820
+ So that's the problem we're trying to solve.
+
+1297
+01:01:13,820 --> 01:01:21,820
+ So the question is, how do we get an aspect of this into our original vector?
+
+1298
+01:01:21,820 --> 01:01:22,820
+ Because what's the larger purpose?
+
+1299
+01:01:22,820 --> 01:01:25,820
+ We're not trying to recreate it so it looks clear.
+
+1300
+01:01:25,820 --> 01:01:31,820
+ We're trying to recreate it so that when we have a query vector, it knows to search for this.
+
+1301
+01:01:31,820 --> 01:01:41,820
+ It's like I think the best way to explain it is if I'm in a room with people, I need to know how the guy's nose looks.
+
+1302
+01:01:41,820 --> 01:01:49,820
+ Just from how tall they are or how tall they are, maybe the color of their skin, I can be like, oh, they're in that direction and I can go there.
+
+1303
+01:01:49,820 --> 01:01:59,820
+ [ Inaudible ]
+
+1304
+01:01:59,820 --> 01:02:03,820
+ Exactly. I don't need all the details to locate where it is.
+
+1305
+01:02:03,820 --> 01:02:09,820
+ I just kind of need to know, yeah, the guy's tall, you know, brown skin, has hair like this.
+
+1306
+01:02:09,820 --> 01:02:13,820
+ So that's kind of what we're extracting from the residual vector, right?
+
+1307
+01:02:13,820 --> 01:02:14,820
+ [ Inaudible ]
+
+1308
+01:02:14,820 --> 01:02:16,820
+ Yeah. That's the only way you can explain it.
+
+1309
+01:02:16,820 --> 01:02:22,820
+ Oh, okay. Because again, what's the main goal we're going to solve is at the end of the day, we're doing this for search, right?
+
+1310
+01:02:22,820 --> 01:02:29,820
+ So we're going to do a query search and then we have to figure out can this query search even locate what's similar?
+
+1311
+01:02:29,820 --> 01:02:31,820
+ Not exact, similar.
+
+1312
+01:02:31,820 --> 01:02:34,820
+ So we get some looks from there like, oh, okay, that's kind of similar.
+
+1313
+01:02:34,820 --> 01:02:36,820
+ That's what we're going to go to, right?
+
+1314
+01:02:36,820 --> 01:02:47,820
+ [ Inaudible ]
+
+1315
+01:02:47,820 --> 01:02:48,820
+ Right. That's exactly it.
+
+1316
+01:02:48,820 --> 01:03:06,820
+ [ Inaudible ]
+
+1317
+01:03:06,820 --> 01:03:18,820
+ So now we have an analogy of mine. Let's try to attempt to go deeper in the math. So what this is doing is imagine this is an R in space. We pick a random view.
+
+1318
+01:03:18,820 --> 01:03:27,820
+ So imagine [ Inaudible ]
+
+1319
+01:03:27,820 --> 01:03:45,820
+ So what it's doing is, oh, if I look at it from this angle and I look at it and I project this vector on, you'll notice that, oh, okay, the only thing I need is does the projection of the vector go along with the vector or go away from the vector?
+
+1320
+01:03:45,820 --> 01:03:53,820
+ If it goes away from the vector, that means it's not as similar. If it goes along with the vector, that means, oh, that's kind of similar.
+
+1321
+01:03:53,820 --> 01:04:00,820
+ So I'm now going to go closer to that. That's like the, again, crunch down. This step had ten sub steps.
+
+1322
+01:04:00,820 --> 01:04:03,820
+ And I was going through it and I was like, should we go down the sub step?
+
+1323
+01:04:03,820 --> 01:04:08,820
+ [ Inaudible ]
+
+1324
+01:04:08,820 --> 01:04:09,820
+ Oh, that's a good one.
+
+1325
+01:04:09,820 --> 01:04:10,820
+ [ Inaudible ]
+
+1326
+01:04:10,820 --> 01:04:12,820
+ Yeah. That's exactly it.
+
+1327
+01:04:12,820 --> 01:04:15,820
+ [ Inaudible ]
+
+1328
+01:04:15,820 --> 01:04:20,820
+ Yes. But it's not just warmer, right? We also have our quantized vector.
+
+1329
+01:04:20,820 --> 01:04:25,820
+ So we have our quantized vector plus a warmer and colder kind of vibe.
+
+1330
+01:04:25,820 --> 01:04:34,820
+ And that allows us to be like, oh, that's kind of all the information we need to even determine that, oh, as a query vector, I'm similar to that, right?
+
+1331
+01:04:34,820 --> 01:04:39,820
+ I mean, that's all we're going to solve for. We don't want a perfect, we want a G and M. We don't want to have like a perfect [ Inaudible ]
+
+1332
+01:04:39,820 --> 01:04:42,820
+ So they're actually using a zero and one for the [ Inaudible ]
+
+1333
+01:04:42,820 --> 01:04:54,820
+ So zero means negative, means going away from the projection of the vector. That's what I'm saying. I didn't want to, the confusion here is, are we reducing this to this?
+
+1334
+01:04:54,820 --> 01:04:59,820
+ [ Inaudible ]
+
+1335
+01:04:59,820 --> 01:05:10,820
+ All we're seeing is when we project something onto this vector, does the projection of that vector go along with it? That's positive. Or go away? And that's a negative.
+
+1336
+01:05:10,820 --> 01:05:19,820
+ If it goes away, we're just focused on the projection of it. And one just means with it. Zero means away from it.
+
+1337
+01:05:19,820 --> 01:05:28,820
+ Guys, this is the actual [ Inaudible ]
+
+1338
+01:05:28,820 --> 01:05:33,820
+ Oh, that's coming the next step. So what do we do? Like, okay, we have this residual bit. Now what?
+
+1339
+01:05:33,820 --> 01:05:43,820
+ How does this, how does this now connect mathematically to this quantized version of that? Okay, here we are.
+
+1340
+01:05:43,820 --> 01:05:58,820
+ So let's go to step five. So in step five, we're basically storing the one zero one and one zero. And you're like, what? That makes no sense.
+
+1341
+01:05:58,820 --> 01:06:26,820
+ [ Inaudible ]
+
+1342
+01:06:26,820 --> 01:06:36,820
+ So when we, so in the residual vectors, we are considering something that's positive, but we're not.
+
+1343
+01:06:36,820 --> 01:06:43,820
+ It doesn't mean we're not including this. We will soon include it, because remember the formula that we were talking about? I'll actually bring it up here.
+
+1344
+01:06:43,820 --> 01:06:55,820
+ So Y times Q. I'll actually come into this in a second. This formula actually breaks into, for example, Y, so R is equal to Y minus Y.
+
+1345
+01:06:55,820 --> 01:07:07,820
+ So that means Y is equal to R plus Y hat. So we actually bring back all the different things with the substitution.
+
+1346
+01:07:07,820 --> 01:07:21,820
+ So, yeah, step five, we're just storing, because one and zero here are the plus and negative signs. Same thing here with the quarks. We're just looking for the plus and negative signs.
+
+1347
+01:07:21,820 --> 01:07:41,820
+ But now, if you're trying to compute similarity, let me see if I can bring up the math of it. Because what is Y? Y is our original vector. Y is equal to R -- oh, is there a pin here? Oh, my God, is there a pin?
+
+1348
+01:07:41,820 --> 01:08:01,820
+ That would be -- is it that? Oh, God, is it that bad? Let's do this. Okay, okay. Awesome. Okay, okay. So this is my thought. I wish I knew this before. I was trying to do like hands and things like that.
+
+1349
+01:08:01,820 --> 01:08:22,820
+ Okay, so we know our R is equal to Y minus Y hat. Okay. So if you want to compute similarity, so we have -- so we're going to compute Y times Q.
+
+1350
+01:08:22,820 --> 01:08:38,820
+ So Q is basically our query vector. So our query vector is like you're asking a question and you want to respond. So the answer here is we have to -- so this Y, you can replace it with Y hat.
+
+1351
+01:08:38,820 --> 01:08:59,820
+ So Y -- so R plus -- yeah, R plus Y hat is equal to Y. All right, we'll place that here. So we have R plus Y hat times Q. And then we'll do R plus Q Y hat.
+
+1352
+01:08:59,820 --> 01:09:08,820
+ Okay, so Y times Q is the thing we're doing. That's the original -- that's the goal. Yes. And you know approximately.
+
+1353
+01:09:08,820 --> 01:09:35,820
+ Okay, so that's the course core. So yeah, now when we're computing the similarity -- so yeah, so once we actually open that up -- oh, you can see we're actually already including our residual vector here, our Y core vector here, whatever you're doing.
+
+1354
+01:09:35,820 --> 01:09:57,820
+ So when you actually -- so once you have that score, the final one is looking at, okay, with our query vector, if we're now timesing that -- our course vector, which is basically what we quantified, you realize, okay, it's about a 35 percent similarity.
+
+1355
+01:09:57,820 --> 01:10:06,820
+ Okay, so it says there, you're showing a multiplication, but in step six, you said there's like a division.
+
+1356
+01:10:06,820 --> 01:10:07,820
+ Yeah, that's what this is, right?
+
+1357
+01:10:07,820 --> 01:10:08,820
+ Okay.
+
+1358
+01:10:08,820 --> 01:10:19,820
+ So this, I just open it up like this. And that's what we have here. So this is our core score.
+
+1359
+01:10:19,820 --> 01:10:33,820
+ Yeah, this is our core score. And then I'll probably pause here because now we're going a little bit too deep. And we'll summarize it, sort of like, it doesn't matter what all the math is, this is our collection.
+
+1360
+01:10:33,820 --> 01:10:37,820
+ And this is equal to the similarity. Doesn't make sense, huh?
+
+1361
+01:10:37,820 --> 01:10:45,820
+ That's right, that's how they got from Y times Q.
+
+1362
+01:10:45,820 --> 01:10:49,820
+ So now we can check, okay.
+
+1363
+01:10:49,820 --> 01:10:56,820
+ Yeah, so really the bottom line to all of this is this, like if I were to summarize everything, you would have to do that.
+
+1364
+01:10:56,820 --> 01:11:03,820
+ Yeah, because the step seven is a .35. So it's fast but slightly long because the original is slightly off.
+
+1365
+01:11:03,820 --> 01:11:05,820
+ Oh, it just leads to the terrible similarity score.
+
+1366
+01:11:05,820 --> 01:11:06,820
+ Okay.
+
+1367
+01:11:06,820 --> 01:11:18,820
+ Given our vectors, this is a terrible vector, like this is terrible similarity score. But baseline, if you're like, oh, I did not track the last 15 minutes, what happened?
+
+1368
+01:11:18,820 --> 01:11:21,820
+ Doesn't matter. All these queries, core sentences.
+
+1369
+01:11:21,820 --> 01:11:32,820
+ So really we need to know, so does the query behave the same way as the error in those views?
+
+1370
+01:11:32,820 --> 01:11:51,820
+ So we talked about, okay, once we have a query, and then once we have the different views on which we project on to the R, the residual vector, it's like, okay, if it's a higher similarity, that means yes, it's higher, and if it's no, that means we have a small similarity.
+
+1371
+01:11:51,820 --> 01:12:05,820
+ So to summarize all this, you can read it there. So the query is a new vector that we're comparing against. The residual bits are tiny bits about what the core vector got wrong, so the floor image got wrong.
+
+1372
+01:12:05,820 --> 01:12:16,820
+ And then we check whether the query lines up with those bits. That's where the similarity comes in. If it does, then we nudge the similarity up. If not, we nudge it down.
+
+1373
+01:12:16,820 --> 01:12:21,820
+ That's basically this whole paper in a nutshell.
+
+1374
+01:12:21,820 --> 01:12:23,820
+ But we skipped so much of the--
+
+1375
+01:12:23,820 --> 01:12:28,820
+ Yeah, I'm actually very curious on the hard drive direction zero.
+
+1376
+01:12:28,820 --> 01:12:38,820
+ So I must have completed something with the correction zero and stuck with the correction zero.
+
+1377
+01:12:38,820 --> 01:12:42,820
+ Oh, this means maybe that we were going for 35 and there's no more--
+
+1378
+01:12:42,820 --> 01:12:45,820
+ Yeah, I guess for this specific problem, there was no need to correct it.
+
+1379
+01:12:45,820 --> 01:12:53,820
+ Yeah, there was no much, very little to correct in this particular example.
+
+1380
+01:12:53,820 --> 01:13:00,820
+ Yeah, okay, I want to pause here. That was a lot, that was a lot. As I mentioned, this is a very dense mathematical paper.
+
+1381
+01:13:00,820 --> 01:13:07,820
+ So if you're like tuned out, you're like, "Oh, this doesn't make any sense." Again, I just want to redo this last part so that we can really do this all together.
+
+1382
+01:13:07,820 --> 01:13:13,820
+ Because you want this to maintain similarity in this new space. You want to find all the ways you can maintain that similarity.
+
+1383
+01:13:13,820 --> 01:13:20,820
+ Yes, it's like, I mean, at the end of the day, once the whole point of AI searches, I have a query vector.
+
+1384
+01:13:20,820 --> 01:13:28,820
+ If I've now quantized my goal vector, how do I make sure that I can still search for the accuracy?
+
+1385
+01:13:28,820 --> 01:13:42,820
+ And so we want to quantize it without, you know, by muscle keeping somewhat of the important parts that will allow us to identify it.
+
+1386
+01:13:42,820 --> 01:13:49,820
+ No, we want to get higher.
+
+1387
+01:13:49,820 --> 01:13:55,820
+ Yeah, it's between, if it's one, that means it's like bang, bang.
+
+1388
+01:13:55,820 --> 01:14:01,820
+ And the similarity is based on that potential, right? Because you have a word and you want to see how similar there are to other words.
+
+1389
+01:14:01,820 --> 01:14:04,820
+ And you want to maintain that similarity.
+
+1390
+01:14:04,820 --> 01:14:12,820
+ [inaudible]
+
+1391
+01:14:12,820 --> 01:14:17,820
+ Oh, good question. Does this change? You mean, like, from the text?
+
+1392
+01:14:17,820 --> 01:14:24,820
+ I mean, at the end of the day, all objects are transferred into tokens that are still vectors.
+
+1393
+01:14:24,820 --> 01:14:32,820
+ So I don't know if this will be different when it comes to, if I'm using text or something that's not text.
+
+1394
+01:14:32,820 --> 01:14:42,820
+ [inaudible]
+
+1395
+01:14:42,820 --> 01:14:44,820
+ Ah, yeah, yeah, possible.
+
+1396
+01:14:44,820 --> 01:14:50,820
+ [inaudible]
+
+1397
+01:14:50,820 --> 01:14:52,820
+ And this comes back to where Shannon speaks.
+
+1398
+01:14:52,820 --> 01:15:07,820
+ If it is a super complex vector embedding, where everything is very unpredictable, then our ability to compress, that actually comes to our insights in a second.
+
+1399
+01:15:07,820 --> 01:15:10,820
+ Yeah, that actually is a small component of it.
+
+1400
+01:15:10,820 --> 01:15:14,820
+ [inaudible]
+
+1401
+01:15:14,820 --> 01:15:26,820
+ There is so much, okay.
+
+1402
+01:15:26,820 --> 01:15:31,820
+ It's like I have the blurry picture and I have the footnotes.
+
+1403
+01:15:31,820 --> 01:15:36,820
+ That's what it is. I have the footnotes for the things that still describe the picture.
+
+1404
+01:15:36,820 --> 01:15:39,820
+ And that footnotes is just one bit.
+
+1405
+01:15:39,820 --> 01:15:44,820
+ That's the whole innovation of this, right? That's the visual piece.
+
+1406
+01:15:44,820 --> 01:15:51,820
+ [inaudible]
+
+1407
+01:15:51,820 --> 01:15:55,820
+ So this actually, this actually is a good [inaudible]
+
+1408
+01:15:55,820 --> 01:15:58,820
+ Then we went into the experiments of this whole paper, right?
+
+1409
+01:15:58,820 --> 01:16:01,820
+ And I was like, okay, when we do experiments, what do we really need to understand?
+
+1410
+01:16:01,820 --> 01:16:05,820
+ What are the questions we have to ask before we get into it?
+
+1411
+01:16:05,820 --> 01:16:09,820
+ It's like, okay, what's the metric we want to know for?
+
+1412
+01:16:09,820 --> 01:16:10,820
+ We're going to check.
+
+1413
+01:16:10,820 --> 01:16:13,820
+ After this, what is the improvement meaningful?
+
+1414
+01:16:13,820 --> 01:16:22,820
+ Which means we're able to get a drastic amount of compression and still be successful in a similarity.
+
+1415
+01:16:22,820 --> 01:16:24,820
+ Or like finding the query.
+
+1416
+01:16:24,820 --> 01:16:25,820
+ We'll talk about that.
+
+1417
+01:16:25,820 --> 01:16:26,820
+ So I'm like, what's the trade-off here?
+
+1418
+01:16:26,820 --> 01:16:29,820
+ And then finally, Ken is actually working with you all.
+
+1419
+01:16:29,820 --> 01:16:44,820
+ [inaudible]
+
+1420
+01:16:44,820 --> 01:16:46,820
+ Okay, so what's the metric being optimized for?
+
+1421
+01:16:46,820 --> 01:16:49,820
+ Now let's actually go to the paper.
+
+1422
+01:16:49,820 --> 01:16:55,820
+ I basically skipped all of two because it's just math.
+
+1423
+01:16:55,820 --> 01:17:00,820
+ I tried my best to understand this and it was a mess.
+
+1424
+01:17:00,820 --> 01:17:07,820
+ It makes me, it gave me a lot of appreciation for people that do this.
+
+1425
+01:17:07,820 --> 01:17:15,820
+ And here I'm like cloud coding and I'm like, oh man, the research stuff is so complex and we so much want to do this.
+
+1426
+01:17:15,820 --> 01:17:24,820
+ When we look at cloud applications and we write code and we just do agents now, I'm like, man, the research stuff behind this is insane.
+
+1427
+01:17:24,820 --> 01:17:28,820
+ And I have so much, because I'm always, I'm an app player guy too, right?
+
+1428
+01:17:28,820 --> 01:17:33,820
+ Doing this just gave me so much more appreciation for what happened.
+
+1429
+01:17:33,820 --> 01:17:36,820
+ Okay, so let's go into our experiments.
+
+1430
+01:17:36,820 --> 01:17:39,820
+ We look into, we actually went through all of this.
+
+1431
+01:17:39,820 --> 01:17:43,820
+ By the way, all of what we talked about was this one paragraph in the last 20 minutes.
+
+1432
+01:17:43,820 --> 01:17:47,820
+ So if you guys want to just read this now.
+
+1433
+01:17:47,820 --> 01:17:55,820
+ So to address this bias and what the bias basically means is when it's quantized as bias.
+
+1434
+01:17:55,820 --> 01:18:17,820
+ We proposed a solution that combines TurboQuant MSC with an instance of QJL, which is the one bit. So specifically let QMSC be the quantization map corresponding to TurboQuant MSC with a bit width of B minus one.
+
+1435
+01:18:17,820 --> 01:18:41,820
+ So all the bits that we have, we focus it on the initial part of this quantization and the one bit that's remaining.
+
+1436
+01:18:41,820 --> 01:18:47,820
+ So for X that is included, actually I don't want to do that math right now.
+
+1437
+01:18:47,820 --> 01:19:04,820
+ For any X that is a vector defined as R, as a small real, you can then apply this quantization map, which is what we did with the way that we talked about on this visual vector.
+
+1438
+01:19:04,820 --> 01:19:16,820
+ [INAUDIBLE]
+
+1439
+01:19:16,820 --> 01:19:23,820
+ I would say, I would say that would be, actually I'm not sure, let's find that information.
+
+1440
+01:19:23,820 --> 01:19:31,820
+ So QMSC, it's like you have a query, you have a vector for MSC, you have a vector for QJL.
+
+1441
+01:19:31,820 --> 01:19:35,820
+ Exactly this, I think it might be that.
+
+1442
+01:19:35,820 --> 01:19:47,820
+ What is the map on this visual vector? I think this actually might be the, yeah the zero one, for example the bits, only the number of bits that we put in the codebook, I think this might be that.
+
+1443
+01:19:47,820 --> 01:19:51,820
+ Ah, okay, so here we go, there's the random rotation.
+
+1444
+01:19:51,820 --> 01:19:53,820
+ You have a random rotation that is an R.
+
+1445
+01:19:53,820 --> 01:19:58,820
+ And also this one gives you that random rotation, and you have a Q which is a quantized quantization map.
+
+1446
+01:19:58,820 --> 01:20:02,820
+ The grid that we talked about, I think that's what this means, the quantization map QJL.
+
+1447
+01:20:02,820 --> 01:20:05,820
+ On this, that's what I think this means.
+
+1448
+01:20:05,820 --> 01:20:10,820
+ [INAUDIBLE]
+
+1449
+01:20:10,820 --> 01:20:14,820
+ Yeah, everything, so would you expect it to be something else?
+
+1450
+01:20:14,820 --> 01:20:26,820
+ [INAUDIBLE]
+
+1451
+01:20:26,820 --> 01:20:32,820
+ So JL is like projecting it into a small dimension, using this random region.
+
+1452
+01:20:32,820 --> 01:20:35,820
+ I was going to double check this, but maybe I'll come back to it.
+
+1453
+01:20:35,820 --> 01:20:39,820
+ [INAUDIBLE]
+
+1454
+01:20:39,820 --> 01:20:41,820
+ Yeah, that's what I think.
+
+1455
+01:20:41,820 --> 01:20:49,820
+ What QJL is doing here, you have a vector in high dimensions, and QJL projects it into a lower dimensional space.
+
+1456
+01:20:49,820 --> 01:21:01,820
+ [INAUDIBLE]
+
+1457
+01:21:01,820 --> 01:21:21,820
+ [INAUDIBLE]
+
+1458
+01:21:21,820 --> 01:21:34,820
+ I mean, this is for, so why don't we do this, I would say this is for, that's a good question, when does it happen, does it happen at the end of every attention, I actually don't know.
+
+1459
+01:21:34,820 --> 01:21:37,820
+ [INAUDIBLE]
+
+1460
+01:21:37,820 --> 01:21:54,820
+ Yeah, so when does, actually good question, when does this exactly, I haven't looked it up actually, I have it right here.
+
+1461
+01:21:54,820 --> 01:22:09,820
+ [INAUDIBLE]
+
+1462
+01:22:09,820 --> 01:22:27,820
+ So every time is this process of pi in the mix of pi, so yeah, is it after every token?
+
+1463
+01:22:27,820 --> 01:22:33,820
+ It has to, right, because every time you have a new token, the similarity changes.
+
+1464
+01:22:33,820 --> 01:22:49,820
+ [INAUDIBLE]
+
+1465
+01:22:49,820 --> 01:23:07,820
+ Where is it, yes, where is it applied, it is applied at the moment you want to compress or approximate vectors, for example, during attention configuration, when storing or retrieving any cache, then approximating inner product, during model compression to reduce memory bandwidth.
+
+1466
+01:23:07,820 --> 01:23:35,820
+ [INAUDIBLE]
+
+1467
+01:23:35,820 --> 01:23:44,820
+ [INAUDIBLE]
+
+1468
+01:23:44,820 --> 01:24:13,820
+ This is a freaking fantastic question, when does this, okay, short answer, this one says yes, short answer, yes, in auto-aggressive generation the model runs the whole pass loop and attention step by step and repeats the process once per generated token, after selecting a token, the current token forms a query and attends also a loop.
+
+1469
+01:24:13,820 --> 01:24:25,820
+ [INAUDIBLE]
+
+1470
+01:24:25,820 --> 01:24:43,820
+ [INAUDIBLE]
+
+1471
+01:24:43,820 --> 01:25:11,820
+ I mean when you apply, so when you apply the entire process, where exactly, where exactly in the generation of process is this applied to the query cache?
+
+1472
+01:25:11,820 --> 01:25:40,820
+ [INAUDIBLE]
+
+1473
+01:25:40,820 --> 01:26:08,820
+ So I guess the way I understand it is, is that, okay, so in a normal way, you would have to do all these computations to get to the query cache, oh, okay, so in a normal way, without all of this, how does it work in GPT, you put up the request, it does a lot of the math, it does a lot of the math, then generate a lot of things, it's just that next time you put it up front, it just does different math.
+
+1474
+01:26:08,820 --> 01:26:23,820
+ So GPT is still like a bunch of math, so the second you start the query, it will just like, it will apply these new rules when it crosses the GPT, so it makes sense that every time you run and you query.
+
+1475
+01:26:23,820 --> 01:26:41,820
+ [INAUDIBLE]
+
+1476
+01:26:41,820 --> 01:27:06,820
+ Maybe if I were to summarize some interesting things, I thought the most interesting thing in this experiment was actually this one, so they ran a lot of other quantization runs, and this is called the [INAUDIBLE] test, where you're looking for a very specific given sentence in a very long, and they found that the protocol actually had the most success with it.
+
+1477
+01:27:06,820 --> 01:27:32,820
+ But here's the controversy, here's the key in this industry, which is apparently when they were doing the turbo quant, it used better TPs and hardware, and so I was like, oh, wait, doesn't that really break the scientific process?
+
+1478
+01:27:32,820 --> 01:27:48,820
+ [INAUDIBLE]
+
+1479
+01:27:48,820 --> 01:28:03,820
+ That's a good question. Okay, so let me speak about it. So why is it that, what difference did you use? I don't know, that's a good question. Maybe because one might have a different memory, but even then, that's the whole point of it, they're reducing it.
+
+1480
+01:28:03,820 --> 01:28:18,820
+ So I don't know, but I was reading it, and I was like, oh, they actually used different ones, and it was the whole thing, but that's actually more than I thought about it. It's a good point.
+
+1481
+01:28:18,820 --> 01:28:33,820
+ So what it says, it was, so this means that it was as good as an uncompressed model in finding a very particular sentence in a really big exact, essentially.
+
+1482
+01:28:33,820 --> 01:28:55,820
+ So it's more so that if you're always comparing your relative terms, you're comparing it to, it's not that the uncompressed one doesn't have loss, you're just treating that as a standard. So if that is a standard, then how far away are you from that? Does that make sense?
+
+1483
+01:28:55,820 --> 01:29:04,820
+ Because you're saying it's not 100%. Because that's also difficult even if you're uncompressed.
+
+1484
+01:29:04,820 --> 01:29:09,820
+ So it's not able to find a needle, even if it's uncompressed.
+
+1485
+01:29:09,820 --> 01:29:18,820
+ So from what I understand is, we're comparing this against an uncompressed model as a performance.
+
+1486
+01:29:18,820 --> 01:29:29,820
+ So if this did as well as an uncompressed model, uncompressed model has mistakes, but if we did exactly as well as an uncompressed model, it would have been 100%.
+
+1487
+01:29:29,820 --> 01:29:49,820
+ But does it mean that uncompressed models, oh, okay, so there's no uncompressed model, I was just wondering if full precision is what model is that?
+
+1488
+01:29:49,820 --> 01:30:11,820
+ No, my thing is full precision was a different, so yeah, so full precision did it.
+
+1489
+01:30:11,820 --> 01:30:23,820
+ I just want to be more efficient than that.
+
+1490
+01:30:23,820 --> 01:30:49,820
+ What is the full precision compared to in the needle?
+
+1491
+01:30:49,820 --> 01:30:53,820
+ So is that full precision, does that mean it's uncompressed?
+
+1492
+01:30:53,820 --> 01:31:02,820
+ No, are you sure? Is that what full precision can be? Or is it just the meaning of another one of the quantization?
+
+1493
+01:31:02,820 --> 01:31:26,820
+ No, it's the one that's more compressing.
+
+1494
+01:31:26,820 --> 01:31:32,820
+ Right, it wouldn't make sense. Why would they include another one and why would they say that they're really a problem to rest?
+
+1495
+01:31:32,820 --> 01:31:36,820
+ So full precision is, as it's saying, this is the model's fault.
+
+1496
+01:31:36,820 --> 01:31:41,820
+ Oh, yeah, even if it says they're compressing, it should be the same exact component as the uncompressed baseline.
+
+1497
+01:31:41,820 --> 01:31:45,820
+ Yeah, but the uncompressed baseline doesn't say that it's full precision.
+
+1498
+01:31:45,820 --> 01:31:48,820
+ It's the baseline run with no, okay, so you are correct.
+
+1499
+01:31:48,820 --> 01:31:59,820
+ The model evaluated that standard floating point position used as the reference for the same, so this is basically saying it is performing basically exactly the same as the full position.
+
+1500
+01:31:59,820 --> 01:32:06,820
+ Because we're encoding things in like one bit versus like 16 bits.
+
+1501
+01:32:06,820 --> 01:32:13,820
+ Okay, I feel like those are the big things here.
+
+1502
+01:32:13,820 --> 01:32:24,820
+ We went a bit into the GPU performance, so that's going to be what I'm going to bring up real quick.
+
+1503
+01:32:24,820 --> 01:32:46,820
+ This was run on the Nvidia A100, but from what I saw in the paper, I should call it a member function.
+
+1504
+01:32:46,820 --> 01:33:01,820
+ So we evaluate two composition methods, the method here. I think from what I understand, they were able to run it on this GPU and were able to successfully get the metrics that we talked about here.
+
+1505
+01:33:01,820 --> 01:33:06,820
+ And the whole point that, oh, actually this you can actually apply in a GPU.
+
+1506
+01:33:06,820 --> 01:33:16,820
+ >> [INAUDIBLE]
+
+1507
+01:33:16,820 --> 01:33:22,820
+ >> The last question I think that came to my mind, and we will close here is, okay, what would it take to bring this into the real world?
+
+1508
+01:33:22,820 --> 01:33:27,820
+ Now that we've gone through this, what do you guys think are the biggest challenges for those that actually work on?
+
+1509
+01:33:27,820 --> 01:33:31,820
+ >> That's actually my question, why don't we just apply this anyway?
+
+1510
+01:33:31,820 --> 01:33:37,820
+ >> Yeah, so I actually asked this question, I'm curious what you guys, just from doing this so far,
+
+1511
+01:33:37,820 --> 01:33:44,820
+ if you think from our perspective, what would be the biggest roadblocks in actually implementing like tomorrow?
+
+1512
+01:33:44,820 --> 01:33:45,820
+ >> [INAUDIBLE]
+
+1513
+01:33:45,820 --> 01:33:51,820
+ >> Yeah, like implementing this PDPache mechanism, what would be the hardest part of this?
+
+1514
+01:33:51,820 --> 01:34:00,820
+ >> [INAUDIBLE]
+
+1515
+01:34:00,820 --> 01:34:05,820
+ >> I would say yes, yeah, but there's actually a few that was actually pretty hard for me.
+
+1516
+01:34:05,820 --> 01:34:08,820
+ I asked for PDPache, so I'm fine with that.
+
+1517
+01:34:08,820 --> 01:34:11,820
+ But anyone else want to have guesses, before I close up?
+
+1518
+01:34:11,820 --> 01:34:17,820
+ >> [INAUDIBLE]
+
+1519
+01:34:17,820 --> 01:34:21,820
+ >> That's exactly, yeah, I can give a comment, so, yeah.
+
+1520
+01:34:21,820 --> 01:34:25,820
+ >> [INAUDIBLE]
+
+1521
+01:34:25,820 --> 01:34:26,820
+ >> Well, success.
+
+1522
+01:34:26,820 --> 01:34:29,820
+ >> [INAUDIBLE]
+
+1523
+01:34:29,820 --> 01:34:32,820
+ >> Here's my comment, maybe I can give a comment.
+
+1524
+01:34:32,820 --> 01:34:34,820
+ >> Maybe before I show the answer, yeah.
+
+1525
+01:34:34,820 --> 01:34:43,820
+ >> Yeah, so, because here we see that perfect score, but it's not really [INAUDIBLE]
+
+1526
+01:34:43,820 --> 01:34:47,820
+ >> I guess the point, I'm almost like, what's like at a hardware level?
+
+1527
+01:34:47,820 --> 01:34:50,820
+ Maybe this is because we didn't work with that thing.
+
+1528
+01:34:50,820 --> 01:34:52,820
+ I wonder if it's that.
+
+1529
+01:34:52,820 --> 01:35:02,820
+ >> [INAUDIBLE]
+
+1530
+01:35:02,820 --> 01:35:12,820
+ >> So the way I understood it is that GPUs are structured a particular way to do particular processing for particular bits.
+
+1531
+01:35:12,820 --> 01:35:14,820
+ And that's just locked in.
+
+1532
+01:35:14,820 --> 01:35:25,820
+ And to redo some of the mathematical architecture for how the GPUs work, to make that happen, is most difficult.
+
+1533
+01:35:25,820 --> 01:35:32,820
+ That means the engineering and the way we, the computer engineering and the way we do it needs to change for this to work.
+
+1534
+01:35:32,820 --> 01:35:35,820
+ >> [INAUDIBLE]
+
+1535
+01:35:35,820 --> 01:35:45,820
+ >> It says it's operationally output. [INAUDIBLE]
+
+1536
+01:35:45,820 --> 01:35:56,820
+ So what I heard understand this as is when we're doing inference at that large of a skill, we might see like localized efficiency, but when we're doing it at a skill, it might not work.
+
+1537
+01:35:56,820 --> 01:35:57,820
+ >> Yeah, this is the thing.
+
+1538
+01:35:57,820 --> 01:36:00,820
+ Yeah, because it shows like maybe the toy problem.
+
+1539
+01:36:00,820 --> 01:36:03,820
+ [INAUDIBLE]
+
+1540
+01:36:03,820 --> 01:36:05,820
+ What is it about the real world?
+
+1541
+01:36:05,820 --> 01:36:07,820
+ I wasn't able to get to that point.
+
+1542
+01:36:07,820 --> 01:36:10,820
+ I spent too much time in the math and I was like, oh shit, I forgot the real world understanding.
+
+1543
+01:36:10,820 --> 01:36:14,820
+ Wait, why can't we do this here?
+
+1544
+01:36:14,820 --> 01:36:19,820
+ Yeah, I think we could spend a lot more time on this, but I think this is a good time to pause.
+
+1545
+01:36:19,820 --> 01:36:20,820
+ How are we doing?
+
+1546
+01:36:20,820 --> 01:36:21,820
+ That was a lot.
+
+1547
+01:36:21,820 --> 01:36:23,820
+ Our brain's probably matched.
+
+1548
+01:36:23,820 --> 01:36:32,820
+ I think what I hope, if you don't remember any of this, I just hope you have a bit more bits in your brain about vectors.
+
+1549
+01:36:32,820 --> 01:36:42,820
+ And just how, at least now when you look at AI, you will now have a visual thing of vectors moving around to make things happen.
+
+1550
+01:36:42,820 --> 01:36:45,820
+ Even though like practically, what would you do with this information?
+
+1551
+01:36:45,820 --> 01:36:47,820
+ I don't know how much you would apply it.
+
+1552
+01:36:47,820 --> 01:36:59,820
+ [INAUDIBLE]
+
+1553
+01:36:59,820 --> 01:37:04,820
+ And so they actually did this for the quen.
+
+1554
+01:37:04,820 --> 01:37:05,820
+ They were--
+
+1555
+01:37:05,820 --> 01:37:09,820
+ [INAUDIBLE]
+
+1556
+01:37:09,820 --> 01:37:10,820
+ Oh, that's a good point.
+
+1557
+01:37:10,820 --> 01:37:13,820
+ When it's for local processing.
+
+1558
+01:37:13,820 --> 01:37:23,820
+ So maybe if I were to do this and if I had infinite time, I would load like a local source model.
+
+1559
+01:37:23,820 --> 01:37:30,820
+ So let's see if I could like implement this quantize it all out of it and then maintain information.
+
+1560
+01:37:30,820 --> 01:37:32,820
+ That's actually a really good point.
+
+1561
+01:37:32,820 --> 01:37:34,820
+ Because where the future's going is more local.
+
+1562
+01:37:34,820 --> 01:37:42,820
+ Can you bring these big models and we don't have the brand or computer.
+
+1563
+01:37:42,820 --> 01:37:44,820
+ So, oh, the other piece, they--
+
+1564
+01:37:44,820 --> 01:37:47,820
+ [INAUDIBLE]
+
+1565
+01:37:47,820 --> 01:37:51,820
+ The last question is how do we bring agents into this?
+
+1566
+01:37:51,820 --> 01:37:52,820
+ Any ideas?
+
+1567
+01:37:52,820 --> 01:37:57,820
+ And that's actually where I was like, oh, that's actually very interesting.
+
+1568
+01:37:57,820 --> 01:37:59,820
+ [INAUDIBLE]
+
+1569
+01:37:59,820 --> 01:38:05,820
+ Yeah, but how could we use the agents to be more efficient even in this whole query process?
+
+1570
+01:38:05,820 --> 01:38:06,820
+ Does anything come to mind?
+
+1571
+01:38:06,820 --> 01:38:12,820
+ Because right now if you have to search for something, it's like we're doing a search, but there isn't much that's happening.
+
+1572
+01:38:12,820 --> 01:38:14,820
+ For example, a search isn't just a search.
+
+1573
+01:38:14,820 --> 01:38:18,820
+ There's ways you can search for information so that we're giving AI more.
+
+1574
+01:38:18,820 --> 01:38:19,820
+ Does that make sense?
+
+1575
+01:38:19,820 --> 01:38:24,820
+ Yeah, but it's just agent search, right? Like you have a lot of content, like emails, calendar, and all that.
+
+1576
+01:38:24,820 --> 01:38:28,820
+ Can you efficiently get the most relevant?
+
+1577
+01:38:28,820 --> 01:38:29,820
+ Yeah, and have the most--
+
+1578
+01:38:29,820 --> 01:38:32,820
+ [INAUDIBLE]
+
+1579
+01:38:32,820 --> 01:38:34,820
+ Yeah, and have the most accurate prompt.
+
+1580
+01:38:34,820 --> 01:38:40,820
+ Because to develop the prompt, [INAUDIBLE]
+
+1581
+01:38:40,820 --> 01:38:42,820
+ Then we can actually do like iteration loops.
+
+1582
+01:38:42,820 --> 01:38:44,820
+ Maybe the first one we're not getting the right answer.
+
+1583
+01:38:44,820 --> 01:38:49,820
+ When agents can learn, how do we have the right kind of query to get the right kind of answer?
+
+1584
+01:38:49,820 --> 01:38:51,820
+ So that's like the other option.
+
+1585
+01:38:51,820 --> 01:38:54,820
+ Ooh, there's actually lots of opportunity for using agents to make this.
+
+1586
+01:38:54,820 --> 01:38:58,820
+ [INAUDIBLE]
+
+1587
+01:38:58,820 --> 01:39:02,820
+ And just give it better-- it will help optimize the work.
+
+1588
+01:39:02,820 --> 01:39:05,820
+ And I thought that was really interesting.
+
+1589
+01:39:05,820 --> 01:39:08,820
+ OK, I think that's a good place to pause.
+
+1590
+01:39:08,820 --> 01:39:12,820
+ Any last thoughts or anything else to share before we close?
+
+1591
+01:39:12,820 --> 01:39:13,820
+ This is a very difficult one to do.
+
+1592
+01:39:13,820 --> 01:39:15,820
+ I'm not going to lie.
+
+1593
+01:39:15,820 --> 01:39:17,820
+ This is-- yeah.
+
+1594
+01:39:17,820 --> 01:39:20,820
+ [INAUDIBLE]
+
+1595
+01:39:20,820 --> 01:39:22,820
+ Do you want to host it?
+
+1596
+01:39:22,820 --> 01:39:24,820
+ Anyone-- by the way, you should know, we--
+
+1597
+01:39:24,820 --> 01:39:32,820
+ [INAUDIBLE]
+
+1598
+01:39:32,820 --> 01:39:33,820
+ I think you guys should host it.
+
+1599
+01:39:33,820 --> 01:39:36,820
+ But this is just my plug for this book.
+
+1600
+01:39:36,820 --> 01:39:38,820
+ It is like I'm reading it right now.
+
+1601
+01:39:38,820 --> 01:39:43,820
+ And if anyone wants to start to approach AI for parts,
+
+1602
+01:39:43,820 --> 01:39:49,820
+ and just getting really curious about the math, I would love to start.
+
+1603
+01:39:49,820 --> 01:39:52,820
+ It goes from-- if you have no knowledge in math,
+
+1604
+01:39:52,820 --> 01:39:55,820
+ it would go from zero all the way up to [INAUDIBLE]
+
+1605
+01:39:55,820 --> 01:39:58,820
+ and kind of like [INAUDIBLE]
+
+1606
+01:39:58,820 --> 01:40:00,820
+ [INAUDIBLE]
+
+1607
+01:40:00,820 --> 01:40:01,820
+ Yeah.
+
+1608
+01:40:01,820 --> 01:40:03,820
+ [INAUDIBLE]
+
+1609
+01:40:03,820 --> 01:40:05,820
+ You know, at one point, I was asking myself,
+
+1610
+01:40:05,820 --> 01:40:08,820
+ if I spend a lot of time, do I spend more time in the theory?
+
+1611
+01:40:08,820 --> 01:40:10,820
+ Do I spend more time in application?
+
+1612
+01:40:10,820 --> 01:40:12,820
+ Do I spend more time in the--
+
+1613
+01:40:12,820 --> 01:40:13,820
+ [INAUDIBLE]
+
+1614
+01:40:13,820 --> 01:40:15,820
+ Or do I spend more time in the research aspect?
+
+1615
+01:40:15,820 --> 01:40:16,820
+ [INAUDIBLE]
+
+1616
+01:40:16,820 --> 01:40:26,820
+ [INAUDIBLE]
+
+1617
+01:40:26,820 --> 01:40:28,820
+ Because the thing is that when you do the research,
+
+1618
+01:40:28,820 --> 01:40:31,820
+ the theory doesn't understand that the [INAUDIBLE]
+
+1619
+01:40:31,820 --> 01:40:33,820
+ of the application.
+
+1620
+01:40:33,820 --> 01:40:35,820
+ But for now, the things cannot be better than that.
+
+1621
+01:40:35,820 --> 01:40:36,820
+ We have no idea.
+
+1622
+01:40:36,820 --> 01:40:38,820
+ [INAUDIBLE]
+
+1623
+01:40:38,820 --> 01:40:40,820
+ And now we think about how do we improve model performance?
+
+1624
+01:40:40,820 --> 01:40:41,820
+ I'm like, oh.
+
+1625
+01:40:41,820 --> 01:40:42,820
+ Yeah, you can do it.
+
+1626
+01:40:42,820 --> 01:40:44,820
+ I was like, oh, there's this thing called [INAUDIBLE]
+
+1627
+01:40:44,820 --> 01:40:45,820
+ I know that's bottleneck.
+
+1628
+01:40:45,820 --> 01:40:46,820
+ Yeah.
+
+1629
+01:40:46,820 --> 01:40:49,820
+ There's a couple whole new nodes that didn't know.
+
+1630
+01:40:49,820 --> 01:40:50,820
+ How am I going to apply this?
+
+1631
+01:40:50,820 --> 01:40:51,820
+ I don't know.
+
+1632
+01:40:51,820 --> 01:40:54,820
+ I might want to do my own local model
+
+1633
+01:40:54,820 --> 01:40:56,820
+ and see if I can implement this.
+
+1634
+01:40:56,820 --> 01:40:58,820
+ But that's going to where my attention would go.
+
+1635
+01:40:58,820 --> 01:40:59,820
+ Yeah.
+
+1636
+01:40:59,820 --> 01:41:00,820
+ [INAUDIBLE]
+
+1637
+01:41:00,820 --> 01:41:04,820
+ [INAUDIBLE]
+
+1638
+01:41:04,820 --> 01:41:05,820
+ Yes.
+
+1639
+01:41:05,820 --> 01:41:06,820
+ And as codecs do it.
+
+1640
+01:41:06,820 --> 01:41:07,820
+ Yeah.
+
+1641
+01:41:07,820 --> 01:41:10,820
+ The last thing I'll say is the next thing I want to do,
+
+1642
+01:41:10,820 --> 01:41:12,820
+ actually-- this is [INAUDIBLE] I'm extremely
+
+1643
+01:41:12,820 --> 01:41:16,820
+ curious about this-- is we're both biology nuts.
+
+1644
+01:41:16,820 --> 01:41:20,820
+ And the next topic I'd love to host to you at some point
+
+1645
+01:41:20,820 --> 01:41:26,820
+ is how we can use things like AI to develop mRNA vaccines.
+
+1646
+01:41:26,820 --> 01:41:28,820
+ What does that process look like?
+
+1647
+01:41:28,820 --> 01:41:29,820
+ Right?
+
+1648
+01:41:29,820 --> 01:41:36,820
+ I was just sharing before you came,
+
+1649
+01:41:36,820 --> 01:41:39,820
+ it's actually not that complicated
+
+1650
+01:41:39,820 --> 01:41:41,820
+ than most people think.
+
+1651
+01:41:41,820 --> 01:41:43,820
+ There's this platform called OpenVax.
+
+1652
+01:41:43,820 --> 01:41:47,820
+ You guys heard that story about that dog on Twitter?
+
+1653
+01:41:47,820 --> 01:41:48,820
+ Yeah.
+
+1654
+01:41:48,820 --> 01:41:50,820
+ Well, this guy was able to create
+
+1655
+01:41:50,820 --> 01:41:55,820
+ an mRNA vaccine for his dog, using chat GPT and alcohol.
+
+1656
+01:41:55,820 --> 01:41:58,820
+ And of course, in association with some professors,
+
+1657
+01:41:58,820 --> 01:42:00,820
+ he could formulate the bio.
+
+1658
+01:42:00,820 --> 01:42:03,820
+ But he did all that literally just--
+
+1659
+01:42:03,820 --> 01:42:06,820
+ [INAUDIBLE]
+
+1660
+01:42:06,820 --> 01:42:10,820
+ Yeah, but to design the mRNA vaccine, he did not do that.
+
+1661
+01:42:10,820 --> 01:42:13,820
+ He just could use codecs.
+
+1662
+01:42:13,820 --> 01:42:17,820
+ So would I ever be interested in that, like looking at biology?
+
+1663
+01:42:17,820 --> 01:42:22,820
+ Understanding proteins, understanding cancer tumors.
+
+1664
+01:42:22,820 --> 01:42:25,820
+ That actually, over this, that is my personal area of interest.
+
+1665
+01:42:25,820 --> 01:42:28,820
+ I'll just show you here.
+
+1666
+01:42:28,820 --> 01:42:30,820
+ I spent a lot of time trying to understand
+
+1667
+01:42:30,820 --> 01:42:32,820
+ how vaccines are made, and how do we do this,
+
+1668
+01:42:32,820 --> 01:42:33,820
+ how do we use it after it.
+
+1669
+01:42:33,820 --> 01:42:36,820
+ I think in the next two years, yes, this
+
+1670
+01:42:36,820 --> 01:42:40,820
+ is one area, which is AI and agents.
+
+1671
+01:42:40,820 --> 01:42:43,820
+ But the next year is the year of biology and AI.
+
+1672
+01:42:43,820 --> 01:42:49,820
+ [INAUDIBLE]
+
+1673
+01:42:49,820 --> 01:42:50,820
+ Yeah.
+
+1674
+01:42:50,820 --> 01:42:52,820
+ So dude, this works even better.
+
+1675
+01:42:52,820 --> 01:42:55,820
+ [INAUDIBLE]
+
+1676
+01:42:55,820 --> 01:42:59,820
+ [INAUDIBLE]
+
+1677
+01:42:59,820 --> 01:43:03,820
+ [INAUDIBLE]
+
+1678
+01:43:03,820 --> 01:43:06,820
+ [INAUDIBLE]
+
+1679
+01:43:06,820 --> 01:43:09,820
+ [INAUDIBLE]
+
+1680
+01:43:09,820 --> 01:43:13,820
+ [INAUDIBLE]
+
+1681
+01:43:13,820 --> 01:43:16,820
+ [INAUDIBLE]
+
+1682
+01:43:16,820 --> 01:43:17,820
+ Yeah, yeah, yeah.
+
+1683
+01:43:17,820 --> 01:43:19,820
+ [INAUDIBLE]
+
+1684
+01:43:19,820 --> 01:43:20,820
+ [INAUDIBLE]
+
+1685
+01:43:20,820 --> 01:43:24,820
+ [INAUDIBLE]
+
+1686
+01:43:24,820 --> 01:43:28,820
+ [INAUDIBLE]
+
+1687
+01:43:28,820 --> 01:43:32,820
+ [INAUDIBLE]
+
+1688
+01:43:32,820 --> 01:43:36,820
+ [INAUDIBLE]
+
+1689
+01:43:36,820 --> 01:43:40,820
+ [INAUDIBLE]
+
+1690
+01:43:40,820 --> 01:43:42,820
+ [INAUDIBLE]
+
+1691
+01:43:42,820 --> 01:43:45,820
+ So you're signaling, but what's the object?
+
+1692
+01:43:45,820 --> 01:43:47,820
+ What's the object we're putting on the [INAUDIBLE]
+
+1693
+01:43:47,820 --> 01:43:51,820
+ [INAUDIBLE]
+
+1694
+01:43:51,820 --> 01:43:55,820
+ [INAUDIBLE]
+
+1695
+01:43:55,820 --> 01:43:59,820
+ [INAUDIBLE]
+
+1696
+01:43:59,820 --> 01:44:00,820
+ I loved it.
+
+1697
+01:44:00,820 --> 01:44:01,820
+ Guys, that's the thing.
+
+1698
+01:44:01,820 --> 01:44:03,820
+ So I don't know if you guys know,
+
+1699
+01:44:03,820 --> 01:44:05,820
+ there's no hierarchy of who gets--
+
+1700
+01:44:05,820 --> 01:44:07,820
+ if you have interesting ideas, like, I
+
+1701
+01:44:07,820 --> 01:44:09,820
+ want to present this paper.
+
+1702
+01:44:09,820 --> 01:44:11,820
+ [INAUDIBLE]
+
+1703
+01:44:11,820 --> 01:44:13,820
+ It's not like I'm a deep expert, and I'm like,
+
+1704
+01:44:13,820 --> 01:44:14,820
+ I'm here to teach you.
+
+1705
+01:44:14,820 --> 01:44:18,820
+ No, it's just like, I use this as just an excuse for me
+
+1706
+01:44:18,820 --> 01:44:21,820
+ to learn, and then we get to share and learn with each other.
+
+1707
+01:44:21,820 --> 01:44:23,820
+ And if you're like, this paper's awesome,
+
+1708
+01:44:23,820 --> 01:44:25,820
+ I'd love to discuss this with everybody,
+
+1709
+01:44:25,820 --> 01:44:27,820
+ and you can use it as a forcing function to learn yourself,
+
+1710
+01:44:27,820 --> 01:44:28,820
+ please message it.
+
+1711
+01:44:28,820 --> 01:44:30,820
+ It's a very good forcing function.
+
+1712
+01:44:30,820 --> 01:44:31,820
+ Yeah, and the people-- yeah.
+
+1713
+01:44:31,820 --> 01:44:34,820
+ It would be interesting to know what are your roadblocks.
+
+1714
+01:44:34,820 --> 01:44:35,820
+ [INAUDIBLE]
+
+1715
+01:44:35,820 --> 01:44:37,820
+ Oh, I have infinite--
+
+1716
+01:44:37,820 --> 01:44:38,820
+ [INAUDIBLE]
+
+1717
+01:44:38,820 --> 01:44:39,820
+ Yeah.
+
+1718
+01:44:39,820 --> 01:44:40,820
+ Would this be an interest?
+
+1719
+01:44:40,820 --> 01:44:41,820
+ Yeah.
+
+1720
+01:44:41,820 --> 01:44:42,820
+ Oh, yeah.
+
+1721
+01:44:42,820 --> 01:44:43,820
+ OK, cool.
+
+1722
+01:44:43,820 --> 01:44:45,820
+ We'll do one maybe two or four weeks from now.
+
+1723
+01:44:45,820 --> 01:44:46,820
+ I'll host one of these.
+
+1724
+01:44:46,820 --> 01:44:48,820
+ Oh, then we can get bio-nerdy.
+
+1725
+01:44:48,820 --> 01:44:50,820
+ Oh, that's going to be a difficult one
+
+1726
+01:44:50,820 --> 01:44:51,820
+ to finish in an hour.
+
+1727
+01:44:51,820 --> 01:44:54,820
+ [INAUDIBLE]
+
+1728
+01:44:54,820 --> 01:44:56,820
+ Anyone here-- you do chemical engineering.
+
+1729
+01:44:56,820 --> 01:44:58,820
+ I know you guys don't answer the question.
+
+1730
+01:44:58,820 --> 01:45:00,820
+ But for anyone else in the bio, just
+
+1731
+01:45:00,820 --> 01:45:02,820
+ have a curiosity about bio.
+
+1732
+01:45:02,820 --> 01:45:04,820
+ [INAUDIBLE]
+
+1733
+01:45:04,820 --> 01:45:05,820
+ Oh, shoot.
+
+1734
+01:45:05,820 --> 01:45:06,820
+ You work at Genomis lab?
+
+1735
+01:45:06,820 --> 01:45:07,820
+ [LAUGHTER]
+
+1736
+01:45:07,820 --> 01:45:08,820
+ I work with Genomis lab.
+
+1737
+01:45:08,820 --> 01:45:09,820
+ You work with Genomis labs.
+
+1738
+01:45:09,820 --> 01:45:10,820
+ [INAUDIBLE]
+
+1739
+01:45:10,820 --> 01:45:11,820
+ OK.
+
+1740
+01:45:11,820 --> 01:45:17,820
+ [INAUDIBLE]
+
+1741
+01:45:17,820 --> 01:45:20,820
+ OK, so you both work for solutions for Genomis labs?
+
+1742
+01:45:20,820 --> 01:45:23,820
+ OK, anyone else do bio stuff or interested in--
+
+1743
+01:45:23,820 --> 01:45:24,820
+ OK.
+
+1744
+01:45:24,820 --> 01:45:28,820
+ This will be me having you join my bio cult.
+
+1745
+01:45:28,820 --> 01:45:30,820
+ I think we need more people into biology.
+
+1746
+01:45:30,820 --> 01:45:32,820
+ I think when we were young, we learned
+
+1747
+01:45:32,820 --> 01:45:34,820
+ biology was mitochondria is the powerhouse of the cell,
+
+1748
+01:45:34,820 --> 01:45:36,820
+ and then that's basically the extent of it.
+
+1749
+01:45:36,820 --> 01:45:39,820
+ And I think if we spend more time understanding this--
+
+1750
+01:45:39,820 --> 01:45:41,820
+ We're going to seek immortality.
+
+1751
+01:45:41,820 --> 01:45:42,820
+ What?
+
+1752
+01:45:42,820 --> 01:45:43,820
+ We're going to seek immortality.
+
+1753
+01:45:43,820 --> 01:45:45,820
+ Yeah, we can be like Brian Johnson and live forever,
+
+1754
+01:45:45,820 --> 01:45:46,820
+ right?
+
+1755
+01:45:46,820 --> 01:45:47,820
+ Find a way to sequence--
+
+1756
+01:45:47,820 --> 01:45:48,820
+ End of time.
+
+1757
+01:45:48,820 --> 01:45:49,820
+ End of time.
+
+1758
+01:45:49,820 --> 01:45:51,820
+ And a drug that makes us immortal.
+
+1759
+01:45:51,820 --> 01:45:53,820
+ All right, thanks, everybody.
+
+1760
+01:45:53,820 --> 01:45:59,820
+ [APPLAUSE]
+
+1761
+01:45:59,820 --> 01:46:01,820
+ That was so interesting.
+
+1762
+01:46:08,820 --> 01:46:09,820
+ Are you working?
+
+1763
+01:46:09,820 --> 01:46:10,820
+ What?
+
+1764
+01:46:10,820 --> 01:46:11,820
+ Are you working this whole time?
+
+1765
+01:46:11,820 --> 01:46:15,820
+ No, I just locked it the whole meeting,
+
+1766
+01:46:15,820 --> 01:46:20,820
+ and then using the LLM to translate into the meeting row.
+
+1767
+01:46:20,820 --> 01:46:21,820
+ How did you go--
+
+1768
+01:46:21,820 --> 01:46:22,820
+ What the--
+
+1769
+01:46:22,820 --> 01:46:25,820
+ [LAUGHTER]
+
+1770
+01:46:25,820 --> 01:46:27,820
+ So that's the meeting row.
+
+1771
+01:46:27,820 --> 01:46:28,820
+ Yeah.
+
+1772
+01:46:28,820 --> 01:46:30,820
+ What's the transcriber that you used?
+
+1773
+01:46:30,820 --> 01:46:31,820
+ Sorry?
+
+1774
+01:46:31,820 --> 01:46:32,820
+ Which transcriber did you use?
+
+1775
+01:46:32,820 --> 01:46:33,820
+ Do you have like a--
+
+1776
+01:46:33,820 --> 01:46:34,820
+ I built my own.
+
+1777
+01:46:34,820 --> 01:46:35,820
+ Oh, sure.
+
+1778
+01:46:35,820 --> 01:46:36,820
+ What the hell?
+
+1779
+01:46:36,820 --> 01:46:38,820
+ This is the--
+
+1780
+01:46:38,820 --> 01:46:43,820
+ You're insane.
+
+1781
+01:46:43,820 --> 01:46:44,820
+ It's still [INAUDIBLE]
+
+1782
+01:46:44,820 --> 01:46:45,820
+ It's still [INAUDIBLE]
+
+1783
+01:46:45,820 --> 01:46:52,820
+ So we just recorded the load, and then it started.
+
+1784
+01:46:52,820 --> 01:46:53,820
+ And then we speak.
+
+1785
+01:46:53,820 --> 01:46:57,820
+ And then it transcribed into the line transcriber.
+
+1786
+01:46:57,820 --> 01:47:00,820
+ And for this transcriber, there's a topic.
+
+1787
+01:47:00,820 --> 01:47:05,820
+ So when the guy keeps saying, the presenter keeps saying,
+
+1788
+01:47:05,820 --> 01:47:07,820
+ the guy keeps saying, they keep transcribing.
+
+1789
+01:47:07,820 --> 01:47:10,820
+ And then I can watch LLM, he's talking about,
+
+1790
+01:47:10,820 --> 01:47:14,820
+ and then what's the topic about that.
+
+1791
+01:47:14,820 --> 01:47:15,820
+ But it's still a prototype.
+
+1792
+01:47:15,820 --> 01:47:16,820
+ He's still working on it.
+
+1793
+01:47:16,820 --> 01:47:17,820
+ Dude, it's fucking insane.
+
+1794
+01:47:17,820 --> 01:47:18,820
+ What the--
+

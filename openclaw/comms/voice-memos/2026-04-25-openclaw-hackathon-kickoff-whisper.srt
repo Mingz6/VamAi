@@ -1,0 +1,5096 @@
+1
+00:00:00,320 --> 00:00:08,630
+ In fact, you can see this as a compression of the Build Your AI in six weeks, in one week.
+
+2
+00:00:08,630 --> 00:00:14,220
+ It's compressing things these days, due to time constraints.
+
+3
+00:00:14,220 --> 00:00:19,810
+ Okay, so yeah, it's one week, it starts today, and then we will have demo day.
+
+4
+00:00:19,810 --> 00:00:24,970
+ And the next week, on Saturday, when people can present their apps here, this same group.
+
+5
+00:00:24,970 --> 00:00:28,980
+ And it's about creating your own public law.
+
+6
+00:00:28,980 --> 00:00:35,070
+ So, people who are facilitating, there's me, Misam Raji, and there's Paul, right here.
+
+7
+00:00:35,070 --> 00:00:38,330
+ There you go.
+
+8
+00:00:38,330 --> 00:00:41,710
+ And thanks to our sponsors.
+
+9
+00:00:41,710 --> 00:00:46,930
+ Well, one sponsor is the North BC University, which gives us this stage for free, which is really nice.
+
+10
+00:00:46,930 --> 00:00:53,790
+ Although, after a month, they will ask us to buy insurance, in case someone fights, breaks.
+
+11
+00:00:53,790 --> 00:00:57,900
+ And we also have two sponsors.
+
+12
+00:00:57,900 --> 00:01:01,930
+ There's Illuminate Universe, who's going to be sponsoring some prizes.
+
+13
+00:01:01,930 --> 00:01:07,550
+ And there's also Yaltam Dental Boutique, in Clare, that works.
+
+14
+00:01:07,550 --> 00:01:10,990
+ This is a very nice dental boutique, it's like a dental spa.
+
+15
+00:01:10,990 --> 00:01:11,960
+ Very cool.
+
+16
+00:01:11,960 --> 00:01:13,440
+ And she's sponsoring the bubblies, which is really nice.
+
+17
+00:01:13,440 --> 00:01:14,440
+ And she's also sponsoring some gift cards.
+
+18
+00:01:14,440 --> 00:01:15,440
+ There's some gift cards right there, for anyone who wants to save some costs, for their teeth
+
+19
+00:01:15,440 --> 00:01:17,010
+ cleaning, or teeth enhancements.
+
+20
+00:01:17,010 --> 00:01:17,110
+ And also, there will be prices, also from Yaltam Dental Boutique, like $300 price.
+
+21
+00:01:17,010 --> 00:01:18,010
+ There will be a lot of prices for the winners.
+
+22
+00:01:18,010 --> 00:01:19,010
+ And if you haven't done so already, please join the Discord, because that's where all the communication
+
+23
+00:01:19,010 --> 00:01:20,650
+ is happening.
+
+24
+00:01:20,650 --> 00:01:21,650
+ And throughout the week, it's mostly going to be online.
+
+25
+00:01:21,650 --> 00:01:21,750
+ So, most of the scores will be online, and we'll be sharing your work.
+
+26
+00:01:21,650 --> 00:01:22,870
+ Okay.
+
+27
+00:01:22,870 --> 00:01:23,870
+ The first entrance to Robots.
+
+28
+00:01:23,870 --> 00:01:24,970
+ Did anyone know that Robots?
+
+29
+00:01:24,970 --> 00:01:25,070
+ The word Robots started from 1920.
+
+30
+00:01:24,970 --> 00:01:26,390
+ So, the first entrance to Robots.
+
+31
+00:01:26,390 --> 00:01:27,390
+ Did anyone know that Robots, the word Robots started from 1920.
+
+32
+00:01:27,390 --> 00:01:30,350
+ So, the first entrance to Robots.
+
+33
+00:01:30,350 --> 00:01:32,350
+ So, the word Robots, it comes from the Czech word Robota.
+
+34
+00:01:32,350 --> 00:01:33,350
+ So, the first entrance to Robots.
+
+35
+00:01:33,350 --> 00:01:34,270
+ Did anyone know that Robots, the word Robots started from 1920, right?
+
+36
+00:01:34,270 --> 00:01:35,440
+ Geeks here.
+
+37
+00:01:35,440 --> 00:01:36,350
+ So, the word Robots comes from the Czech word, Robota.
+
+38
+00:01:36,350 --> 00:01:39,200
+ So, the first entrance to Robots.
+
+39
+00:01:39,200 --> 00:01:40,200
+ And the first entrance to Robots.
+
+40
+00:01:40,200 --> 00:01:41,200
+ So, the first entrance to Robots.
+
+41
+00:01:41,200 --> 00:01:42,200
+ So, the first entrance to Robots, the first entrance to Robots.
+
+42
+00:01:42,200 --> 00:01:43,200
+ So, the first entrance to Robots, the first entrance to Robots.
+
+43
+00:01:43,200 --> 00:01:44,650
+ So, the first entrance to Robots, the first entrance to Robots.
+
+44
+00:01:44,650 --> 00:01:45,800
+ So, the first entrance to Robots.
+
+45
+00:01:45,800 --> 00:01:46,800
+ So, the first entrance to Robots.
+
+46
+00:01:46,800 --> 00:01:47,960
+ So, the first entrance to Robots.
+
+47
+00:01:47,960 --> 00:01:50,250
+ So, the first entrance to Robots, the first entrance to Robots.
+
+48
+00:01:50,250 --> 00:01:54,470
+ So, the first entrance to Robots.
+
+49
+00:01:54,470 --> 00:01:58,770
+ So, the first entrance to Robots.
+
+50
+00:01:58,770 --> 00:02:04,010
+ Did anyone know that Robots, the word Robots started from 1920, right?
+
+51
+00:02:04,010 --> 00:02:06,490
+ Geeks here.
+
+52
+00:02:06,490 --> 00:02:13,910
+ So, the word Robots, it comes from the Czech word Robota, which means forced labor and servitude.
+
+53
+00:02:13,910 --> 00:02:17,160
+ It started as a playwright, like a theater player.
+
+54
+00:02:17,160 --> 00:02:22,230
+ And, if you don't know where Czech Republic is, it's next to Germany and Austria.
+
+55
+00:02:22,230 --> 00:02:23,170
+ And Poland.
+
+56
+00:02:23,170 --> 00:02:27,660
+ And Poland as well, you can see it.
+
+57
+00:02:27,660 --> 00:02:37,760
+ And the idea is to showcase how happens something like Robots can do human labor at scale very efficiently.
+
+58
+00:02:37,760 --> 00:02:42,640
+ It spread really quickly through Europe when that playwright came out.
+
+59
+00:02:42,640 --> 00:02:47,670
+ It's funny because the critics of the theater, they were pretty harsh in the theater play.
+
+60
+00:02:47,670 --> 00:02:48,670
+ But people really loved this.
+
+61
+00:02:48,670 --> 00:02:51,920
+ Loved it in the sense they were very interested about the concept.
+
+62
+00:02:51,920 --> 00:02:54,200
+ And a lot of it was driven by fear.
+
+63
+00:02:54,200 --> 00:02:57,550
+ Because it shows that humans can be replaced by machines.
+
+64
+00:02:57,550 --> 00:03:03,430
+ So, all this fear about AI replacing us started from 1920.
+
+65
+00:03:03,430 --> 00:03:04,350
+ And the fear would never go away.
+
+66
+00:03:04,350 --> 00:03:11,760
+ Okay, after that, the actual real robot that started, an autonomous robot, was 1948.
+
+67
+00:03:11,760 --> 00:03:14,240
+ This LC, the Turtoys.
+
+68
+00:03:14,240 --> 00:03:16,300
+ And it had a very simple task.
+
+69
+00:03:16,300 --> 00:03:22,680
+ All it can move around and all it needs, all it does is it can see light and goes towards it.
+
+70
+00:03:22,680 --> 00:03:29,600
+ So, if you're stuck in a cave and you have this Turtoys, it can guide you maybe through the light at the end of the tunnel.
+
+71
+00:03:29,600 --> 00:03:35,740
+ And it had some nice functionality and it wasn't very sophisticated because it was the first one.
+
+72
+00:03:35,740 --> 00:03:38,660
+ And it can avoid obstacles.
+
+73
+00:03:38,660 --> 00:03:40,660
+ And the good thing is like Roomba.
+
+74
+00:03:40,660 --> 00:03:42,720
+ You know, the vacuum in your home.
+
+75
+00:03:42,720 --> 00:03:47,510
+ You can go back and recharge whenever it needs batteries.
+
+76
+00:03:47,510 --> 00:03:52,710
+ Okay, so personal assistants are very, very important.
+
+77
+00:03:52,710 --> 00:03:56,410
+ I'm not sure how many people here watched Star Wars.
+
+78
+00:03:56,410 --> 00:03:59,660
+ But we saw how useful they were in Star Wars.
+
+79
+00:03:59,660 --> 00:04:04,610
+ There's these two very popular bots or agents.
+
+80
+00:04:04,610 --> 00:04:10,460
+ C-3PO and R2-D2 from 1977 Star Wars movie.
+
+81
+00:04:10,460 --> 00:04:12,380
+ And they did two things.
+
+82
+00:04:12,380 --> 00:04:14,340
+ So, C-3PO mostly talks.
+
+83
+00:04:14,340 --> 00:04:16,340
+ So, it was good with language, communication.
+
+84
+00:04:16,340 --> 00:04:18,300
+ It was like the interface to humans.
+
+85
+00:04:18,300 --> 00:04:21,770
+ And R2-D2, well, they didn't do much talking.
+
+86
+00:04:21,770 --> 00:04:22,730
+ It was just like people.
+
+87
+00:04:22,730 --> 00:04:24,850
+ That's all it does, basically.
+
+88
+00:04:24,850 --> 00:04:26,300
+ But it does incredible things.
+
+89
+00:04:26,300 --> 00:04:30,550
+ It can hack, it can repair, it can execute all kinds of tasks and so on.
+
+90
+00:04:30,550 --> 00:04:32,480
+ Very cool.
+
+91
+00:04:32,480 --> 00:04:36,810
+ So, when they did Star Wars, well, they did a lot of things.
+
+92
+00:04:36,810 --> 00:04:40,860
+ Like, they hacked doors, they fixed whole ships.
+
+93
+00:04:40,860 --> 00:04:43,860
+ So, if you can imagine fixing ships, it's like fixing your food.
+
+94
+00:04:43,860 --> 00:04:46,660
+ And they did a lot of support, you guys shared with allies.
+
+95
+00:04:46,660 --> 00:04:47,660
+ So, they were very, very useful.
+
+96
+00:04:47,660 --> 00:04:49,660
+ Of course, but there's human and Luke.
+
+97
+00:04:49,660 --> 00:04:51,660
+ So, they didn't replace, for example, Luke.
+
+98
+00:04:51,660 --> 00:04:53,710
+ Right?
+
+99
+00:04:53,710 --> 00:04:55,710
+ They didn't replace the humans in Star Wars, the Jedis.
+
+100
+00:04:55,710 --> 00:04:58,030
+ They're still human and Luke.
+
+101
+00:04:58,030 --> 00:05:02,310
+ So, even if there's powerful agents, AI and bots like these,
+
+102
+00:05:02,310 --> 00:05:03,780
+ they still need humans.
+
+103
+00:05:03,780 --> 00:05:07,460
+ Okay.
+
+104
+00:05:07,460 --> 00:05:12,410
+ So, right now, we are at the age of personal assistants.
+
+105
+00:05:12,410 --> 00:05:14,540
+ An agent that can do personal assistants.
+
+106
+00:05:14,540 --> 00:05:17,700
+ It started really, really big with Open Cloud.
+
+107
+00:05:17,700 --> 00:05:22,650
+ Because it was a very nice, what we call orchestration layer,
+
+108
+00:05:22,650 --> 00:05:25,810
+ of all the capabilities with AI models, LMs,
+
+109
+00:05:25,810 --> 00:05:26,810
+ like large language models.
+
+110
+00:05:26,810 --> 00:05:29,830
+ Put them all together, so that it can do tasks for you.
+
+111
+00:05:29,830 --> 00:05:33,790
+ So, now, we are at the age of building your own personal assistants.
+
+112
+00:05:33,790 --> 00:05:38,870
+ And, kind of, the reason why, right now, it's becoming more and more popular,
+
+113
+00:05:38,870 --> 00:05:41,870
+ is because LMs, or large language models, are strong enough.
+
+114
+00:05:41,870 --> 00:05:45,720
+ The foundation of these agents is strong enough to do tasks for you.
+
+115
+00:05:45,720 --> 00:05:51,960
+ So, it all started from, like, ChatGPT, November 30, 2022.
+
+116
+00:05:51,960 --> 00:05:53,960
+ And, at the beginning, it wasn't the best.
+
+117
+00:05:53,960 --> 00:05:55,960
+ But, over time, people saw the potential.
+
+118
+00:05:55,960 --> 00:05:59,080
+ They trained many different models, and they made it very strong.
+
+119
+00:05:59,080 --> 00:06:01,590
+ So, you can ask many different questions.
+
+120
+00:06:01,590 --> 00:06:03,590
+ I can explain the AI, write emails, give out code,
+
+121
+00:06:03,590 --> 00:06:13,020
+ and I can give you a lot of the space of all these personal assistants.
+
+122
+00:06:13,020 --> 00:06:18,360
+ You can imagine ChatGPT of these two agents from the Star Wars.
+
+123
+00:06:18,360 --> 00:06:21,410
+ The foundation, their brains.
+
+124
+00:06:21,410 --> 00:06:24,740
+ Okay.
+
+125
+00:06:24,740 --> 00:06:25,990
+ So, AI evolution.
+
+126
+00:06:25,990 --> 00:06:28,980
+ It started, like, I would say, from 2022.
+
+127
+00:06:28,980 --> 00:06:31,980
+ It's, like, a strong question-answering boss.
+
+128
+00:06:31,980 --> 00:06:36,460
+ So, in 2022, we had mostly just answering questions.
+
+129
+00:06:36,460 --> 00:06:43,570
+ And then, over time, towards 2025, they're able to suggest different follow-ups for solutions.
+
+130
+00:06:43,570 --> 00:06:45,860
+ Now, they're even able to plan.
+
+131
+00:06:45,860 --> 00:06:49,890
+ So, if you give them a very big, ambitious task, they can break it down, and plan it,
+
+132
+00:06:49,890 --> 00:06:50,890
+ and achieve the task.
+
+133
+00:06:50,890 --> 00:06:53,590
+ And then, they can execute each step.
+
+134
+00:06:53,590 --> 00:06:55,670
+ Like, if you use the platform, you'll see it.
+
+135
+00:06:55,670 --> 00:06:56,750
+ It breaks down your tasks.
+
+136
+00:06:56,750 --> 00:06:58,040
+ And then, it does each step.
+
+137
+00:06:58,040 --> 00:07:02,330
+ It executes each step, one by one, until it achieves the goal.
+
+138
+00:07:02,330 --> 00:07:05,210
+ And then, you can also monitor the output.
+
+139
+00:07:05,210 --> 00:07:07,210
+ So, we went from, like, ChatBot to agents.
+
+140
+00:07:07,210 --> 00:07:10,270
+ And basically, the main difference is that agents can act.
+
+141
+00:07:10,270 --> 00:07:11,360
+ They can execute things.
+
+142
+00:07:11,360 --> 00:07:19,170
+ So, the goal of this hackathon is to create your own personal assistant.
+
+143
+00:07:19,170 --> 00:07:23,350
+ So, you have, well, ambitious tasks or high-level tasks.
+
+144
+00:07:23,350 --> 00:07:25,280
+ I find my meeting with Bob.
+
+145
+00:07:25,280 --> 00:07:29,990
+ Hatch my items, make slides, and to Bob, you just ask for so many different tasks.
+
+146
+00:07:29,990 --> 00:07:36,850
+ Then, the AI assistant can go to the meeting nodes and do web search for you.
+
+147
+00:07:36,850 --> 00:07:41,090
+ And then, he can create slides for you, and then sends it to Bob, for example.
+
+148
+00:07:41,090 --> 00:07:43,360
+ Very cool.
+
+149
+00:07:43,360 --> 00:07:46,360
+ This is the idea of this hackathon, is to build something like this.
+
+150
+00:07:46,360 --> 00:07:54,430
+ It's not necessarily about after a meeting summarization, but it could be anything.
+
+151
+00:07:54,430 --> 00:07:59,150
+ Ideally, it's something you care about, where you want your own message.
+
+152
+00:07:59,150 --> 00:08:01,970
+ Okay.
+
+153
+00:08:01,970 --> 00:08:05,970
+ So, we can see OpenClaw as a personal assistant agent harness.
+
+154
+00:08:05,970 --> 00:08:07,970
+ We call this a harness.
+
+155
+00:08:07,970 --> 00:08:10,000
+ Harness is like everything around the LLM.
+
+156
+00:08:10,000 --> 00:08:16,520
+ By connecting with the services, the tools, the data, like Gmail, Calendar, Notion, sending
+
+157
+00:08:16,520 --> 00:08:20,130
+ to Telegram, emails, all of that around it.
+
+158
+00:08:20,130 --> 00:08:22,460
+ That is called a harness.
+
+159
+00:08:22,460 --> 00:08:29,210
+ And it kind of made it alive by Peter Steinberger, who, the way it started is like he wanted to
+
+160
+00:08:29,210 --> 00:08:32,520
+ create his own personal assistant for fun.
+
+161
+00:08:32,520 --> 00:08:35,890
+ He didn't think it would blow up, and then it just exploded.
+
+162
+00:08:35,890 --> 00:08:39,430
+ So, let's look at this here, OpenClaw.
+
+163
+00:08:39,430 --> 00:08:43,000
+ So, this is like a high-level visualization OpenClaw.
+
+164
+00:08:43,000 --> 00:08:46,030
+ So, you have data connectors, like Calendar, Gmail, Notion.
+
+165
+00:08:46,030 --> 00:08:48,310
+ The center of this is like an AI agent.
+
+166
+00:08:48,310 --> 00:08:50,310
+ Could be ChatGPT, Gemini, or PodCode.
+
+167
+00:08:50,310 --> 00:08:54,370
+ And then, it has a bunch of tools.
+
+168
+00:08:54,370 --> 00:08:55,370
+ Data connectors, tools.
+
+169
+00:08:55,370 --> 00:09:02,090
+ Tools could be anything, like send Telegram, create invoice, send email, summarize, book meetings,
+
+170
+00:09:02,090 --> 00:09:05,340
+ any piece of any tools that you connect to.
+
+171
+00:09:05,340 --> 00:09:09,170
+ However, there's also extra things that you need to add, which is memory.
+
+172
+00:09:09,170 --> 00:09:15,570
+ So, if you install OpenClaw, it writes a markdown file called notes.
+
+173
+00:09:15,570 --> 00:09:22,260
+ So, every time you write it, it writes notes to keep track of your interests, or safeguards,
+
+174
+00:09:22,260 --> 00:09:27,910
+ or anything that you've been doing, so that when you ask it for a new task, it can serve
+
+175
+00:09:27,910 --> 00:09:28,940
+ you better.
+
+176
+00:09:28,940 --> 00:09:31,890
+ Because now it knows more about you as you use it.
+
+177
+00:09:31,890 --> 00:09:34,270
+ And there's also this thing called soul.
+
+178
+00:09:34,270 --> 00:09:38,440
+ So, soul is like an extension of a persona.
+
+179
+00:09:38,440 --> 00:09:45,020
+ It's like a character, values, goals, the north stars, and it's all this.
+
+180
+00:09:45,020 --> 00:09:46,530
+ Agent soul.
+
+181
+00:09:46,530 --> 00:09:49,240
+ That's what they call it, soul.mp.
+
+182
+00:09:49,240 --> 00:09:57,850
+ So, if you go to OpenClaw.ai, or their website, if you install OpenClaw on your computer,
+
+183
+00:09:57,850 --> 00:10:01,480
+ there's like a bunch of steps that it guides you through.
+
+184
+00:10:01,480 --> 00:10:07,840
+ The first step, when you run it, when you install it, just like when you install a game, or you install a software,
+
+185
+00:10:07,840 --> 00:10:11,960
+ the first step is to decide which model you're going to use.
+
+186
+00:10:11,960 --> 00:10:17,720
+ AI, Quen, Synthetic, Venice, AI, Google, Copilot, OpenRouter, and so on.
+
+187
+00:10:17,720 --> 00:10:18,770
+ So many.
+
+188
+00:10:18,770 --> 00:10:24,900
+ For this hackathon, the way, we're going to encourage, and you can use anything you want, but we're going to show the plot code.
+
+189
+00:10:24,900 --> 00:10:30,230
+ I personally found plot code very powerful, but you can use anything you want.
+
+190
+00:10:30,230 --> 00:10:34,920
+ And then it will ask you to select some channels.
+
+191
+00:10:34,920 --> 00:10:36,920
+ It's like, what do you want to connect it with?
+
+192
+00:10:36,920 --> 00:10:40,240
+ So you can connect with Google, Discord, Telegram, Slack, Signal, all of these things.
+
+193
+00:10:40,240 --> 00:10:45,770
+ Of course, different channels have different challenges in connecting them.
+
+194
+00:10:45,770 --> 00:10:47,990
+ For example, Telegram is very easy to connect with.
+
+195
+00:10:47,990 --> 00:10:51,360
+ I connect with it in like 10 minutes, and it's what's able to send me messages.
+
+196
+00:10:51,360 --> 00:10:54,520
+ WhatsApp is a bit more challenging.
+
+197
+00:10:54,520 --> 00:11:00,510
+ It might log you off, and it might throttle your messages and so on.
+
+198
+00:11:00,510 --> 00:11:06,090
+ You need to buy a business API if you want to connect it properly, but that's very expensive.
+
+199
+00:11:06,090 --> 00:11:07,340
+ But Telegram is free.
+
+200
+00:11:07,340 --> 00:11:09,040
+ This is part as well.
+
+201
+00:11:09,040 --> 00:11:12,320
+ You will also show how to connect with Google and so on.
+
+202
+00:11:12,320 --> 00:11:18,280
+ So these are what we call the data connectors, connecting with different data sources.
+
+203
+00:11:18,280 --> 00:11:19,390
+ And then there's tools.
+
+204
+00:11:19,390 --> 00:11:23,090
+ There's a lot of tools, like Apple Notes.
+
+205
+00:11:23,090 --> 00:11:28,660
+ If you wanted to allow it to use your password to log into different systems, you can have
+
+206
+00:11:28,660 --> 00:11:29,660
+ it access 1Password.
+
+207
+00:11:29,660 --> 00:11:32,100
+ So 1Password, I use it personally.
+
+208
+00:11:32,100 --> 00:11:34,100
+ I'm not sure how many people use 1Password.
+
+209
+00:11:34,100 --> 00:11:36,480
+ Yeah, it's one of my favorites.
+
+210
+00:11:36,480 --> 00:11:40,970
+ I have like more than 300 websites that I sign up here.
+
+211
+00:11:40,970 --> 00:11:44,030
+ You can't memorize all those random passwords.
+
+212
+00:11:44,030 --> 00:11:49,210
+ 1Password is one of the best ways to access different websites without having to remember all of them.
+
+213
+00:11:49,210 --> 00:11:52,590
+ But there's a lot of different tools.
+
+214
+00:11:52,590 --> 00:11:55,750
+ It could be Obsidian, which just keeps track of different documents.
+
+215
+00:11:55,750 --> 00:12:00,790
+ It could be summarization and stuff.
+
+216
+00:12:00,790 --> 00:12:04,230
+ So this is like OpenClaw if you install it in your machine.
+
+217
+00:12:04,230 --> 00:12:06,550
+ But we're not going to use OpenClaw.
+
+218
+00:12:06,550 --> 00:12:09,190
+ Even though this is OpenClaw, I could use something else.
+
+219
+00:12:09,190 --> 00:12:12,690
+ That's right.
+
+220
+00:12:12,690 --> 00:12:15,970
+ OpenClaw is the inspiration.
+
+221
+00:12:15,970 --> 00:12:21,440
+ In fact, if you watch YouTube videos on OpenClaw, a lot of them will recommend building your own OpenClaw.
+
+222
+00:12:21,440 --> 00:12:25,920
+ Because you'll have more control over security.
+
+223
+00:12:25,920 --> 00:12:27,920
+ You'll have a lot more flexibility.
+
+224
+00:12:27,920 --> 00:12:32,070
+ You can create your own service providers, ground data connectors and tools.
+
+225
+00:12:32,070 --> 00:12:35,280
+ And potentially a lot more useful.
+
+226
+00:12:35,280 --> 00:12:36,280
+ Because OpenClaw has its own harness.
+
+227
+00:12:36,280 --> 00:12:38,280
+ It might not be useful for your use case.
+
+228
+00:12:38,280 --> 00:12:45,430
+ But if you're using something like ClockCode to build it, chances are you'll get a much more useful patient harness.
+
+229
+00:12:45,430 --> 00:12:47,730
+ It's actually very easy.
+
+230
+00:12:47,730 --> 00:12:58,520
+ For the people who did workshops on ClockCode, you can just go OpenClaw and you ask it to create a connector for Notion or Telegram, VDC, etc.
+
+231
+00:12:58,520 --> 00:12:59,490
+ And then it will guide you.
+
+232
+00:12:59,490 --> 00:13:02,090
+ It's like, okay, I need your MPI key.
+
+233
+00:13:02,090 --> 00:13:03,090
+ Go to the spot site.
+
+234
+00:13:03,090 --> 00:13:04,090
+ Link it.
+
+235
+00:13:04,090 --> 00:13:05,380
+ It creates a file.
+
+236
+00:13:05,380 --> 00:13:07,380
+ And then it presents it to you.
+
+237
+00:13:07,380 --> 00:13:10,340
+ So it's very, very powerful.
+
+238
+00:13:10,340 --> 00:13:15,000
+ So these are some of the tools that I created myself.
+
+239
+00:13:15,000 --> 00:13:17,000
+ Like accessing Excel sheets, Gmail, and those tools.
+
+240
+00:13:17,000 --> 00:13:19,660
+ Does that make sense?
+
+241
+00:13:19,660 --> 00:13:20,610
+ Any questions?
+
+242
+00:13:20,610 --> 00:13:25,090
+ We're not going to use OpenClaw.
+
+243
+00:13:25,090 --> 00:13:28,110
+ Clickbait.
+
+244
+00:13:28,110 --> 00:13:29,110
+ Clickbait.
+
+245
+00:13:29,110 --> 00:13:30,110
+ Okay.
+
+246
+00:13:30,110 --> 00:13:31,070
+ So this is how it looks.
+
+247
+00:13:31,070 --> 00:13:32,200
+ But let me show you an example.
+
+248
+00:13:32,200 --> 00:13:36,280
+ So this is the website I built myself.
+
+249
+00:13:36,280 --> 00:13:56,390
+ So one of the best ways to use ClockCode is to create and to install VS Code as a nice interface.
+
+250
+00:13:56,390 --> 00:13:58,700
+ And then install an extension called CloudCode.
+
+251
+00:13:58,700 --> 00:14:02,430
+ So the chat looks like this.
+
+252
+00:14:02,430 --> 00:14:05,810
+ When you open VS Code, you'll also be presented with a co-pilot.
+
+253
+00:14:05,810 --> 00:14:07,070
+ Ignore a co-pilot.
+
+254
+00:14:07,070 --> 00:14:13,470
+ Sometimes I get tricked and they accidentally tell the co-pilot to do things for me.
+
+255
+00:14:13,470 --> 00:14:14,470
+ But it doesn't do it as well.
+
+256
+00:14:14,470 --> 00:14:18,710
+ So CloudCode is the one that I recommend using.
+
+257
+00:14:18,710 --> 00:14:21,190
+ So all the files, as you can see there.
+
+258
+00:14:21,190 --> 00:14:22,820
+ So yeah, this is CloudCode.
+
+259
+00:14:22,820 --> 00:14:27,230
+ This is the agent that you chat with to build your app, your Visual Assistant app.
+
+260
+00:14:27,230 --> 00:14:29,990
+ This is the code it creates.
+
+261
+00:14:29,990 --> 00:14:32,990
+ If you're not really a coder, you don't have to look at this as much.
+
+262
+00:14:32,990 --> 00:14:35,110
+ But it's just files that it organizes.
+
+263
+00:14:35,110 --> 00:14:38,270
+ It's nice to see what files it has been created.
+
+264
+00:14:38,270 --> 00:14:40,870
+ And each file could be accessing different services.
+
+265
+00:14:40,870 --> 00:14:48,620
+ And then this is the website that it created, which I will demonstrate in a second.
+
+266
+00:14:48,620 --> 00:14:50,190
+ Okay.
+
+267
+00:14:50,190 --> 00:14:54,500
+ So let me show you that website that I created yesterday.
+
+268
+00:14:54,500 --> 00:14:59,440
+ First, I'll show you the landing page.
+
+269
+00:14:59,440 --> 00:15:01,440
+ So automate anything with AI components.
+
+270
+00:15:01,440 --> 00:15:05,140
+ So instead of tools, I call them components.
+
+271
+00:15:05,140 --> 00:15:07,810
+ Because there are tools and data connectors.
+
+272
+00:15:07,810 --> 00:15:08,810
+ Components for me is anything.
+
+273
+00:15:08,810 --> 00:15:10,810
+ Like tools, data connectors, services.
+
+274
+00:15:10,810 --> 00:15:13,190
+ So these are all different things that I have created myself.
+
+275
+00:15:13,190 --> 00:15:18,670
+ So for example, access Excel sheets.
+
+276
+00:15:18,670 --> 00:15:20,670
+ So I told them to connect to my Google account.
+
+277
+00:15:20,670 --> 00:15:22,370
+ I run this.
+
+278
+00:15:22,370 --> 00:15:28,620
+ It's actually like sifting and these are actions.
+
+279
+00:15:28,620 --> 00:15:31,670
+ Access Luma.
+
+280
+00:15:31,670 --> 00:15:34,690
+ So this gives me all the Luma events.
+
+281
+00:15:34,690 --> 00:15:35,690
+ You see here.
+
+282
+00:15:35,690 --> 00:15:37,940
+ So I don't have to go to the Luma website.
+
+283
+00:15:37,940 --> 00:15:39,940
+ I can just retrieve them by the API.
+
+284
+00:15:39,940 --> 00:15:42,210
+ Access Notion.
+
+285
+00:15:42,210 --> 00:15:46,800
+ So I can search for different Notion documents that I have.
+
+286
+00:15:46,800 --> 00:15:47,820
+ Or I can create a new one.
+
+287
+00:15:47,820 --> 00:15:51,760
+ So let's say build the cloud code.
+
+288
+00:15:51,760 --> 00:15:59,620
+ It creates it and now I can open in Notion.
+
+289
+00:15:59,620 --> 00:16:02,380
+ So this is very cool, right?
+
+290
+00:16:02,380 --> 00:16:05,730
+ Because that means the fact that I can do it in a different website like that.
+
+291
+00:16:05,730 --> 00:16:08,730
+ That means you can have an agent that automates all of that.
+
+292
+00:16:08,730 --> 00:16:12,010
+ And you can send something to Telegram and it creates Notion for you.
+
+293
+00:16:12,010 --> 00:16:15,750
+ Or it gives you a list of Luma events that you have.
+
+294
+00:16:15,750 --> 00:16:18,470
+ And so on.
+
+295
+00:16:18,470 --> 00:16:19,470
+ I built a bunch of things just for fun.
+
+296
+00:16:19,470 --> 00:16:22,750
+ It was very quick to build all these things.
+
+297
+00:16:22,750 --> 00:16:24,550
+ Find rents.
+
+298
+00:16:24,550 --> 00:16:28,540
+ You're looking for like a two-bedroom.
+
+299
+00:16:28,540 --> 00:16:31,770
+ There you've got a two-bedroom and you can see it in the map.
+
+300
+00:16:31,770 --> 00:16:35,010
+ So I built this in like 10 minutes.
+
+301
+00:16:35,010 --> 00:16:36,170
+ I just asked.
+
+302
+00:16:36,170 --> 00:16:38,170
+ Give me something that accesses like Zooper, retail and so on.
+
+303
+00:16:38,170 --> 00:16:41,330
+ And then I can ask it in a plain language.
+
+304
+00:16:41,330 --> 00:16:43,600
+ And then it just creates its own thing.
+
+305
+00:16:43,600 --> 00:16:54,550
+ Pretty more cool stuff.
+
+306
+00:16:54,550 --> 00:16:58,350
+ Well, Zoom meetings.
+
+307
+00:16:58,350 --> 00:16:59,910
+ It shows me all the Zoom meetings.
+
+308
+00:16:59,910 --> 00:17:03,480
+ So you don't have to go to the annoying Zoom interface.
+
+309
+00:17:03,480 --> 00:17:06,480
+ So this is another very useful thing of having your own personal assistant.
+
+310
+00:17:06,480 --> 00:17:10,980
+ If you're tired of navigating different web apps like Zoom.
+
+311
+00:17:10,980 --> 00:17:11,980
+ Or like learning how to use Zoom.
+
+312
+00:17:11,980 --> 00:17:13,980
+ Learning how to use Notion.
+
+313
+00:17:13,980 --> 00:17:16,110
+ Learning how to use Luma.
+
+314
+00:17:16,110 --> 00:17:18,440
+ You can have it all in your own interface.
+
+315
+00:17:18,440 --> 00:17:19,490
+ Or you can have it in Telegram.
+
+316
+00:17:19,490 --> 00:17:20,740
+ That's the beauty of this.
+
+317
+00:17:20,740 --> 00:17:22,930
+ That's why they say SaaS.
+
+318
+00:17:22,930 --> 00:17:23,930
+ Software as a service is dying.
+
+319
+00:17:23,930 --> 00:17:26,210
+ Because you don't need these softwares anymore.
+
+320
+00:17:26,210 --> 00:17:32,360
+ You can just have an agent that just acts as this and displays it in a very nice dashboard.
+
+321
+00:17:32,360 --> 00:17:35,920
+ What else do you have?
+
+322
+00:17:35,920 --> 00:17:36,920
+ Google Calendar.
+
+323
+00:17:36,920 --> 00:17:39,230
+ There you go.
+
+324
+00:17:39,230 --> 00:17:42,790
+ Search Marketplace.
+
+325
+00:17:42,790 --> 00:17:43,790
+ I created this for fun.
+
+326
+00:17:43,790 --> 00:17:45,790
+ Let me say I'm searching for bikes.
+
+327
+00:17:45,790 --> 00:17:50,250
+ I went to PGG and Craigslist.
+
+328
+00:17:50,250 --> 00:17:52,240
+ Very cool, right?
+
+329
+00:17:52,240 --> 00:17:54,060
+ And then you can create a chatbot.
+
+330
+00:17:54,060 --> 00:17:55,060
+ So you can go here.
+
+331
+00:17:55,060 --> 00:17:56,060
+ And they can give you a personality.
+
+332
+00:17:56,060 --> 00:17:57,990
+ So I can call it Sol.
+
+333
+00:17:57,990 --> 00:17:58,990
+ The personality.
+
+334
+00:17:58,990 --> 00:17:59,990
+ So you can only say ah.
+
+335
+00:17:59,990 --> 00:18:01,430
+ Let's just see if it works.
+
+336
+00:18:01,430 --> 00:18:02,430
+ It's using OpenRotter.
+
+337
+00:18:02,430 --> 00:18:03,360
+ So OpenRotter is something else you're going to use.
+
+338
+00:18:03,360 --> 00:18:05,990
+ There you go.
+
+339
+00:18:05,990 --> 00:18:08,550
+ Or B.
+
+340
+00:18:08,550 --> 00:18:08,650
+ Very wise.
+
+341
+00:18:08,550 --> 00:18:09,640
+ It's thinking now because it's wise.
+
+342
+00:18:09,640 --> 00:18:10,640
+ I'm using Sol.
+
+343
+00:18:10,640 --> 00:18:12,050
+ So Sol is a very expensive model.
+
+344
+00:18:12,050 --> 00:18:13,460
+ There you go.
+
+345
+00:18:13,460 --> 00:18:15,160
+ You see?
+
+346
+00:18:15,160 --> 00:18:16,830
+ So I just created a chatbot basically with Persona.
+
+347
+00:18:16,830 --> 00:18:28,190
+ And it just took also 10 minutes to read.
+
+348
+00:18:28,190 --> 00:18:29,190
+ Yeah.
+
+349
+00:18:29,190 --> 00:18:43,720
+ I have the Craigslist one.
+
+350
+00:18:43,720 --> 00:18:44,720
+ Did you tell it which places to go to to find those listings?
+
+351
+00:18:44,720 --> 00:18:45,720
+ Okay.
+
+352
+00:18:45,720 --> 00:18:47,930
+ Good question.
+
+353
+00:18:47,930 --> 00:18:48,030
+ So the question was for the Craigslist component or tool that I asked the bot to find the bot
+
+354
+00:18:47,930 --> 00:18:50,340
+ to find those listings?
+
+355
+00:18:50,340 --> 00:18:51,340
+ Yeah.
+
+356
+00:18:51,340 --> 00:18:51,440
+ Okay.
+
+357
+00:18:51,340 --> 00:18:52,340
+ Good question.
+
+358
+00:18:52,340 --> 00:18:53,280
+ So I just created a chatbot basically with Persona.
+
+359
+00:18:53,280 --> 00:18:54,970
+ And it just took also 10 minutes to read.
+
+360
+00:18:54,970 --> 00:18:56,000
+ Yeah.
+
+361
+00:18:56,000 --> 00:18:58,790
+ I have the Craigslist one.
+
+362
+00:18:58,790 --> 00:19:04,520
+ Did you tell it which places to go to to find those listings?
+
+363
+00:19:04,520 --> 00:19:05,900
+ Okay.
+
+364
+00:19:05,900 --> 00:19:07,030
+ Good question.
+
+365
+00:19:07,030 --> 00:19:17,360
+ So the question was for the Craigslist component or tool that I asked the bot to find the
+
+366
+00:19:17,360 --> 00:19:18,360
+ go to Craigslist specifically on PGG.
+
+367
+00:19:18,360 --> 00:19:19,360
+ I did it.
+
+368
+00:19:19,360 --> 00:19:20,360
+ I just said, give me listings of different items around the area.
+
+369
+00:19:20,360 --> 00:19:21,460
+ And then it suggested, do you want PGG increases?
+
+370
+00:19:21,460 --> 00:19:22,590
+ And then I said, yes.
+
+371
+00:19:22,590 --> 00:19:23,840
+ It also found out which places to look for.
+
+372
+00:19:23,840 --> 00:19:36,470
+ So if there are some places which you trust, you can also tell it to actually exclusively access
+
+373
+00:19:36,470 --> 00:19:37,470
+ the box?
+
+374
+00:19:37,470 --> 00:19:38,470
+ Yeah.
+
+375
+00:19:38,470 --> 00:19:39,470
+ Yeah.
+
+376
+00:19:39,470 --> 00:19:43,180
+ Yeah.
+
+377
+00:19:43,180 --> 00:19:47,730
+ Yeah.
+
+378
+00:19:47,730 --> 00:19:50,660
+ So you see this chatbot that we have here?
+
+379
+00:19:50,660 --> 00:19:54,650
+ So all these that I'm showing are different components.
+
+380
+00:19:54,650 --> 00:20:01,950
+ And you'll have workflows, which is just a mix of these components together.
+
+381
+00:20:01,950 --> 00:20:08,040
+ So you can imagine connecting the chatbot with the Craigslist item and Telegram.
+
+382
+00:20:08,040 --> 00:20:12,290
+ So now you go to Telegram, you send a message, the message goes to your chatbot.
+
+383
+00:20:12,290 --> 00:20:17,790
+ The chatbot accesses the component for retrieving items from Craigslist, then goes back to Telegram.
+
+384
+00:20:17,790 --> 00:20:19,790
+ So you're connecting different components.
+
+385
+00:20:19,790 --> 00:20:26,230
+ Yeah.
+
+386
+00:20:26,230 --> 00:20:27,230
+ Exactly.
+
+387
+00:20:27,230 --> 00:20:28,230
+ Conversation would be another component.
+
+388
+00:20:28,230 --> 00:20:30,090
+ Text-to-speech could be another component.
+
+389
+00:20:30,090 --> 00:20:35,660
+ So if you want Telegram to give you audio, you can add a text-to-speech component using
+
+390
+00:20:35,660 --> 00:20:36,660
+ 11 labs.
+
+391
+00:20:36,660 --> 00:20:40,320
+ And then it gives you the audio file.
+
+392
+00:20:40,320 --> 00:20:45,390
+ You can do it locally.
+
+393
+00:20:45,390 --> 00:20:50,540
+ So for example, here I'm using open router, but you can have a model running on your machine
+
+394
+00:20:50,540 --> 00:20:53,120
+ that's connected to your phone.
+
+395
+00:20:53,120 --> 00:21:10,650
+ The question was, what a statement was, can we just mine these components to do something
+
+396
+00:21:10,650 --> 00:21:11,650
+ together, right?
+
+397
+00:21:11,650 --> 00:21:13,090
+ Yeah.
+
+398
+00:21:13,090 --> 00:21:14,400
+ Yeah, exactly.
+
+399
+00:21:14,400 --> 00:21:18,490
+ So this component's idea, I mean, it's there, but it's not really standardized.
+
+400
+00:21:18,490 --> 00:21:20,440
+ But now I'm seeing it more and more.
+
+401
+00:21:20,440 --> 00:21:24,410
+ In fact, there's this thing called Qclaw, which does this component thing.
+
+402
+00:21:24,410 --> 00:21:25,410
+ I thought I came up with this idea.
+
+403
+00:21:25,410 --> 00:21:30,970
+ And then I just, last week I saw this Qclaw, which is putting all these components, like
+
+404
+00:21:30,970 --> 00:21:32,240
+ a dashboard like this.
+
+405
+00:21:32,240 --> 00:21:37,810
+ You can imagine this as a marketplace for all the services and components that you want
+
+406
+00:21:37,810 --> 00:21:39,810
+ to integrate into your personal assistant.
+
+407
+00:21:39,810 --> 00:21:48,730
+ So one of the asks for this hackathon is to ask you to create a marketplace like this,
+
+408
+00:21:48,730 --> 00:21:53,540
+ like a dashboard like this, for every component that you want for your app.
+
+409
+00:21:53,540 --> 00:21:59,180
+ So if you went to the previous workshops in building your AI apps, the goal was just to
+
+410
+00:21:59,180 --> 00:22:00,400
+ build an app, right?
+
+411
+00:22:00,400 --> 00:22:01,530
+ If it does its own thing.
+
+412
+00:22:01,530 --> 00:22:06,940
+ Now, one of the prerequisites that I will, like, really recommend is to first build all
+
+413
+00:22:06,940 --> 00:22:11,970
+ the components that you want, like text-to-speech, chatbot, telegram, and so on.
+
+414
+00:22:11,970 --> 00:22:15,730
+ And have them, when you click on them, there's a way to test them.
+
+415
+00:22:15,730 --> 00:22:19,590
+ So when you run it, it should, like, give you the output, like here.
+
+416
+00:22:19,590 --> 00:22:21,960
+ Yeah?
+
+417
+00:22:21,960 --> 00:22:22,960
+ So you can test them.
+
+418
+00:22:22,960 --> 00:22:27,180
+ And then, on top of components, you can have workflows.
+
+419
+00:22:27,180 --> 00:22:28,720
+ Components and workflows.
+
+420
+00:22:28,720 --> 00:22:29,720
+ Workflows is a combination of them.
+
+421
+00:22:29,720 --> 00:22:33,530
+ Yeah?
+
+422
+00:22:33,530 --> 00:22:35,520
+ So is it a good idea to have only one?
+
+423
+00:22:35,520 --> 00:22:45,950
+ So the question was, is it one personal assistant versus many?
+
+424
+00:22:45,950 --> 00:22:47,070
+ Yeah.
+
+425
+00:22:47,070 --> 00:22:51,450
+ And so it depends on, like, how far the use cases are from each other.
+
+426
+00:22:51,450 --> 00:22:57,430
+ So if all the use cases are about the same taxes, just one personal assistant, unless maybe
+
+427
+00:22:57,430 --> 00:22:58,430
+ there's many different kinds of taxes.
+
+428
+00:22:58,430 --> 00:22:59,430
+ So it depends how different your use cases are.
+
+429
+00:22:59,430 --> 00:23:00,380
+ If they can be clustered very independently, I would recommend having two different personal
+
+430
+00:23:00,380 --> 00:23:01,400
+ assistants.
+
+431
+00:23:01,400 --> 00:23:02,970
+ Based on the domain.
+
+432
+00:23:02,970 --> 00:23:03,970
+ Based on the domain.
+
+433
+00:23:03,970 --> 00:23:04,070
+ Because if you have independent domains and you have one personal assistant, it's just
+
+434
+00:23:03,970 --> 00:23:05,550
+ too much.
+
+435
+00:23:05,550 --> 00:23:06,460
+ You're going to get cluttered.
+
+436
+00:23:06,460 --> 00:23:07,900
+ There will be a lot of coupling.
+
+437
+00:23:07,900 --> 00:23:09,660
+ So one of the main practices of software engineering is minimizing coupling.
+
+438
+00:23:09,660 --> 00:23:11,170
+ Keeping your feet.
+
+439
+00:23:11,170 --> 00:23:12,130
+ Yeah.
+
+440
+00:23:12,130 --> 00:23:13,260
+ Dependencies.
+
+441
+00:23:13,260 --> 00:23:14,260
+ Dependencies where there's no, none.
+
+442
+00:23:14,260 --> 00:23:15,640
+ There shouldn't be dependencies.
+
+443
+00:23:15,640 --> 00:23:16,640
+ So like emphasizing modularity.
+
+444
+00:23:16,640 --> 00:23:16,740
+ So this is very important when you build your code and your app.
+
+445
+00:23:16,640 --> 00:23:17,640
+ Always make sure to ask your agent to make things very modular.
+
+446
+00:23:17,640 --> 00:23:18,800
+ Otherwise things will be intertwined and then you'll be spent a lot of time.
+
+447
+00:23:18,800 --> 00:23:19,770
+ So if you have independent domains and you have one personal assistant, it's just too much.
+
+448
+00:23:19,770 --> 00:23:20,800
+ You're going to get cluttered.
+
+449
+00:23:20,800 --> 00:23:21,830
+ There will be a lot of coupling.
+
+450
+00:23:21,830 --> 00:23:22,830
+ So one of the main practices of software engineering is minimizing coupling.
+
+451
+00:23:22,830 --> 00:23:23,830
+ So one of the main practices of software engineering is minimizing coupling.
+
+452
+00:23:23,830 --> 00:23:24,830
+ Keeping your feet.
+
+453
+00:23:24,830 --> 00:23:26,080
+ Yeah.
+
+454
+00:23:26,080 --> 00:23:27,460
+ Dependencies.
+
+455
+00:23:27,460 --> 00:23:29,200
+ Dependencies.
+
+456
+00:23:29,200 --> 00:23:30,200
+ Dependencies where there's no, none.
+
+457
+00:23:30,200 --> 00:23:31,330
+ There shouldn't be dependencies.
+
+458
+00:23:31,330 --> 00:23:32,330
+ So like emphasizing modularity.
+
+459
+00:23:32,330 --> 00:23:38,760
+ So this is very important when you build your code and your app.
+
+460
+00:23:38,760 --> 00:23:39,760
+ Always make sure to ask your agent to make things very modular.
+
+461
+00:23:39,760 --> 00:23:40,910
+ Otherwise things will be intertwined.
+
+462
+00:23:40,910 --> 00:23:41,910
+ And then you'll be spending millions of tokens every time you call it.
+
+463
+00:23:41,910 --> 00:23:43,480
+ And it doesn't know where things are.
+
+464
+00:23:43,480 --> 00:23:44,480
+ And so on.
+
+465
+00:23:44,480 --> 00:23:45,480
+ Is this a personal assistant?
+
+466
+00:23:45,480 --> 00:23:46,400
+ This is a personal assistant for me.
+
+467
+00:23:46,400 --> 00:23:47,920
+ But then the things that you have listed out here are not related to each other as such.
+
+468
+00:23:47,920 --> 00:23:48,920
+ So you just sent that info.
+
+469
+00:23:48,920 --> 00:23:50,400
+ So this is a meta.
+
+470
+00:23:50,400 --> 00:23:51,400
+ Okay.
+
+471
+00:23:51,400 --> 00:23:52,400
+ So it's different.
+
+472
+00:23:52,400 --> 00:23:53,400
+ So this is more like a meta personal assistant.
+
+473
+00:23:53,400 --> 00:23:54,370
+ Okay.
+
+474
+00:23:54,370 --> 00:23:55,810
+ So this is not.
+
+475
+00:23:55,810 --> 00:23:57,130
+ Okay.
+
+476
+00:23:57,130 --> 00:23:58,130
+ Okay.
+
+477
+00:23:58,130 --> 00:23:59,130
+ So this is more like a meta personal assistant.
+
+478
+00:23:59,130 --> 00:24:00,130
+ Okay.
+
+479
+00:24:00,130 --> 00:24:01,130
+ So this is not.
+
+480
+00:24:01,130 --> 00:24:02,130
+ Okay.
+
+481
+00:24:02,130 --> 00:24:03,130
+ Okay.
+
+482
+00:24:03,130 --> 00:24:04,130
+ So this is not.
+
+483
+00:24:04,130 --> 00:24:06,150
+ Okay.
+
+484
+00:24:06,150 --> 00:24:07,150
+ So this is not.
+
+485
+00:24:07,150 --> 00:24:08,330
+ Okay.
+
+486
+00:24:08,330 --> 00:24:12,060
+ So this is more like a meta personal assistant.
+
+487
+00:24:12,060 --> 00:24:12,960
+ Okay.
+
+488
+00:24:12,960 --> 00:24:16,650
+ Okay.
+
+489
+00:24:16,650 --> 00:24:17,650
+ So this is not.
+
+490
+00:24:17,650 --> 00:24:18,650
+ Okay.
+
+491
+00:24:18,650 --> 00:24:20,060
+ This is maybe not really a personal assistant.
+
+492
+00:24:20,060 --> 00:24:22,970
+ This is more like a marketplace of all the components that will help me create.
+
+493
+00:24:22,970 --> 00:24:24,030
+ Yeah.
+
+494
+00:24:24,030 --> 00:24:25,980
+ That I use to help me create my own personal assistant.
+
+495
+00:24:25,980 --> 00:24:27,990
+ Yeah.
+
+496
+00:24:27,990 --> 00:24:29,950
+ So this is just a market.
+
+497
+00:24:29,950 --> 00:24:31,860
+ I can say this is less of a personal assistant.
+
+498
+00:24:31,860 --> 00:24:32,980
+ At the end of the world it's just words.
+
+499
+00:24:32,980 --> 00:24:33,980
+ But yeah.
+
+500
+00:24:33,980 --> 00:24:35,270
+ That's a very good.
+
+501
+00:24:35,270 --> 00:24:37,870
+ So each of these things.
+
+502
+00:24:37,870 --> 00:24:40,870
+ Each of these tabs in and of itself is a personal assistant.
+
+503
+00:24:40,870 --> 00:24:44,000
+ But integrated together it's not a personal assistant.
+
+504
+00:24:44,000 --> 00:24:46,050
+ That's what you're saying.
+
+505
+00:24:46,050 --> 00:24:47,050
+ Yeah.
+
+506
+00:24:47,050 --> 00:24:48,270
+ So each of these tabs is like a.
+
+507
+00:24:48,270 --> 00:24:49,590
+ Okay.
+
+508
+00:24:49,590 --> 00:24:50,750
+ So let's say I want to access Notion.
+
+509
+00:24:50,750 --> 00:24:51,750
+ Right.
+
+510
+00:24:51,750 --> 00:24:54,450
+ Or generate Excalibur for example.
+
+511
+00:24:54,450 --> 00:24:58,690
+ This allows me to generate figures.
+
+512
+00:24:58,690 --> 00:24:59,690
+ Which is actually very good.
+
+513
+00:24:59,690 --> 00:25:03,970
+ Well you can say this is kind of a personal assistant.
+
+514
+00:25:03,970 --> 00:25:04,970
+ But it's not really a personal assistant.
+
+515
+00:25:04,970 --> 00:25:05,970
+ It's just a service.
+
+516
+00:25:05,970 --> 00:25:10,540
+ Because I see a personal assistant as someone you can interact with.
+
+517
+00:25:10,540 --> 00:25:13,910
+ A network.
+
+518
+00:25:13,910 --> 00:25:15,130
+ Well this is more of a connector.
+
+519
+00:25:15,130 --> 00:25:18,130
+ So a personal assistant is something that you can go back and forth.
+
+520
+00:25:18,130 --> 00:25:20,190
+ Keeps track of what you've been doing over time.
+
+521
+00:25:20,190 --> 00:25:21,190
+ But your components are like.
+
+522
+00:25:21,190 --> 00:25:22,190
+ Components are like connectors.
+
+523
+00:25:22,190 --> 00:25:23,570
+ Components are like connectors.
+
+524
+00:25:23,570 --> 00:25:24,720
+ Exactly.
+
+525
+00:25:24,720 --> 00:25:25,720
+ It's more of a connectors.
+
+526
+00:25:25,720 --> 00:25:26,970
+ Like a single service.
+
+527
+00:25:26,970 --> 00:25:27,970
+ Personal assistant has.
+
+528
+00:25:27,970 --> 00:25:30,090
+ So a personal assistant as I showed here.
+
+529
+00:25:30,090 --> 00:25:32,560
+ It's more like this.
+
+530
+00:25:32,560 --> 00:25:34,330
+ It has a use case.
+
+531
+00:25:34,330 --> 00:25:35,330
+ And it has memory.
+
+532
+00:25:35,330 --> 00:25:36,360
+ It has its own persona.
+
+533
+00:25:36,360 --> 00:25:37,360
+ It does different things.
+
+534
+00:25:37,360 --> 00:25:38,490
+ But it has concrete workflows.
+
+535
+00:25:38,490 --> 00:25:39,490
+ A set of workflows.
+
+536
+00:25:39,490 --> 00:25:40,640
+ So a personal assistant could be like.
+
+537
+00:25:40,640 --> 00:25:41,640
+ Let's say I'm organizing these value events.
+
+538
+00:25:41,640 --> 00:25:42,730
+ There's a lot of things that go into this.
+
+539
+00:25:42,730 --> 00:25:45,680
+ I need to first book the meeting.
+
+540
+00:25:45,680 --> 00:25:46,680
+ I need to get sponsorships.
+
+541
+00:25:46,680 --> 00:25:47,680
+ I need to see the cost.
+
+542
+00:25:47,680 --> 00:25:48,680
+ Maybe insurance and so on.
+
+543
+00:25:48,680 --> 00:25:48,780
+ So a component would be just booking the room.
+
+544
+00:25:48,680 --> 00:25:50,130
+ A personal assistant is doing all that thing together.
+
+545
+00:25:50,130 --> 00:25:51,130
+ The use case is higher level when it comes to personal assistant.
+
+546
+00:25:51,130 --> 00:25:52,090
+ So it's automating workflows.
+
+547
+00:25:52,090 --> 00:25:53,130
+ That's what a personal assistant is.
+
+548
+00:25:53,130 --> 00:25:54,290
+ Automating workflows.
+
+549
+00:25:54,290 --> 00:25:55,320
+ Automating workflows.
+
+550
+00:25:55,320 --> 00:25:56,320
+ That's what a personal assistant is.
+
+551
+00:25:56,320 --> 00:25:57,410
+ Automating workflows.
+
+552
+00:25:57,410 --> 00:26:02,680
+ Where is what you just presented as part of that one pane of glass.
+
+553
+00:26:02,680 --> 00:26:04,440
+ Exactly.
+
+554
+00:26:04,440 --> 00:26:05,440
+ It's one task.
+
+555
+00:26:05,440 --> 00:26:06,410
+ Okay.
+
+556
+00:26:06,410 --> 00:26:08,690
+ That makes sense.
+
+557
+00:26:08,690 --> 00:26:09,780
+ It's like doing one task.
+
+558
+00:26:09,780 --> 00:26:10,710
+ So automating workflows.
+
+559
+00:26:10,710 --> 00:26:12,780
+ But maybe it doesn't have to be fully automated.
+
+560
+00:26:12,780 --> 00:26:14,780
+ Like it could be automated with a human in the loop.
+
+561
+00:26:14,780 --> 00:26:15,960
+ You just got to get a job.
+
+562
+00:26:15,960 --> 00:26:16,960
+ You just got to get a job.
+
+563
+00:26:16,960 --> 00:26:17,960
+ You just got to get a job.
+
+564
+00:26:17,960 --> 00:26:18,960
+ You just got to get a job.
+
+565
+00:26:18,960 --> 00:26:19,960
+ You just got to get a job.
+
+566
+00:26:19,960 --> 00:26:21,300
+ You just got to get a job.
+
+567
+00:26:21,300 --> 00:26:22,300
+ You just got to get a job.
+
+568
+00:26:22,300 --> 00:26:23,490
+ You just got to get a job.
+
+569
+00:26:23,490 --> 00:26:24,490
+ You just got to get a job.
+
+570
+00:26:24,490 --> 00:26:25,840
+ You just got to get a job.
+
+571
+00:26:25,840 --> 00:26:26,840
+ You just got to get a job.
+
+572
+00:26:26,840 --> 00:26:27,840
+ You just got to get a job.
+
+573
+00:26:27,840 --> 00:26:28,840
+ You just got to get a job.
+
+574
+00:26:28,840 --> 00:26:29,840
+ You just got to get a job.
+
+575
+00:26:29,840 --> 00:26:30,750
+ You just got to get a job.
+
+576
+00:26:30,750 --> 00:26:37,720
+ You just got to get a job.
+
+577
+00:26:37,720 --> 00:26:40,110
+ You just got to get a job.
+
+578
+00:26:40,110 --> 00:26:44,100
+ Yeah.
+
+579
+00:26:44,100 --> 00:26:45,700
+ So that's actually a good question.
+
+580
+00:26:45,700 --> 00:26:46,700
+ Good statement.
+
+581
+00:26:46,700 --> 00:26:53,130
+ So I think the statement was that you can have an agent on top of this.
+
+582
+00:26:53,130 --> 00:26:55,290
+ So let's say you have 1,000 components.
+
+583
+00:26:55,290 --> 00:26:58,350
+ So this is like a marketplace for your agent.
+
+584
+00:26:58,350 --> 00:27:00,350
+ You have 10,000 components.
+
+585
+00:27:00,350 --> 00:27:08,700
+ And you tell your cloud code or your agent, create a personal assistant for like booking events
+
+586
+00:27:08,700 --> 00:27:09,700
+ here.
+
+587
+00:27:09,700 --> 00:27:14,010
+ Then it will decide which components are useful and create workflows on top of it.
+
+588
+00:27:14,010 --> 00:27:17,340
+ Yeah?
+
+589
+00:27:17,340 --> 00:27:18,330
+ Yeah.
+
+590
+00:27:18,330 --> 00:27:19,400
+ By itself.
+
+591
+00:27:19,400 --> 00:27:20,820
+ Create some by itself.
+
+592
+00:27:20,820 --> 00:27:25,560
+ So I don't tell it a protocol of like in the workflow, step A to be happening first
+
+593
+00:27:25,560 --> 00:27:27,560
+ and then step B and that's how you do it.
+
+594
+00:27:27,560 --> 00:27:30,560
+ Or should I just tell it, create your own workflow?
+
+595
+00:27:30,560 --> 00:27:31,560
+ But you can bet it.
+
+596
+00:27:31,560 --> 00:27:35,550
+ So you create the workflows and you can say, ah, this is a nice workflow or this is valid.
+
+597
+00:27:35,550 --> 00:27:39,200
+ So here's the thing.
+
+598
+00:27:39,200 --> 00:27:45,480
+ If you use openclaw or cloud code, you can even skip the part of components and just say
+
+599
+00:27:45,480 --> 00:27:50,450
+ cloud code, create workflows for me to book AI events without giving it any components.
+
+600
+00:27:50,450 --> 00:27:51,510
+ So you can go even higher level.
+
+601
+00:27:51,510 --> 00:27:55,950
+ But I recommend against that because then you will have a lot of risks.
+
+602
+00:27:55,950 --> 00:28:01,300
+ Because then it will create its own components in its own way.
+
+603
+00:28:01,300 --> 00:28:02,300
+ You don't know if they're secure.
+
+604
+00:28:02,300 --> 00:28:05,340
+ You don't know if you're going to do the right thing and so on.
+
+605
+00:28:05,340 --> 00:28:08,680
+ So having things in components first so you can vet them.
+
+606
+00:28:08,680 --> 00:28:11,870
+ So it's always nice to have each component to be audited.
+
+607
+00:28:11,870 --> 00:28:19,430
+ So each component you make sure it doesn't access data that is, you know, like sensitive.
+
+608
+00:28:19,430 --> 00:28:21,730
+ Or you make sure it doesn't delete your files or something.
+
+609
+00:28:21,730 --> 00:28:26,050
+ So if you enforce your agent to build workflows based on your components,
+
+610
+00:28:26,050 --> 00:28:29,240
+ you already have some guarantees in terms of security.
+
+611
+00:28:29,240 --> 00:28:34,290
+ This is the trend of like enterprise and organizations.
+
+612
+00:28:34,290 --> 00:28:39,600
+ They're going from just asking cloud code to do things for you to first build things in components
+
+613
+00:28:39,600 --> 00:28:41,600
+ and then cloud code can only do things based on your components.
+
+614
+00:28:41,600 --> 00:28:44,010
+ Very, very important.
+
+615
+00:28:44,010 --> 00:28:47,010
+ But we have more control to tell it which components to use.
+
+616
+00:28:47,010 --> 00:28:47,930
+ Exactly.
+
+617
+00:28:47,930 --> 00:28:50,390
+ Think of one step further.
+
+618
+00:28:50,390 --> 00:28:51,680
+ You have these components.
+
+619
+00:28:51,680 --> 00:28:53,680
+ You ask the agent to build a workflow for you.
+
+620
+00:28:53,680 --> 00:28:55,680
+ Now you have a set of workflows.
+
+621
+00:28:55,680 --> 00:28:58,000
+ You can also vet those.
+
+622
+00:28:58,000 --> 00:29:02,670
+ So if you have a workflow for booking events, you can just rerun that workflow.
+
+623
+00:29:02,670 --> 00:29:06,780
+ If you don't have that workflow saved, it will just create,
+
+624
+00:29:06,780 --> 00:29:11,190
+ every time ask cloud code to give you the workflow, it will create new workflows every time.
+
+625
+00:29:11,190 --> 00:29:12,470
+ You're wasting tokens.
+
+626
+00:29:12,470 --> 00:29:15,820
+ There's a lot of risks of doing something wrong.
+
+627
+00:29:15,820 --> 00:29:21,690
+ Things are not predictable because if every time it creates the workflow,
+
+628
+00:29:21,690 --> 00:29:24,000
+ even for the same domain, for the same task,
+
+629
+00:29:24,000 --> 00:29:27,170
+ because all these models are publicistic, right?
+
+630
+00:29:27,170 --> 00:29:30,850
+ It's not deterministic if you just recreate the workflows from scratch.
+
+631
+00:29:30,850 --> 00:29:34,830
+ This is the idea of cloud code, creating workflows from scratch itself.
+
+632
+00:29:34,830 --> 00:29:40,760
+ So the more I'm thinking about it, so basically, the realistic use case,
+
+633
+00:29:40,760 --> 00:29:44,760
+ you're trying to make a personal assistant for every department of your life, so to say.
+
+634
+00:29:44,760 --> 00:29:45,760
+ Exactly.
+
+635
+00:29:45,760 --> 00:29:46,690
+ Finance.
+
+636
+00:29:46,690 --> 00:29:49,910
+ So for events, or XYZ, whatever it is.
+
+637
+00:29:49,910 --> 00:29:50,910
+ Exactly.
+
+638
+00:29:50,910 --> 00:29:52,910
+ You can make a personal assistant for each of them,
+
+639
+00:29:52,910 --> 00:29:57,910
+ and they can have their own components which interact with each other in order to give you the result.
+
+640
+00:29:57,910 --> 00:29:58,810
+ Exactly, yeah.
+
+641
+00:29:58,810 --> 00:29:59,940
+ Yeah.
+
+642
+00:29:59,940 --> 00:30:00,940
+ So you have a personal assistant for every domain.
+
+643
+00:30:00,940 --> 00:30:02,960
+ In fact, this is actually a good exercise in life.
+
+644
+00:30:02,960 --> 00:30:05,660
+ You can see our lives are just made of workflows.
+
+645
+00:30:05,660 --> 00:30:06,780
+ How do I present?
+
+646
+00:30:06,780 --> 00:30:07,880
+ How do I create slides?
+
+647
+00:30:07,880 --> 00:30:08,880
+ How do I walk?
+
+648
+00:30:08,880 --> 00:30:13,350
+ How do I buy the cheapest rings or something?
+
+649
+00:30:13,350 --> 00:30:15,410
+ Because imagine all these are workflows.
+
+650
+00:30:15,410 --> 00:30:16,410
+ How do I do my taxes?
+
+651
+00:30:16,410 --> 00:30:19,530
+ So you can create these once, and then reuse them all the time.
+
+652
+00:30:19,530 --> 00:30:22,970
+ So imagine having a workflow for all the major things you have in life.
+
+653
+00:30:22,970 --> 00:30:25,450
+ It will save a lot of time, right?
+
+654
+00:30:25,450 --> 00:30:26,890
+ And trust them?
+
+655
+00:30:26,890 --> 00:30:29,040
+ Well, you audit them once.
+
+656
+00:30:29,040 --> 00:30:32,350
+ So once you audit the workflow, you trust them.
+
+657
+00:30:32,350 --> 00:30:34,300
+ Trust them.
+
+658
+00:30:34,300 --> 00:30:40,020
+ You just need to know the workflow, like the range of outputs it can have.
+
+659
+00:30:40,020 --> 00:30:45,820
+ So if you have, let's say, a workflow of finding bikes.
+
+660
+00:30:45,820 --> 00:30:50,900
+ You can by yourself go to PGG places, all these websites, interact with them.
+
+661
+00:30:50,900 --> 00:30:53,890
+ Message the seller and so on.
+
+662
+00:30:53,890 --> 00:30:56,360
+ You can have that as a workflow, and that's it.
+
+663
+00:30:56,360 --> 00:30:57,360
+ You just rerun the workflow.
+
+664
+00:30:57,360 --> 00:31:00,680
+ And in that workflow, you can allow the user to type messages.
+
+665
+00:31:00,680 --> 00:31:07,090
+ Like, okay, send to all the people who are selling bikes with costs at 50.
+
+666
+00:31:07,090 --> 00:31:08,270
+ So you have the agent.
+
+667
+00:31:08,270 --> 00:31:10,270
+ Send them all the messages through this workflow.
+
+668
+00:31:10,270 --> 00:31:11,560
+ It does.
+
+669
+00:31:11,560 --> 00:31:18,280
+ And then, set up a message to yourself, so it can tell you if it has actually sent a message
+
+670
+00:31:18,280 --> 00:31:21,440
+ today to someone or not, if they got a deal on some bike.
+
+671
+00:31:21,440 --> 00:31:22,440
+ Exactly.
+
+672
+00:31:22,440 --> 00:31:25,440
+ And one of the best ways for the agent to send you messages is to connect to the telegram.
+
+673
+00:31:25,440 --> 00:31:28,330
+ Like, I have this telegram here.
+
+674
+00:31:28,330 --> 00:31:31,180
+ Hola.
+
+675
+00:31:31,180 --> 00:31:32,000
+ Amigo.
+
+676
+00:31:33,240 --> 00:31:36,030
+ I'm sorry.
+
+677
+00:31:36,030 --> 00:31:39,260
+ I'm not sure why that happened.
+
+678
+00:31:39,260 --> 00:31:40,730
+ I'm really glad.
+
+679
+00:31:40,730 --> 00:31:42,850
+ I'm not sure why it was working this morning.
+
+680
+00:31:42,850 --> 00:31:43,850
+ Maybe the workflow also fixed.
+
+681
+00:31:43,850 --> 00:31:47,970
+ You can also have a layer to fix if anything goes down.
+
+682
+00:31:47,970 --> 00:31:50,540
+ We actually call this heartbeat.
+
+683
+00:31:50,540 --> 00:31:53,500
+ In the upper cloud, there's a concept called heartbeat.
+
+684
+00:31:53,500 --> 00:31:58,640
+ So heartbeat is like every minute, every 10 minutes, you check something.
+
+685
+00:31:58,640 --> 00:32:01,050
+ Like, you check if you got any response.
+
+686
+00:32:01,050 --> 00:32:02,050
+ You check if your apps are down.
+
+687
+00:32:02,050 --> 00:32:05,080
+ You check this and then do something based on the heartbeat.
+
+688
+00:32:05,080 --> 00:32:10,060
+ So in the upper cloud, there's the secret of heartbeat, which will integrate as well.
+
+689
+00:32:10,060 --> 00:32:15,230
+ There's also like, for example, send email.
+
+690
+00:32:15,230 --> 00:32:17,380
+ So I want to send an email to this one minute.
+
+691
+00:32:17,380 --> 00:32:18,400
+ So they're going to be an error.
+
+692
+00:32:18,400 --> 00:32:25,510
+ I did that in purpose because I prevented the agent from sending emails to just, you know,
+
+693
+00:32:25,510 --> 00:32:31,640
+ to prevent the case of sending wrong emails to the wrong person.
+
+694
+00:32:31,640 --> 00:32:34,030
+ So a lot of my accesses are like weed only.
+
+695
+00:32:34,030 --> 00:32:36,030
+ There's another thing, good thing to keep in mind.
+
+696
+00:32:36,030 --> 00:32:37,030
+ Start with weed only.
+
+697
+00:32:37,030 --> 00:32:42,960
+ Another thing I wanted to show is this cool thing.
+
+698
+00:32:42,960 --> 00:32:46,470
+ So there's this thing called, I learned about it recently.
+
+699
+00:32:46,470 --> 00:32:47,470
+ Generate Xcalidraw.
+
+700
+00:32:47,470 --> 00:32:49,630
+ Anyone can know Xcalidraw?
+
+701
+00:32:49,630 --> 00:32:53,900
+ Xcalidraw is like a very nice way to create figures.
+
+702
+00:32:53,900 --> 00:33:01,950
+ See like these ones that I created.
+
+703
+00:33:01,950 --> 00:33:09,070
+ So I created an agent that just thought, create a flow chart in Xcalidraw for Amigo, Amiga, Amigos.
+
+704
+00:33:09,070 --> 00:33:13,570
+ And then create a JSON file that you can copy, paste.
+
+705
+00:33:13,570 --> 00:33:15,870
+ Xcalidraw creates the chart.
+
+706
+00:33:15,870 --> 00:33:19,060
+ Well, it was working, but let's see.
+
+707
+00:33:19,060 --> 00:33:20,960
+ Let me see.
+
+708
+00:33:20,960 --> 00:33:21,960
+ Using class of 4.
+
+709
+00:33:21,960 --> 00:33:26,630
+ So why can't we have another component to copy this code and then--
+
+710
+00:33:26,630 --> 00:33:27,690
+ Yeah, yeah.
+
+711
+00:33:27,690 --> 00:33:28,690
+ Because this is one-- yeah, we can.
+
+712
+00:33:28,690 --> 00:33:29,780
+ We can.
+
+713
+00:33:29,780 --> 00:33:31,770
+ We can have another component that copies that to there and retains it.
+
+714
+00:33:31,770 --> 00:33:32,810
+ And then it becomes a workflow.
+
+715
+00:33:32,810 --> 00:33:35,410
+ So workflow is just a series of components.
+
+716
+00:33:35,410 --> 00:33:37,810
+ Let's say we copy this.
+
+717
+00:33:37,810 --> 00:33:38,810
+ Hopefully it works.
+
+718
+00:33:38,810 --> 00:33:40,350
+ Oh, there you go.
+
+719
+00:33:40,350 --> 00:33:43,290
+ Very cool.
+
+720
+00:33:43,290 --> 00:33:48,160
+ So you can like, whenever you want to create a figure that is cool, you can have it as a component.
+
+721
+00:33:48,450 --> 00:33:55,360
+ One thing that I want to tell people-- I remember this guy-- he's not here.
+
+722
+00:33:55,360 --> 00:33:57,280
+ He's a software engineer.
+
+723
+00:33:57,280 --> 00:33:59,280
+ He's like, ah, they want to create a QR code.
+
+724
+00:33:59,280 --> 00:34:01,760
+ All these online ones are paid or has ads.
+
+725
+00:34:01,760 --> 00:34:06,110
+ You know, just ask your IGPT or create a simple script.
+
+726
+00:34:06,110 --> 00:34:08,360
+ So it's like, create this, you have a QR code.
+
+727
+00:34:08,360 --> 00:34:09,360
+ It stays forever.
+
+728
+00:34:09,360 --> 00:34:10,670
+ It's actually a very simple formula.
+
+729
+00:34:10,670 --> 00:34:12,860
+ People think it's insane.
+
+730
+00:34:12,860 --> 00:34:16,850
+ But because people think it's insane, there's like hundreds of QR codes online.
+
+731
+00:34:16,850 --> 00:34:20,390
+ Some of them ask you to register, span, track you.
+
+732
+00:34:20,390 --> 00:34:21,960
+ Very simple.
+
+733
+00:34:21,960 --> 00:34:22,960
+ Really.
+
+734
+00:34:22,960 --> 00:34:26,370
+ I don't want to see anyone here using those websites.
+
+735
+00:34:26,370 --> 00:34:30,840
+ Does that make sense?
+
+736
+00:34:30,840 --> 00:34:33,850
+ Those are online.
+
+737
+00:34:33,850 --> 00:34:34,850
+ Does that make sense?
+
+738
+00:34:34,850 --> 00:34:43,110
+ Yeah.
+
+739
+00:34:43,110 --> 00:34:48,100
+ For each of these, you give them access to your one password account.
+
+740
+00:34:48,100 --> 00:34:50,060
+ The password to log.
+
+741
+00:34:50,060 --> 00:34:56,230
+ Now, I will recommend, I will strongly recommend connecting with one password.
+
+742
+00:34:56,230 --> 00:34:57,420
+ At all costs.
+
+743
+00:34:57,420 --> 00:34:59,420
+ All I give them is an API key.
+
+744
+00:34:59,420 --> 00:35:00,960
+ Yeah, key to one password.
+
+745
+00:35:00,960 --> 00:35:01,960
+ Yeah, yeah.
+
+746
+00:35:01,960 --> 00:35:09,370
+ So if you log in to Zoom, for example, or you log in to Excaligraw or Notion, there's a
+
+747
+00:35:09,370 --> 00:35:11,490
+ set up, what's it called, app set up.
+
+748
+00:35:11,490 --> 00:35:12,750
+ There you can get a new guide.
+
+749
+00:35:12,750 --> 00:35:20,370
+ How do you control it so if it accesses your one password, it doesn't get access to some
+
+750
+00:35:20,370 --> 00:35:23,590
+ other account that you don't like to share with?
+
+751
+00:35:23,590 --> 00:35:24,870
+ Yeah.
+
+752
+00:35:24,870 --> 00:35:27,870
+ So if it has access to one password, technically it has access to all your passwords and log in,
+
+753
+00:35:27,870 --> 00:35:29,220
+ right?
+
+754
+00:35:29,220 --> 00:35:33,950
+ And people were doing it and a lot of them are free, so be really careful.
+
+755
+00:35:33,950 --> 00:35:37,950
+ But what you, so there's another component called BrowserMCP, for example.
+
+756
+00:35:37,950 --> 00:35:43,200
+ So BrowserMCP could be a component which allows your computer to interact with the web.
+
+757
+00:35:43,200 --> 00:35:48,800
+ So let's say you want to tell your agent to log in to your Gmail or log in to an app.
+
+758
+00:35:48,800 --> 00:35:54,560
+ You can go to one password to achieve the login information and go to the website to BrowserMCP
+
+759
+00:35:54,560 --> 00:35:55,660
+ because it can click.
+
+760
+00:35:55,660 --> 00:35:58,110
+ But also BrowserMCP is very risky.
+
+761
+00:35:58,110 --> 00:36:01,300
+ I recommend having a phone for that because it can click.
+
+762
+00:36:01,300 --> 00:36:05,810
+ Or you can get like an advertisement that says, "Oh, you want iPhone 14.
+
+763
+00:36:05,810 --> 00:36:06,810
+ Click here."
+
+764
+00:36:06,810 --> 00:36:11,930
+ And then the agent's like, "Oh, I will satisfy my master."
+
+765
+00:36:11,930 --> 00:36:19,660
+ Which of these components are, their capabilities are limited to the API that you're accessing?
+
+766
+00:36:19,660 --> 00:36:20,680
+ Yeah.
+
+767
+00:36:20,680 --> 00:36:21,770
+ Right?
+
+768
+00:36:21,770 --> 00:36:24,830
+ Like your Zoom, it depends on what they're willing to share.
+
+769
+00:36:24,830 --> 00:36:25,830
+ Exactly.
+
+770
+00:36:25,830 --> 00:36:29,800
+ So that's another limit, there's all, there's another thing to watch out for.
+
+771
+00:36:29,800 --> 00:36:31,830
+ The limitations of these API keys.
+
+772
+00:36:31,830 --> 00:36:39,390
+ There are ways to go beyond API keys, like MCPs and there are some tricks, but usually they're
+
+773
+00:36:39,390 --> 00:36:40,900
+ one of the best ways to go with it.
+
+774
+00:36:40,900 --> 00:36:50,530
+ And are you adding some form of protection within these components?
+
+775
+00:36:50,530 --> 00:36:56,030
+ For example, I could ask the assistant, find the best price for a car.
+
+776
+00:36:56,030 --> 00:36:59,870
+ I could send a message to all my friends, "What car do you recommend?"
+
+777
+00:36:59,870 --> 00:37:00,870
+ Yeah.
+
+778
+00:37:00,870 --> 00:37:01,870
+ Right?
+
+779
+00:37:01,870 --> 00:37:02,870
+ That wasn't my intention.
+
+780
+00:37:02,870 --> 00:37:03,870
+ It wasn't my intention.
+
+781
+00:37:03,870 --> 00:37:05,180
+ It wasn't my intention.
+
+782
+00:37:05,180 --> 00:37:06,530
+ It wasn't to do research.
+
+783
+00:37:06,530 --> 00:37:07,520
+ Right?
+
+784
+00:37:07,520 --> 00:37:09,520
+ How do you control it so it doesn't go out of bounds?
+
+785
+00:37:09,520 --> 00:37:12,520
+ Well, so the agent can only use that, so first you have to create the components.
+
+786
+00:37:12,520 --> 00:37:13,930
+ Like the WhatsApp, for example.
+
+787
+00:37:13,930 --> 00:37:14,930
+ Like the WhatsApp.
+
+788
+00:37:14,930 --> 00:37:15,840
+ Oh, this one doesn't work.
+
+789
+00:37:15,840 --> 00:37:21,050
+ I don't want to do WhatsApp, just send everybody a message asking a question.
+
+790
+00:37:21,050 --> 00:37:25,990
+ So when it creates the workflow for you, basically the components, you can look at the workflow
+
+791
+00:37:25,990 --> 00:37:29,450
+ and remove the things you don't like.
+
+792
+00:37:29,450 --> 00:37:32,660
+ So here people know NA10, right?
+
+793
+00:37:32,660 --> 00:37:46,530
+ So you could imagine, so this is like an NA10.
+
+794
+00:37:46,530 --> 00:37:51,890
+ For people who use NA10, it's like a very popular workflow structure.
+
+795
+00:37:51,890 --> 00:37:57,810
+ So you just link here, like Slack, and then you have an AI agent that does that.
+
+796
+00:37:57,810 --> 00:38:00,860
+ So you can imagine that the workflow that it builds is just something like this.
+
+797
+00:38:00,860 --> 00:38:02,460
+ And you can remove things.
+
+798
+00:38:02,460 --> 00:38:05,460
+ And then you ask, "Okay, why do we use CloudCon, not just NA10?"
+
+799
+00:38:05,460 --> 00:38:11,860
+ Even though NA10 looks easy to use, it's actually very difficult if you want something outside
+
+800
+00:38:11,860 --> 00:38:14,560
+ the nodes that they give you.
+
+801
+00:38:14,560 --> 00:38:16,560
+ And then every node has its own behavior.
+
+802
+00:38:16,560 --> 00:38:17,560
+ Maybe it's not very flexible.
+
+803
+00:38:17,560 --> 00:38:19,560
+ So every node has a lot of constraints.
+
+804
+00:38:19,560 --> 00:38:20,560
+ So that's the problem.
+
+805
+00:38:20,560 --> 00:38:22,560
+ It's like basically creating NA10 on demand.
+
+806
+00:38:22,560 --> 00:38:24,010
+ That's the idea.
+
+807
+00:38:24,010 --> 00:38:25,270
+ Creating NA10.
+
+808
+00:38:25,270 --> 00:38:30,270
+ So if you create the workflow, and then one of the components that you decided to add
+
+809
+00:38:30,270 --> 00:38:32,490
+ was sending to everyone, you can just leave that.
+
+810
+00:38:32,490 --> 00:38:34,490
+ And then when you run the workflow, it doesn't run that.
+
+811
+00:38:34,490 --> 00:38:39,780
+ You can think of components also nodes, and so on.
+
+812
+00:38:39,780 --> 00:38:41,780
+ And a component is just a concept I came up with.
+
+813
+00:38:41,780 --> 00:38:43,910
+ A component could be a workflow in itself.
+
+814
+00:38:43,910 --> 00:38:44,870
+ Right.
+
+815
+00:38:44,870 --> 00:38:47,870
+ I understand the idea of workflow, which is pre-planned.
+
+816
+00:38:47,870 --> 00:38:57,800
+ I kind of imagined the system creatively come up with a better way of doing it.
+
+817
+00:38:57,800 --> 00:38:58,800
+ Yeah.
+
+818
+00:38:58,800 --> 00:39:00,800
+ So this is where we're heading.
+
+819
+00:39:00,800 --> 00:39:05,080
+ Now the recommendation is not to just allow it to dynamically create workflows for different
+
+820
+00:39:05,080 --> 00:39:07,080
+ tasks, because there's a lot of danger.
+
+821
+00:39:07,080 --> 00:39:10,260
+ You can bring a lot of tokens and things around the system.
+
+822
+00:39:10,260 --> 00:39:15,200
+ But the best way to do this is to allow it to create a workflow, and then you vet it.
+
+823
+00:39:15,200 --> 00:39:17,390
+ It's like, okay, is this nice?
+
+824
+00:39:17,390 --> 00:39:19,060
+ And then you run it.
+
+825
+00:39:19,060 --> 00:39:23,820
+ And then in the workflow, you can have an agent that does limited interactions, like just
+
+826
+00:39:23,820 --> 00:39:24,940
+ send an email.
+
+827
+00:39:24,940 --> 00:39:26,740
+ The workflow doesn't mean static.
+
+828
+00:39:26,740 --> 00:39:31,890
+ The workflow can also have inputs that you can give, like messages to send and so on.
+
+829
+00:39:31,890 --> 00:39:32,920
+ But it's way more restricted.
+
+830
+00:39:32,920 --> 00:39:39,780
+ There's another way to handle the API keys or any other secrets that you need for your
+
+831
+00:39:39,780 --> 00:39:40,780
+ agent to run properly.
+
+832
+00:39:40,780 --> 00:39:44,840
+ Especially with one password, you can create one vault, and then you can put everything
+
+833
+00:39:44,840 --> 00:39:45,840
+ there.
+
+834
+00:39:45,840 --> 00:39:46,750
+ Okay, good idea.
+
+835
+00:39:46,750 --> 00:39:50,990
+ Okay, so for people who want to use one password, you can have different vaults.
+
+836
+00:39:50,990 --> 00:39:51,990
+ And you just give it the vault.
+
+837
+00:39:51,990 --> 00:39:54,850
+ So there's actually a cool idea.
+
+838
+00:39:54,850 --> 00:39:56,260
+ I've seen people do it.
+
+839
+00:39:56,260 --> 00:40:03,890
+ So you know like in Twitter or on the internet, where there's a lot of announcements of prices.
+
+840
+00:40:03,890 --> 00:40:09,200
+ It's like, join this, and then you have a 5% probability of winning an award.
+
+841
+00:40:09,200 --> 00:40:14,760
+ So some people create an agent, which just logs into all of these services, and then goes
+
+842
+00:40:14,760 --> 00:40:17,080
+ into the draw of prices, and then it twins.
+
+843
+00:40:17,080 --> 00:40:22,550
+ Because it's 20 to like 10 million draws of many different events on Twitter and so on,
+
+844
+00:40:22,550 --> 00:40:23,730
+ and just got prices.
+
+845
+00:40:23,730 --> 00:40:26,460
+ So you just give it a vault.
+
+846
+00:40:26,460 --> 00:40:30,680
+ So the way, one reason I said that, because you can give it a vault, keep track only the
+
+847
+00:40:30,680 --> 00:40:33,920
+ passwords and user names for websites that you don't care about.
+
+848
+00:40:33,920 --> 00:40:37,800
+ Gmail, Gmail they should remember.
+
+849
+00:40:37,800 --> 00:40:47,560
+ Regarding the Kelly draw, it resulted in one flowchart.
+
+850
+00:40:47,560 --> 00:40:48,560
+ Yeah.
+
+851
+00:40:48,560 --> 00:40:49,620
+ But I don't like it.
+
+852
+00:40:49,620 --> 00:40:50,610
+ I want something else.
+
+853
+00:40:50,610 --> 00:40:53,050
+ Yes, you can have it a bit.
+
+854
+00:40:53,050 --> 00:40:55,110
+ How do we do it?
+
+855
+00:40:55,110 --> 00:40:58,100
+ Like I want it to be able to give me the best version possible.
+
+856
+00:40:58,100 --> 00:41:04,130
+ So what can I do for it to satisfy what I want as a result, and then use that to create
+
+857
+00:41:04,130 --> 00:41:05,130
+ the experience?
+
+858
+00:41:05,130 --> 00:41:07,130
+ Okay, so it's like a combination of different components.
+
+859
+00:41:07,130 --> 00:41:11,450
+ One component is the chat bar, and then you have the Kelly draw series to the flowchart.
+
+860
+00:41:11,450 --> 00:41:14,590
+ And then the image that you get from the sky view.
+
+861
+00:41:14,590 --> 00:41:17,640
+ So you have all these three interacting.
+
+862
+00:41:17,640 --> 00:41:20,640
+ So if you look at the output, and then you talk to the agent.
+
+863
+00:41:20,640 --> 00:41:22,740
+ You say, I don't like this color.
+
+864
+00:41:22,740 --> 00:41:23,740
+ Can you change it?
+
+865
+00:41:23,740 --> 00:41:24,710
+ And then just change it.
+
+866
+00:41:24,710 --> 00:41:26,710
+ Can I give it a reference that I want to create something?
+
+867
+00:41:26,710 --> 00:41:27,710
+ Yeah, you can upload pictures.
+
+868
+00:41:27,710 --> 00:41:34,380
+ You can do anything you want.
+
+869
+00:41:34,380 --> 00:41:37,380
+ One, because time is passing fast, but all of these are good questions.
+
+870
+00:41:37,380 --> 00:41:41,500
+ This card is nice and alive, asking so many questions.
+
+871
+00:41:41,500 --> 00:41:43,500
+ There are prices for people who ask a lot.
+
+872
+00:41:43,500 --> 00:41:57,370
+ So let me show you some different workflows that exist.
+
+873
+00:41:57,370 --> 00:41:58,370
+ That people have built.
+
+874
+00:41:58,370 --> 00:41:59,370
+ So, personal assistant.
+
+875
+00:41:59,370 --> 00:42:02,370
+ So this is the, I'll also ask the question of what is a personal assistant.
+
+876
+00:42:02,370 --> 00:42:06,590
+ So you can think of all these different nodes as components or tools.
+
+877
+00:42:06,590 --> 00:42:09,680
+ So there's a YouTube guy named Matthew Bergman.
+
+878
+00:42:09,680 --> 00:42:11,410
+ He's actually very good.
+
+879
+00:42:11,410 --> 00:42:13,410
+ I like watching his YouTube videos.
+
+880
+00:42:13,410 --> 00:42:17,520
+ And he created, he has a YouTube video called 21 use cases of public cloud.
+
+881
+00:42:17,520 --> 00:42:23,170
+ And he, he also generated these with like, Challengity or open cloud.
+
+882
+00:42:23,170 --> 00:42:29,070
+ But this is a CRM system, customer relations and management system.
+
+883
+00:42:29,070 --> 00:42:33,050
+ So let's say you wanna, you're, you're selling services.
+
+884
+00:42:33,050 --> 00:42:34,050
+ Let's say you're selling mentors.
+
+885
+00:42:34,050 --> 00:42:37,050
+ But you have a relationship with different customers.
+
+886
+00:42:37,050 --> 00:42:40,360
+ So many things, let's say you're connected to Deloitte.
+
+887
+00:42:40,360 --> 00:42:41,360
+ You're connected to a DMO.
+
+888
+00:42:41,360 --> 00:42:43,490
+ You're connected to many different companies.
+
+889
+00:42:43,490 --> 00:42:46,160
+ And potential clients.
+
+890
+00:42:46,160 --> 00:42:49,540
+ So CRMs, a lot of companies have been on CRMs.
+
+891
+00:42:49,540 --> 00:42:52,530
+ Which is about managing your relationships with your clients.
+
+892
+00:42:52,530 --> 00:42:54,590
+ For customers.
+
+893
+00:42:54,590 --> 00:42:58,870
+ So you can like, keep track of all the Gmail calendar and knowledge base of these clients.
+
+894
+00:42:58,870 --> 00:42:59,830
+ Discount them.
+
+895
+00:42:59,830 --> 00:43:03,360
+ And then if there's like a movement in the relationship.
+
+896
+00:43:03,360 --> 00:43:07,050
+ If one of the customers is like, oh, I don't like this office.
+
+897
+00:43:07,050 --> 00:43:08,050
+ I wanna go somewhere else.
+
+898
+00:43:08,050 --> 00:43:12,300
+ You maybe automatically send them an email.
+
+899
+00:43:12,300 --> 00:43:16,280
+ Personal assistant could be meetings.
+
+900
+00:43:16,280 --> 00:43:17,280
+ You know, like AI companion.
+
+901
+00:43:17,280 --> 00:43:20,630
+ So you can think of AI companion as like a personal assistant.
+
+902
+00:43:20,630 --> 00:43:27,390
+ That transcribes the chat in your Zoom.
+
+903
+00:43:27,390 --> 00:43:29,530
+ So you can have that as a personal assistant.
+
+904
+00:43:29,530 --> 00:43:30,780
+ It takes transcripts.
+
+905
+00:43:30,780 --> 00:43:33,870
+ Okay, maybe it matches it to the CRM that you had earlier.
+
+906
+00:43:33,870 --> 00:43:36,160
+ Finds to-do action items.
+
+907
+00:43:36,160 --> 00:43:38,510
+ And then adds them into your Todoist task.
+
+908
+00:43:38,510 --> 00:43:41,510
+ So Todoist is a very nice app.
+
+909
+00:43:41,510 --> 00:43:45,370
+ That gives you, well, it helps you keep track of your to-do list.
+
+910
+00:43:45,370 --> 00:43:49,850
+ But you can also make it after meeting ends.
+
+911
+00:43:49,850 --> 00:43:52,910
+ You can have it send action items to your Notion for example.
+
+912
+00:43:52,910 --> 00:43:54,090
+ And then you open Notion.
+
+913
+00:43:54,090 --> 00:43:55,380
+ Or to your Telegram.
+
+914
+00:43:55,380 --> 00:43:56,380
+ So you can do whatever you want.
+
+915
+00:43:56,380 --> 00:44:04,310
+ But you see here that the main difference between how we built in our previous workshops and here.
+
+916
+00:44:04,310 --> 00:44:07,660
+ In the previous workshop you just had a static app.
+
+917
+00:44:07,660 --> 00:44:11,620
+ Right now you have data connectors and you have these services that you connect to.
+
+918
+00:44:11,620 --> 00:44:12,960
+ And actions.
+
+919
+00:44:12,960 --> 00:44:15,600
+ You can also have knowledge base.
+
+920
+00:44:15,600 --> 00:44:17,600
+ Let's say you want to keep up to date with all the latest papers.
+
+921
+00:44:17,600 --> 00:44:18,600
+ So you have that.
+
+922
+00:44:18,600 --> 00:44:20,820
+ All the latest papers in AI.
+
+923
+00:44:20,820 --> 00:44:22,940
+ Or like different domains.
+
+924
+00:44:22,940 --> 00:44:24,160
+ You can connect it to different articles.
+
+925
+00:44:24,160 --> 00:44:25,160
+ YouTube.
+
+926
+00:44:25,160 --> 00:44:26,190
+ Twitter.
+
+927
+00:44:26,190 --> 00:44:28,130
+ Although the Twitter API is pretty intense.
+
+928
+00:44:28,130 --> 00:44:30,150
+ I think they have a very high cost.
+
+929
+00:44:30,150 --> 00:44:32,240
+ The free version is not very good.
+
+930
+00:44:32,240 --> 00:44:33,590
+ And just all of that.
+
+931
+00:44:33,590 --> 00:44:34,590
+ Then you can send it to Slack.
+
+932
+00:44:34,590 --> 00:44:35,590
+ Then it can send you on telegrams.
+
+933
+00:44:35,590 --> 00:44:37,010
+ Oh.
+
+934
+00:44:37,010 --> 00:44:38,510
+ You can have five papers.
+
+935
+00:44:38,510 --> 00:44:39,450
+ You can have social media tracking.
+
+936
+00:44:39,450 --> 00:44:40,500
+ Morning briefings is a very good one.
+
+937
+00:44:40,500 --> 00:44:42,430
+ This is one that you specifically have.
+
+938
+00:44:42,430 --> 00:44:43,430
+ Connects with your content.
+
+939
+00:44:43,430 --> 00:44:44,430
+ Tells you what should you do to this.
+
+940
+00:44:44,430 --> 00:44:45,430
+ Like my telegram told me today I have to do this.
+
+941
+00:44:45,430 --> 00:44:46,420
+ Good reminder right.
+
+942
+00:44:46,420 --> 00:44:47,730
+ So when it comes to workflows.
+
+943
+00:44:47,730 --> 00:44:48,730
+ There are different strategies to think about.
+
+944
+00:44:48,730 --> 00:44:49,630
+ So remember the workflow is saying getting items from Craigslist.
+
+945
+00:44:49,630 --> 00:44:51,270
+ The one we were mentioning right now is called.
+
+946
+00:44:51,270 --> 00:44:52,270
+ It's like a one off workflow.
+
+947
+00:44:52,270 --> 00:44:53,690
+ Like you run it.
+
+948
+00:44:53,690 --> 00:44:55,200
+ You run it and it does the workflow.
+
+949
+00:44:55,200 --> 00:44:56,200
+ But you can also have cron jobs and heartbeats.
+
+950
+00:44:56,200 --> 00:44:59,650
+ The cron jobs is scheduled.
+
+951
+00:44:59,650 --> 00:45:01,060
+ So daily briefings can be scheduled every morning.
+
+952
+00:45:01,060 --> 00:45:02,060
+ Every morning is scheduled and sends you the briefings.
+
+953
+00:45:02,060 --> 00:45:03,060
+ And there's a second one.
+
+954
+00:45:03,060 --> 00:45:04,280
+ You can also have cron jobs and heartbeats.
+
+955
+00:45:04,280 --> 00:45:06,280
+ So daily briefings can be scheduled every morning.
+
+956
+00:45:06,280 --> 00:45:07,280
+ Every morning is scheduled and sends you the briefings.
+
+957
+00:45:07,280 --> 00:45:08,980
+ And there's a second one.
+
+958
+00:45:08,980 --> 00:45:09,980
+ But you can also have cron jobs and heartbeats.
+
+959
+00:45:09,980 --> 00:45:10,980
+ And then you can also have cron jobs and heartbeats.
+
+960
+00:45:10,980 --> 00:45:12,010
+ The cron jobs is scheduled.
+
+961
+00:45:12,010 --> 00:45:13,010
+ So daily briefings can be scheduled every morning.
+
+962
+00:45:13,010 --> 00:45:13,950
+ Every morning is scheduled and sends you the briefings.
+
+963
+00:45:13,950 --> 00:45:15,710
+ So cron jobs is scheduled.
+
+964
+00:45:15,710 --> 00:45:16,670
+ It just waits.
+
+965
+00:45:16,670 --> 00:45:17,930
+ Let's say every 6 a.m.
+
+966
+00:45:17,930 --> 00:45:18,930
+ It does it.
+
+967
+00:45:18,930 --> 00:45:19,930
+ It's like the rooster in the morning when you do the alarm.
+
+968
+00:45:19,930 --> 00:45:20,930
+ A lot of these good cron jobs.
+
+969
+00:45:20,930 --> 00:45:22,250
+ Heartbeats is a bit different.
+
+970
+00:45:22,250 --> 00:45:23,250
+ Heartbeats means like every 30 minutes or every one hour, it does something.
+
+971
+00:45:23,250 --> 00:45:24,790
+ Every one hour is like a check on this client.
+
+972
+00:45:24,790 --> 00:45:27,160
+ Is he happy?
+
+973
+00:45:27,160 --> 00:45:28,160
+ Is he not?
+
+974
+00:45:28,160 --> 00:45:29,160
+ Is he angry or something?
+
+975
+00:45:29,160 --> 00:45:30,160
+ Is he happy?
+
+976
+00:45:30,160 --> 00:45:31,160
+ Is he not?
+
+977
+00:45:31,160 --> 00:45:33,180
+ Is he angry or something?
+
+978
+00:45:33,180 --> 00:45:34,110
+ Is he happy?
+
+979
+00:45:34,110 --> 00:45:36,950
+ Is he not?
+
+980
+00:45:36,950 --> 00:45:38,510
+ Is he angry or something?
+
+981
+00:45:38,510 --> 00:45:40,820
+ Is he happy?
+
+982
+00:45:40,820 --> 00:45:41,820
+ Is he not?
+
+983
+00:45:41,820 --> 00:45:42,820
+ Is he angry or something?
+
+984
+00:45:42,820 --> 00:45:43,820
+ Is he happy?
+
+985
+00:45:43,820 --> 00:45:44,820
+ Is he angry or something?
+
+986
+00:45:44,820 --> 00:45:46,290
+ Is he happy?
+
+987
+00:45:46,290 --> 00:45:47,250
+ I don't know.
+
+988
+00:45:47,250 --> 00:45:48,250
+ Heartbeats is like a pulse check.
+
+989
+00:45:48,250 --> 00:45:49,630
+ Your heart is sending oxygen.
+
+990
+00:45:49,630 --> 00:45:50,630
+ I don't know.
+
+991
+00:45:50,630 --> 00:45:52,400
+ Only a second.
+
+992
+00:45:52,400 --> 00:45:53,850
+ So these are the different strategies you can use to run work with.
+
+993
+00:45:53,850 --> 00:45:54,850
+ So heartbeat is a concept that came out of public law.
+
+994
+00:45:54,850 --> 00:45:58,830
+ So that's the main differentiator here, but cron jobs could be heartbeats.
+
+995
+00:45:58,830 --> 00:46:00,550
+ Well, there's cron jobs like every time, but it could also be every 30 minutes.
+
+996
+00:46:00,550 --> 00:46:01,550
+ It's the same thing.
+
+997
+00:46:01,550 --> 00:46:02,810
+ But as you can see, schedule at a time versus you thinking.
+
+998
+00:46:02,810 --> 00:46:05,650
+ There's like a subtle difference, but they're both kind of common.
+
+999
+00:46:05,650 --> 00:46:06,560
+ They're all like terms that are kind of new-ish.
+
+1000
+00:46:06,560 --> 00:46:07,610
+ It's not like it's a standard term.
+
+1001
+00:46:07,610 --> 00:46:11,480
+ Even these components cost that.
+
+1002
+00:46:11,480 --> 00:46:12,480
+ But they really like us to see things in the form of components or tools.
+
+1003
+00:46:12,480 --> 00:46:13,480
+ That's so bad.
+
+1004
+00:46:13,480 --> 00:46:14,480
+ So what do you think about that?
+
+1005
+00:46:14,480 --> 00:46:16,520
+ I think it's a little bit more about that.
+
+1006
+00:46:16,520 --> 00:46:17,520
+ I think it's a little bit more about that.
+
+1007
+00:46:17,520 --> 00:46:18,520
+ I think it's a little bit more about that.
+
+1008
+00:46:18,520 --> 00:46:19,490
+ I think it's a little bit more about that.
+
+1009
+00:46:19,490 --> 00:46:20,930
+ I think it's a little bit more about that.
+
+1010
+00:46:20,930 --> 00:46:22,140
+ I think it's a little bit more about that.
+
+1011
+00:46:22,140 --> 00:46:23,140
+ I think it's a little bit more about that.
+
+1012
+00:46:23,140 --> 00:46:24,140
+ I think it's a little bit more about that.
+
+1013
+00:46:24,140 --> 00:46:25,140
+ I think it's a little bit more about that.
+
+1014
+00:46:25,140 --> 00:46:26,300
+ I think it's a little bit more about that.
+
+1015
+00:46:26,300 --> 00:46:27,490
+ I think it's a little bit more about that.
+
+1016
+00:46:27,490 --> 00:46:29,120
+ I think it's a little bit more about that.
+
+1017
+00:46:29,120 --> 00:46:30,120
+ I think it's a little bit more about that.
+
+1018
+00:46:30,120 --> 00:46:31,120
+ I think it's a little bit more about that.
+
+1019
+00:46:31,120 --> 00:46:32,120
+ I think it's a little bit more about that.
+
+1020
+00:46:32,120 --> 00:46:36,610
+ I think it's a little bit more about that.
+
+1021
+00:46:36,610 --> 00:46:37,610
+ I think it's a little bit more about that.
+
+1022
+00:46:37,610 --> 00:46:38,610
+ I think it's a little bit more about that.
+
+1023
+00:46:38,610 --> 00:46:40,280
+ I think it's a little bit more about that.
+
+1024
+00:46:40,280 --> 00:46:41,280
+ I think it's a little bit more about that.
+
+1025
+00:46:41,280 --> 00:46:43,550
+ I think it's a little bit more about that.
+
+1026
+00:46:43,550 --> 00:46:44,550
+ I think it's a little bit more about that.
+
+1027
+00:46:44,550 --> 00:46:45,550
+ I think it's a little bit more about that.
+
+1028
+00:46:45,550 --> 00:46:46,530
+ I think it's a little bit more about that.
+
+1029
+00:46:46,530 --> 00:46:47,640
+ I think it's a little bit more about that.
+
+1030
+00:46:47,640 --> 00:46:48,640
+ I think it's a little bit more about that.
+
+1031
+00:46:48,640 --> 00:46:53,930
+ I think it's a little bit more about that.
+
+1032
+00:46:53,930 --> 00:46:55,820
+ I think it's a little bit more about that.
+
+1033
+00:46:55,820 --> 00:46:56,820
+ I think it's a little bit more about that.
+
+1034
+00:46:56,820 --> 00:46:59,290
+ I think it's a little bit more about that.
+
+1035
+00:46:59,290 --> 00:47:00,550
+ It's an overview.
+
+1036
+00:47:00,550 --> 00:47:02,550
+ Today, Saturday, we're doing the kick-off, as you can see.
+
+1037
+00:47:02,550 --> 00:47:04,930
+ After this, we'll have socials.
+
+1038
+00:47:04,930 --> 00:47:07,460
+ We're going to go somewhere.
+
+1039
+00:47:07,460 --> 00:47:09,290
+ We're going to have kids in there.
+
+1040
+00:47:09,290 --> 00:47:12,020
+ We're going to play some more games.
+
+1041
+00:47:12,020 --> 00:47:13,880
+ You can just follow me.
+
+1042
+00:47:13,880 --> 00:47:18,220
+ Socials are great.
+
+1043
+00:47:18,220 --> 00:47:20,220
+ Socials is the best way to connect.
+
+1044
+00:47:20,220 --> 00:47:24,890
+ For me, my biggest career growth was connecting with other people who are building.
+
+1045
+00:47:24,890 --> 00:47:30,700
+ So, Sunday and Tuesday, or Sunday and Monday, we'll figure this out.
+
+1046
+00:47:30,700 --> 00:47:32,700
+ We'll have app-building lectures.
+
+1047
+00:47:32,700 --> 00:47:35,040
+ We're going to do two lectures.
+
+1048
+00:47:35,040 --> 00:47:39,260
+ One lecture will be me, the one on Sunday.
+
+1049
+00:47:39,260 --> 00:47:42,210
+ I'll show you how to build personal assistants from scratch.
+
+1050
+00:47:42,210 --> 00:47:45,270
+ The lecture after that will be by Powell.
+
+1051
+00:47:45,270 --> 00:47:46,910
+ About security.
+
+1052
+00:47:46,910 --> 00:47:50,410
+ In fact, when I created a website for this hackathon,
+
+1053
+00:47:50,410 --> 00:47:56,000
+ they immediately sent me this cloud analysis of some potential loophole that it has.
+
+1054
+00:47:56,000 --> 00:47:58,220
+ But don't worry about it.
+
+1055
+00:47:58,220 --> 00:48:01,670
+ It's a good idea.
+
+1056
+00:48:01,670 --> 00:48:08,020
+ Whenever you build an app, send it to a cloud or something that's security.
+
+1057
+00:48:08,020 --> 00:48:18,850
+ They're the same thing.
+
+1058
+00:48:18,850 --> 00:48:23,930
+ The CLI agent, or a cloud code or VS code, they're the same.
+
+1059
+00:48:23,930 --> 00:48:27,080
+ It's just the VS code that makes it easier to view things.
+
+1060
+00:48:27,080 --> 00:48:30,190
+ Because then you can see the files, you can see the code.
+
+1061
+00:48:30,190 --> 00:48:32,450
+ You didn't mention about this codex.
+
+1062
+00:48:32,450 --> 00:48:33,440
+ Huh?
+
+1063
+00:48:33,440 --> 00:48:34,570
+ There's also codex.
+
+1064
+00:48:34,570 --> 00:48:41,930
+ Meaning that if you're already paying for OpenAI, for ChatGPT, you can use alternatively codex.
+
+1065
+00:48:41,930 --> 00:48:59,480
+ So the things we're showing right now is another scaffolding on top of the scaffolding that already exists.
+
+1066
+00:48:59,480 --> 00:49:01,760
+ So cloud code has its own scaffolding, right?
+
+1067
+00:49:01,760 --> 00:49:03,760
+ It can plan, it can do things for you.
+
+1068
+00:49:03,760 --> 00:49:07,040
+ The components, you can think of these components that we have.
+
+1069
+00:49:07,040 --> 00:49:08,040
+ It's an extra scaffolding.
+
+1070
+00:49:08,040 --> 00:49:13,150
+ It's like having a building that you're scaffolding and then adding others.
+
+1071
+00:49:13,150 --> 00:49:20,850
+ And then Monday and Thursday, we're going to go to WeWork together.
+
+1072
+00:49:20,850 --> 00:49:23,780
+ These are also one of the best places to be at.
+
+1073
+00:49:23,780 --> 00:49:28,030
+ More like inspiring each other and making a lot of progress.
+
+1074
+00:49:28,030 --> 00:49:33,130
+ We've seen a lot of people come to WeWork in those days and then spend the whole night just working.
+
+1075
+00:49:33,130 --> 00:49:35,280
+ It's very epic.
+
+1076
+00:49:35,280 --> 00:49:37,810
+ One week is a lot of fun.
+
+1077
+00:49:37,810 --> 00:49:43,300
+ One week is a lot of time, but it's also enough time to build it.
+
+1078
+00:49:43,300 --> 00:49:46,300
+ Like that thing I built, I mean, maybe I have experience.
+
+1079
+00:49:46,300 --> 00:49:52,500
+ But you can build something if you have all nighters.
+
+1080
+00:49:52,500 --> 00:49:55,610
+ But it's doable.
+
+1081
+00:49:55,610 --> 00:49:58,650
+ I've seen it now.
+
+1082
+00:49:58,650 --> 00:50:04,180
+ Also, access the, everything is in the hackathon website.
+
+1083
+00:50:04,180 --> 00:50:08,690
+ So you go to the website that I sent in the blast and discord and so on.
+
+1084
+00:50:08,690 --> 00:50:09,690
+ Go there and log in.
+
+1085
+00:50:09,690 --> 00:50:11,690
+ You can use your domain email and password.
+
+1086
+00:50:11,690 --> 00:50:12,690
+ The password is 123.
+
+1087
+00:50:12,690 --> 00:50:13,950
+ It's a security loophole.
+
+1088
+00:50:13,950 --> 00:50:16,300
+ But you can change the password when you're in.
+
+1089
+00:50:16,300 --> 00:50:18,580
+ There isn't much information about you anyways.
+
+1090
+00:50:18,580 --> 00:50:24,020
+ The only information is like the thing that the tasks you have completed is pretty much.
+
+1091
+00:50:24,020 --> 00:50:27,780
+ And you can see there's a leaderboard.
+
+1092
+00:50:27,780 --> 00:50:33,760
+ So there's a leaderboard about the people, how many people have finished their tasks.
+
+1093
+00:50:33,760 --> 00:50:37,110
+ And the leaderboard is sorted by how many have finished.
+
+1094
+00:50:37,110 --> 00:50:38,360
+ So they're last.
+
+1095
+00:50:38,360 --> 00:50:43,900
+ I mean, there's always a last no matter how good everyone is.
+
+1096
+00:50:43,900 --> 00:50:53,090
+ And then, in demo day, what we're going to ask is to create a demo video of 1.5 minutes max.
+
+1097
+00:50:53,090 --> 00:50:55,830
+ Don't go beyond 1.5 minutes.
+
+1098
+00:50:55,830 --> 00:50:56,830
+ No slides at all.
+
+1099
+00:50:56,830 --> 00:50:58,830
+ I've done slides before.
+
+1100
+00:50:58,830 --> 00:51:00,620
+ Just the lives.
+
+1101
+00:51:00,620 --> 00:51:01,740
+ You interact with the app.
+
+1102
+00:51:01,740 --> 00:51:05,740
+ So this is a nice app for AI system that helps people do homeworks.
+
+1103
+00:51:05,740 --> 00:51:09,020
+ Our previous cohorts from a different program.
+
+1104
+00:51:09,020 --> 00:51:11,600
+ And you just showed this in 1.5 minutes.
+
+1105
+00:51:11,600 --> 00:51:14,530
+ And then we're going to just play the video.
+
+1106
+00:51:14,530 --> 00:51:17,290
+ So you don't have to do a live demo.
+
+1107
+00:51:17,290 --> 00:51:18,350
+ Then people ask you questions.
+
+1108
+00:51:18,350 --> 00:51:22,470
+ If you submit this, you'll get your certificate of completion.
+
+1109
+00:51:22,470 --> 00:51:25,780
+ And you'll have the chance to win the prices.
+
+1110
+00:51:25,780 --> 00:51:30,080
+ So that's all that needs to be done.
+
+1111
+00:51:30,080 --> 00:51:31,530
+ It's only delivered.
+
+1112
+00:51:31,530 --> 00:51:33,840
+ Yeah.
+
+1113
+00:51:33,840 --> 00:51:34,840
+ The winners get prices.
+
+1114
+00:51:34,840 --> 00:51:36,840
+ So from 1180 Universe, first place $150.
+
+1115
+00:51:36,840 --> 00:51:37,840
+ Second place $100.
+
+1116
+00:51:37,840 --> 00:51:38,840
+ Third place $50.
+
+1117
+00:51:38,840 --> 00:51:42,990
+ From Dental Boutique, you're going to get this very nice package.
+
+1118
+00:51:42,990 --> 00:51:45,620
+ They're happy.
+
+1119
+00:51:45,620 --> 00:51:46,620
+ $300.
+
+1120
+00:51:46,620 --> 00:51:46,720
+ Because Dental Boutique is really nice.
+
+1121
+00:51:46,620 --> 00:51:48,450
+ They have the best people in greeting.
+
+1122
+00:51:48,450 --> 00:51:49,510
+ Trust you.
+
+1123
+00:51:49,510 --> 00:51:49,610
+ Based on how people greet you, you'll get attracted to one place or another.
+
+1124
+00:51:49,510 --> 00:51:50,510
+ Yeah.
+
+1125
+00:51:50,510 --> 00:51:51,510
+ And these are some of the judges.
+
+1126
+00:51:51,510 --> 00:51:52,640
+ Alina is from 1180 Universe.
+
+1127
+00:51:52,640 --> 00:51:54,750
+ Claire, from behind, will be one of the judges.
+
+1128
+00:51:54,750 --> 00:51:55,750
+ So make sure you...
+
+1129
+00:51:55,750 --> 00:51:56,700
+ You're good with her.
+
+1130
+00:51:56,700 --> 00:51:57,970
+ Maybe if you come to her mental fatigue, you'll get bonus points.
+
+1131
+00:51:57,970 --> 00:52:01,940
+ There will be some biases.
+
+1132
+00:52:01,940 --> 00:52:03,060
+ She's there at the front desk.
+
+1133
+00:52:03,060 --> 00:52:04,060
+ Oh, I've seen your app.
+
+1134
+00:52:04,060 --> 00:52:05,060
+ So, okay.
+
+1135
+00:52:05,060 --> 00:52:05,160
+ I'll send the address.
+
+1136
+00:52:05,060 --> 00:52:06,060
+ I'll send the address.
+
+1137
+00:52:06,060 --> 00:52:07,190
+ I'll send it on this one.
+
+1138
+00:52:07,190 --> 00:52:08,190
+ Today, right?
+
+1139
+00:52:08,190 --> 00:52:09,370
+ Yeah.
+
+1140
+00:52:09,370 --> 00:52:10,270
+ Okay.
+
+1141
+00:52:10,270 --> 00:52:10,370
+ I'll do a very quick intro about myself.
+
+1142
+00:52:10,270 --> 00:52:11,560
+ I'm Yisam.
+
+1143
+00:52:11,560 --> 00:52:12,560
+ I did my PhD at UBC, postdoc in DPL.
+
+1144
+00:52:12,560 --> 00:52:15,090
+ I work as a research scientist now.
+
+1145
+00:52:15,090 --> 00:52:16,090
+ And I'm going to get to the next one.
+
+1146
+00:52:16,090 --> 00:52:17,090
+ I'm going to get to the next one.
+
+1147
+00:52:17,090 --> 00:52:18,090
+ I'm going to get to the next one.
+
+1148
+00:52:18,090 --> 00:52:19,150
+ I'm going to get to the next one.
+
+1149
+00:52:19,150 --> 00:52:20,150
+ I'm going to get to the next one.
+
+1150
+00:52:20,150 --> 00:52:21,150
+ I'm going to get to the next one.
+
+1151
+00:52:21,150 --> 00:52:22,050
+ I'm going to get to the next one.
+
+1152
+00:52:22,050 --> 00:52:31,580
+ I'm going to get to the next one.
+
+1153
+00:52:31,580 --> 00:52:32,580
+ I'm going to get to the next one.
+
+1154
+00:52:32,580 --> 00:52:33,580
+ I'm going to get to the next one.
+
+1155
+00:52:33,580 --> 00:52:34,490
+ I'm going to get to the next one.
+
+1156
+00:52:34,490 --> 00:52:35,710
+ I'm going to get to the next one.
+
+1157
+00:52:35,710 --> 00:52:36,670
+ I'm going to get to the next one.
+
+1158
+00:52:36,670 --> 00:52:38,140
+ I'm going to get to the next one.
+
+1159
+00:52:38,140 --> 00:52:40,080
+ Yeah.
+
+1160
+00:52:40,080 --> 00:52:46,450
+ Okay.
+
+1161
+00:52:46,450 --> 00:52:50,400
+ I'll do a very quick intro about myself.
+
+1162
+00:52:50,400 --> 00:52:51,400
+ I'm Yisam.
+
+1163
+00:52:51,400 --> 00:52:56,100
+ I did my PhD at UBC, postdoc in DPL.
+
+1164
+00:52:56,100 --> 00:52:59,220
+ I work as a research scientist now.
+
+1165
+00:52:59,220 --> 00:53:00,790
+ I'm a professor at UBC.
+
+1166
+00:53:00,790 --> 00:53:04,200
+ And now I'm managing other research scientists.
+
+1167
+00:53:04,200 --> 00:53:05,770
+ A lot of AI.
+
+1168
+00:53:05,770 --> 00:53:10,460
+ I've been doing AI more than 14 years before it became big.
+
+1169
+00:53:10,460 --> 00:53:17,330
+ The time when I was doing AI, I was doing the AI you went to.
+
+1170
+00:53:17,330 --> 00:53:18,330
+ Paul, do you want to introduce yourself?
+
+1171
+00:53:18,330 --> 00:53:20,350
+ Do you want to like so that people can hear you?
+
+1172
+00:53:20,350 --> 00:53:21,610
+ Yes.
+
+1173
+00:53:21,610 --> 00:53:28,250
+ I believe that some of you have already known me.
+
+1174
+00:53:28,250 --> 00:53:29,210
+ Hi.
+
+1175
+00:53:29,210 --> 00:53:30,210
+ I'm Paul.
+
+1176
+00:53:30,210 --> 00:53:33,210
+ I'm a senior data scientist at Jefferson Fortline.
+
+1177
+00:53:33,210 --> 00:53:36,210
+ So I work in digital innovation domain.
+
+1178
+00:53:36,210 --> 00:53:40,210
+ And the daily basis I'm actually building congenital systems,
+
+1179
+00:53:40,210 --> 00:53:51,400
+ primarily for like AI solutions in general digital emissions.
+
+1180
+00:53:51,400 --> 00:53:56,520
+ And I'll be helping you some to guide you through the process.
+
+1181
+00:53:56,520 --> 00:54:01,630
+ And I want to focus especially on like aspects of debugging and security.
+
+1182
+00:54:01,630 --> 00:54:02,630
+ It's very important.
+
+1183
+00:54:02,630 --> 00:54:06,970
+ And you may have heard that open global and exploded.
+
+1184
+00:54:06,970 --> 00:54:12,300
+ Right away there's like adoption in the industry.
+
+1185
+00:54:12,300 --> 00:54:19,460
+ But we're so focused on us unboxing the digital solutions and security.
+
+1186
+00:54:19,460 --> 00:54:24,450
+ And one primary example is NemoPo from MPDR.
+
+1187
+00:54:24,450 --> 00:54:31,070
+ And if you read anything about NemoPo you will notice that a big part of that is so-called open shell.
+
+1188
+00:54:31,070 --> 00:54:38,280
+ We get to the idea to sandbox access to code execution, like data availability.
+
+1189
+00:54:38,280 --> 00:54:43,900
+ And usually we are dealing with a trade-off.
+
+1190
+00:54:43,900 --> 00:54:51,200
+ So the more flexibility and independence your agent has, the more useful it gets.
+
+1191
+00:54:51,200 --> 00:54:54,740
+ But the higher the risks.
+
+1192
+00:54:54,740 --> 00:54:57,740
+ So I guess we can find some trade there.
+
+1193
+00:54:57,740 --> 00:54:59,740
+ My background is in computer science.
+
+1194
+00:54:59,740 --> 00:55:07,870
+ I use all of the coding agents on any basis, both private projects and enterprise level.
+
+1195
+00:55:07,870 --> 00:55:11,830
+ Upcode, which is great projects from OpenAI.
+
+1196
+00:55:11,830 --> 00:55:19,430
+ We were quickly mentioning Tisum is recommending here Hotcode, which is really, really great.
+
+1197
+00:55:19,430 --> 00:55:24,640
+ But at the same time if you're already paying for OpenAI, ChargeGPT.
+
+1198
+00:55:24,640 --> 00:55:29,930
+ ChargeGPT, the OpenAI has this thing called Codex, which we hold it.
+
+1199
+00:55:29,930 --> 00:55:40,220
+ And there are three main components for both of them, which is like CLI, the visual code plugin, which is so great.
+
+1200
+00:55:40,220 --> 00:55:47,460
+ And I highly recommend using visual code because it gives you much more visibility for what's happening with the code that you're building.
+
+1201
+00:55:47,460 --> 00:55:52,650
+ And of course the desktop app, both the code and Codex have about desktop apps.
+
+1202
+00:55:52,650 --> 00:55:57,830
+ And last but not least, you can use it to build your own agent and personal assistant.
+
+1203
+00:55:57,830 --> 00:56:10,600
+ But also once you have those components, which is like a tool or XP server, you can essentially use it from within a plot or codex as personal assistant.
+
+1204
+00:56:10,600 --> 00:56:18,340
+ And last but not least, later I may have some time to talk about it, but there are different agent SDKs that you can use.
+
+1205
+00:56:18,340 --> 00:56:25,730
+ And one of them is a cloud agent SDK, which essentially uses a full harness that Anthropi already built.
+
+1206
+00:56:25,730 --> 00:56:33,230
+ And you can plug in all of those components, and you can do something with digital types of codecats.
+
+1207
+00:56:33,230 --> 00:56:34,410
+ Yep. Thanks.
+
+1208
+00:56:34,410 --> 00:56:36,410
+ So, hopefully you'll get better.
+
+1209
+00:56:36,410 --> 00:56:37,630
+ Thanks, Mal.
+
+1210
+00:56:37,630 --> 00:56:38,720
+ That's good.
+
+1211
+00:56:38,720 --> 00:56:45,130
+ So, we're going to have a quick break.
+
+1212
+00:56:45,130 --> 00:56:47,220
+ We're going to come back this time.
+
+1213
+00:56:47,220 --> 00:56:48,220
+ Let's come back at 12:30.
+
+1214
+00:56:48,220 --> 00:56:50,700
+ We're going to come back at 12:30.
+
+1215
+00:56:50,700 --> 00:56:55,020
+ Feel free to grab those gift cards for mental.
+
+1216
+00:56:55,020 --> 00:57:00,450
+ $30, whether you're insuring them.
+
+1217
+00:57:00,450 --> 00:57:03,870
+ So, we'll have a quick representation on this part of this.
+
+1218
+00:57:03,870 --> 00:57:08,640
+ And one thing is that keep your laptops, like, ready.
+
+1219
+00:57:08,640 --> 00:57:15,110
+ Because the next part will be you're going to group together and you're going to build a quick app.
+
+1220
+00:57:15,110 --> 00:57:18,940
+ It has, like, a landing page and some walk-out components.
+
+1221
+00:57:18,940 --> 00:57:21,410
+ So, good.
+
+1222
+00:57:21,410 --> 00:57:24,670
+ Even those online, we're going to tell you how to do it.
+
+1223
+00:57:24,670 --> 00:57:31,080
+ So, you get your VS code with cloud code or codex ready so you can build that, like, landing page.
+
+1224
+00:57:31,080 --> 00:57:33,930
+ And, uh, yeah.
+
+1225
+00:57:33,930 --> 00:57:35,930
+ And then you get the chance to present.
+
+1226
+00:57:35,930 --> 00:57:36,930
+ Yeah.
+
+1227
+00:57:36,930 --> 00:57:37,930
+ So, let's go.
+
+1228
+00:57:37,930 --> 00:57:39,930
+ Let's come back and close, uh, drink.
+
+1229
+00:57:39,930 --> 00:57:40,930
+ I'm using the pilot.
+
+1230
+00:57:40,930 --> 00:57:42,950
+ You're using the pilot.
+
+1231
+00:57:42,950 --> 00:57:43,950
+ You're using the pilot.
+
+1232
+00:57:43,950 --> 00:57:44,950
+ You're using the pilot.
+
+1233
+00:57:44,950 --> 00:57:45,950
+ Right, right, right.
+
+1234
+00:57:45,950 --> 00:57:46,950
+ You're using the pilot.
+
+1235
+00:57:46,950 --> 00:57:47,950
+ No problem.
+
+1236
+00:57:47,950 --> 00:57:48,950
+ You're using the pilot.
+
+1237
+00:57:48,950 --> 00:57:50,770
+ I'm using the pilot.
+
+1238
+00:57:50,770 --> 00:57:55,080
+ You're using the pilot.
+
+1239
+00:57:55,080 --> 00:57:56,080
+ You're using the pilot.
+
+1240
+00:57:56,080 --> 00:57:57,080
+ I'm using the pilot.
+
+1241
+00:57:57,080 --> 00:57:58,080
+ You're using the pilot.
+
+1242
+00:57:58,080 --> 00:57:59,220
+ You're using the pilot.
+
+1243
+00:57:59,220 --> 00:58:02,420
+ You're using the pilot.
+
+1244
+00:58:02,420 --> 00:58:04,120
+ You're using the pilot.
+
+1245
+00:58:04,120 --> 00:58:05,120
+ You're using the pilot.
+
+1246
+00:58:05,120 --> 00:58:06,120
+ No problem.
+
+1247
+00:58:06,120 --> 00:58:07,120
+ You're using the pilot.
+
+1248
+00:58:07,120 --> 00:58:23,660
+ I didn't use it, but I saw them in the open box. They were using the open box. They said they were using the open box.
+
+1249
+00:58:23,660 --> 00:58:31,260
+ But they said they were using the open box.
+
+1250
+00:58:31,260 --> 00:58:54,610
+ They used the open box. They used the open box.
+
+1251
+00:58:54,610 --> 00:59:04,570
+ They used the open box. They used the open box.
+
+1252
+00:59:04,570 --> 00:59:14,690
+ I don't want to say that open box is the open box.
+
+1253
+00:59:14,690 --> 00:59:25,130
+ They used the open box. They used the open box.
+
+1254
+00:59:25,130 --> 00:59:27,130
+ Now we can't buy the open box.
+
+1255
+00:59:27,130 --> 00:59:33,120
+ They used the open box.
+
+1256
+00:59:33,120 --> 00:59:37,280
+ I don't know if it was the open box.
+
+1257
+00:59:37,280 --> 00:59:41,410
+ They said they were using the open box.
+
+1258
+00:59:41,410 --> 00:59:44,050
+ They used the open box.
+
+1259
+00:59:44,050 --> 00:59:46,050
+ They used the open box.
+
+1260
+00:59:46,050 --> 00:59:48,050
+ They used the open box.
+
+1261
+00:59:48,050 --> 00:59:50,400
+ They used the open box.
+
+1262
+00:59:50,400 --> 00:59:52,400
+ They used the open box.
+
+1263
+00:59:52,400 --> 00:59:54,750
+ They used the open box.
+
+1264
+00:59:54,750 --> 00:59:56,750
+ They used the open box.
+
+1265
+00:59:56,750 --> 00:59:58,750
+ They used the open box.
+
+1266
+00:59:58,750 --> 01:00:00,750
+ They used the open box.
+
+1267
+01:00:00,750 --> 01:00:02,750
+ They used the open box.
+
+1268
+01:00:02,750 --> 01:00:04,750
+ They used the open box.
+
+1269
+01:00:04,750 --> 01:00:06,930
+ They used the open box.
+
+1270
+01:00:06,930 --> 01:00:08,930
+ They used the open box.
+
+1271
+01:00:08,930 --> 01:00:11,310
+ They used the open box.
+
+1272
+01:00:11,310 --> 01:00:13,310
+ The open box.
+
+1273
+01:00:13,310 --> 01:00:43,850
+ If you want to buy an open call, you want to buy an open call, and you want to buy an open call, 1-4-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5-5
+
+1274
+01:00:43,850 --> 01:01:03,320
+ I'm going to go to the next one. I'm going to go to the next one. I'm going to go to the next one.
+

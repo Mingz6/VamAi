@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}MoneyClaw — Optimize Your Spending{% endblock %}
+{% block extra_style %}
+    .hero { text-align: center; padding: 6rem 2rem 4rem; background: linear-gradient(135deg, #fff9e6 0%, #fff0c2 100%); }
+    .hero h1 { font-size: 3.2rem; font-weight: 900; line-height: 1.15; margin-bottom: 1.2rem; }
+    .hero h1 span { color: #f5a623; }
+    .hero p { font-size: 1.2rem; color: #555; max-width: 520px; margin: 0 auto 2.4rem; }
+    .hero-btn { display: inline-block; background: #f5a623; color: #fff; padding: 0.9rem 2.4rem; border-radius: 50px; font-size: 1rem; font-weight: 700; text-decoration: none; box-shadow: 0 4px 16px rgba(245,166,35,0.35); transition: transform 0.15s, box-shadow 0.15s; }
+    .hero-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(245,166,35,0.45); }
+    .features { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; padding: 4rem 2rem; background: #fff; }
+    .card { background: #fffbf0; border: 1.5px solid #ffe9a0; border-radius: 16px; padding: 2rem; max-width: 260px; text-align: center; }
+    .card .icon { font-size: 2.4rem; margin-bottom: 1rem; }
+    .card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .card p { font-size: 0.9rem; color: #666; }
+    .cta { background: linear-gradient(135deg, #f5a623, #f7c968); text-align: center; padding: 4rem 2rem; color: #fff; }
+    .cta h2 { font-size: 2rem; margin-bottom: 1rem; }
+    .cta p { margin-bottom: 2rem; font-size: 1.05rem; opacity: 0.9; }
+    .btn-white { background: #fff; color: #f5a623; padding: 0.85rem 2.2rem; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1rem; }
+    .btn-white:hover { opacity: 0.9; }
+    footer { text-align: center; padding: 1.5rem; font-size: 0.85rem; color: #aaa; background: #fff; }
+{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Stop Overspending.<br><span>Start Winning.</span></h1>
+  <p>MoneyClaw analyzes your spending, finds waste, and gives you a clear path to financial freedom.</p>
+  <a href="#" class="hero-btn">Get Started Free</a>
+</section>
+<section class="features">
+  <div class="card"><div class="icon">📊</div><h3>Spending Insights</h3><p>Visual breakdowns of where your money actually goes, every month.</p></div>
+  <div class="card"><div class="icon">✂️</div><h3>Smart Cuts</h3><p>AI-powered suggestions to trim subscriptions and hidden fees.</p></div>
+  <div class="card"><div class="icon">🎯</div><h3>Goal Tracker</h3><p>Set savings goals and watch MoneyClaw help you hit them.</p></div>
+  <div class="card"><div class="icon">🔔</div><h3>Overspend Alerts</h3><p>Get notified before you blow your budget, not after.</p></div>
+</section>
+<section class="cta">
+  <h2>Ready to claw back your money?</h2>
+  <p>Join thousands optimizing their spending with MoneyClaw.</p>
+  <a href="#" class="btn-white">Start for Free</a>
+</section>
+<footer>© 2026 MoneyClaw. All rights reserved.</footer>
+{% endblock %}

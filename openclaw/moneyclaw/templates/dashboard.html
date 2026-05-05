@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% block title %}MoneyClaw — Dashboard{% endblock %}
+{% block body_extra_style %}display: flex; flex-direction: column; height: 100vh;{% endblock %}
+{% block extra_style %}
+    .main-panel { flex: 1; overflow-y: auto; padding: 2rem 2.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+    .btn-run { background: #f5a623; color: #fff; border: none; border-radius: 8px; padding: 0.75rem; font-size: 0.95rem; font-weight: 700; cursor: pointer; width: 100%; }
+    .btn-run:hover { opacity: 0.88; } .btn-run:disabled { opacity: 0.5; cursor: not-allowed; }
+    .stats-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .stat-card { flex: 1; min-width: 130px; background: #fff; border: 1.5px solid #ffe9a0; border-radius: 12px; padding: 1rem 1.2rem; }
+    .stat-card .s-label { font-size: 0.72rem; font-weight: 700; color: #aaa; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+    .stat-card .s-value { font-size: 1.4rem; font-weight: 900; }
+    .stat-card.green .s-value { color: #059669; } .stat-card.red .s-value { color: #dc2626; } .stat-card.blue .s-value { color: #2563eb; }
+    .chart-card { background: #fff; border: 1.5px solid #ffe9a0; border-radius: 14px; padding: 1.5rem; }
+    .chart-card canvas { max-height: 380px; }
+{% endblock %}
+{% block content %}
+<div class="layout">
+  <aside class="sidebar">
+    <h1>Dashboard</h1>
+    <p class="sidebar-desc">Visualize payments from your Gmail exports.</p>
+    <div>
+      <label>DATA FILE</label>
+      <select id="file-select">
+        {% for f in files %}
+        <option value="{{ f }}">{{ f }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div>
+      <label>CHART TYPE</label>
+      <select id="chart-type">
+        <option value="bar">Bar Chart</option>
+        <option value="pie">Pie Chart</option>
+      </select>
+    </div>
+    <div>
+      <label>BREAKDOWN BY</label>
+      <select id="breakdown">
+        <option value="user">User</option>
+        <option value="type">Transfer Type</option>
+      </select>
+    </div>
+    <button class="btn-run" id="run-btn" onclick="runDashboard()">&#9654; Run</button>
+  </aside>
+  <div class="main-panel" id="main-panel">
+    <div class="ready-state">
+      <div class="icon">⚡</div>
+      <strong>Ready to run</strong>
+      <p>Select a file and click Run</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+  let chartInstance = null;
+
+  async function runDashboard() {
+    const btn = document.getElementById("run-btn");
+    btn.disabled = true; btn.textContent = "Loading...";
+
+    const payload = {
+      file: document.getElementById("file-select").value,
+      chart_type: document.getElementById("chart-type").value,
+      breakdown: document.getElementById("breakdown").value,
+    };
+
+    try {
+      const res = await fetch("/api/dashboard", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify(payload) });
+      const data = await res.json();
+      if (data.error) {
+        document.getElementById("main-panel").innerHTML = `<div class="error">${data.error}</div>`;
+      } else {
+        render(data, payload.chart_type, payload.breakdown);
+      }
+    } catch(e) {
+      document.getElementById("main-panel").innerHTML = `<div class="error">${e.message}</div>`;
+    }
+    btn.disabled = false; btn.textContent = "▶ Run";
+  }
+
+  function render(data, chartType, breakdown) {
+    const panel = document.getElementById("main-panel");
+
+    const totalReceived = data.transactions.filter(t => t.type === "received").reduce((s,t) => s+t.amount, 0);
+    const totalSent = data.transactions.filter(t => t.type === "sent").reduce((s,t) => s+t.amount, 0);
+    const count = data.transactions.length;
+
+    panel.innerHTML = `
+      <div class="stats-row">
+        <div class="stat-card green"><div class="s-label">TOTAL RECEIVED</div><div class="s-value">$${totalReceived.toLocaleString("en", {minimumFractionDigits:2})}</div></div>
+        <div class="stat-card red"><div class="s-label">TOTAL SENT</div><div class="s-value">$${totalSent.toLocaleString("en", {minimumFractionDigits:2})}</div></div>
+        <div class="stat-card blue"><div class="s-label">TRANSACTIONS</div><div class="s-value">${count}</div></div>
+      </div>
+      <div class="chart-card"><canvas id="myChart"></canvas></div>`;
+
+    if (chartInstance) { chartInstance.destroy(); chartInstance = null; }
+
+    const agg = data.aggregated;
+    const labels = Object.keys(agg);
+    const received = labels.map(k => agg[k].received);
+    const sent = labels.map(k => agg[k].sent);
+    const counts = labels.map(k => agg[k].count);
+
+    const COLORS = ["#f5a623","#059669","#2563eb","#dc2626","#7c3aed","#0891b2","#d97706","#be185d","#16a34a","#9333ea"];
+    const ctx = document.getElementById("myChart").getContext("2d");
+
+    if (chartType === "bar") {
+      chartInstance = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels,
+          datasets: [
+            { label: "Received ($)", data: received, backgroundColor: "#059669cc", borderColor: "#059669", borderWidth: 1.5, borderRadius: 6 },
+            { label: "Sent ($)", data: sent, backgroundColor: "#dc2626cc", borderColor: "#dc2626", borderWidth: 1.5, borderRadius: 6 },
+          ]
+        },
+        options: {
+          responsive: true,
+          interaction: { mode: "index", intersect: false },
+          plugins: {
+            legend: { position: "top" },
+            tooltip: {
+              callbacks: {
+                afterBody: (items) => {
+                  const i = items[0].dataIndex;
+                  return [`Transactions: ${counts[i]}`];
+                },
+                label: (item) => ` ${item.dataset.label}: $${item.raw.toLocaleString("en", {minimumFractionDigits:2})}`,
+              }
+            }
+          },
+          scales: {
+            y: { beginAtZero: true, ticks: { callback: v => "$" + v.toLocaleString() }, grid: { color: "#ffe9a0" } },
+            x: { grid: { display: false } }
+          }
+        }
+      });
+    } else {
+      // Pie: total per label
+      const totals = labels.map((k,i) => received[i] + sent[i]);
+      chartInstance = new Chart(ctx, {
+        type: "pie",
+        data: {
+          labels,
+          datasets: [{ data: totals, backgroundColor: COLORS.slice(0, labels.length), borderWidth: 2, borderColor: "#fff" }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: "right" },
+            tooltip: {
+              callbacks: {
+                label: (item) => {
+                  const k = labels[item.dataIndex];
+                  const pct = ((item.raw / totals.reduce((a,b)=>a+b,0))*100).toFixed(1);
+                  return ` ${k}: $${item.raw.toLocaleString("en",{minimumFractionDigits:2})} (${pct}%)`;
+                },
+                afterLabel: (item) => ` Transactions: ${counts[item.dataIndex]}`
+              }
+            }
+          }
+        }
+      });
+    }
+  }
+</script>
+{% endblock %}

@@ -1,0 +1,1794 @@
+ The most random specific topic but I think it's actually kind of cool. There's so much
+ to dig into this. Just a few quick things, we'll do a quick intro. I just want to set
+ the set expectations for what we can do in the next hour. So I would say the only difference
+ between me and you is I just spend more time than me. That's basically it, right? So I'm
+ not the big expert that has all the answers. If we do, I've loaded this all to GPP and
+ then we can ask together and then discover together. So that's where I come. I just spend
+ a lot more time trying to understand this. My hope is you bring in, maybe because of
+ your background, you maybe understand very specific aspects of these in different ways.
+ Maybe you see different applications in the way, in the work that you do. So that's kind
+ of the baseline on the set. So quick intro. I've been, gosh, I've been interested in AI
+ since like the NLP days. If I tell somebody what NLP now is, I don't think they'll understand,
+ oh, NLP, like what is that? But 10 years ago, that's where I started a lot of my explorations.
+ I'm primarily an engineering and startup guy. Right now, I actually spend a lot of my time
+ training young people for like 10 months, how to do cool things with AI. I'm also an
+ adjunct professor at UBC. So I teach the first year of UBC engineering class. So if anyone
+ comes into UBC engineering, I'm the first face that welcomes him into the engineering
+ experience. That's a little bit about me. So what we'll do is we'll go--
+ [INAUDIBLE]
+ Yeah.
+ Oh, yeah.
+ Have you gone to my class?
+ Yeah, I go to my class.
+ What?
+ So it's funny. Right after this, I teach a dance class at Baza, 830. So if you ever do
+ salsa dancing or bachata, come.
+ We'll do a completely different reading. OK. So we have quite a few people. So we'll keep
+ this short. But I still want to hear from you. So here's what I'm looking for. Name
+ your AI readiness. So for me, number one is you use chat GPT. 10 is you spend a lot of
+ your time understanding research papers, digging in, and whatnot. And I'm just looking to understand
+ how much have you dug under the hood. So do you use GPT? Or have you spent some time understanding
+ what is this transformer thing, KB cache thing, vector thing? I just want to understand how
+ are we feeling underneath the hood. Well, according to that, I will real time adjust
+ how we guide our discussion today.
+ Cool.
+ Hi, everybody. I'm Farah Hussain. And in terms of my ranking on that scale, I think I'm somewhere
+ at three.
+ OK, awesome. Perfect. Great.
+ Hey, I'm Mullen. I'd say I'm at five probably.
+ OK.
+ Actually, maybe a little bit of-- I don't want to go into your whole background of what
+ you do. So I don't know how to ask that question without going into--
+ Too much detail.
+ Too much detail.
+ So maybe as short as you can keep it, what do you think is important to know as it relates
+ to this conversation?
+ OK. So I think, in short, don't want to be left behind. That's why I'm here.
+ OK. That's a good answer. That's what she wanted us hoping for. Good. FOMO.
+ FOMO. FOMO.
+ OK.
+ So yeah, my name is Min. I'm a developer. So I would say like 80% or 80% for using the
+ AI stuff. So FOMO as well.
+ OK, awesome. I'm Thomas. I'd say like four to six, somewhere in that range. And I'm just
+ like trying to get back into computer science something right now.
+ Awesome.
+ So there, I mean, I don't know how to say like a three, I think. I mean, I'm just like
+ trying to get to like know more about the AI stuff.
+ Cool. OK.
+ If it's three, I'm two.
+ Two? OK.
+ [LAUGHTER]
+ Yeah, don't run them like that. It's like, how dare you say that? You're hurting my feelings.
+ You should have heard what he was talking about. But I want to know, what's interesting
+ for me is when I get into a case, I want to know when to come to that algorithm and try
+ to figure things out. I don't need to know them, but I need to know.
+ OK.
+ [INAUDIBLE]
+ All right. My name is Noah. I would say I'm about a seven. I spent a lot of time, when
+ I was with Pranav last year, taking into the transformer and the architecture [INAUDIBLE]
+ OK.
+ I'm Zen. I also spent a lot of time with Pranav. I would say I'm about a six. He's going into
+ computer science. I'm going to engineering. So a little less focus on AI, but, yeah.
+ Cool. OK.
+ Sorry, just before you go, have you applied a lot of this in your work, likely today as
+ well?
+ Yeah.
+ OK. Very interesting.
+ Hi.
+ OK. I'm just making notes. Yes.
+ My name is Cyrus. I say I'm a four, but I came here to catch myself back up to what
+ is currently happening.
+ OK. Great.
+ My name is Rachel. If you're a four, then I'd probably like a two.
+ [LAUGHTER]
+ It's the same reason I put it on.
+ [LAUGHTER]
+ We're going to normalize this out.
+ [INAUDIBLE]
+ Yeah, exactly. Yes.
+ I think I'm maybe a two.
+ Cool.
+ I'm just here to learn more about [INAUDIBLE]
+ What is this?
+ Yeah.
+ Cool.
+ This is my birth.
+ [LAUGHTER]
+ Hi.
+ We'll catch you at some point.
+ [LAUGHTER]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ Man, what was the deal with these infinitely playable games?
+ So you're saying having PCs that can always be [INAUDIBLE]
+ That's interesting.
+ OK. Very cool. Very cool. OK.
+ [INAUDIBLE]
+ Hi. My name is Dom.
+ I would say my recognition is around [INAUDIBLE]
+ With regards to mental health, like,
+ classifying mental health levels.
+ [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ [LAUGHTER]
+ All of us. Yeah.
+ I'm actually here because there's something about [INAUDIBLE]
+ I don't know if you guys have read this paper,
+ but this is the most revolutionary paper that has ever come out in two years.
+ And I'm looking to make --
+ I'm basically looking to make the link to this paper.
+ Cool.
+ Awesome.
+ I think I'm around two, but based on what you said,
+ I think I learned a lot of these two.
+ [LAUGHTER]
+ First negative number.
+ Yeah.
+ I'm still going to learn more about this.
+ OK.
+ [INAUDIBLE]
+ [INAUDIBLE]
+ This is crazy.
+ Yeah.
+ You bet.
+ OK.
+ Welcome back.
+ [LAUGHTER]
+ Yeah, good to hear from you.
+ Good.
+ Hi.
+ I'm [INAUDIBLE]
+ I started in work in AI, but my current role is not really in AI.
+ That's why I'm here to catch up.
+ So my name is Sahil.
+ I would say I'm like six.
+ I use a lot of AI at work.
+ And apart from work, there's two things.
+ [INAUDIBLE]
+ So I don't really go into the blackboard,
+ but opportunities like this and just talking to AI about it
+ like this as well is what I'm trying to do.
+ Awesome.
+ Cool.
+ [INAUDIBLE]
+ All right.
+ [INAUDIBLE]
+ Yeah, hi.
+ My name is Anthony.
+ [INAUDIBLE]
+ I took computer science and UBC back in the '80s, actually.
+ I worked as a systems engineer for one of the big banks.
+ I recently retired.
+ I have to say that even in reading papers like this,
+ even back in the '80s, we published Shannon's theory
+ of [INAUDIBLE]
+ Oh.
+ That's a fundamental theory of information storage
+ and transformation.
+ Yeah, yeah, yeah.
+ If you want to talk about the very first sentence
+ of this thing, if you don't know the Shannon theory,
+ then you can.
+ [INAUDIBLE]
+ I can throw a few tickets on that.
+ Cool.
+ [INAUDIBLE]
+ Awesome.
+ Yeah.
+ This whole paper is founded on that underlying first principle
+ knowledge.
+ OK.
+ Yeah.
+ [INAUDIBLE]
+ Yeah.
+ Yeah.
+ Cool.
+ OK.
+ [INAUDIBLE]
+ OK.
+ My name is Murillo.
+ I'm one of the [INAUDIBLE]
+ And I will say my number is nine,
+ but not because I know a lot, just because every day
+ I'm into some AI stuff, trying to learn by myself,
+ trying to build some [INAUDIBLE]
+ And absolutely [INAUDIBLE]
+ So talk about that.
+ I'm pushing myself more right now.
+ And yeah, I've been [INAUDIBLE]
+ And since I came here, every week I tried to do something.
+ That's why I was doing that.
+ I did not agree with you about the view of AI.
+ That's how much I am into AI right now.
+ So your mind is like, I'm that passionate about it.
+ Yeah.
+ Every day, every day.
+ I love it.
+ I love it.
+ OK, cool.
+ OK, so I'm [INAUDIBLE]
+ Thank you.
+ And he's 11 or 10.
+ Yeah.
+ Yeah, you can see.
+ So AI is my escapism.
+ So you can go to 12, 5, or 10, because it's
+ like a way of feeling comfortable.
+ Cool.
+ [INAUDIBLE]
+ Yeah, cool.
+ OK, let's dive in.
+ So the issue with this setup, too,
+ is it feels like I'm the lecturer,
+ and we're participants.
+ I hope that we don't do that.
+ It is like, interrupt me, bring up points that--
+ imagine we had a really big roundtable.
+ That's really the intention of [INAUDIBLE]
+ Because I definitely don't want to be lecturing
+ for an hour on this.
+ OK, so what I'm going to do is-- yes, you're right.
+ This is actually very little app layer stuff.
+ This is going to go into the very first principles
+ of what the heck is a vector, and how do we get from that
+ to all this.
+ So I want to spend maybe 10 minutes,
+ because I know a lot of you are in the two to four range,
+ because if we don't understand the fundamentals,
+ we can't actually understand the paper.
+ So the first 10 minutes will just
+ be a quick crash course on the basics we need to know,
+ and then we'll open up the paper.
+ OK, so I mean, really simply, when I think about AI search,
+ it is like, I have a need for information.
+ There's lots of candidates of information sources I can have,
+ and I need some way of scoring which matched the need.
+ And historically, what we do search is you match words,
+ you figure out phrases.
+ Maybe there's like algorithmic ways
+ to search for something based on weights.
+ But with AI and transformers, a big part of that
+ is all of it is now based in vectors
+ and how it relates to each other.
+ So if I were to really put this fundamentally simply,
+ if we have a query for something,
+ we're converting that as a vector, right?
+ All the things, the documents, the things that we want
+ are also vectors.
+ And we're basically trying to find what matches closely
+ to it.
+ That's really the most first principles fundamental to this.
+ So I don't know if anyone's taken a linear algebra class,
+ but I think a lot of you have taken a linear algebra class.
+ Yeah, there is one of my favorite books.
+ [INTERPOSING VOICES]
+ There is this book from Anil on how machines think.
+ I forgot the name of the book.
+ It's like one of my favorite math AI books.
+ He starts in the Perceptron, right?
+ Like the very early machine learning 1960s
+ and then works his way up in math.
+ It's one of my favorite ones.
+ And a lot of that actually was my early interest
+ in looking behind the hood, right?
+ So baseline is we're working with vectors, right?
+ So if you had a three-dimensional space
+ on these three coordinates, we have x, y, and z.
+ And if you throw an arrow in, I'm sure all of us
+ know we can represent this as x, y, and z.
+ And this is a vector.
+ It's a line pointing in the direction, right?
+ GPT, we're working with many dimensions.
+ Many, many, many, many, many dimensions.
+ So we're just simplifying it to this one.
+ The second thing to understand is dot product.
+ Very, very important.
+ The simplest way I like to think about dot product
+ is how similar are two concepts, right?
+ That's basically it.
+ If I have a concept A and I have a concept B,
+ how similar are they, right?
+ So if they're kind of here, they're similar.
+ If they're here, maybe not as-- not similar at all, right?
+ Again, I'm hyper-simplifying this.
+ It's a lot more complex.
+ But whenever you hear dot product,
+ or things like cosine similarity, things like that,
+ it's just like, how similar are they?
+ I think it's just a mental model to use.
+ How do you go through this?
+ [INAUDIBLE]
+ Cosine, if they were exactly the same cosine,
+ but with the angles--
+ Yes.
+ [INAUDIBLE]
+ Yes.
+ So it goes 1, if it's 90, 0, negative 1.
+ [INAUDIBLE]
+ Exactly.
+ [INAUDIBLE]
+ And then we have this concept, vector embedding.
+ The simplest way to put it is when we have text,
+ objects can be plotted and things.
+ If we have text, we put them through an embedding model,
+ and we represent that text as these vectors, right?
+ So GP doesn't really understand English.
+ It all just understands big matrixes, right?
+ So that's what we do.
+ We take these objects, and we figure out some ways
+ to make them into these embeddings.
+ Of course, we're not going to go into the very specifics.
+ There's a whole tokenization, all those
+ we don't want to get into.
+ But that's just the basics.
+ It's a nice figure.
+ Very nice figure.
+ Yeah, it's just so clean to understand.
+ And then we have--
+ I just want to show you this video.
+ One of my favorite YouTubers on the planet
+ is 3Blue1Brown.
+ He was the guy that helped me understand what the heck KQV,
+ and just understanding how the key, and the query,
+ and the values all come together in these big tabular formats.
+ So what I want to do is just play that first bit,
+ so we can better understand just what these similarities mean.
+ So how do we go from a sentence to this?
+ It's like 20 or 30 seconds, but I just highly
+ recommend this channel.
+ So good.
+ The first step in a transformer is
+ to associate each token with a high dimensional vector, what
+ we call its embedding.
+ Now, the most important idea I want you to have in mind
+ is how directions in this high dimensional space
+ of all possible embeddings can correspond
+ with semantic meaning.
+ In the last chapter, we saw an example
+ for how direction can correspond to gender,
+ in the sense that adding a certain step in this space
+ can take you from the embedding of a masculine noun
+ to the embedding of the corresponding feminine noun.
+ That's just one example.
+ You could imagine how many other directions
+ in this high dimensional space could
+ correspond to numerous other aspects of a word's meaning.
+ The aim of a transformer is to progressively adjust
+ these embeddings so that they don't merely
+ encode an individual word, but instead they
+ bake in some much, much richer contextual meaning.
+ I should say up front that a lot of people
+ find the attention mechanism, this key piece in a transformer--
+ We'll get into attention mechanism in a second.
+ But I hope we understood that.
+ It's like we're taking these words
+ and just representing them in this end dimensional space.
+ I don't know about you guys, but that's just so frickin'
+ interesting.
+ The fact that-- I don't know if you guys see this video.
+ Like, if you take king and remove something--
+ if you take king and then add them as a feminine piece,
+ you'll see the vector changes so that it actually
+ represents queen.
+ I'm like, it's crazy that all of that is just math, right?
+ And this is why I'm like, if I think about application layer
+ exploration and I think research expert,
+ this is so much more interesting.
+ I'm like, there's so much to dig into
+ and understand artistically how all this comes about.
+ So that is just to get a sense of, OK,
+ if it's in a particular direction,
+ there is a meaning and semantics attachment.
+ Cool.
+ The next thing is to understand this thing called attention.
+ Again, if I were to explain this super, super simply,
+ we have our input text.
+ It's tokenized.
+ It means it's flipped into these individual components.
+ And it goes through our GPT transformer
+ and then has an output.
+ So that's kind of how GPT just fundamentally works.
+ But if I were to ask, what is attention?
+ I kind of just put this as the one line.
+ So it is taking information from the past tokens
+ and helping it inform the current token
+ so we can figure out what the next one is.
+ And again, the simplest way to understand
+ that is the more-- it allows me to understand
+ in a particular sentence, oh, what pieces of information
+ do I need to consider now?
+ So I can figure out predictably what
+ is the next token going to be.
+ So if I have more attention layers,
+ as you know, in GPT there's a whole bunch of attention layers.
+ That just simply means spending more time thinking about it
+ and then updates the vectors.
+ So all of this is still a little bit confusing.
+ I think the basic thing to remember
+ is attention is how tokens relate to each other.
+ So it understands what the previous information
+ and packs more context into the part one.
+ Cool.
+ Just in case, I remember now there
+ is one amazing paper called "Attention is All You Need."
+ Yes.
+ [LAUGHTER]
+ So I mean, attention is all you need.
+ It's the birth of this, all of this, right?
+ And I highly recommend it.
+ I highly recommend it to others.
+ It literally-- I mean, it is where all this comes from.
+ Have you ever done-- and attention is all you need.
+ Like old school-- I got to say old school.
+ It's a long time ago.
+ Have you done a reading group on attention?
+ Long time ago, yeah.
+ In Montreal.
+ It might be worth bringing that up at some point.
+ So if Google hadn't published it,
+ are there people who would have known?
+ Yeah, I guess.
+ I think the industry was going in this direction.
+ It would have happened at some point.
+ Yeah.
+ OK, I just want to pause here.
+ Any quick questions?
+ Again, the goal is not to get the details.
+ Imagine we have a watercolor painting.
+ That's all I'm looking for.
+ I'm not looking for branches in the leaves
+ in your understanding of this yet.
+ But so far, are we good?
+ Any questions?
+ OK, cool.
+ OK.
+ And then we have this thing called kidney cache.
+ That's going to come up a little.
+ That's basically the crux of this paper, right?
+ And the way I just think about it, very simply,
+ is this attention mechanism spends a lot of time
+ looking at previous tokens and words to inform
+ what has to come next.
+ So instead of writing this every time
+ and processing it every time, it just keeps a cache
+ of all the different-- keeps a cache.
+ And the best way to think about it
+ is this information about past tokens.
+ And it just remembers that.
+ So you can imagine if we work with really big,
+ really big vectors and sizes, that cache gets really big.
+ And so this entire paper today is
+ how do we basically quantize it?
+ And that's the fundamental understanding.
+ It's like a very big conversation history.
+ Yes.
+ You want to keep track of it, right?
+ I think I started using GPT in one chat way too long.
+ And then it starts to slow down rapidly.
+ That's because the kidney cache is growing too big.
+ There's just so much context.
+ Yes.
+ One small aspect of it is that, yes.
+ And this is going really, really large.
+ It's quadratic, which means yeah, right?
+ Is that so?
+ Yeah, quadratic.
+ Because the attention is quadratic.
+ OK.
+ I searched it up because I was like,
+ what is the KB cache before this?
+ And the KB cache is a key value cache, right?
+ But then doesn't that mean that it's a hash map?
+ Because it's a key value pair.
+ And wouldn't that mean that it's always in constant time?
+ Or why does it get slower the more that it gets
+ if a key value pair you can just do it using a hash map
+ and it's supposed to be constant time?
+ My understanding of this is that it just
+ adds to the computation speed.
+ KB cache is added part of the vector.
+ So if you have to constantly, in your attention mechanisms,
+ go back, that is actually quite a bit to process.
+ So that's kind of my understanding of it.
+ Unless anyone else has a different date.
+ Yeah.
+ [INAUDIBLE]
+ Is that what you're asking?
+ Yeah.
+ Did you understand what KB cache meant?
+ Or were you just asking why is it so big and ballooned up?
+ Yeah, like why does it slow down?
+ Why does it get bigger?
+ I mean--
+ Go for it, please.
+ I was going to say, I think this whole paper talks
+ about the efficiency of storing the KB cache
+ data in the finite amount of hardware memory on the GPU.
+ So if you have an Nvidia graphics card like a 5,000
+ or a Blackbook GPU plugged inside your computer,
+ it has 8 gigabytes of PPR5 memory.
+ So it comes down to how much data
+ can be efficiently crammed into that memory
+ in order to keep your AI working as quickly
+ as possible.
+ We're going to talk about that in so much depth today.
+ Yeah.
+ That's the point of this.
+ [INAUDIBLE]
+ But doesn't it conceptually mean the more--
+ the longer it gets, let's say sentence versus paragraph
+ versus the longer it gets, we need more information
+ to maintain the semantics of that.
+ What's important?
+ So that's-- isn't that why it gets slower anyway?
+ Slower because of memory.
+ So KB cache, these things, are stored in memory.
+ And a lot of the memory is like, I need to access it fast.
+ But memory can't-- you guys know the simplest analogies
+ like the RAM and storage, right?
+ Yeah.
+ And then your RAM has like--
+ it's to get quick.
+ It's to be able to do quick operations.
+ In nanoseconds.
+ Yeah.
+ That memory access--
+ Yeah.
+ [INAUDIBLE]
+ Exactly.
+ So KB cache, if it keeps growing, the memory gets full.
+ And then it just--
+ the latency starts to crash as things start to crash.
+ So I would say that's one of the bottlenecks.
+ It's because memory is only limited.
+ So the storage, which is different, then there's memory.
+ And that's one of the reasons why memory chips have not
+ been priced that way.
+ Because as they build out more and more of these AI data
+ centers, the manufacturers are switching their DRAM--
+ their production in DRAM.
+ It is high bandwidth memory.
+ And so when you go to the computer store to buy memory,
+ it's in short supply, right?
+ Because--
+ Let's see.
+ All the manufacturers like Vipron Technologies
+ are making this high-speed memory
+ for all the AI data centers.
+ [INAUDIBLE]
+ [LAUGHTER]
+ Right?
+ Yeah.
+ That's insane.
+ It hasn't changed in the last five years.
+ It's like doubled, huh?
+ [INAUDIBLE]
+ Yeah, you can afford it if you bought any videos.
+ Oh, so look at that.
+ Prices for-- the kids have surged.
+ Yeah.
+ This is interesting.
+ So it has surged three to four times their early 2025 lows.
+ So between early 2025 and now, it's surged three to four times.
+ This is precisely why.
+ Yeah, I have a buddy who was buying RAM
+ like it was [INAUDIBLE]
+ [INTERPOSING VOICES]
+ The reason is because the manufacturers, like Samsung,
+ have switched their production from DRAM, which
+ is usually used for new computers, to HBM then.
+ Oh, yeah, we're going to talk about that too.
+ HBM, yeah.
+ [INAUDIBLE]
+ Oh, this is good.
+ This is actually perfect because we're going to get into it.
+ I guess, literally, this is basically setting up
+ what you asked, which is this grows so quickly
+ that the-- man, it just requires so many more computations.
+ And we just need to find a way to make this cheaper
+ and not lose accuracy.
+ So that's how we're going to slowly start to get into this.
+ So if you have your papers, let's work it out.
+ Let's get into this.
+ OK.
+ Actually, you know what?
+ Give me my-- sorry.
+ Let's spend some time.
+ I love-- oh, my god.
+ I spent so much time really understanding
+ Shannon's source point, but if you want to spend just one
+ or two minutes, what do you understand about it?
+ So what I was thinking topside.
+ And then it's in 1980s?
+ Way back in the Stone Age, in 1980s.
+ [INAUDIBLE]
+ Did you do punch?
+ Because I remember university.
+ Yeah, my first day we did punch.
+ Don't go there, man.
+ So the Shannon theory--
+ No problem.
+ The way that it was explained to me was--
+ Yeah.
+ You know, the Shannon theorem was written in the 1920s.
+ And it had to do with how to encode information, right,
+ at maximum efficiency.
+ So the basic idea was, let's say you
+ have somebody doing something similar to Morse code.
+ How fast can you transfer information
+ over a pair of copper wires using tap, tap, tap, tap?
+ How can you encode your information, your letters
+ of the alphabet, as efficiently as possible,
+ to transmit as much information as possible
+ over an OG communication panel?
+ That was the basic premise of the Shannon theory.
+ Yeah.
+ And it's about information and coding.
+ And you guys have-- so if you watch the video
+ that I sent across, the example that I love that he gave
+ is, if you had two text files, one text file
+ is a file just with the letter A.
+ And you have another text file that
+ is a bunch of random ones.
+ The first text file is going to be 7MB.
+ You can get it down to a few--
+ Little points, yeah.
+ The other one, the latter one, not as much.
+ Maybe 1.2.
+ Yes.
+ And the primary reason why is A, A, it's predictable.
+ The more predictable it is, the easier it is to compress
+ something, right?
+ And the less predictable it is.
+ The conversion breaks it down in December.
+ Yeah.
+ And that's when the Shannon theory and [INAUDIBLE]
+ And there's that two axes.
+ One is like, how much information can you take?
+ Yeah.
+ [INAUDIBLE]
+ Yeah.
+ [INAUDIBLE]
+ So the fact that we got back to that page
+ full of letter A's is one big symbol.
+ [INAUDIBLE]
+ Because it was told it was one big symbol.
+ [INAUDIBLE]
+ Yeah.
+ So there's-- oh, god.
+ There's so much we can--
+ I'm now realizing what Assam was saying.
+ Yeah.
+ In the last reading group, only spent half the research--
+ like, we were building it for half, because I could see.
+ So many interesting things there.
+ OK.
+ So there's a lot of math and a lot to peruse through.
+ So perhaps the way we want to get through this is--
+ you'll notice I highlighted a few things.
+ Mean squared error, a huge component of that today.
+ We'll get into it.
+ But if I were to explain turboquant
+ in two to three sentences, what you're basically doing
+ is you're trying to get these vectors,
+ and we're trying to quantize them.
+ And so what we're going to go through today
+ is, OK, how do they actually do that?
+ There's this rotation piece.
+ There is this residual piece.
+ We'll kind of piece together what all those components are.
+ But what's interesting about this paper is it takes--
+ it's like it takes together two concepts from what's
+ already been done before.
+ So this one bit quantized scale transform method
+ was there before.
+ And they're actually introducing that as a way
+ to make sure that all of these get lost in our compression.
+ We have some way to bring that back.
+ That's what that is.
+ So we'll go into a lot of detail.
+ Don't worry about it too much.
+ But I would say this--
+ the big piece to remember in this first piece
+ as we read this is--
+ yeah, we're essentially trying to reduce them.
+ But the two ways that we figure out, OK, how good
+ or how effective this compression has been
+ is to these two things called mean squared error
+ and inner product errors.
+ Does anyone have a sense--
+ or have a sense of don't explain,
+ or they've gone through it themselves,
+ what really a mean squared error is?
+ Does anyone have a chance to have a look into that?
+ Want to give it a shot?
+ [INAUDIBLE]
+ Yeah.
+ But intuitively, do we have a sense of what that means?
+ Intuitively, what is a mean squared error?
+ Yeah, give it a shot.
+ Yeah.
+ Like, how do I look in stats?
+ Because I'm taking 80 stats right now.
+ Like, when you do linear regression,
+ the mean squared error, it's like--
+ because you want to square it because you
+ have on top of the line or on the bottom of the line.
+ So it's just a regularized version
+ of adding up all the mean squared.
+ And I like to think of, yeah, if something
+ has a really high mean squared error,
+ that means our original vector and our depressed vector
+ are kind of not similar.
+ Right?
+ And this is an analogy of the face and the blurry faces.
+ If you put it together, how similar are they?
+ And the mean squared error will tell us, OK, are they--
+ like, how similar is similar?
+ Anyone thought-- sense of what inner part error looks
+ like as we're looking through?
+ Let me give it a shot.
+ And we're reading the paper.
+ What they thought it meant.
+ OK.
+ OK, so we'll go into a little more detail.
+ That whole paper is about these two things.
+ So we'll come to it at some point.
+ But I just wonder if anyone had some early ideas on that.
+ OK.
+ So this actually now comes to answer your question.
+ So as LM capabilities depend heavily
+ on their model and size and context length,
+ serving them requires substantial memory demands
+ and increase into inference latency.
+ And this is what you were talking about, [INAUDIBLE]
+ I highlighted this because I wanted
+ to go down a whole rabbit hole, but I didn't have time.
+ [INAUDIBLE]
+ You have a finite amount of memory.
+ Hardware memory.
+ Right?
+ [INAUDIBLE]
+ Yeah, so what we're trying to do is,
+ can we try to compress this while preserving
+ the inner product?
+ So the way that I would think about preserving
+ the inner product is, what MSC is trying to do is like, hey,
+ can we take this vector and when we compress it,
+ I'll assimilate it.
+ But the inner product, I actually did a-- there we go.
+ So inner products ever measures how much the similarities
+ between the vector changes at the compression.
+ And what means better is just understanding, OK,
+ if a higher MSC means, the compressed vector
+ changed a lot more than the original.
+ And a lower MSC just means it stayed closer to the original.
+ So I would kind of think of this as distortion.
+ So high MSC means greater.
+ This just has moved quite a bit.
+ Lower MSC means it's closer to the original.
+ So I keep these two in mind because this
+ is what we'll kind of look at throughout the entire paper
+ as we keep going.
+ OK, any other thoughts or comments that we keep going?
+ Yeah, MSC and inner product are related
+ because A minus B squared, if you open it up,
+ there is B minus AB.
+ Minus two AB?
+ Yes.
+ [INAUDIBLE]
+ At some point, I have the whole math break down
+ because I was like, we have to get into the math.
+ So we will get into that.
+ OK, I actually wanted to read this product.
+ So these models must store key value embeddings
+ from previously generated tokens in the key to cash.
+ We just talked about that.
+ So you have some context now.
+ The size of which scales with model size.
+ So if you have bigger models, that means more attention heads.
+ More attention heads means higher kd cash.
+ Scaling is a significant bottleneck
+ in terms of memory usage and computational speed.
+ Therefore, reducing the kd cash.
+ I just look at repetition of why this is important.
+ Again and again and again.
+ Additionally, any improvement in this?
+ Like you're improving the whole world
+ because everyone is using all these [INAUDIBLE]
+ to improve by 5% means you're using 5% for everyone
+ in the world because kd cash is a very fundamental.
+ So the impact is huge.
+ Any progress in that is huge.
+ Yeah, I can't wait to get the implementation of this stuff
+ because that's where this stuff gets a little more typical.
+ Because we're still in theory land.
+ We're still theoretically assessing what this looks like.
+ We'll get to the implementation in a second.
+ See, OK, to what extent?
+ There's actually some experiments here at the end
+ that shows, OK, how much will we actually
+ be able to get a meaningful improvement in these models
+ or improvement in being able to get the right information
+ with the compression.
+ OK, what the hell is this?
+ Additional nearest neighbor search
+ and high dimensional spaces for inner product
+ and full size similarity is a corner
+ shown in the vector of the business.
+ This is basically what I showed you earlier in that video,
+ which is if you want to do search,
+ understanding the inner product and cosine similarity
+ of those two vectors is how we understand.
+ This is how we pull stuff from vector databases.
+ So we're still in this early setting up
+ the stage for the paper.
+ We're not actually getting into much stuff yet.
+ This is just why it's important.
+ OK, and then we get into the first summary of what this is.
+ So it's a two stage process.
+ So first, we develop a vector quantizer
+ with optimal distortion rate in terms of the mean spread error.
+ What the heck does that mean?
+ Don't worry about it.
+ We'll get into it.
+ Subsequently, we apply a one bit quantizer
+ to the residual, resulting in an unbiased and low distortion
+ inner product quantizer.
+ When I read that first, I was like,
+ I have no idea what that is.
+ They make me feel the same way.
+ They're like, what?
+ No idea.
+ But we'll get into it.
+ So this is good.
+ This is where we start to explore that first half.
+ So this is where they're kind of getting into this bit.
+ So how do we do that first quantizing bit
+ before we add the one bit later on?
+ So our MSE optimal quantizer starts
+ by randomly rotating d-dimensional input vectors,
+ observing the key fact that each coordinates
+ in the rotated vectors and then follows a beta distribution.
+ And then they design a Lloyd-Max quantizer
+ for each coordinate by solving continuous [INAUDIBLE]
+ They're like, what does any of that mean?
+ We will, again, get into it.
+ But I just wanted to set up all the things before.
+ I have a whole thing on getting into it step by step.
+ With the related work, we already
+ went through Shannon's seminal work.
+ How do people understand online versus offline quantization?
+ Does anyone remember?
+ How do you understand?
+ Never heard of it.
+ So the way I understood it-- and please correct me
+ if anyone else has spent a lot more time than this.
+ I actually wrote it down here.
+ So offline methods, they actually
+ start by understanding the structure of the data
+ before they do the quantization.
+ Online methods do it so a little bit more real-time.
+ Yeah.
+ So online is like the speed is a big factor.
+ Yes.
+ Because you need to do it--
+ offline, you can make it more easy.
+ Is it overnight, for example?
+ Because there's more time.
+ And I'd imagine it gives more accurate information.
+ And that's kind of like a trade-off
+ in this between the online versus offline.
+ But what we're working with is primarily,
+ I believe, online.
+ Yeah, because you have to do it real-time.
+ Exactly.
+ Because you were talking to the [INAUDIBLE]
+ and wanted to be able to compress real-time.
+ Yes.
+ Yeah.
+ And then there's the last concept.
+ And this is where we start to get a little bit more technical.
+ Code books or product quantization.
+ Are those concepts?
+ I guess if you've seen the video,
+ you'll learn a little bit more about what code books are.
+ Does it even have a sense?
+ What?
+ Yeah, the colors.
+ Yes, yes.
+ So you know what?
+ Let's bring that again back in when we do it from front
+ to back versus going into it deep now.
+ I just want to see if there's anything else we missed
+ before we get into things.
+ OK, I think we're ready.
+ We're ready to get into the details a little bit.
+ How are we doing so far?
+ Any questions before we go even deeper?
+ Because now we're actually going into an understanding.
+ What is this rotation around this thing?
+ Is it the sphere?
+ We'll go into the details.
+ Anything before we get here?
+ At least are we having an intuitive understanding?
+ It doesn't matter if you understand all the details,
+ but intuitively?
+ Yeah.
+ OK.
+ So I actually have it right here.
+ And we have two people to help.
+ How can I understand this step by step?
+ If I take a vector, that should go through the process
+ one by one.
+ And then we'll pause at every step.
+ So we can understand why does that matter.
+ So we start with a vector.
+ We'll start very simple.
+ We have a 1, 0, 0.
+ And then we apply this 3D rotation.
+ Does anyone know why?
+ Let's start there.
+ Why do we need to rotate this stuff?
+ Yeah, why is there a why?
+ Does that matter?
+ Yeah, exactly.
+ Does anyone have a sense of why we need to rotate this?
+ Why can we just use this and continue with this initial vector?
+ Why do we need to use this rotation piece?
+ [INAUDIBLE]
+ OK.
+ But why is it important?
+ Why do you think it might be important?
+ Can you do it on its own?
+ [INAUDIBLE]
+ Yeah.
+ Yeah.
+ Yeah.
+ It's hard to do compression when you have some spiky vector
+ in that way.
+ So again, my understanding of this,
+ I'm going to do 10 minutes of extra time in quantization.
+ But in the time that I spent, I was like, OK,
+ why do we need to do this?
+ I really broke my head on this.
+ And I think as I understood it is
+ if we need to quantize it accurately
+ without losing a lot of its meaning,
+ what we need to be able to do is it's almost
+ like we are striking out the spikes
+ across a different dimension.
+ So it's just easier to start to process a lot of information.
+ Because if we have a sphere and we run through the mean square
+ error, this stuff will be really big.
+ Because this is a spike.
+ If anything's really big and you want errors on it,
+ that just gets even more.
+ So that's what it's intuition for.
+ OK.
+ We need that rotation.
+ So whatever.
+ [INAUDIBLE]
+ But why specifically do you [INAUDIBLE]
+ Why specifically--
+ [INAUDIBLE]
+ Yes.
+ Oh, these are random.
+ [INAUDIBLE]
+ Yeah, that's a good question.
+ Is it randomized or intentional?
+ Yeah, it's randomized.
+ If it's intentional, that means then--
+ There's bias.
+ Yeah, there's bias.
+ There's going to be a lot of bias.
+ So we're adding a random notation.
+ Yes.
+ [INAUDIBLE]
+ So then that's a concept.
+ But if you do that [INAUDIBLE]
+ [INAUDIBLE]
+ Interesting.
+ Because what I was thinking about is, wait,
+ doesn't it lose meaning after it rotates?
+ I was like, what?
+ And then I learned that the rotation happens [INAUDIBLE]
+ And I was like, OK, what does that mean in this context?
+ And the way to explain it is you can take a map
+ and rotate a map.
+ Within it, everything still is similar.
+ You're working with each other.
+ So it's still the same thing where internally,
+ we're only taking one vector vector.
+ If we're looking at the vectors around it
+ and then we're rotating it, rotation
+ is happening all across the board.
+ And so as a result of that, it still
+ doesn't lose its meaning to the type of other vectors around it.
+ That's how I understand it.
+ It was a wave.
+ It didn't lose meaning.
+ But this random rotation is applied to also other vectors
+ in that.
+ So it's like the whole thing is moving together,
+ is how I understand it.
+ [INAUDIBLE]
+ Yeah, so it still rotates independently.
+ But I would think of this as it's a--
+ the rotational matrix that we're adding
+ is the same, but the vector is very different.
+ But for example, the instructions
+ of how we're going to rotate is the same.
+ But for every vector, because of what their vectors are,
+ that individually will look different.
+ It's how-- OK.
+ [INAUDIBLE]
+ OK.
+ [INAUDIBLE]
+ Right, so you'll be rotating with the same randomized R
+ that's coming in.
+ And every vector in that is subject
+ to the same randomized R. The R is similar.
+ It's the same for a [INAUDIBLE]
+ It's how I understand it.
+ We can actually double check this.
+ I'll bring up GPT later.
+ [INAUDIBLE]
+ Oh, I don't know what you're going to say.
+ So you're asking?
+ I'm just trying to see intuitively.
+ You're asking does the rotation of the matrix--
+ [INAUDIBLE]
+ So I understand.
+ [INAUDIBLE]
+ OK.
+ Yeah.
+ [INAUDIBLE]
+ [INAUDIBLE]
+ Oh, OK.
+ So I think the reason I'm going to answer that yet
+ is because I don't know--
+ the second user word, decompression, that tells me
+ that you may not look ahead at what's
+ happening with the processes yet.
+ So how would we pause that?
+ And once we get to the end step, if there's still
+ that question there, I think it would clarify itself
+ five steps please.
+ But if not, we'll come back to it.
+ OK.
+ First one.
+ We can spend forever on this first step.
+ But if it's rotation, I think it was already there apparently.
+ It wasn't you in this paper.
+ [INAUDIBLE]
+ No, that's the actual one, right?
+ But this rotation piece is like a very common--
+ it's like a vector quantization.
+ It's not like a brand new concept.
+ [INAUDIBLE]
+ Yeah.
+ Is that what we just said?
+ [INAUDIBLE]
+ That was the previous one?
+ Yeah, the previous one.
+ What's it called?
+ [INAUDIBLE]
+ Did you say [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ Oh, polar quant.
+ Oh, polar quant.
+ OK, OK.
+ Yes, yes, yes.
+ So you're saying-- man, I use so much of the quads
+ that every time I go to Google, it thinks that I'm a robot.
+ And I do it all the way.
+ OK.
+ Yeah, so that's going to--
+ I noticed that this is actually not
+ a new concept within this paper.
+ OK.
+ Well, that's step one.
+ So OK.
+ Step two is now very interesting.
+ And it gets a little bit more gnarly.
+ So OK.
+ So we're just on the rotation.
+ Now we're entering this quantizing section.
+ Does anyone know why this now quantized version of y
+ is just this number but in positive numbers?
+ [INAUDIBLE]
+ Or in that case, let's say, in this case,
+ because the one bit is 2.7.
+ I would say in this particular example,
+ because we're doing a simplified version, it's one bit.
+ So it's 0 and 1.
+ OK, so to explain that, when we are quantizing,
+ there's something called a quantizing level.
+ And the best way to think about that
+ is the number of bits we want to quantize something by.
+ So one bit is 2.
+ It's versions 0 and 1, right?
+ So the way you know the number of bits and how many outcomes
+ is 2 to the power 10.
+ So if we have two bits, that is 4.
+ But each time we have more bits, that, again,
+ goes back to the same problem.
+ We blow things up again, right?
+ So we're simplifying this.
+ We're going to use one bit, 0 and 1.
+ One bit, so it's basically two particular outcomes.
+ So in this case, we just randomly set.
+ You know what?
+ We'll quantize it just by either plus 0.7 or negative 0.7.
+ This you can set.
+ So that's not what I meant.
+ No.
+ And why do we choose 0.7?
+ And this is where you have-- this also
+ gets into some part of the optimization problem.
+ Which one do you choose?
+ We'll get to this when we get the mean square error.
+ Because that's where it all relates.
+ So the way you pick this is like, what's the right number?
+ Where we can first figure out, OK,
+ once we try to quantize this, for example, now 0.6.
+ So we're here.
+ OK, so if it quantizes 0.7, 0.6 is closer to plus 0.6--
+ plus 0.7.
+ So we add that as 0.7.
+ Negative 0.5 is closest to negative 0.7.
+ That's what we have out here.
+ 0.6 is closest to 0.7, hence 0.7.
+ And again, I would say the intuitive way to understand this
+ is when you quantize something, the way I think about it
+ is we have to latch it onto a grid, a fixed grid.
+ And again, I think the best way to bring that up
+ is actually this piece right here.
+ You guys remember this from the video?
+ OK, so the way I personally understood this
+ is when we only have two colors, then everything needs to fit
+ and either sort itself into this or this.
+ So if you have something that's a bit more orange,
+ it won't go into the green button.
+ It would go into the orange button.
+ But if we increase that to more bits
+ and then we get to K equal, let's say, to 64,
+ that means this kind of green can go closer to this kind of green
+ and we're getting a bit more detail.
+ So I think about it as, OK, which color does this need to snap to?
+ Now, when you have a one-bit thing, there's only two things to snap to.
+ In this case, it's red and green.
+ In this case, we can decide if 0.7 or negative 0.7.
+ So we need to snap to something.
+ And then the thing with signs here is just positive is one, negative is zero.
+ OK, I'll pause here.
+ So I saw that you can snap to something so that you can unsnap.
+ If you unsnap back to the original space, you don't know about it.
+ We're not unsnapping yet.
+ That's where the residual comes in, and we'll talk about that.
+ Yeah, that's after.
+ So once we snap this, of course there's the mean that's lost.
+ I think about this photo.
+ Once we snap to the red and green, we've lost some mean, some definition, some line.
+ We've lost that sign.
+ So we lose certain definitions as we do this, but that's the point of quantizing.
+ We need to -- that's the whole point.
+ We need to quantize it and that this is the first step to that.
+ OK. Let's go to step three.
+ And again, if you're not sure, please ask.
+ I'm not sure we'll ask that today, right?
+ OK.
+ Well, this is similar to what I was saying when you do great things with JPEG.
+ Sometimes you can reduce a lot the size.
+ And the idea is that when you reduce the size of the PNG to JPEG,
+ it doesn't look very different to the human eye.
+ So you're able to do the quantizing without much difference.
+ Yeah, and think about the number of colors, right?
+ So if you have RGB, R, P, and I can see you've seen the RGB colors, right?
+ Yeah, but I guess beyond that, like 4K, for example, I don't know if you guys know that,
+ but it's like R2, actually, like 4K and under is literally --
+ It's like 18.
+ It's hard to tell.
+ It's hard to tell.
+ Yeah.
+ I think similar things here.
+ It's just like, OK, can we quantize it in one bit?
+ But again, once we do this, we lose a lot of information.
+ So where do we do that?
+ So let me just recap so far.
+ So number one is we have our vector.
+ We rotate it in some ways so that the things that are more spiky,
+ we even it out at the end of the day.
+ That reduces the amount of errors that we have.
+ And number two is we have that big vector, and then we need to quantize it.
+ The way we do that is there's a bunch of numbers.
+ We need to just quantize it to either this number or this number.
+ So let's say 0.6.
+ What is that closest to, 0.7 or negative 0.7?
+ [INAUDIBLE]
+ That's what that would be.
+ And that's how we get this vector [INAUDIBLE]
+ So whenever you see y hat, that means it's basically the [INAUDIBLE]
+ [INAUDIBLE]
+ I mean, to be honest, we haven't even done meaningful compression yet.
+ Because we've lost a shit ton of information now, right?
+ From this to this, we've lost so much information.
+ So that's the next problem to solve is what do we do then, right?
+ OK.
+ So that's where residual is.
+ We compute what we lost.
+ So how do we compute what we lost is actually very simple.
+ You just subtract the two vectors.
+ So we have your y minus y hat.
+ So that is our residual.
+ So this is the error that is now in our compression because we lost this information.
+ OK, that's step three.
+ [INAUDIBLE]
+ OK, step four, what do we do with residual?
+ That's kind of the-- we're now getting to [INAUDIBLE]
+ So the residual is a compression.
+ It's like a compression.
+ Yes.
+ It is the-- it's just that what was lost.
+ Yeah, what was lost.
+ Yeah, it's just what was lost.
+ [INAUDIBLE]
+ OK, so the question now is what do we do with this R that we have?
+ Now, this is where it gets a tiny bit more complex.
+ And I tried my best to be like, how do I simplify this?
+ I had a hard time.
+ So we'll try our best.
+ OK, so we have our R finally, our residual.
+ Negative 0.1, positive 0.2, negative 0.1.
+ So what they say here is restore a tiny sketch.
+ By the way, there's like 10 steps underneath the step four that I matched.
+ Because it was getting too specific.
+ So I'll explain it as soon as I can.
+ So I don't have to actually do that kind of analogy.
+ I don't have an idea.
+ So the way to understand this particular piece and this tiny sketch is let's say we have our face.
+ OK?
+ We took this face that was really clear.
+ We quantized it.
+ Now we have a little bit of a blurry face.
+ So we're trying to figure out, OK, how do we now bring back information that we have without blowing it up back again?
+ So what I would do is I would look at the residual, at all the stuff that we lost.
+ And I'm just going to basically extract some hints from it.
+ So what that means is it might be like a line, like a casing.
+ It might not be the whole thing, but it might be like a line, might be like a particular, like a feature.
+ And that's what this is basically.
+ So instead of taking the whole R, you just take a bit from it.
+ And that allows us to better understand, because at the end of the day, what's the point of all this?
+ What we're trying to do is when we have a new vector that's coming in and we're trying to do a document search, for example.
+ We just want to say, is this kind of similar to this image?
+ You don't really need the whole image.
+ You don't really need the blurry image, but with those lines.
+ So that's what this residual bit does.
+ We're not including the entire thing, because then there's no point of it.
+ We're just taking a small aspect of that.
+ Maybe I can go more into depth.
+ No, we're still in two.
+ No, no, no, we're still one bit.
+ That's only zero and one.
+ We're still working in -- it's still one bit, but one bit has two possibilities.
+ That's what it is.
+ [ Inaudible ]
+ But it does some really cool things.
+ For example, this one component here, so what this R does, or the way we get to finally what parts of this R we want, these are really cool projection techniques.
+ So where they look at this vector from one point in this space and they project it manually with the light shining on it.
+ And they're just understanding, is it going with the vector or opposite the vector?
+ That's how we get -- that's how we get -- is it on the plus side or the negative side?
+ So that's where it comes in.
+ A couple of random views of the vector.
+ [ Inaudible ]
+ So this doesn't convert --
+ [ Inaudible ]
+ In this paper, it's only given in really complex math.
+ And that makes it very difficult.
+ [ Inaudible ]
+ So we have this residual vector, but we can't get this whole thing because then it's the same --
+ [ Inaudible ]
+ But we need to have some way of including this lost information back into our compressed quantized version.
+ So that's the problem we're trying to solve.
+ So the question is, how do we get an aspect of this into our original vector?
+ Because what's the larger purpose?
+ We're not trying to recreate it so it looks clear.
+ We're trying to recreate it so that when we have a query vector, it knows to search for this.
+ It's like I think the best way to explain it is if I'm in a room with people, I need to know how the guy's nose looks.
+ Just from how tall they are or how tall they are, maybe the color of their skin, I can be like, oh, they're in that direction and I can go there.
+ [ Inaudible ]
+ Exactly. I don't need all the details to locate where it is.
+ I just kind of need to know, yeah, the guy's tall, you know, brown skin, has hair like this.
+ So that's kind of what we're extracting from the residual vector, right?
+ [ Inaudible ]
+ Yeah. That's the only way you can explain it.
+ Oh, okay. Because again, what's the main goal we're going to solve is at the end of the day, we're doing this for search, right?
+ So we're going to do a query search and then we have to figure out can this query search even locate what's similar?
+ Not exact, similar.
+ So we get some looks from there like, oh, okay, that's kind of similar.
+ That's what we're going to go to, right?
+ [ Inaudible ]
+ Right. That's exactly it.
+ [ Inaudible ]
+ So now we have an analogy of mine. Let's try to attempt to go deeper in the math. So what this is doing is imagine this is an R in space. We pick a random view.
+ So imagine [ Inaudible ]
+ So what it's doing is, oh, if I look at it from this angle and I look at it and I project this vector on, you'll notice that, oh, okay, the only thing I need is does the projection of the vector go along with the vector or go away from the vector?
+ If it goes away from the vector, that means it's not as similar. If it goes along with the vector, that means, oh, that's kind of similar.
+ So I'm now going to go closer to that. That's like the, again, crunch down. This step had ten sub steps.
+ And I was going through it and I was like, should we go down the sub step?
+ [ Inaudible ]
+ Oh, that's a good one.
+ [ Inaudible ]
+ Yeah. That's exactly it.
+ [ Inaudible ]
+ Yes. But it's not just warmer, right? We also have our quantized vector.
+ So we have our quantized vector plus a warmer and colder kind of vibe.
+ And that allows us to be like, oh, that's kind of all the information we need to even determine that, oh, as a query vector, I'm similar to that, right?
+ I mean, that's all we're going to solve for. We don't want a perfect, we want a G and M. We don't want to have like a perfect [ Inaudible ]
+ So they're actually using a zero and one for the [ Inaudible ]
+ So zero means negative, means going away from the projection of the vector. That's what I'm saying. I didn't want to, the confusion here is, are we reducing this to this?
+ [ Inaudible ]
+ All we're seeing is when we project something onto this vector, does the projection of that vector go along with it? That's positive. Or go away? And that's a negative.
+ If it goes away, we're just focused on the projection of it. And one just means with it. Zero means away from it.
+ Guys, this is the actual [ Inaudible ]
+ Oh, that's coming the next step. So what do we do? Like, okay, we have this residual bit. Now what?
+ How does this, how does this now connect mathematically to this quantized version of that? Okay, here we are.
+ So let's go to step five. So in step five, we're basically storing the one zero one and one zero. And you're like, what? That makes no sense.
+ [ Inaudible ]
+ So when we, so in the residual vectors, we are considering something that's positive, but we're not.
+ It doesn't mean we're not including this. We will soon include it, because remember the formula that we were talking about? I'll actually bring it up here.
+ So Y times Q. I'll actually come into this in a second. This formula actually breaks into, for example, Y, so R is equal to Y minus Y.
+ So that means Y is equal to R plus Y hat. So we actually bring back all the different things with the substitution.
+ So, yeah, step five, we're just storing, because one and zero here are the plus and negative signs. Same thing here with the quarks. We're just looking for the plus and negative signs.
+ But now, if you're trying to compute similarity, let me see if I can bring up the math of it. Because what is Y? Y is our original vector. Y is equal to R -- oh, is there a pin here? Oh, my God, is there a pin?
+ That would be -- is it that? Oh, God, is it that bad? Let's do this. Okay, okay. Awesome. Okay, okay. So this is my thought. I wish I knew this before. I was trying to do like hands and things like that.
+ Okay, so we know our R is equal to Y minus Y hat. Okay. So if you want to compute similarity, so we have -- so we're going to compute Y times Q.
+ So Q is basically our query vector. So our query vector is like you're asking a question and you want to respond. So the answer here is we have to -- so this Y, you can replace it with Y hat.
+ So Y -- so R plus -- yeah, R plus Y hat is equal to Y. All right, we'll place that here. So we have R plus Y hat times Q. And then we'll do R plus Q Y hat.
+ Okay, so Y times Q is the thing we're doing. That's the original -- that's the goal. Yes. And you know approximately.
+ Okay, so that's the course core. So yeah, now when we're computing the similarity -- so yeah, so once we actually open that up -- oh, you can see we're actually already including our residual vector here, our Y core vector here, whatever you're doing.
+ So when you actually -- so once you have that score, the final one is looking at, okay, with our query vector, if we're now timesing that -- our course vector, which is basically what we quantified, you realize, okay, it's about a 35 percent similarity.
+ Okay, so it says there, you're showing a multiplication, but in step six, you said there's like a division.
+ Yeah, that's what this is, right?
+ Okay.
+ So this, I just open it up like this. And that's what we have here. So this is our core score.
+ Yeah, this is our core score. And then I'll probably pause here because now we're going a little bit too deep. And we'll summarize it, sort of like, it doesn't matter what all the math is, this is our collection.
+ And this is equal to the similarity. Doesn't make sense, huh?
+ That's right, that's how they got from Y times Q.
+ So now we can check, okay.
+ Yeah, so really the bottom line to all of this is this, like if I were to summarize everything, you would have to do that.
+ Yeah, because the step seven is a .35. So it's fast but slightly long because the original is slightly off.
+ Oh, it just leads to the terrible similarity score.
+ Okay.
+ Given our vectors, this is a terrible vector, like this is terrible similarity score. But baseline, if you're like, oh, I did not track the last 15 minutes, what happened?
+ Doesn't matter. All these queries, core sentences.
+ So really we need to know, so does the query behave the same way as the error in those views?
+ So we talked about, okay, once we have a query, and then once we have the different views on which we project on to the R, the residual vector, it's like, okay, if it's a higher similarity, that means yes, it's higher, and if it's no, that means we have a small similarity.
+ So to summarize all this, you can read it there. So the query is a new vector that we're comparing against. The residual bits are tiny bits about what the core vector got wrong, so the floor image got wrong.
+ And then we check whether the query lines up with those bits. That's where the similarity comes in. If it does, then we nudge the similarity up. If not, we nudge it down.
+ That's basically this whole paper in a nutshell.
+ But we skipped so much of the--
+ Yeah, I'm actually very curious on the hard drive direction zero.
+ So I must have completed something with the correction zero and stuck with the correction zero.
+ Oh, this means maybe that we were going for 35 and there's no more--
+ Yeah, I guess for this specific problem, there was no need to correct it.
+ Yeah, there was no much, very little to correct in this particular example.
+ Yeah, okay, I want to pause here. That was a lot, that was a lot. As I mentioned, this is a very dense mathematical paper.
+ So if you're like tuned out, you're like, "Oh, this doesn't make any sense." Again, I just want to redo this last part so that we can really do this all together.
+ Because you want this to maintain similarity in this new space. You want to find all the ways you can maintain that similarity.
+ Yes, it's like, I mean, at the end of the day, once the whole point of AI searches, I have a query vector.
+ If I've now quantized my goal vector, how do I make sure that I can still search for the accuracy?
+ And so we want to quantize it without, you know, by muscle keeping somewhat of the important parts that will allow us to identify it.
+ No, we want to get higher.
+ Yeah, it's between, if it's one, that means it's like bang, bang.
+ And the similarity is based on that potential, right? Because you have a word and you want to see how similar there are to other words.
+ And you want to maintain that similarity.
+ [inaudible]
+ Oh, good question. Does this change? You mean, like, from the text?
+ I mean, at the end of the day, all objects are transferred into tokens that are still vectors.
+ So I don't know if this will be different when it comes to, if I'm using text or something that's not text.
+ [inaudible]
+ Ah, yeah, yeah, possible.
+ [inaudible]
+ And this comes back to where Shannon speaks.
+ If it is a super complex vector embedding, where everything is very unpredictable, then our ability to compress, that actually comes to our insights in a second.
+ Yeah, that actually is a small component of it.
+ [inaudible]
+ There is so much, okay.
+ It's like I have the blurry picture and I have the footnotes.
+ That's what it is. I have the footnotes for the things that still describe the picture.
+ And that footnotes is just one bit.
+ That's the whole innovation of this, right? That's the visual piece.
+ [inaudible]
+ So this actually, this actually is a good [inaudible]
+ Then we went into the experiments of this whole paper, right?
+ And I was like, okay, when we do experiments, what do we really need to understand?
+ What are the questions we have to ask before we get into it?
+ It's like, okay, what's the metric we want to know for?
+ We're going to check.
+ After this, what is the improvement meaningful?
+ Which means we're able to get a drastic amount of compression and still be successful in a similarity.
+ Or like finding the query.
+ We'll talk about that.
+ So I'm like, what's the trade-off here?
+ And then finally, Ken is actually working with you all.
+ [inaudible]
+ Okay, so what's the metric being optimized for?
+ Now let's actually go to the paper.
+ I basically skipped all of two because it's just math.
+ I tried my best to understand this and it was a mess.
+ It makes me, it gave me a lot of appreciation for people that do this.
+ And here I'm like cloud coding and I'm like, oh man, the research stuff is so complex and we so much want to do this.
+ When we look at cloud applications and we write code and we just do agents now, I'm like, man, the research stuff behind this is insane.
+ And I have so much, because I'm always, I'm an app player guy too, right?
+ Doing this just gave me so much more appreciation for what happened.
+ Okay, so let's go into our experiments.
+ We look into, we actually went through all of this.
+ By the way, all of what we talked about was this one paragraph in the last 20 minutes.
+ So if you guys want to just read this now.
+ So to address this bias and what the bias basically means is when it's quantized as bias.
+ We proposed a solution that combines TurboQuant MSC with an instance of QJL, which is the one bit. So specifically let QMSC be the quantization map corresponding to TurboQuant MSC with a bit width of B minus one.
+ So all the bits that we have, we focus it on the initial part of this quantization and the one bit that's remaining.
+ So for X that is included, actually I don't want to do that math right now.
+ For any X that is a vector defined as R, as a small real, you can then apply this quantization map, which is what we did with the way that we talked about on this visual vector.
+ [INAUDIBLE]
+ I would say, I would say that would be, actually I'm not sure, let's find that information.
+ So QMSC, it's like you have a query, you have a vector for MSC, you have a vector for QJL.
+ Exactly this, I think it might be that.
+ What is the map on this visual vector? I think this actually might be the, yeah the zero one, for example the bits, only the number of bits that we put in the codebook, I think this might be that.
+ Ah, okay, so here we go, there's the random rotation.
+ You have a random rotation that is an R.
+ And also this one gives you that random rotation, and you have a Q which is a quantized quantization map.
+ The grid that we talked about, I think that's what this means, the quantization map QJL.
+ On this, that's what I think this means.
+ [INAUDIBLE]
+ Yeah, everything, so would you expect it to be something else?
+ [INAUDIBLE]
+ So JL is like projecting it into a small dimension, using this random region.
+ I was going to double check this, but maybe I'll come back to it.
+ [INAUDIBLE]
+ Yeah, that's what I think.
+ What QJL is doing here, you have a vector in high dimensions, and QJL projects it into a lower dimensional space.
+ [INAUDIBLE]
+ [INAUDIBLE]
+ I mean, this is for, so why don't we do this, I would say this is for, that's a good question, when does it happen, does it happen at the end of every attention, I actually don't know.
+ [INAUDIBLE]
+ Yeah, so when does, actually good question, when does this exactly, I haven't looked it up actually, I have it right here.
+ [INAUDIBLE]
+ So every time is this process of pi in the mix of pi, so yeah, is it after every token?
+ It has to, right, because every time you have a new token, the similarity changes.
+ [INAUDIBLE]
+ Where is it, yes, where is it applied, it is applied at the moment you want to compress or approximate vectors, for example, during attention configuration, when storing or retrieving any cache, then approximating inner product, during model compression to reduce memory bandwidth.
+ [INAUDIBLE]
+ [INAUDIBLE]
+ This is a freaking fantastic question, when does this, okay, short answer, this one says yes, short answer, yes, in auto-aggressive generation the model runs the whole pass loop and attention step by step and repeats the process once per generated token, after selecting a token, the current token forms a query and attends also a loop.
+ [INAUDIBLE]
+ [INAUDIBLE]
+ I mean when you apply, so when you apply the entire process, where exactly, where exactly in the generation of process is this applied to the query cache?
+ [INAUDIBLE]
+ So I guess the way I understand it is, is that, okay, so in a normal way, you would have to do all these computations to get to the query cache, oh, okay, so in a normal way, without all of this, how does it work in GPT, you put up the request, it does a lot of the math, it does a lot of the math, then generate a lot of things, it's just that next time you put it up front, it just does different math.
+ So GPT is still like a bunch of math, so the second you start the query, it will just like, it will apply these new rules when it crosses the GPT, so it makes sense that every time you run and you query.
+ [INAUDIBLE]
+ Maybe if I were to summarize some interesting things, I thought the most interesting thing in this experiment was actually this one, so they ran a lot of other quantization runs, and this is called the [INAUDIBLE] test, where you're looking for a very specific given sentence in a very long, and they found that the protocol actually had the most success with it.
+ But here's the controversy, here's the key in this industry, which is apparently when they were doing the turbo quant, it used better TPs and hardware, and so I was like, oh, wait, doesn't that really break the scientific process?
+ [INAUDIBLE]
+ That's a good question. Okay, so let me speak about it. So why is it that, what difference did you use? I don't know, that's a good question. Maybe because one might have a different memory, but even then, that's the whole point of it, they're reducing it.
+ So I don't know, but I was reading it, and I was like, oh, they actually used different ones, and it was the whole thing, but that's actually more than I thought about it. It's a good point.
+ So what it says, it was, so this means that it was as good as an uncompressed model in finding a very particular sentence in a really big exact, essentially.
+ So it's more so that if you're always comparing your relative terms, you're comparing it to, it's not that the uncompressed one doesn't have loss, you're just treating that as a standard. So if that is a standard, then how far away are you from that? Does that make sense?
+ Because you're saying it's not 100%. Because that's also difficult even if you're uncompressed.
+ So it's not able to find a needle, even if it's uncompressed.
+ So from what I understand is, we're comparing this against an uncompressed model as a performance.
+ So if this did as well as an uncompressed model, uncompressed model has mistakes, but if we did exactly as well as an uncompressed model, it would have been 100%.
+ But does it mean that uncompressed models, oh, okay, so there's no uncompressed model, I was just wondering if full precision is what model is that?
+ No, my thing is full precision was a different, so yeah, so full precision did it.
+ I just want to be more efficient than that.
+ What is the full precision compared to in the needle?
+ So is that full precision, does that mean it's uncompressed?
+ No, are you sure? Is that what full precision can be? Or is it just the meaning of another one of the quantization?
+ No, it's the one that's more compressing.
+ Right, it wouldn't make sense. Why would they include another one and why would they say that they're really a problem to rest?
+ So full precision is, as it's saying, this is the model's fault.
+ Oh, yeah, even if it says they're compressing, it should be the same exact component as the uncompressed baseline.
+ Yeah, but the uncompressed baseline doesn't say that it's full precision.
+ It's the baseline run with no, okay, so you are correct.
+ The model evaluated that standard floating point position used as the reference for the same, so this is basically saying it is performing basically exactly the same as the full position.
+ Because we're encoding things in like one bit versus like 16 bits.
+ Okay, I feel like those are the big things here.
+ We went a bit into the GPU performance, so that's going to be what I'm going to bring up real quick.
+ This was run on the Nvidia A100, but from what I saw in the paper, I should call it a member function.
+ So we evaluate two composition methods, the method here. I think from what I understand, they were able to run it on this GPU and were able to successfully get the metrics that we talked about here.
+ And the whole point that, oh, actually this you can actually apply in a GPU.
+ >> [INAUDIBLE]
+ >> The last question I think that came to my mind, and we will close here is, okay, what would it take to bring this into the real world?
+ Now that we've gone through this, what do you guys think are the biggest challenges for those that actually work on?
+ >> That's actually my question, why don't we just apply this anyway?
+ >> Yeah, so I actually asked this question, I'm curious what you guys, just from doing this so far,
+ if you think from our perspective, what would be the biggest roadblocks in actually implementing like tomorrow?
+ >> [INAUDIBLE]
+ >> Yeah, like implementing this PDPache mechanism, what would be the hardest part of this?
+ >> [INAUDIBLE]
+ >> I would say yes, yeah, but there's actually a few that was actually pretty hard for me.
+ I asked for PDPache, so I'm fine with that.
+ But anyone else want to have guesses, before I close up?
+ >> [INAUDIBLE]
+ >> That's exactly, yeah, I can give a comment, so, yeah.
+ >> [INAUDIBLE]
+ >> Well, success.
+ >> [INAUDIBLE]
+ >> Here's my comment, maybe I can give a comment.
+ >> Maybe before I show the answer, yeah.
+ >> Yeah, so, because here we see that perfect score, but it's not really [INAUDIBLE]
+ >> I guess the point, I'm almost like, what's like at a hardware level?
+ Maybe this is because we didn't work with that thing.
+ I wonder if it's that.
+ >> [INAUDIBLE]
+ >> So the way I understood it is that GPUs are structured a particular way to do particular processing for particular bits.
+ And that's just locked in.
+ And to redo some of the mathematical architecture for how the GPUs work, to make that happen, is most difficult.
+ That means the engineering and the way we, the computer engineering and the way we do it needs to change for this to work.
+ >> [INAUDIBLE]
+ >> It says it's operationally output. [INAUDIBLE]
+ So what I heard understand this as is when we're doing inference at that large of a skill, we might see like localized efficiency, but when we're doing it at a skill, it might not work.
+ >> Yeah, this is the thing.
+ Yeah, because it shows like maybe the toy problem.
+ [INAUDIBLE]
+ What is it about the real world?
+ I wasn't able to get to that point.
+ I spent too much time in the math and I was like, oh shit, I forgot the real world understanding.
+ Wait, why can't we do this here?
+ Yeah, I think we could spend a lot more time on this, but I think this is a good time to pause.
+ How are we doing?
+ That was a lot.
+ Our brain's probably matched.
+ I think what I hope, if you don't remember any of this, I just hope you have a bit more bits in your brain about vectors.
+ And just how, at least now when you look at AI, you will now have a visual thing of vectors moving around to make things happen.
+ Even though like practically, what would you do with this information?
+ I don't know how much you would apply it.
+ [INAUDIBLE]
+ And so they actually did this for the quen.
+ They were--
+ [INAUDIBLE]
+ Oh, that's a good point.
+ When it's for local processing.
+ So maybe if I were to do this and if I had infinite time, I would load like a local source model.
+ So let's see if I could like implement this quantize it all out of it and then maintain information.
+ That's actually a really good point.
+ Because where the future's going is more local.
+ Can you bring these big models and we don't have the brand or computer.
+ So, oh, the other piece, they--
+ [INAUDIBLE]
+ The last question is how do we bring agents into this?
+ Any ideas?
+ And that's actually where I was like, oh, that's actually very interesting.
+ [INAUDIBLE]
+ Yeah, but how could we use the agents to be more efficient even in this whole query process?
+ Does anything come to mind?
+ Because right now if you have to search for something, it's like we're doing a search, but there isn't much that's happening.
+ For example, a search isn't just a search.
+ There's ways you can search for information so that we're giving AI more.
+ Does that make sense?
+ Yeah, but it's just agent search, right? Like you have a lot of content, like emails, calendar, and all that.
+ Can you efficiently get the most relevant?
+ Yeah, and have the most--
+ [INAUDIBLE]
+ Yeah, and have the most accurate prompt.
+ Because to develop the prompt, [INAUDIBLE]
+ Then we can actually do like iteration loops.
+ Maybe the first one we're not getting the right answer.
+ When agents can learn, how do we have the right kind of query to get the right kind of answer?
+ So that's like the other option.
+ Ooh, there's actually lots of opportunity for using agents to make this.
+ [INAUDIBLE]
+ And just give it better-- it will help optimize the work.
+ And I thought that was really interesting.
+ OK, I think that's a good place to pause.
+ Any last thoughts or anything else to share before we close?
+ This is a very difficult one to do.
+ I'm not going to lie.
+ This is-- yeah.
+ [INAUDIBLE]
+ Do you want to host it?
+ Anyone-- by the way, you should know, we--
+ [INAUDIBLE]
+ I think you guys should host it.
+ But this is just my plug for this book.
+ It is like I'm reading it right now.
+ And if anyone wants to start to approach AI for parts,
+ and just getting really curious about the math, I would love to start.
+ It goes from-- if you have no knowledge in math,
+ it would go from zero all the way up to [INAUDIBLE]
+ and kind of like [INAUDIBLE]
+ [INAUDIBLE]
+ Yeah.
+ [INAUDIBLE]
+ You know, at one point, I was asking myself,
+ if I spend a lot of time, do I spend more time in the theory?
+ Do I spend more time in application?
+ Do I spend more time in the--
+ [INAUDIBLE]
+ Or do I spend more time in the research aspect?
+ [INAUDIBLE]
+ [INAUDIBLE]
+ Because the thing is that when you do the research,
+ the theory doesn't understand that the [INAUDIBLE]
+ of the application.
+ But for now, the things cannot be better than that.
+ We have no idea.
+ [INAUDIBLE]
+ And now we think about how do we improve model performance?
+ I'm like, oh.
+ Yeah, you can do it.
+ I was like, oh, there's this thing called [INAUDIBLE]
+ I know that's bottleneck.
+ Yeah.
+ There's a couple whole new nodes that didn't know.
+ How am I going to apply this?
+ I don't know.
+ I might want to do my own local model
+ and see if I can implement this.
+ But that's going to where my attention would go.
+ Yeah.
+ [INAUDIBLE]
+ [INAUDIBLE]
+ Yes.
+ And as codecs do it.
+ Yeah.
+ The last thing I'll say is the next thing I want to do,
+ actually-- this is [INAUDIBLE] I'm extremely
+ curious about this-- is we're both biology nuts.
+ And the next topic I'd love to host to you at some point
+ is how we can use things like AI to develop mRNA vaccines.
+ What does that process look like?
+ Right?
+ I was just sharing before you came,
+ it's actually not that complicated
+ than most people think.
+ There's this platform called OpenVax.
+ You guys heard that story about that dog on Twitter?
+ Yeah.
+ Well, this guy was able to create
+ an mRNA vaccine for his dog, using chat GPT and alcohol.
+ And of course, in association with some professors,
+ he could formulate the bio.
+ But he did all that literally just--
+ [INAUDIBLE]
+ Yeah, but to design the mRNA vaccine, he did not do that.
+ He just could use codecs.
+ So would I ever be interested in that, like looking at biology?
+ Understanding proteins, understanding cancer tumors.
+ That actually, over this, that is my personal area of interest.
+ I'll just show you here.
+ I spent a lot of time trying to understand
+ how vaccines are made, and how do we do this,
+ how do we use it after it.
+ I think in the next two years, yes, this
+ is one area, which is AI and agents.
+ But the next year is the year of biology and AI.
+ [INAUDIBLE]
+ Yeah.
+ So dude, this works even better.
+ [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ Yeah, yeah, yeah.
+ [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ So you're signaling, but what's the object?
+ What's the object we're putting on the [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ [INAUDIBLE]
+ I loved it.
+ Guys, that's the thing.
+ So I don't know if you guys know,
+ there's no hierarchy of who gets--
+ if you have interesting ideas, like, I
+ want to present this paper.
+ [INAUDIBLE]
+ It's not like I'm a deep expert, and I'm like,
+ I'm here to teach you.
+ No, it's just like, I use this as just an excuse for me
+ to learn, and then we get to share and learn with each other.
+ And if you're like, this paper's awesome,
+ I'd love to discuss this with everybody,
+ and you can use it as a forcing function to learn yourself,
+ please message it.
+ It's a very good forcing function.
+ Yeah, and the people-- yeah.
+ It would be interesting to know what are your roadblocks.
+ [INAUDIBLE]
+ Oh, I have infinite--
+ [INAUDIBLE]
+ Yeah.
+ Would this be an interest?
+ Yeah.
+ Oh, yeah.
+ OK, cool.
+ We'll do one maybe two or four weeks from now.
+ I'll host one of these.
+ Oh, then we can get bio-nerdy.
+ Oh, that's going to be a difficult one
+ to finish in an hour.
+ [INAUDIBLE]
+ Anyone here-- you do chemical engineering.
+ I know you guys don't answer the question.
+ But for anyone else in the bio, just
+ have a curiosity about bio.
+ [INAUDIBLE]
+ Oh, shoot.
+ You work at Genomis lab?
+ [LAUGHTER]
+ I work with Genomis lab.
+ You work with Genomis labs.
+ [INAUDIBLE]
+ OK.
+ [INAUDIBLE]
+ OK, so you both work for solutions for Genomis labs?
+ OK, anyone else do bio stuff or interested in--
+ OK.
+ This will be me having you join my bio cult.
+ I think we need more people into biology.
+ I think when we were young, we learned
+ biology was mitochondria is the powerhouse of the cell,
+ and then that's basically the extent of it.
+ And I think if we spend more time understanding this--
+ We're going to seek immortality.
+ What?
+ We're going to seek immortality.
+ Yeah, we can be like Brian Johnson and live forever,
+ right?
+ Find a way to sequence--
+ End of time.
+ End of time.
+ And a drug that makes us immortal.
+ All right, thanks, everybody.
+ [APPLAUSE]
+ That was so interesting.
+ Are you working?
+ What?
+ Are you working this whole time?
+ No, I just locked it the whole meeting,
+ and then using the LLM to translate into the meeting row.
+ How did you go--
+ What the--
+ [LAUGHTER]
+ So that's the meeting row.
+ Yeah.
+ What's the transcriber that you used?
+ Sorry?
+ Which transcriber did you use?
+ Do you have like a--
+ I built my own.
+ Oh, sure.
+ What the hell?
+ This is the--
+ You're insane.
+ It's still [INAUDIBLE]
+ It's still [INAUDIBLE]
+ So we just recorded the load, and then it started.
+ And then we speak.
+ And then it transcribed into the line transcriber.
+ And for this transcriber, there's a topic.
+ So when the guy keeps saying, the presenter keeps saying,
+ the guy keeps saying, they keep transcribing.
+ And then I can watch LLM, he's talking about,
+ and then what's the topic about that.
+ But it's still a prototype.
+ He's still working on it.
+ Dude, it's fucking insane.
+ What the--

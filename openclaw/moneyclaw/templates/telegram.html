@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+{% block title %}MoneyClaw — Send Telegram{% endblock %}
+{% block body_extra_style %}display: flex; flex-direction: column; height: 100vh;{% endblock %}
+{% block extra_style %}
+    .main-panel { flex: 1; overflow-y: auto; padding: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+    .btn-run { background: #f5a623; color: #fff; border: none; border-radius: 8px; padding: 0.75rem; font-size: 0.95rem; font-weight: 700; cursor: pointer; width: 100%; }
+    .btn-run:hover { opacity: 0.88; } .btn-run:disabled { opacity: 0.5; cursor: not-allowed; }
+    .chat-area { flex: 1; display: flex; flex-direction: column; gap: 0.8rem; }
+    .chat-row { display: flex; justify-content: flex-end; }
+    .chat-bubble { max-width: 75%; background: #f5a623; color: #fff; padding: 0.75rem 1.1rem; border-radius: 18px 18px 4px 18px; font-size: 0.92rem; line-height: 1.5; white-space: pre-wrap; box-shadow: 0 2px 8px rgba(245,166,35,0.25); }
+    .chat-bubble.error { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; border-radius: 18px; }
+    .chat-meta { font-size: 0.72rem; color: #aaa; text-align: right; margin-top: 0.2rem; }
+    .chat-label { font-size: 0.72rem; font-weight: 700; color: #aaa; letter-spacing: 0.05em; text-align: right; margin-bottom: 0.2rem; }
+    .empty-chat { margin: auto; text-align: center; color: #ccc; font-size: 0.9rem; }
+    .empty-chat .icon { font-size: 2rem; margin-bottom: 0.4rem; }
+    .key-row { display: flex; flex-direction: column; gap: 0.3rem; }
+    .key-input-row { display: flex; gap: 0.4rem; align-items: center; }
+    .key-input-row input { flex: 1; min-width: 0; }
+    .btn-reveal { background: #fffbf0; border: 1.5px solid #ffe9a0; border-radius: 8px; padding: 0.4rem 0.6rem; font-size: 0.75rem; cursor: pointer; white-space: nowrap; flex-shrink: 0; }
+    .btn-reveal:hover { background: #fff3cc; }
+    .btn-save-key { background: #f5a623; color: #fff; border: none; border-radius: 8px; font-size: 0.82rem; font-weight: 700; cursor: pointer; }
+    .btn-save-key:hover { opacity: 0.88; }
+    .key-status { font-size: 0.72rem; color: #059669; font-weight: 600; }
+    .key-status.missing { color: #dc2626; }
+    .sidebar { width: 320px; }
+    .setup-guide { background: #fffbf0; border: 1.5px solid #ffe9a0; border-radius: 10px; padding: 0.8rem 1rem; }
+    .guide-title { font-size: 0.8rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .steps { display: flex; flex-direction: column; gap: 0.35rem; padding: 0; }
+    .steps li { font-size: 0.78rem; color: #555; line-height: 1.45; list-style: none; padding-left: 0.9rem; position: relative; }
+    .steps li::before { content: "•"; position: absolute; left: 0; color: #f5a623; }
+    .steps code { background: #fff3cc; padding: 0.05rem 0.3rem; border-radius: 4px; font-size: 0.75rem; }
+{% endblock %}
+{% block content %}
+<div class="layout">
+  <aside class="sidebar">
+    <h1>Send Telegram</h1>
+    <p class="sidebar-desc">Send a Telegram message to yourself via a bot.</p>
+    <div>
+      <label>MESSAGE</label>
+      <textarea id="message" rows="5" placeholder="hola amigo">hola amigo</textarea>
+    </div>
+    <div>
+      <label>CHAT ID (LEAVE BLANK TO USE DEFAULT)</label>
+      <input type="text" id="chat_id" placeholder="Chat ID (leave blank to use default)"/>
+    </div>
+    <button class="btn-run" id="run-btn" onclick="sendMsg()">&#9654; Run</button>
+    <div style="display:flex;flex-direction:column;gap:0.4rem;">
+      <label>SEND EVERY X SECONDS</label>
+      <div style="display:flex;gap:0.5rem;align-items:center;">
+        <input type="number" id="interval" value="10" min="1" style="width:80px;"/>
+        <button class="btn-run" id="repeat-btn" style="flex:1;" onclick="toggleRepeat()">&#9654; Start</button>
+      </div>
+    </div>
+
+    <hr style="border:none;border-top:1.5px solid #ffe9a0;"/>
+
+    <div class="key-row">
+      <label>BOT TOKEN <span id="token-status" class="key-status missing">not set</span></label>
+      <div class="key-input-row">
+        <input type="password" id="token-input" placeholder="123456:ABC-xxx"/>
+        <button class="btn-reveal" onclick="toggleReveal('token-input', this)">Show</button>
+      </div>
+    </div>
+    <div class="key-row">
+      <label>CHAT ID <span id="chatid-status" class="key-status missing">not set</span></label>
+      <div class="key-input-row">
+        <input type="password" id="chatid-input" placeholder="123456789"/>
+        <button class="btn-reveal" onclick="toggleReveal('chatid-input', this)">Show</button>
+      </div>
+    </div>
+    <button class="btn-save-key" onclick="saveKeys()" style="width:100%;padding:0.6rem;">Save Keys</button>
+
+    <div class="setup-guide">
+      <div class="guide-title">📖 How to get your keys</div>
+      <ul class="steps">
+        <li>Search for <code>@BotFather</code> on Telegram</li>
+        <li>Send <code>/newbot</code> → copy the <strong>Bot Token</strong></li>
+        <li>Search <code>@userinfobot</code> → copy your <strong>Chat ID</strong></li>
+        <li>Paste both above and click <strong>Save Keys</strong></li>
+      </ul>
+    </div>
+  </aside>
+
+  <div class="main-panel">
+    <div class="chat-area" id="chat-area">
+      <div class="empty-chat" id="empty-chat">
+        <div class="icon">✈️</div>
+        <div>Messages you send will appear here</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}<script>
+  let repeatTimer = null;
+
+  async function loadKeys() {
+    const res = await fetch("/api/env/telegram");
+    const d = await res.json();
+    const ti = document.getElementById("token-input"), ts = document.getElementById("token-status");
+    if (d.token_set) { ti.value = d.token_masked; ti.dataset.masked="1"; ts.textContent="set ✓"; ts.className="key-status"; }
+    else { ts.textContent="not set"; ts.className="key-status missing"; }
+    const ci = document.getElementById("chatid-input"), cs = document.getElementById("chatid-status");
+    if (d.chat_id_set) { ci.value = d.chat_id_masked; ci.dataset.masked="1"; cs.textContent="set ✓"; cs.className="key-status"; }
+    else { cs.textContent="not set"; cs.className="key-status missing"; }
+  }
+
+  function toggleReveal(id, btn) {
+    const inp = document.getElementById(id);
+    inp.type = inp.type === "password" ? "text" : "password";
+    btn.textContent = inp.type === "password" ? "Show" : "Hide";
+  }
+
+  async function saveKeys() {
+    const ti = document.getElementById("token-input"), ci = document.getElementById("chatid-input");
+    const payload = {};
+    if (!ti.dataset.masked) payload.token = ti.value.trim();
+    if (!ci.dataset.masked) payload.chat_id = ci.value.trim();
+    if (!Object.keys(payload).length) return;
+    await fetch("/api/env/telegram", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(payload) });
+    ti.dataset.masked=""; ci.dataset.masked="";
+    loadKeys();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    loadKeys();
+    ["token-input","chatid-input"].forEach(id => document.getElementById(id).addEventListener("input", function(){ this.dataset.masked=""; }));
+  });
+
+  function toggleRepeat() {
+    const btn = document.getElementById("repeat-btn");
+    if (repeatTimer) {
+      clearInterval(repeatTimer); repeatTimer = null;
+      btn.textContent = "▶ Start"; btn.style.background = "#f5a623";
+    } else {
+      const secs = parseInt(document.getElementById("interval").value) * 1000;
+      sendMsg(); repeatTimer = setInterval(sendMsg, secs);
+      btn.textContent = "⏹ Stop"; btn.style.background = "#dc2626";
+    }
+  }
+
+  function addBubble(text, isError) {
+    document.getElementById("empty-chat")?.remove();
+    const area = document.getElementById("chat-area");
+    const time = new Date().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"});
+    const wrap = document.createElement("div");
+    wrap.innerHTML = `
+      <div class="chat-label">SENT TO TELEGRAM</div>
+      <div class="chat-row"><div class="chat-bubble${isError ? " error" : ""}">${escHtml(text)}</div></div>
+      <div class="chat-meta">${isError ? "❌ Failed" : "✅ Delivered"} · ${time}</div>`;
+    area.appendChild(wrap);
+    area.scrollTop = area.scrollHeight;
+  }
+
+  async function sendMsg() {
+    const msgEl = document.getElementById("message");
+    const msg = msgEl.value.trim();
+    if (!msg) { addBubble("Try again — message is empty.", true); return; }
+    const btn = document.getElementById("run-btn");
+    btn.disabled = true; btn.textContent = "Sending...";
+    try {
+      const res = await fetch("/api/telegram/send", {
+        method:"POST", headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({ message: msg, chat_id: document.getElementById("chat_id").value }),
+      });
+      const data = await res.json();
+      addBubble(data.error ? data.error : msg, !!data.error);
+    } catch(e) { addBubble(e.message, true); }
+    btn.disabled = false; btn.textContent = "▶ Run";
+  }
+
+  function escHtml(s) { return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+</script>{% endblock %}
